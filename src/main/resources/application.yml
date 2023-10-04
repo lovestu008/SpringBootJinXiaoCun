@@ -1,6 +1,8 @@
 #端口号
 server:
   port: 8080
+  servlet:
+    context-path: /shop
 
 #mysql数据库
 spring:
