@@ -3,11 +3,9 @@ package com.it;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.Date;
-
-import static com.it.utils.DateUtils.stepMonth;
 
 @SpringBootApplication
 public class SupermarketApplication {
