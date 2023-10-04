@@ -1,6 +1,6 @@
 #端口号
 server:
-  port: 2001
+  port: 8080
 
 #mysql数据库
 spring:
@@ -14,7 +14,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/supermarket?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=Asia/Shanghai
     username: root
-    password: 
+    password: root
     #连接池springboot自带
     hikari:
       #连接池名字
@@ -33,20 +33,27 @@ spring:
       connection-timeout: 30000
       #测试连接是否可用的查询语句
       connection-test-query: SELECT 1
+  ## 启⽤热部署
+  devtools:
+    restart:
+      enabled: true
+      additional-paths: src/main/java
 
 
-
-#mybatis-plus配置
-mybatis-plus:
-  #mapper.xml映射文件路径
-  mapper-locations: classpath*:/mapper/*.xml
-  #配置mybatis数据返回类型别名（默认类名）
-  type-aliases-package:
+  ## mybatis 配置
+mybatis:
+  mapper-locations: classpath:/mappers/*.xml
+  type-aliases-package: com.xxxx.supermarket.vo;com.xxxx.supermarket.query;com.xxxx.supermarket.dto
   configuration:
-    #自动驼峰命名
-    map-underscore-to-camel-case: false
+    map-underscore-to-camel-case: true
+  ## pageHelper 分⻚
+pagehelper:
+  helper-dialect: mysql
 
 #日志
 logging:
   level:
-    com.it: debug
+    com:
+      xxxx:
+        crm:
+          dao: debug
