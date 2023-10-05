@@ -3,11 +3,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.xxxx</groupId>
-    <artifactId>crm</artifactId>
+    <artifactId>supermarket</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>crm</name>
+    <name>supermarket</name>
     <url>http://maven.apache.org</url>
 
     <properties>
