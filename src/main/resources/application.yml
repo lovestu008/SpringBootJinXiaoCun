@@ -17,24 +17,13 @@ spring:
     url: jdbc:mysql://localhost:3306/supermarket?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=Asia/Shanghai
     username: root
     password: root
-    #连接池springboot自带
-    hikari:
-      #连接池名字
-      pool-name: DateHilariCP
-      #最小空闲连接
-      minimum-idle: 5
-      #空闲连接存活最大时间默认10分钟（600000）
-      idle-timeout: 180000
-      #最大连接数 默认10
-      maximum-pool-size: 10
-      #从连接池返回自动提交
-      auto-commit: true
-      #连接最大存活时间 0表示永久 1800000  30分钟
-      max-lifetime: 1800000
-      #连接超时时间默认 30000  30秒
-      connection-timeout: 30000
-      #测试连接是否可用的查询语句
-      connection-test-query: SELECT 1
+
+  ## freemarker
+  freemarker:
+    suffix: .ftl
+    content-type: text/html
+    charset: UTF-8
+    template-loader-path: classpath:/views/
   ## 启⽤热部署
   devtools:
     restart:
@@ -57,5 +46,5 @@ logging:
   level:
     com:
       xxxx:
-        crm:
+        supermarket:
           dao: debug
