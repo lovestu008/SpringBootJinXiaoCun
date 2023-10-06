@@ -10,13 +10,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
-import java.util.List;
 
 @Controller
 public class LoginController extends BaseController {
 
     @Resource
     private UserService userService;
+
 
 
     /**
@@ -37,10 +37,10 @@ public class LoginController extends BaseController {
     @RequestMapping("main")
     public String main(HttpServletRequest request) {
         //查询用户对象,设置到session作用域
-        Integer userId = LoginUserUtil.releaseUserIdFromCookie(request);
+        /*Integer userId = LoginUserUtil.releaseUserIdFromCookie(request);
 
         User user = userService.selectByPrimaryKey(userId);
-        request.getSession().setAttribute("user", user);
+        request.getSession().setAttribute("user", user);*/
 
         return "main";
     }

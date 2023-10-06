@@ -74,7 +74,7 @@ layui.use(['table','layer'],function(){
                                    type:"post",
                                    url : ctx+"/role/delete",
                                    data:{
-                                          roleId:data.id
+                                          id:data.id
                                    },
                                    dataType:"json",
                                    success:function (result) {

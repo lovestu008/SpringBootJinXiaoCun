@@ -2,6 +2,7 @@ package com.xxxx.supermarket.controller;
 
 import com.xxxx.supermarket.base.BaseController;
 import com.xxxx.supermarket.base.ResultInfo;
+import com.xxxx.supermarket.dao.RoleMapper;
 import com.xxxx.supermarket.entity.Role;
 import com.xxxx.supermarket.query.RoleQuery;
 import com.xxxx.supermarket.service.RoleService;
@@ -11,6 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+import javax.xml.transform.Result;
 import java.util.Map;
 
 @Controller
@@ -19,6 +22,8 @@ public class RoleController extends BaseController{
 
     @Resource
     private RoleService roleService;
+    @Resource
+    private RoleMapper roleMapper;
 
     @RequestMapping("index")
     public String index(){
@@ -32,7 +37,11 @@ public class RoleController extends BaseController{
     }
 
     @RequestMapping("addOrUpdateRolePage")
-    public String toAddOrUpdateRolePage(){
+    public String toAddOrUpdateRolePage(Integer id, HttpServletRequest request){
+        if (null != id){
+            Role role = roleMapper.selectByPrimaryKey(id);
+            request.setAttribute("role",role);
+        }
         return "role/add_update";
     }
 
@@ -49,6 +58,13 @@ public class RoleController extends BaseController{
     public ResultInfo roleUpdate(Role role){
         roleService.updateRole(role);
         return success("角色修改成功");
+    }
+
+    @RequestMapping("delete")
+    @ResponseBody
+    public ResultInfo roleDelete(Integer id){
+        roleService.deleteRole(id);
+        return success("角色删除成功");
     }
 
 }
