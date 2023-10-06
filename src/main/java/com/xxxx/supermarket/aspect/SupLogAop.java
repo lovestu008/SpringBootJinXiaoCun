@@ -22,7 +22,7 @@ public class SupLogAop implements Ordered {
     @Resource
     private LogMapper logMapper;
     /**
-     * 定义BusLogAop的切入点为标记@BusLog注解的方法
+     * 定义SupLogAop的切入点为标记@SupLog注解的方法
      */
     @Pointcut(value = "@annotation(com.xxxx.supermarket.aspect.SupLog)")
     public void pointcut() {
@@ -55,6 +55,7 @@ public class SupLogAop implements Ordered {
             log.setType(logType);
             log.setContent(logContent);
             log.setUname("admin");
+            log.setId(1);
             log.setTime(new Date());
             //保存业务操作日志信息
             AssertUtil.isTrue(logMapper.insertSelective(log)<1,"保存操作日志失败！");
