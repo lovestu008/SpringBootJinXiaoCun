@@ -1,9 +1,8 @@
 package com.xxxx.supermarket.controller;
 
 import com.xxxx.supermarket.base.BaseController;
-import com.xxxx.supermarket.entity.User;
-import com.xxxx.supermarket.utils.LoginUserUtil;
 import com.xxxx.supermarket.service.UserService;
+import com.xxxx.supermarket.utils.LoginUserUtil;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
