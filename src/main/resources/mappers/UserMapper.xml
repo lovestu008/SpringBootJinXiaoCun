@@ -149,8 +149,9 @@
       updateTime = #{updatetime,jdbcType=TIMESTAMP}
     where id = #{id,jdbcType=INTEGER}
   </update>
-
+<!--多条件查询-->
   <select id="selectByParams" parameterType="com.xxxx.supermarket.query.UserQuery" resultType="com.xxxx.supermarket.entity.User">
+
     select <include refid="Base_Column_List"></include>
         from t_user
     where
@@ -166,5 +167,13 @@
         and email like concat('%',#{email},'%')
       </if>
     </where>
+  </select>
+
+  <!--通过用户名查询用户-->
+  <select id="selectByUserByName" resultType="com.xxxx.supermarket.entity.User" parameterType="string">
+    select <include refid="Base_Column_List"></include>
+        from t_user
+    where
+        is_del = 0 and user_name = #{userName}
   </select>
 </mapper>
