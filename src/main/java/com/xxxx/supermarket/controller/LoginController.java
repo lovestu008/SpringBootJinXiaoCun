@@ -29,6 +29,12 @@ public class LoginController extends BaseController {
         return "index";
     }
 
+    // 系统界⾯欢迎⻚
+    @RequestMapping("welcome")
+    public String welcome() {
+        return "welcome";
+    }
+
     /**
      * 后端管理主⻚⾯
      *
