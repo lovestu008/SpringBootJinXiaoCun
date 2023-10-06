@@ -70,6 +70,6 @@
         </div>
     </div>
 </form>
-<script type="text/javascript" src="${ctx}/js/module/add.js"></script>
+<script type="text/javascript" src="${ctx}/js/menu/add.js"></script>
 </body>
 </html>

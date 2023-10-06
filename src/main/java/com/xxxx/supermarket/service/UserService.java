@@ -35,8 +35,21 @@ public class UserService extends BaseService<User,Integer> {
         return userModel;
     }
 
+    /**
+     * service 用户添加操作
+     * @param user
+     */
+    public void addUser(User user) {
 
 
+    }
+
+    /**
+     * service用户修改操作
+     * @param user
+     */
+    public void updateUser(User user) {
 
 
+    }
 }

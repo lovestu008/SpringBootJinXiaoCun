@@ -153,10 +153,9 @@
   <select id="selectByParams" parameterType="com.xxxx.supermarket.query.UserQuery" resultType="com.xxxx.supermarket.entity.User">
 
     select <include refid="Base_Column_List"></include>
-        from t_user
-    where
-        is_del = 0
+        from  t_user
     <where>
+      is_del = 0
       <if test="null != userName and '' != userName " >
         and user_name like concat('%',#{userName},'%')
       </if>
