@@ -7,21 +7,14 @@
 
 <div class="layui-form-item layui-row layui-col-xs12">
     <label class="layui-form-label">客户ID</label>
-    <select name="customerId" id="customerId">
-        <option value="">请选择</option>
-    </select>
-</div>
-<div class="layui-form-item layui-row layui-col-xs12">
-    <label class="layui-form-label">商品名</label>
-    <div class="layui-col-md6">
-        <select lay-search="" name="goodsName" id="goodsName" lay-filter="goodsByName">
-            <option value="">请搜索</option>
-
-            <option value="cccc1">cccc1</option>
-            <option value="cccc2">cccc2</option>
-
+    <div class="layui-input-block">
+        <select name="customerId" id="customerId" xm-select="customerId">
         </select>
     </div>
+</div>
+<div class="layui-form-item layui-row layui-col-xs12">
+    <label class="layui-form-label">商品选择</label>
+    <button type="button" class="layui-btn layui-btn-primary" lay-on="goodsName" id="goodsName">选择商品</button>
 </div>
 <fieldset class="layui-elem-field site-demo-button">
     <legend>商品信息</legend>
@@ -29,6 +22,13 @@
     <input name="id" type="hidden" value="${(goods.id)!}"/>
     <input name="typeId" type="hidden" value="${(goods.typeId)!}"/>
     <input name="flag" type="hidden" value="${flag!}"/>
+    <div class="layui-form-item layui-row layui-col-xs12">
+        <label class="layui-form-label">商品名</label>
+        <div class="layui-input-block">
+            <input type="text" class="layui-input name" readonly="readonly"
+                   name="name" id="name" value="${(goods.name)!}">
+        </div>
+    </div>
 
     <br/>
     <div class="layui-row">

@@ -31,6 +31,13 @@ public class SaleController extends BaseController {
 
         return "sale/sale";
     }
+    /**
+     * 单据查询主页
+     */
+    @RequestMapping("searchPage")
+    public String searchPage(HttpServletRequest request){
+        return "sale/sale_search";
+    }
 
     /**
      * 分⻚查询销售单
@@ -50,15 +57,8 @@ public class SaleController extends BaseController {
      *
      * @return
      */
-    @RequestMapping("addOrUpdateSalePage")
-    public String addOrUpdateSalePage(Integer id, HttpServletRequest request) {
-        //判断saleChanceId是否为空
-        if (id != null) {
-            //通过Id查询营销机会数据
-            SaleList saleList = saleService.selectByPrimaryKey(id);
-            //将数据设置到请求域中
-            request.setAttribute("saleList", saleList);
-        }
+    @RequestMapping("addSalePage")
+    public String addSalePage() {
         return "sale/add_update";
     }
 
