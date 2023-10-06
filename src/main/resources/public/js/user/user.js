@@ -17,12 +17,13 @@ layui.use(['table','layer'],function(){
         cols : [[
             {type: "checkbox", fixed:"center"},
             {field: "id", title:'编号',fixed:"true"},
-            {field: 'userName', title: '用户名',align:"center"},
-            {field: 'email', title: '用户邮箱', align:'center'},
-            {field: 'phone', title: '用户电话', align:'center'},
+            {field: 'userName', title: '用户名', align:'center'},
+            {field: 'phone', title: '电话号码', align:'center'},
+            {field: 'email', title: '用户名', align:'center'},
+            {field: 'password', title: '用户密码', align:'center'},
             {field: 'trueName', title: '真实姓名', align:'center'},
-            {field: 'createDate', title: '创建时间', align:'center'},
-            {field: 'updateDate', title: '更新时间', align:'center'},
+            {field: 'remarks', title: '标记', align:'center'},
+            {field: 'bz', title: '备注',align:"center"},
             {title: '操作', templet:'#userListBar',fixed:"right",align:"center",
                 minWidth:150}
         ]]
