@@ -5,9 +5,9 @@ import java.util.Date;
 public class SaleList {
     private Integer id;
 
-    private Float amountPaid;
+    private Float amountPaid;//实付金额
 
-    private Float amountPayable;
+    private Float amountPayable;//应付金额
 
     private String remarks;
 
