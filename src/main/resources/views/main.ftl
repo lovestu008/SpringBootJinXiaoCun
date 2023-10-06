@@ -78,10 +78,10 @@
                             <a href="javascript:;" class="layui-menu-tips"><i class="fa fa-desktop"></i><span class="layui-left-nav"> 销售管理</span> <span class="layui-nav-more"></span></a>
                             <dl class="layui-nav-child">
                                 <dd>
-                                    <a href="javascript:;" class="layui-menu-tips" data-type="tabAdd" data-tab-mpi="m-p-i-5" data-tab="customer_serve/index/1" target="_self"><i class="fa fa-tachometer"></i><span class="layui-left-nav"> 商品销售</span></a>
+                                    <a href="javascript:;" class="layui-menu-tips" data-type="tabAdd" data-tab-mpi="m-p-i-5" data-tab="sale/index" target="_self"><i class="fa fa-tachometer"></i><span class="layui-left-nav"> 商品销售</span></a>
                                 </dd>
                                 <dd>
-                                    <a href="javascript:;" class="layui-menu-tips" data-type="tabAdd" data-tab-mpi="m-p-i-6" data-tab="customer_serve/index/2" target="_self"><i class="fa fa-tachometer"></i><span class="layui-left-nav"> 商品销售退货</span></a>
+                                    <a href="javascript:;" class="layui-menu-tips" data-type="tabAdd" data-tab-mpi="m-p-i-6" data-tab="sale_return/index" target="_self"><i class="fa fa-tachometer"></i><span class="layui-left-nav"> 商品销售退货</span></a>
                                 </dd>
                             </dl>
                         </li>
