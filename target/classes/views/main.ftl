@@ -11,7 +11,7 @@
         <div class="layui-logo">
             <a href="">
                 <img src="images/logo.png" alt="logo">
-                <h2>超市-管理系统</h2>
+                <h1>超市进销管理系统</h1>
             </a>
         </div>
         <a>
@@ -56,10 +56,10 @@
                                         <a href="javascript:;" class="layui-menu-tips" data-type="tabAdd" data-tab-mpi="m-p-i-2" data-tab="cus_dev_plan/index" target="_self"><i class="fa fa-ellipsis-h"></i><span class="layui-left-nav"> 供应商管理</span></a>
                                     </dd>
                                     <dd>
-                                        <a href="javascript:;" class="layui-menu-tips" data-type="tabAdd" data-tab-mpi="m-p-i-1" data-tab="sale_chance/index" target="_self"><i class="fa fa-tty"></i><span class="layui-left-nav"> 商品管理</span></a>
+                                        <a href="javascript:;" class="layui-menu-tips" data-type="tabAdd" data-tab-mpi="m-p-i-1" data-tab="goods/index" target="_self"><i class="fa fa-tty"></i><span class="layui-left-nav"> 商品管理</span></a>
                                     </dd>
                                     <dd>
-                                        <a href="javascript:;" class="layui-menu-tips" data-type="tabAdd" data-tab-mpi="m-p-i-2" data-tab="cus_dev_plan/index" target="_self"><i class="fa fa-ellipsis-h"></i><span class="layui-left-nav"> 商品类别管理</span></a>
+                                        <a href="javascript:;" class="layui-menu-tips" data-type="tabAdd" data-tab-mpi="m-p-i-2" data-tab="category/index" target="_self"><i class="fa fa-ellipsis-h"></i><span class="layui-left-nav"> 商品类别管理</span></a>
                                     </dd>
 
                             </dl>
