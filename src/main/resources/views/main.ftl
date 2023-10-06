@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>CRM-智能办公系统</title>
+    <title>超市进销管理系统</title>
     <#include "common.ftl">
 </head>
 <body class="layui-layout-body layuimini-all">
@@ -11,7 +11,7 @@
         <div class="layui-logo">
             <a href="">
                 <img src="images/logo.png" alt="logo">
-                <h1>超市进销管理系统</h1>
+                <h2>超市-管理系统</h2>
             </a>
         </div>
         <a>
@@ -105,7 +105,7 @@
                             <a href="javascript:;" class="layui-menu-tips"><i class="fa fa-gears"></i><span class="layui-left-nav"> 其他管理</span> <span class="layui-nav-more"></span></a>
                             <dl class="layui-nav-child">
                                 <dd>
-                                    <a href="javascript:;" class="layui-menu-tips" data-type="tabAdd" data-tab-mpi="m-p-i-10" data-tab="data_dic/index" target="_self"><i class="fa fa-tachometer"></i><span class="layui-left-nav"> 日志管理</span></a>
+                                    <a href="javascript:;" class="layui-menu-tips" data-type="tabAdd" data-tab-mpi="m-p-i-10" data-tab="log/index" target="_self"><i class="fa fa-tachometer"></i><span class="layui-left-nav"> 日志管理</span></a>
                                 </dd>
                                 <dd>
                                     <a href="javascript:;" class="layui-menu-tips" data-type="tabAdd" data-tab-mpi="m-p-i-11" data-tab="user/index" target="_self"><i class="fa fa-user"></i><span class="layui-left-nav"> 统计报表</span></a>
