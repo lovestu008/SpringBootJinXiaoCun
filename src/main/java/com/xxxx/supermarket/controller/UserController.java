@@ -27,11 +27,12 @@ public class UserController extends BaseController {
     @ResponseBody
     public ResultInfo userLogin(String userName,String userPwd){
         ResultInfo resultInfo = new ResultInfo();
-        /*UserModel userModel = userService.userLogin(userName,userPwd);
-        resultInfo.setResult(userModel);*/
+        UserModel userModel = userService.userLogin(userName,userPwd);
+        resultInfo.setResult(userModel);
         resultInfo.setCode(200);
         return resultInfo;
     }
+
     @RequestMapping("index")
     public String index(){
         return "user/user";
