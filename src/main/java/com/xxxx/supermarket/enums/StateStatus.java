@@ -4,10 +4,10 @@ package com.xxxx.supermarket.enums;
  * 分配状态枚举类
  */
 public enum  StateStatus {
-    // 未分配
-    UNSTATE(0),
-    // 已分配
-    STATED(1);
+    // 未付款
+    UNSTATE(1),
+    // 已付款
+    STATED(0);
 
     private Integer type;
 

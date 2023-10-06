@@ -22,6 +22,34 @@
     from t_sale_list
     where id = #{id,jdbcType=INTEGER}
   </select>
+  
+  <select id="selectByParams" parameterType="com.xxxx.supermarket.query.SaleQuery" resultType="com.xxxx.supermarket.entity.SaleListGoods">
+      select tslg.*
+    from t_sale_list sl
+    left join t_sale_list_goods tslg
+    on sl.id = tslg.sale_list_id
+      <where>
+          state>=1
+          <if test="customerId !=null">
+              and customer_id = #{customerId}
+          </if>
+          <if test="amountPaid !=null">
+              and customer_id = #{amountPaid}
+          </if>
+          <if test="amountPayable !=null">
+              and customer_id = #{amountPayable}
+          </if>
+          <if test="saleDate !=null">
+              and customer_id = #{saleDate}
+          </if>
+          <if test="remarks !=null">
+              and customer_id = #{remarks}
+          </if>
+          <if test="state !=null">
+              and customer_id = #{state}
+          </if>
+      </where>
+  </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from t_sale_list
     where id = #{id,jdbcType=INTEGER}

@@ -7,70 +7,100 @@
 <body class="childrenBody">
 
 <form class="layui-form">
-    <#if permissions?seq_contains("101001")>
+    <input type="hidden" name="saleNumber" value="${saleNumber!}" >
+    <input type="hidden" name="goodsJson" >
     <blockquote class="layui-elem-quote quoteBox">
-        <form class="layui-form">
-            <div class="layui-inline">
-                <div class="layui-input-inline">
-                    <input type="text" name="customerName"
-                           class="layui-input
-                           searchVal" placeholder="客户名"/>
+        <fieldset class="layui-elem-field site-demo-button" >
+            <legend>单号:${saleNumber!}</legend>
+            <br/>
+            <div class="layui-row">
+                <div class="layui-col-xs3">
+                    <label class="layui-form-label">客户</label>
+                    <div class="layui-input-block">
+                        <select id="customerId" name="customerId"  >
+                            <option value="0" >请选择</option>
+                        </select>
+                    </div>
                 </div>
-                <div class="layui-input-inline">
-                    <input type="text" name="createMan" class="layui-input
-                    searchVal" placeholder="创建⼈"/>
+                <div class="layui-col-xs3">
+                    <label class="layui-form-label">应付金额</label>
+                    <div class="layui-input-block">
+                        <input type="text" class="layui-input amountPayable"
+                               name="amountPayable" id="amountPayable" >
+                    </div>
                 </div>
-                <div class="layui-input-inline">
-                    <select name="state" id="state">
-                        <option value="">分配状态</option>
-                        <option value="0">未分配</option>
-                        <option value="1">已分配</option>
-                    </select>
+                <div class="layui-col-xs3">
+                    <label class="layui-form-label">实付金额</label>
+                    <div class="layui-input-block">
+                        <input type="text" class="layui-input amountPaid"
+                               name="amountPaid" id="amountPaid" >
+                    </div>
                 </div>
-                <a class="layui-btn search_btn" data-type="reload">
-                    <i class="layui-icon">&#xe615;</i> 搜索
-                </a>
+                <div class="layui-col-xs3">
+                    <label class="layui-form-label">销售日期</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="saleDate" id="saleDate" lay-verify="saleDate"
+                               placeholder="yyyy-MM-dd" autocomplete="off" readonly="readonly" class="layui-input">
+                    </div>
+                </div>
             </div>
-        </form>
-    </blockquote>
-    </#if>
+            <br/>
+            <div class="layui-row">
+                <div class="layui-col-xs4">
+                    <label class="layui-form-label">备注</label>
+                    <div class="layui-input-block">
+                        <input type="text" class="layui-input remarks"
+                               name="remarks" id="remarks" >
+                    </div>
+                </div>
+                <div class="layui-col-xs4">
+                    <label class="layui-form-label">是否付款</label>
+                    <div class="layui-input-block">
+                        <select id="state" name="state"   class="select">
+                            <option value="1" >已付</option>
+                            <option value="0" >未付</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="layui-col-xs4">
+                    <label class="layui-form-label"></label>
+                    <button class="layui-btn layui-btn-lg" lay-submit=""
+                            lay-filter="addSaleList">保存
+                    </button>
+                </div>
 
+            </div>
+        </fieldset>
+    </blockquote>
     <!-- 数据表格 -->
-    <table id="saleChanceList" class="layui-table" lay-filter="saleChances">
+    <table id="saleList" class="layui-table" lay-filter="sales">
     </table>
 
     <#--头部工具栏-->
 
     <script type="text/html" id="toolbarDemo">
         <div class="layui-btn-container">
-            <#if permissions?seq_contains("101002")>
+
             <a class="layui-btn layui-btn-normal addNews_btn" lay-event="add">
                 <i class="layui-icon">&#xe608;</i>
                 添加
             </a>
-            </#if>
-            <#if permissions?seq_contains("101003")>
             <a class="layui-btn layui-btn-normal delNews_btn" lay-event="del">
                 <i class="layui-icon">&#xe608;</i>
                 删除
             </a>
-            </#if>
         </div>
     </script>
 
 
     <!--操作-->
-    <script id="saleChanceListBar" type="text/html">
-        <#if permissions?seq_contains("101004")>
-            <a class="layui-btn layui-btn-xs" id="edit" lay-event="edit">编辑</a>
-        </#if>
-        <#if permissions?seq_contains("101003")>
+    <script id="saleListBar" type="text/html">
+        <a class="layui-btn layui-btn-xs" id="edit" lay-event="edit">编辑</a>
         <a class="layui-btn layui-btn-xs layui-btn-danger" lay-event="del">删除</a>
-        </#if>
     </script>
 
 </form>
 
-<script type="text/javascript" src="${ctx}/js/saleChance/sale.chance.js"></script>
+<script type="text/javascript" src="${ctx}/js/sale/sale.js"></script>
 </body>
 </html>
