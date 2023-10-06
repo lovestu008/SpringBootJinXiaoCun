@@ -115,7 +115,7 @@ layui.use(['table','layer'],function(){
        function openAddGrantDialog(data) {
               // 判断是否选择了角色记录
               if (data.length == 0) {
-                     layer.msg("请选择要授权的角色！",{icon:5});Q11Q1Q   1Q     1Q     1Q
+                     layer.msg("请选择要授权的角色！",{icon:5});
                      return;
               }
               // 只支持单个角色授权
