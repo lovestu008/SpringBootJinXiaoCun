@@ -1,0 +1,417 @@
+Index: src/main/java/com/xxxx/supermarket/Starter.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.xxxx.supermarket;\r\n\r\nimport org.springframework.boot.SpringApplication;\r\nimport org.springframework.boot.autoconfigure.SpringBootApplication;\r\n\r\n@SpringBootApplication\r\npublic class Starter {\r\n    public static void main(String[] args) {\r\n        SpringApplication.run(Starter.class);\r\n    }\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/xxxx/supermarket/Starter.java b/src/main/java/com/xxxx/supermarket/Starter.java
+--- a/src/main/java/com/xxxx/supermarket/Starter.java	
++++ b/src/main/java/com/xxxx/supermarket/Starter.java	
+@@ -1,12 +1,13 @@
+ package com.xxxx.supermarket;
+ 
++import org.mybatis.spring.annotation.MapperScan;
+ import org.springframework.boot.SpringApplication;
+ import org.springframework.boot.autoconfigure.SpringBootApplication;
+ 
+ @SpringBootApplication
++@MapperScan("com.xxxx.supermarket.dao")
+ public class Starter {
+     public static void main(String[] args) {
+         SpringApplication.run(Starter.class);
+     }
+-
+ }
+Index: src/main/resources/application.yml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>#端口号\r\nserver:\r\n  port: 8080\r\n  servlet:\r\n    context-path: /supermarket\r\n\r\n#mysql数据库\r\nspring:\r\n  thymeleaf:\r\n    cache: false\r\n    enabled: true\r\n  jackson:\r\n    date-format: yyyy-MM-dd HH:mm:ss\r\n    time-zone: GMT+8\r\n  datasource:\r\n    driver-class-name: com.mysql.cj.jdbc.Driver\r\n    url: jdbc:mysql://localhost:3306/supermarket?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=Asia/Shanghai\r\n    username: root\r\n    password: root\r\n\r\n  ## freemarker\r\n  freemarker:\r\n    suffix: .ftl\r\n    content-type: text/html\r\n    charset: UTF-8\r\n    template-loader-path: classpath:/views/\r\n  ## 启⽤热部署\r\n  devtools:\r\n    restart:\r\n      enabled: true\r\n      additional-paths: src/main/java\r\n\r\n\r\n  ## mybatis 配置\r\nmybatis:\r\n  mapper-locations: classpath:/mappers/*.xml\r\n  type-aliases-package: com.xxxx.supermarket.vo;com.xxxx.supermarket.query;com.xxxx.supermarket.dto\r\n  configuration:\r\n    map-underscore-to-camel-case: true\r\n  ## pageHelper 分⻚\r\npagehelper:\r\n  helper-dialect: mysql\r\n\r\n#日志\r\nlogging:\r\n  level:\r\n    com:\r\n      xxxx:\r\n        supermarket:\r\n          dao: debug
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/application.yml b/src/main/resources/application.yml
+--- a/src/main/resources/application.yml	
++++ b/src/main/resources/application.yml	
+@@ -16,7 +16,7 @@
+     driver-class-name: com.mysql.cj.jdbc.Driver
+     url: jdbc:mysql://localhost:3306/supermarket?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+     username: root
+-    password: root
++    password: mmm314627
+ 
+   ## freemarker
+   freemarker:
+@@ -34,7 +34,7 @@
+   ## mybatis 配置
+ mybatis:
+   mapper-locations: classpath:/mappers/*.xml
+-  type-aliases-package: com.xxxx.supermarket.vo;com.xxxx.supermarket.query;com.xxxx.supermarket.dto
++  type-aliases-package: com.xxxx.supermarket.entity;com.xxxx.supermarket.query;com.xxxx.supermarket.dto
+   configuration:
+     map-underscore-to-camel-case: true
+   ## pageHelper 分⻚
+Index: src/main/resources/mappers/LogMapper.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/mappers/LogMapper.xml b/src/main/resources/mappers/LogMapper.xml
+new file mode 100644
+--- /dev/null	
++++ b/src/main/resources/mappers/LogMapper.xml	
+@@ -0,0 +1,93 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
++<mapper namespace="com.xxxx.supermarket.dao.LogMapper">
++  <resultMap id="BaseResultMap" type="com.xxxx.supermarket.entity.Log">
++    <id column="id" jdbcType="INTEGER" property="id" />
++    <result column="content" jdbcType="VARCHAR" property="content" />
++    <result column="time" jdbcType="TIMESTAMP" property="time" />
++    <result column="type" jdbcType="VARCHAR" property="type" />
++    <result column="user_id" jdbcType="INTEGER" property="userId" />
++  </resultMap>
++  <sql id="Base_Column_List">
++    id, content, time, type, user_id
++  </sql>
++  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
++    select 
++    <include refid="Base_Column_List" />
++    from t_log
++    where id = #{id,jdbcType=INTEGER}
++  </select>
++  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
++    delete from t_log
++    where id = #{id,jdbcType=INTEGER}
++  </delete>
++  <insert id="insert" parameterType="com.xxxx.supermarket.entity.Log">
++    insert into t_log (id, content, time, 
++      type, user_id)
++    values (#{id,jdbcType=INTEGER}, #{content,jdbcType=VARCHAR}, #{time,jdbcType=TIMESTAMP}, 
++      #{type,jdbcType=VARCHAR}, #{userId,jdbcType=INTEGER})
++  </insert>
++  <insert id="insertSelective" parameterType="com.xxxx.supermarket.entity.Log">
++    insert into t_log
++    <trim prefix="(" suffix=")" suffixOverrides=",">
++      <if test="id != null">
++        id,
++      </if>
++      <if test="content != null">
++        content,
++      </if>
++      <if test="time != null">
++        time,
++      </if>
++      <if test="type != null">
++        type,
++      </if>
++      <if test="userId != null">
++        user_id,
++      </if>
++    </trim>
++    <trim prefix="values (" suffix=")" suffixOverrides=",">
++      <if test="id != null">
++        #{id,jdbcType=INTEGER},
++      </if>
++      <if test="content != null">
++        #{content,jdbcType=VARCHAR},
++      </if>
++      <if test="time != null">
++        #{time,jdbcType=TIMESTAMP},
++      </if>
++      <if test="type != null">
++        #{type,jdbcType=VARCHAR},
++      </if>
++      <if test="userId != null">
++        #{userId,jdbcType=INTEGER},
++      </if>
++    </trim>
++  </insert>
++  <update id="updateByPrimaryKeySelective" parameterType="com.xxxx.supermarket.entity.Log">
++    update t_log
++    <set>
++      <if test="content != null">
++        content = #{content,jdbcType=VARCHAR},
++      </if>
++      <if test="time != null">
++        time = #{time,jdbcType=TIMESTAMP},
++      </if>
++      <if test="type != null">
++        type = #{type,jdbcType=VARCHAR},
++      </if>
++      <if test="userId != null">
++        user_id = #{userId,jdbcType=INTEGER},
++      </if>
++    </set>
++    where id = #{id,jdbcType=INTEGER}
++  </update>
++  <update id="updateByPrimaryKey" parameterType="com.xxxx.supermarket.entity.Log">
++    update t_log
++    set content = #{content,jdbcType=VARCHAR},
++      time = #{time,jdbcType=TIMESTAMP},
++      type = #{type,jdbcType=VARCHAR},
++      user_id = #{userId,jdbcType=INTEGER}
++    where id = #{id,jdbcType=INTEGER}
++  </update>
++</mapper>
+\ No newline at end of file
+Index: src/main/java/com/xxxx/supermarket/entity/Log.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/xxxx/supermarket/entity/Log.java b/src/main/java/com/xxxx/supermarket/entity/Log.java
+new file mode 100644
+--- /dev/null	
++++ b/src/main/java/com/xxxx/supermarket/entity/Log.java	
+@@ -0,0 +1,55 @@
++package com.xxxx.supermarket.entity;
++
++import java.util.Date;
++
++public class Log {
++    private Integer id;
++
++    private String content;
++
++    private Date time;
++
++    private String type;
++
++    private Integer userId;
++
++    public Integer getId() {
++        return id;
++    }
++
++    public void setId(Integer id) {
++        this.id = id;
++    }
++
++    public String getContent() {
++        return content;
++    }
++
++    public void setContent(String content) {
++        this.content = content == null ? null : content.trim();
++    }
++
++    public Date getTime() {
++        return time;
++    }
++
++    public void setTime(Date time) {
++        this.time = time;
++    }
++
++    public String getType() {
++        return type;
++    }
++
++    public void setType(String type) {
++        this.type = type == null ? null : type.trim();
++    }
++
++    public Integer getUserId() {
++        return userId;
++    }
++
++    public void setUserId(Integer userId) {
++        this.userId = userId;
++    }
++}
+\ No newline at end of file
+Index: src/main/java/com/xxxx/supermarket/dao/LogMapper.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/xxxx/supermarket/dao/LogMapper.java b/src/main/java/com/xxxx/supermarket/dao/LogMapper.java
+new file mode 100644
+--- /dev/null	
++++ b/src/main/java/com/xxxx/supermarket/dao/LogMapper.java	
+@@ -0,0 +1,6 @@
++package com.xxxx.supermarket.dao;
++
++import com.xxxx.supermarket.entity.Log;
++
++public interface LogMapper {
++}
+\ No newline at end of file
+Index: .idea/compiler.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/compiler.xml b/.idea/compiler.xml
+new file mode 100644
+--- /dev/null	
++++ b/.idea/compiler.xml	
+@@ -0,0 +1,23 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="CompilerConfiguration">
++    <annotationProcessing>
++      <profile default="true" name="Default" enabled="true" />
++      <profile name="Maven default annotation processors profile" enabled="true">
++        <sourceOutputDir name="target/generated-sources/annotations" />
++        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
++        <outputRelativeToContentRoot value="true" />
++        <module name="supermarket" />
++      </profile>
++    </annotationProcessing>
++    <bytecodeTargetLevel>
++      <module name="crm" target="1.8" />
++    </bytecodeTargetLevel>
++  </component>
++  <component name="JavacSettings">
++    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
++      <module name="crm" options="-parameters" />
++      <module name="supermarket" options="-parameters" />
++    </option>
++  </component>
++</project>
+\ No newline at end of file
+Index: src/main/java/com/xxxx/supermarket/service/LogService.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/xxxx/supermarket/service/LogService.java b/src/main/java/com/xxxx/supermarket/service/LogService.java
+new file mode 100644
+--- /dev/null	
++++ b/src/main/java/com/xxxx/supermarket/service/LogService.java	
+@@ -0,0 +1,8 @@
++package com.xxxx.supermarket.service;
++
++import com.xxxx.supermarket.base.BaseService;
++import com.xxxx.supermarket.entity.Log;
++
++public class LogService extends BaseService<Log,Integer> {
++
++}
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+new file mode 100644
+--- /dev/null	
++++ b/.idea/vcs.xml	
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="" vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/encodings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/encodings.xml b/.idea/encodings.xml
+new file mode 100644
+--- /dev/null	
++++ b/.idea/encodings.xml	
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="Encoding">
++    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+new file mode 100644
+--- /dev/null	
++++ b/.idea/misc.xml	
+@@ -0,0 +1,12 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ExternalStorageConfigurationManager" enabled="true" />
++  <component name="MavenProjectsManager">
++    <option name="originalFiles">
++      <list>
++        <option value="$PROJECT_DIR$/pom.xml" />
++      </list>
++    </option>
++  </component>
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
++</project>
+\ No newline at end of file
+Index: .idea/jarRepositories.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/jarRepositories.xml b/.idea/jarRepositories.xml
+new file mode 100644
+--- /dev/null	
++++ b/.idea/jarRepositories.xml	
+@@ -0,0 +1,20 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="RemoteRepositoriesConfiguration">
++    <remote-repository>
++      <option name="id" value="central" />
++      <option name="name" value="Maven Central repository" />
++      <option name="url" value="https://repo1.maven.org/maven2" />
++    </remote-repository>
++    <remote-repository>
++      <option name="id" value="central" />
++      <option name="name" value="Central Repository" />
++      <option name="url" value="http://maven.aliyun.com/nexus/content/groups/public" />
++    </remote-repository>
++    <remote-repository>
++      <option name="id" value="jboss.community" />
++      <option name="name" value="JBoss Community repository" />
++      <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
++    </remote-repository>
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/.gitignore b/.idea/.gitignore
+new file mode 100644
+--- /dev/null	
++++ b/.idea/.gitignore	
+@@ -0,0 +1,8 @@
++# Default ignored files
++/shelf/
++/workspace.xml
++# Editor-based HTTP Client requests
++/httpRequests/
++# Datasource local storage ignored files
++/dataSources/
++/dataSources.local.xml
+Index: src/main/resources/views/main.ftl
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n<html>\r\n<head>\r\n    <meta charset=\"utf-8\">\r\n    <title>CRM-智能办公系统</title>\r\n    <#include \"common.ftl\">\r\n</head>\r\n<body class=\"layui-layout-body layuimini-all\">\r\n<div class=\"layui-layout layui-layout-admin\">\r\n    <div class=\"layui-header header\">\r\n        <div class=\"layui-logo\">\r\n            <a href=\"\">\r\n                <img src=\"images/logo.png\" alt=\"logo\">\r\n                <h1>超市进销管理系统</h1>\r\n            </a>\r\n        </div>\r\n        <a>\r\n            <div class=\"layuimini-tool\"><i title=\"展开\" class=\"fa fa-outdent\" data-side-fold=\"1\"></i></div>\r\n        </a>\r\n        <ul class=\"layui-nav layui-layout-right\">\r\n            <li class=\"layui-nav-item mobile layui-hide-xs\" lay-unselect>\r\n                <a href=\"javascript:;\" data-check-screen=\"full\"><i class=\"fa fa-arrows-alt\"></i></a>\r\n            </li>\r\n            <li class=\"layui-nav-item layuimini-setting\">\r\n                <a href=\"javascript:;\">${(user.userName)!\"\"}</a>\r\n                <dl class=\"layui-nav-child\">\r\n                    <dd>\r\n                        <a href=\"javascript:;\" data-iframe-tab=\"${ctx}/user/toSettingPage\" data-title=\"基本资料\" data-icon=\"fa fa-gears\">基本资料</a>\r\n                    </dd>\r\n                    <dd>\r\n                        <a href=\"javascript:;\" data-iframe-tab=\"${ctx}/user/toPasswordPage\" data-title=\"修改密码\" data-icon=\"fa fa-gears\">修改密码</a>\r\n                    </dd>\r\n                    <dd>\r\n                        <a href=\"javascript:;\" class=\"login-out\">退出登录</a>\r\n                    </dd>\r\n                </dl>\r\n            </li>\r\n            <li class=\"layui-nav-item layuimini-select-bgcolor mobile layui-hide-xs\" lay-unselect>\r\n                <a href=\"javascript:;\"></a>\r\n            </li>\r\n        </ul>\r\n    </div>\r\n\r\n    <div class=\"layui-side layui-bg-black\">\r\n        <div class=\"layui-side-scroll layui-left-menu\">\r\n            <#-- 判断当前登录用户是否拥有权限 -->\r\n                <ul class=\"layui-nav layui-nav-tree layui-left-nav-tree layui-this\" id=\"currency\">\r\n                    <#-- 通过freemarker中的seq_contains内建指令判断菜单是否显示 -->\r\n                        <li class=\"layui-nav-item\">\r\n                            <a href=\"javascript:;\" class=\"layui-menu-tips\"><i class=\"fa fa-street-view\"></i><span class=\"layui-left-nav\"> 基础管理</span> <span class=\"layui-nav-more\"></span></a>\r\n                            <dl class=\"layui-nav-child\">\r\n                                    <dd>\r\n                                        <a href=\"javascript:;\" class=\"layui-menu-tips\" data-type=\"tabAdd\" data-tab-mpi=\"m-p-i-1\" data-tab=\"sale_chance/index\" target=\"_self\"><i class=\"fa fa-tty\"></i><span class=\"layui-left-nav\"> 客户管理</span></a>\r\n                                    </dd>\r\n                                    <dd>\r\n                                        <a href=\"javascript:;\" class=\"layui-menu-tips\" data-type=\"tabAdd\" data-tab-mpi=\"m-p-i-2\" data-tab=\"cus_dev_plan/index\" target=\"_self\"><i class=\"fa fa-ellipsis-h\"></i><span class=\"layui-left-nav\"> 供应商管理</span></a>\r\n                                    </dd>\r\n                                    <dd>\r\n                                        <a href=\"javascript:;\" class=\"layui-menu-tips\" data-type=\"tabAdd\" data-tab-mpi=\"m-p-i-1\" data-tab=\"sale_chance/index\" target=\"_self\"><i class=\"fa fa-tty\"></i><span class=\"layui-left-nav\"> 商品管理</span></a>\r\n                                    </dd>\r\n                                    <dd>\r\n                                        <a href=\"javascript:;\" class=\"layui-menu-tips\" data-type=\"tabAdd\" data-tab-mpi=\"m-p-i-2\" data-tab=\"cus_dev_plan/index\" target=\"_self\"><i class=\"fa fa-ellipsis-h\"></i><span class=\"layui-left-nav\"> 商品类别管理</span></a>\r\n                                    </dd>\r\n\r\n                            </dl>\r\n                        </li>\r\n                        <li class=\"layui-nav-item\">\r\n                            <a href=\"javascript:;\" class=\"layui-menu-tips\"><i class=\"fa fa-flag\"></i><span class=\"layui-left-nav\"> 进退货管理</span> <span class=\"layui-nav-more\"></span></a><dl class=\"layui-nav-child\">\r\n                                <dd>\r\n                                    <a href=\"javascript:;\" class=\"layui-menu-tips\" data-type=\"tabAdd\" data-tab-mpi=\"m-p-i-3\" data-tab=\"customer/index\" target=\"_self\"><i class=\"fa fa-exchange\"></i><span class=\"layui-left-nav\"> 商品进货</span></a>\r\n                                </dd>\r\n                                <dd>\r\n                                    <a href=\"javascript:;\" class=\"layui-menu-tips\" data-type=\"tabAdd\" data-tab-mpi=\"m-p-i-4\" data-tab=\"customer_loss/index\" target=\"_self\"><i class=\"fa fa-user-times\"></i><span class=\"layui-left-nav\"> 商品退货查询</span></a>\r\n                                </dd>\r\n                            </dl>\r\n                        </li>\r\n                        <li class=\"layui-nav-item\">\r\n                            <a href=\"javascript:;\" class=\"layui-menu-tips\"><i class=\"fa fa-desktop\"></i><span class=\"layui-left-nav\"> 销售管理</span> <span class=\"layui-nav-more\"></span></a>\r\n                            <dl class=\"layui-nav-child\">\r\n                                <dd>\r\n                                    <a href=\"javascript:;\" class=\"layui-menu-tips\" data-type=\"tabAdd\" data-tab-mpi=\"m-p-i-5\" data-tab=\"customer_serve/index/1\" target=\"_self\"><i class=\"fa fa-tachometer\"></i><span class=\"layui-left-nav\"> 商品销售</span></a>\r\n                                </dd>\r\n                                <dd>\r\n                                    <a href=\"javascript:;\" class=\"layui-menu-tips\" data-type=\"tabAdd\" data-tab-mpi=\"m-p-i-6\" data-tab=\"customer_serve/index/2\" target=\"_self\"><i class=\"fa fa-tachometer\"></i><span class=\"layui-left-nav\"> 商品销售退货</span></a>\r\n                                </dd>\r\n                            </dl>\r\n                        </li>\r\n                        <li class=\"layui-nav-item\">\r\n                            <a href=\"javascript:;\" class=\"layui-menu-tips\"><i class=\"fa fa-home\"></i><span class=\"layui-left-nav\"> 系统管理</span> <span class=\"layui-nav-more\"></span></a><dl class=\"layui-nav-child\">\r\n                                <dd>\r\n                                    <a href=\"javascript:;\" class=\"layui-menu-tips\" data-type=\"tabAdd\" data-tab-mpi=\"m-p-i-10\" data-tab=\"report/0\" target=\"_self\"><i class=\"fa fa-tachometer\"></i><span class=\"layui-left-nav\"> 权限管理</span></a>\r\n                                </dd>\r\n                                <dd>\r\n                                    <a href=\"javascript:;\" class=\"layui-menu-tips\" data-type=\"tabAdd\" data-tab-mpi=\"m-p-i-10\" data-tab=\"report/1\" target=\"_self\"><i class=\"fa fa-tachometer\"></i><span class=\"layui-left-nav\"> 角色管理</span></a>\r\n                                </dd>\r\n                                <dd>\r\n                                    <a href=\"javascript:;\" class=\"layui-menu-tips\" data-type=\"tabAdd\" data-tab-mpi=\"m-p-i-10\" data-tab=\"report/2\" target=\"_self\"><i class=\"fa fa-tachometer\"></i><span class=\"layui-left-nav\"> 用户管理</span></a>\r\n                                </dd>\r\n                                <dd>\r\n                                    <a href=\"javascript:;\" class=\"layui-menu-tips\" data-type=\"tabAdd\" data-tab-mpi=\"m-p-i-10\" data-tab=\"report/3\" target=\"_self\"><i class=\"fa fa-tachometer\"></i><span class=\"layui-left-nav\"> 菜单管理</span></a>\r\n                                </dd>\r\n                            </dl>\r\n                        </li>\r\n                        <li class=\"layui-nav-item\">\r\n                            <a href=\"javascript:;\" class=\"layui-menu-tips\"><i class=\"fa fa-gears\"></i><span class=\"layui-left-nav\"> 其他管理</span> <span class=\"layui-nav-more\"></span></a>\r\n                            <dl class=\"layui-nav-child\">\r\n                                <dd>\r\n                                    <a href=\"javascript:;\" class=\"layui-menu-tips\" data-type=\"tabAdd\" data-tab-mpi=\"m-p-i-10\" data-tab=\"data_dic/index\" target=\"_self\"><i class=\"fa fa-tachometer\"></i><span class=\"layui-left-nav\"> 日志管理</span></a>\r\n                                </dd>\r\n                                <dd>\r\n                                    <a href=\"javascript:;\" class=\"layui-menu-tips\" data-type=\"tabAdd\" data-tab-mpi=\"m-p-i-11\" data-tab=\"user/index\" target=\"_self\"><i class=\"fa fa-user\"></i><span class=\"layui-left-nav\"> 统计报表</span></a>\r\n                                </dd>\r\n                            </dl>\r\n                        </li>\r\n                    <span class=\"layui-nav-bar\" style=\"top: 201px; height: 0px; opacity: 0;\"></span>\r\n                </ul>\r\n        </div>\r\n    </div>\r\n\r\n    <div class=\"layui-body\">\r\n        <div class=\"layui-tab\" lay-filter=\"layuiminiTab\" id=\"top_tabs_box\">\r\n            <ul class=\"layui-tab-title\" id=\"top_tabs\">\r\n                <li class=\"layui-this\" id=\"layuiminiHomeTabId\" lay-id=\"welcome\"><i class=\"fa fa-home\"></i> <span>首页</span></li>\r\n            </ul>\r\n\r\n            <ul class=\"layui-nav closeBox\">\r\n                <li class=\"layui-nav-item\">\r\n                    <a href=\"javascript:;\"> <i class=\"fa fa-dot-circle-o\"></i> 页面操作</a>\r\n                    <dl class=\"layui-nav-child\">\r\n                        <dd><a href=\"javascript:;\" data-page-close=\"other\"><i class=\"fa fa-window-close\"></i> 关闭其他</a></dd>\r\n                        <dd><a href=\"javascript:;\" data-page-close=\"all\"><i class=\"fa fa-window-close-o\"></i> 关闭全部</a></dd>\r\n                    </dl>\r\n                </li>\r\n            </ul>\r\n            <div class=\"layui-tab-content clildFrame\">\r\n                <div id=\"layuiminiHomeTabIframe\" class=\"layui-tab-item layui-show\">\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n\r\n</div>\r\n\r\n<script type=\"text/javascript\" src=\"${ctx}/js/main.js\"></script>\r\n</body>\r\n</html>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/views/main.ftl b/src/main/resources/views/main.ftl
+--- a/src/main/resources/views/main.ftl	
++++ b/src/main/resources/views/main.ftl	
+@@ -2,7 +2,7 @@
+ <html>
+ <head>
+     <meta charset="utf-8">
+-    <title>CRM-智能办公系统</title>
++    <title>超市进销管理系统</title>
+     <#include "common.ftl">
+ </head>
+ <body class="layui-layout-body layuimini-all">

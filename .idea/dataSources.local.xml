@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal" created-in="IU-231.8109.175">
+    <data-source name="192.168.1.124" uuid="505befc5-1725-44ef-bd78-81d271298580">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MYSQL" exact-version="0" />
+      <secret-storage>forget</secret-storage>
+      <schema-mapping />
+    </data-source>
+  </component>
+</project>
