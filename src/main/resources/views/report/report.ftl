@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>统计报表</title>
-    <link rel="icon" href="/favicon.ico">
-    <link rel="stylesheet" href="/resources/layui/css/layui.css" media="all"/>
-    <link rel="stylesheet" href="/resources/css/public.css" media="all"/>
+    <#include "../common.ftl">
+    <link rel="icon" href="${ctx}/favicon.ico">
+    <link rel="stylesheet" href="${ctx}/css/layui.css" media="all"/>
+    <link rel="stylesheet" href="${ctx}/css/public.css" media="all"/>
 </head>
 <body class="childrenBody">
 <div style="width: 1300px;height:350px;">
@@ -25,10 +26,10 @@
 <!-- 数据表格开始 -->
 
 <!-- 数据表格结束 -->
-<script type="text/javascript" src="/resources/layui/layui.js"></script>
+<script type="text/javascript" src="${ctx}/layui.js"></script>
 <script type="text/javascript">
     layui.extend({
-        echarts: '/resources/js/echarts'
+        echarts: '${ctx}/js/report/echarts'
     }).use(['layer','echarts','jquery'], function () {
         var $ = layui.jquery;
         var layer = layui.layer;
@@ -39,51 +40,51 @@
          */
         $.post("/report/statisticsSales",
             function (data) {
-            var myChart = echarts.init(document.getElementById('make'));
-            // 指定图表的配置项和数据
-            option = {
-                title: {
-                    text: '商品总销量前五统计',
+                var myChart = echarts.init(document.getElementById('make'));
+                // 指定图表的配置项和数据
+                option = {
+                    title: {
+                        text: '商品总销量前五统计',
 
-                },
-                tooltip: {
-                    trigger: 'axis',
-                    axisPointer: {
-                        type: 'shadow'
-                    }
-                },
-                legend: {
-                    data: ['总销量', '实际销量']
-                },
-                grid: {
-                    left: '3%',
-                    right: '4%',
-                    bottom: '3%',
-                    containLabel: true
-                },
-                xAxis: {
-                    type: 'value',
-                    boundaryGap: [0, 0.01]
-                },
-                yAxis: {
-                    type: 'category',
-                    data: data.data.data1
-                },
-                series: [
-                    {
-                        name: '总销量',
-                        type: 'bar',
-                        data: data.data.data2
                     },
-                    {
-                        name: '实际销量',
-                        type: 'bar',
-                        data: data.data.data3
-                    }
-                ]
-            };
-            myChart.setOption(option);
-        },"json");
+                    tooltip: {
+                        trigger: 'axis',
+                        axisPointer: {
+                            type: 'shadow'
+                        }
+                    },
+                    legend: {
+                        data: ['总销量', '实际销量']
+                    },
+                    grid: {
+                        left: '3%',
+                        right: '4%',
+                        bottom: '3%',
+                        containLabel: true
+                    },
+                    xAxis: {
+                        type: 'value',
+                        boundaryGap: [0, 0.01]
+                    },
+                    yAxis: {
+                        type: 'category',
+                        data: data.data.data1
+                    },
+                    series: [
+                        {
+                            name: '总销量',
+                            type: 'bar',
+                            data: data.data.data2
+                        },
+                        {
+                            name: '实际销量',
+                            type: 'bar',
+                            data: data.data.data3
+                        }
+                    ]
+                };
+                myChart.setOption(option);
+            },"json");
 
         /**
          * 进货报表
@@ -288,7 +289,7 @@
 
 
     });
-        // 基于准备好的dom，初始化echarts实例
+    // 基于准备好的dom，初始化echarts实例
 
 </script>
 </body>

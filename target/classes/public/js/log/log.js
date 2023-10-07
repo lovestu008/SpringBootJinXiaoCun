@@ -1,17 +1,14 @@
-layui.use(['table','layer'],function(){
+layui.use(['laydate','table','layer'],function(){
     var layer = parent.layer === undefined ? layui.layer : top.layer,
         $ = layui.jquery,
         laydate = layui.laydate,
         table = layui.table;
-
-    /*laydate.render({
-        elem: '#startTime',
-        value:getBeforeDate(-6)
+    laydate.render({
+        elem: '#startTime'
     });
     laydate.render({
-        elem: '#endTime',
-        value:getBeforeDate(0)
-    });*/
+        elem: '#endTime'
+    });
     /**
      * 列表展示
      */
@@ -39,31 +36,18 @@ layui.use(['table','layer'],function(){
      * 绑定搜索按钮的点击事件
      */
     $(".search_btn").click(function () {
-        var startTime= $("[name='startTime']").val();
-        var endTime=  $("[name='endTime']").val();
         tableIns.reload({
             where: { //设定异步数据接⼝的额外参数，任意设
                 type: $("[name='type']").val(), // 操作类型
                 uname: $("[name='uname']").val(), // 登录⼈
-                /*startTime: startTime, // 开始时间
-                endTime: endTime // 结束时间*/
+                startTime: $("[name='startTime']").val(),// 时间
+                endTime: $("[name='endTime']").val()
             }
             ,page: {
                 curr: 1 // 重新从第 1 ⻚开始
             }
         });// 只重载数据
     });
-    //n为你要传入的参数，当前为0，前一天为-1，后一天为1
-    function getBeforeDate(n){
-        var date = new Date() ;
-        var year,month,day ;
-        date.setDate(date.getDate()+n);
-        year = date.getFullYear();
-        month = date.getMonth()+1;
-        day = date.getDate() ;
-        s = year + '-' + ( month < 10 ? ( '0' + month ) : month ) + '-' + ( day < 10 ? ( '0' + day ) : day) ;
-        return s ;
-    }
     /**
      * 头部工具栏，监听事件
      */

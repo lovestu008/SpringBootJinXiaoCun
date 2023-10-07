@@ -14,8 +14,8 @@
                 <div class="layui-input-inline">
                     <select name="type" id="type">
                         <option value="">请选择操作类型</option>
-                        <option value="登录操作">登录操作</option>
-                        <option value="查询操作">查询操作</option>
+                        <option value="日志管理">日志管理</option>
+                        <option value="角色管理">角色管理</option>
                         <option value="添加操作">添加操作</option>
                         <option value="删除操作">删除操作</option>
                         <option value="修改操作">修改操作</option>
@@ -23,18 +23,17 @@
                     </select>
                 </div>
                 <div class="layui-input-inline">
-                    <input type="text" name="uname" class="layui-input
-                    searchVal" placeholder="登录人姓名"/>
+                    <input type="text" name="uname" class="layui-input searchVal" placeholder="登录人姓名"/>
                 </div>
                 开始时间：
                 <div class="layui-input-inline">
-                    <input type="date" name="startTime"
-                           class="layui-input searchVal" placeholder="开始时间"/>
+                    <input type="text" name="startTime" id="startTime" lay-verify="startTime"
+                           class="layui-input searchVal" placeholder="yyyy-MM-dd" autocomplete="off" readonly="readonly" />
                 </div>
                 结束时间：
                 <div class="layui-input-inline">
-                    <input type="date" name="endTime"
-                           class="layui-input searchVal" placeholder="结束时间"/>
+                    <input type="text" name="endTime" id="endTime" lay-verify="endTime"
+                           class="layui-input searchVal" placeholder="yyyy-MM-dd" autocomplete="off" readonly="readonly" />
                 </div>
                 <a class="layui-btn search_btn" data-type="reload">
                     <i class="layui-icon">&#xe615;</i> 搜索

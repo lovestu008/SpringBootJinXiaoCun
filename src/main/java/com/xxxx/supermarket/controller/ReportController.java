@@ -1,15 +1,10 @@
-/*package com.xxxx.supermarket.controller;
+package com.xxxx.supermarket.controller;
 
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.it.aspect.SysLog;
-import com.it.entity.*;
-import com.it.service.*;
-import com.it.utils.DataGridViewResult;
-import com.it.utils.DateUtils;
 import com.xxxx.supermarket.aspect.SupLog;
 import com.xxxx.supermarket.aspect.SupLogAop;
 import com.xxxx.supermarket.utils.DataGridViewResult;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -17,12 +12,17 @@ import javax.annotation.Resource;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-@RestController
+@Controller
 @RequestMapping("/report")
 public class ReportController {
+    //进入统计报表界面
+    @RequestMapping("index")
+    public String index(){
+        return "report/report";
+    }
 
-   *//* @Autowired
-    private SaleService saleService;
+   /* @Autowired
+   /* private SaleService saleService;
 
     @Autowired
     private OutsaleService outsaleService;
@@ -177,6 +177,6 @@ public class ReportController {
         map.put("data4",list4);
         return new DataGridViewResult(map);
     }
+*/
 
-
-}*/
+}

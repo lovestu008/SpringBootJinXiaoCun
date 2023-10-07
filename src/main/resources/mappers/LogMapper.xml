@@ -31,9 +31,6 @@
   <insert id="insertSelective" parameterType="com.xxxx.supermarket.entity.Log">
     insert into t_log
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="id != null">
-        id,
-      </if>
       <if test="content != null">
         content,
       </if>
@@ -48,9 +45,6 @@
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="id != null">
-        #{id,jdbcType=INTEGER},
-      </if>
       <if test="content != null">
         #{content,jdbcType=VARCHAR},
       </if>
@@ -119,11 +113,11 @@
       <if test="uname != null and uname != ''">
         and u.user_name = #{uname}
       </if>
-      <if test="startTime != null and startTime != ''">
-        and l.time >=#{startTime}
+      <if test="null != startTime">
+        and l.time &gt;=#{startTime}
       </if>
-      <if test="endTime != null and endTime != ''">
-        and #{endTime}>=l.time
+      <if test="null !=endTime">
+        and l.time &lt;=#{endTime}
       </if>
     </where>
   </select>

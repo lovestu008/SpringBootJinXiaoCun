@@ -27,6 +27,14 @@
     delete from t_sale_list_goods
     where id = #{id,jdbcType=INTEGER}
   </delete>
+  <delete id="deleteBatch">
+      delete from t_sale_list_goods
+      where id in
+      <foreach collection="array" item="id" open="(" close=")" separator=",">
+          #{id}
+      </foreach>
+  </delete>
+
   <insert id="insert" parameterType="com.xxxx.supermarket.entity.SaleListGoods">
     insert into t_sale_list_goods (id, code, model, 
       name, num, price, total, 

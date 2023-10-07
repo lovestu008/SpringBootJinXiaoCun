@@ -11,20 +11,23 @@ import org.aspectj.lang.annotation.Pointcut;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.core.Ordered;
 import org.springframework.stereotype.Component;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 import java.util.Date;
 
 @Component
 @Aspect
 @Slf4j
-public class SupLogAop implements Ordered {
+public class SupLogAop implements Ordered {//Ordered接口用于排序，值越小优先级越高
     @Resource
     private LogMapper logMapper;
     /**
      * 定义SupLogAop的切入点为标记@SupLog注解的方法
      */
-    @Pointcut(value = "@annotation(com.xxxx.supermarket.aspect.SupLog)")
+    @Pointcut(value = "@annotation(com.xxxx.supermarket.aspect.SupLog)")//切面，拦截到所有SupLog注解
     public void pointcut() {
     }
     /**
@@ -33,8 +36,8 @@ public class SupLogAop implements Ordered {
      * @param proceedingJoinPoint
      * @retur
      */
-    @Around("pointcut()")
-    public Object around(ProceedingJoinPoint proceedingJoinPoint) {
+    @Around("pointcut()")  //对连接点进行拦截
+    public Object around(ProceedingJoinPoint proceedingJoinPoint) {//连接点，请求作为参数传入
         log.info("----SupAop 环绕通知 start");
         //执行目标方法
         Object result = null;
@@ -46,6 +49,8 @@ public class SupLogAop implements Ordered {
         //目标方法执行完成后，获取目标类、目标方法上的业务日志注解上的功能名称和功能描述
         Object target = proceedingJoinPoint.getTarget();
         MethodSignature signature = (MethodSignature) proceedingJoinPoint.getSignature();
+        ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
+        HttpServletRequest request = attributes.getRequest();
         SupLog anno1 = target.getClass().getAnnotation(SupLog.class);
         SupLog anno2 = signature.getMethod().getAnnotation(SupLog.class);
         if (anno1!=null&&anno2!=null){
@@ -54,8 +59,8 @@ public class SupLogAop implements Ordered {
             String logContent = anno2.content();
             log.setType(logType);
             log.setContent(logContent);
-            log.setUname("admin");
-            log.setId(1);
+            log.setUname("admin");//通过request作用域获取
+            log.setUserId(1);
             log.setTime(new Date());
             //保存业务操作日志信息
             AssertUtil.isTrue(logMapper.insertSelective(log)<1,"保存操作日志失败！");

@@ -32,11 +32,6 @@ public class LogService extends BaseService<Log,Integer> {
         //开启分页
         PageHelper.startPage(logQuery.getPage(),logQuery.getLimit());
         //得到对应分页对象
-        /*Map<String,Object> map1 = new HashMap<>();
-        map1.put("type",logQuery.getType());
-        map1.put("uname",logQuery.getUname());
-        map1.put("startTime",logQuery.getStartTime());
-        map1.put("endTime",logQuery.getEndTime());*/
         PageInfo<Log> pageInfo = new PageInfo<>(logMapper.queryByParams(logQuery));
         //设置map对象
         map.put("code",0);
