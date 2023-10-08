@@ -26,7 +26,9 @@
 <!-- 数据表格开始 -->
 
 <!-- 数据表格结束 -->
+
 <script type="text/javascript" src="${ctx}/layui.js"></script>
+<script type="text/javascript" src="${ctx}/js/report/echarts.js"></script>
 <script type="text/javascript">
     layui.extend({
         echarts: '${ctx}/js/report/echarts'
