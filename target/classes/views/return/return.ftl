@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>商品进货</title>
+    <title>商品退货</title>
     <#include "../common.ftl">
 </head>
 <body class="childrenBody">
