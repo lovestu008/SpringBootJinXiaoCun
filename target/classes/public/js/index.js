@@ -31,9 +31,9 @@ layui.use(['form','jquery','jquery_cookie'], function () {
                 if (data.code == 200) {
                     layer.msg("登录成功！", function () {
                         // 将⽤户信息存到cookie中
-                        /*var result = data.result;*/
+                        var result = data.result;
                         //如果用户选择“记住我”，则设置cookie的有效期为7天
-                        /*if ($("#rememberMe").prop("checked")){
+                        if ($("#rememberMe").prop("checked")){
                             $.cookie("userIdStr", result.userIdStr, { expires: 7 });
                             $.cookie("userName", result.userName, { expires: 7 });
                             $.cookie("trueName", result.trueName, { expires: 7 });
@@ -41,7 +41,7 @@ layui.use(['form','jquery','jquery_cookie'], function () {
                             $.cookie("userIdStr", result.userIdStr);
                             $.cookie("userName", result.userName);
                             $.cookie("trueName", result.trueName);
-                        }*/
+                        }
                         // 登录成功后，跳转到⾸⻚
                         window.location.href = ctx + "/main";
                     });
