@@ -19,7 +19,7 @@
     </option>
   </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="main" />
+    <option name="BRANCH" value="origin/hwj" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -74,7 +74,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/maven_code/SpringBootJinXiaoCun/src/main/resources/public/js",
+    "last_opened_file_path": "D:/maven_code/Shop",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -89,13 +89,14 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\maven_code\SpringBootJinXiaoCun\src\main\resources\public\js\report" />
       <recent name="D:\maven_code\SpringBootJinXiaoCun\src\main\resources\public\js" />
       <recent name="D:\maven_code\SpringBootJinXiaoCun\src\main\resources\public" />
       <recent name="D:\maven_code\SpringBootJinXiaoCun\src\main\resources\public\css" />
       <recent name="D:\maven_code\SpringBootJinXiaoCun\src\main\resources\views" />
-      <recent name="D:\maven_code\SpringBootJinXiaoCun\src\main\resources\public\js\report" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\maven_code\SpringBootJinXiaoCun\src\main\resources\public\js\echarts" />
       <recent name="D:\maven_code\SpringBootJinXiaoCun\src\main\resources" />
       <recent name="D:\maven_code\SpringBootJinXiaoCun\src\main\resources\views" />
     </key>
@@ -172,6 +173,7 @@
       <workItem from="1696576347581" duration="3377000" />
       <workItem from="1696579756546" duration="5044000" />
       <workItem from="1696679524362" duration="6612000" />
+      <workItem from="1696769709003" duration="4474000" />
     </task>
     <task id="LOCAL-00001" summary="Log日志管理">
       <created>1696564223103</created>
@@ -208,7 +210,14 @@
       <option name="project" value="LOCAL" />
       <updated>1696685854262</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="日志管理完成">
+      <created>1696773980875</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1696773980875</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
