@@ -33,6 +33,6 @@
         </div>
     </script>
 
-    <script type="text/javascript" src="${ctx}/js/module/module.js"></script>
+    <script type="text/javascript" src="${ctx}/js/menu/menu.js"></script>
 </body>
 </html>

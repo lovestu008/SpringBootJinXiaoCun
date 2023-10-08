@@ -4,7 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3286b870-ff35-4633-a223-fbd82b544e13" name="Changes" comment="日志管理完成" />
+    <list default="true" id="47f004b4-5068-48b2-9225-7a541737bcc5" name="Changes" comment="menu 下js文件">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/dao/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/dao/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/model/UserModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/model/UserModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/user/add.update.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/js/user/add.update.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/user/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/js/user/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/views/user/add_update.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/user/add_update.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/service/UserService.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,13 +28,12 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="AnnotationType" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="origin/hwj" />
+    <option name="BRANCH" value="origin/sun" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -29,32 +43,17 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;
-  }
-}</component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="selectedUrlAndAccountId">
-      <UrlAndAccount>
-        <option name="accountId" value="8eb5ad04-f5e9-4e55-950d-2f04129bbb40" />
-        <option name="url" value="git@github.com:lovestu008/SpringBootJinXiaoCun.git" />
-      </UrlAndAccount>
-    </option>
-  </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="$PROJECT_DIR$/../../apache-maven-3.9.4" />
+        <option name="localRepository" value="D:\study\px\maven_rep\repository" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../downloadapp/apache-maven-3.9.4" />
         <option name="useMavenConfig" value="true" />
-        <option name="userSettingsFile" value="D:\apache-maven-3.9.4\conf\settings.xml" />
+        <option name="userSettingsFile" value="D:\study\px\downloadapp\apache-maven-3.9.4\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectId" id="2WIllG0OBT4YecLKpUO7LwL6IhZ" />
+  <component name="ProjectId" id="2WKp0dODD9Slq5aYDzzTCORTx3j" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -64,50 +63,31 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/maven_code/Shop",
+    "last_opened_file_path": "D:/study/px/SpringStudy/crm",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "configurable.group.build",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "MavenSettings",
     "spring.configuration.checksum": "46d7115f401497dd00b87ad0447a2608",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\maven_code\SpringBootJinXiaoCun\src\main\resources\public\js\report" />
-      <recent name="D:\maven_code\SpringBootJinXiaoCun\src\main\resources\public\js" />
-      <recent name="D:\maven_code\SpringBootJinXiaoCun\src\main\resources\public" />
-      <recent name="D:\maven_code\SpringBootJinXiaoCun\src\main\resources\public\css" />
-      <recent name="D:\maven_code\SpringBootJinXiaoCun\src\main\resources\views" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\maven_code\SpringBootJinXiaoCun\src\main\resources\public\js\echarts" />
-      <recent name="D:\maven_code\SpringBootJinXiaoCun\src\main\resources" />
-      <recent name="D:\maven_code\SpringBootJinXiaoCun\src\main\resources\views" />
-    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.xxxx.supermarket.utils" />
-      <recent name="com.xxxx.supermarket.controller" />
-      <recent name="com.xxxx.supermarket.aspect" />
+      <recent name="com.xxxx.supermarket" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.Starter">
-    <configuration name="supermarket" type="MavenRunConfiguration" factoryName="Maven">
+    <configuration name="supermarket [mybatis-generator:generate...]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
       <MavenSettings>
         <option name="myGeneralSettings" />
         <option name="myRunnerSettings" />
@@ -133,13 +113,6 @@
       </MavenSettings>
       <method v="2" />
     </configuration>
-    <configuration name="Starter (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="crm" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xxxx.supermarket.Starter" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Starter" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="supermarket" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.xxxx.supermarket.Starter" />
@@ -148,76 +121,71 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Maven.supermarket" />
+      <item itemvalue="Maven.supermarket [mybatis-generator:generate...]" />
       <item itemvalue="Spring Boot.Starter" />
-      <item itemvalue="Spring Boot.Starter (1)" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="3286b870-ff35-4633-a223-fbd82b544e13" name="Changes" comment="" />
-      <created>1696428133330</created>
+      <changelist id="47f004b4-5068-48b2-9225-7a541737bcc5" name="Changes" comment="" />
+      <created>1696490904462</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1696428133330</updated>
-      <workItem from="1696428134903" duration="1711000" />
-      <workItem from="1696429930109" duration="1300000" />
-      <workItem from="1696468261892" duration="7173000" />
-      <workItem from="1696492760964" duration="15775000" />
-      <workItem from="1696553721523" duration="4814000" />
-      <workItem from="1696558623400" duration="1756000" />
-      <workItem from="1696560552308" duration="2076000" />
-      <workItem from="1696562694009" duration="32000" />
-      <workItem from="1696562742190" duration="5664000" />
-      <workItem from="1696576347581" duration="3377000" />
-      <workItem from="1696579756546" duration="5044000" />
-      <workItem from="1696679524362" duration="6612000" />
-      <workItem from="1696769709003" duration="4474000" />
+      <updated>1696490904462</updated>
+      <workItem from="1696490905901" duration="35387000" />
+      <workItem from="1696752530180" duration="10551000" />
     </task>
-    <task id="LOCAL-00001" summary="Log日志管理">
-      <created>1696564223103</created>
+    <task id="LOCAL-00001" summary="role module">
+      <created>1696554818830</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1696564223103</updated>
+      <updated>1696554818830</updated>
     </task>
-    <task id="LOCAL-00002" summary="log日志切面修改">
-      <created>1696576822638</created>
+    <task id="LOCAL-00002" summary="登录模块">
+      <created>1696560986248</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1696576822638</updated>
+      <updated>1696560986248</updated>
     </task>
-    <task id="LOCAL-00003" summary="---">
-      <created>1696577127270</created>
+    <task id="LOCAL-00003" summary="user更新">
+      <created>1696564079093</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1696577127270</updated>
+      <updated>1696564079093</updated>
     </task>
-    <task id="LOCAL-00004" summary="---">
-      <created>1696685637196</created>
+    <task id="LOCAL-00004" summary="user 与 menu 模块">
+      <created>1696584982153</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1696685637196</updated>
+      <updated>1696584982153</updated>
     </task>
-    <task id="LOCAL-00005" summary="日志管理完成">
-      <created>1696685854262</created>
+    <task id="LOCAL-00005" summary="role.js操作">
+      <created>1696585021522</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1696685854262</updated>
+      <updated>1696585021522</updated>
     </task>
-    <task id="LOCAL-00006" summary="日志管理完成">
-      <created>1696773980875</created>
+    <task id="LOCAL-00006" summary="unversioned 问题">
+      <created>1696585110928</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1696773980875</updated>
+      <updated>1696585110928</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="menu 下js文件">
+      <created>1696585138290</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1696585138290</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -247,15 +215,13 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Log日志管理" />
-    <MESSAGE value="log日志切面修改" />
-    <MESSAGE value="---" />
-    <MESSAGE value="日志管理完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="日志管理完成" />
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
+    <MESSAGE value="role module" />
+    <MESSAGE value="登录模块" />
+    <MESSAGE value="user更新" />
+    <MESSAGE value="user 与 menu 模块" />
+    <MESSAGE value="role.js操作" />
+    <MESSAGE value="unversioned 问题" />
+    <MESSAGE value="menu 下js文件" />
+    <option name="LAST_COMMIT_MESSAGE" value="menu 下js文件" />
   </component>
 </project>
