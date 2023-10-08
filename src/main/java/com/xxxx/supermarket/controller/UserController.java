@@ -68,5 +68,10 @@ public class UserController extends BaseController {
         return success("用户修改成功");
     }
 
-
+    @RequestMapping("delete")
+    @ResponseBody
+    public ResultInfo deleteUser(Integer[] ids){
+        userService.deleteUser(ids);
+        return success("用户删除成功");
+    }
 }

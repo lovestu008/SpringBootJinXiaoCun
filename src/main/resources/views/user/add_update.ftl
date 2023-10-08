@@ -24,8 +24,7 @@
                 <label class="layui-form-label">邮箱</label>
                 <div class="layui-input-block">
                     <input type="text" class="layui-input userEmail"
-                           lay-verify="email" name="email" valid="email"
-                           placeholder="请输入邮箱">
+                           lay-verify="email" name="email" value="${(user.email)!}" id="email" placeholder="请输入邮箱">
                 </div>
             </div>
 
@@ -34,6 +33,14 @@
                 <div class="layui-input-block">
                     <input type="text" class="layui-input userEmail"
                            lay-verify="phone" name="phone" value="${(user.phone)!}" id="phone" placeholder="请输入手机号">
+                </div>
+            </div>
+
+            <div class="layui-form-item layui-row layui-col-xs12">
+                <label class="layui-form-label">备注</label>
+                <div class="layui-input-block">
+                    <input type="text" class="layui-input userEmail"
+                           lay-verify="remarks" name="remarks" value="${(user.remarks)!}" id="remarks" placeholder="请输入备注">
                 </div>
             </div>
 

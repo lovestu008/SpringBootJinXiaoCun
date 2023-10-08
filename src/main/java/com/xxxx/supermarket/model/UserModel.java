@@ -25,5 +25,12 @@ public class UserModel {
         this.trueName = trueName;
     }
 
-
+    @Override
+    public String toString() {
+        return "UserModel{" +
+                "userIdStr='" + userIdStr + '\'' +
+                ", userName='" + userName + '\'' +
+                ", trueName='" + trueName + '\'' +
+                '}';
+    }
 }

@@ -4,25 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47f004b4-5068-48b2-9225-7a541737bcc5" name="Changes" comment="user更新">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/MenuController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/service/MenuService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="47f004b4-5068-48b2-9225-7a541737bcc5" name="Changes" comment="menu 下js文件">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/dao/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/dao/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/model/UserModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/model/UserModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/UserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/module/add.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/js/menu/add.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/module/module.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/js/menu/menu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/module/update.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/js/menu/update.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/role/role.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/js/role/role.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/user/add.update.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/js/user/add.update.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/user/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/js/user/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/views/main.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/main.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/views/module/add.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/menu/add.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/views/module/module.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/menu/menu.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/views/module/update.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/menu/update.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/views/user/add_update.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/user/add_update.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/service/UserService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,6 +77,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "MavenSettings",
+    "spring.configuration.checksum": "46d7115f401497dd00b87ad0447a2608",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -136,7 +133,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1696490904462</updated>
-      <workItem from="1696490905901" duration="34220000" />
+      <workItem from="1696490905901" duration="35387000" />
+      <workItem from="1696752530180" duration="10551000" />
     </task>
     <task id="LOCAL-00001" summary="role module">
       <created>1696554818830</created>
@@ -159,7 +157,35 @@
       <option name="project" value="LOCAL" />
       <updated>1696564079093</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="user 与 menu 模块">
+      <created>1696584982153</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1696584982153</updated>
+    </task>
+    <task id="LOCAL-00005" summary="role.js操作">
+      <created>1696585021522</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1696585021522</updated>
+    </task>
+    <task id="LOCAL-00006" summary="unversioned 问题">
+      <created>1696585110928</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1696585110928</updated>
+    </task>
+    <task id="LOCAL-00007" summary="menu 下js文件">
+      <created>1696585138290</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1696585138290</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -176,7 +202,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="hwj" />
+                        <option value="main" />
                       </list>
                     </value>
                   </entry>
@@ -192,6 +218,10 @@
     <MESSAGE value="role module" />
     <MESSAGE value="登录模块" />
     <MESSAGE value="user更新" />
-    <option name="LAST_COMMIT_MESSAGE" value="user更新" />
+    <MESSAGE value="user 与 menu 模块" />
+    <MESSAGE value="role.js操作" />
+    <MESSAGE value="unversioned 问题" />
+    <MESSAGE value="menu 下js文件" />
+    <option name="LAST_COMMIT_MESSAGE" value="menu 下js文件" />
   </component>
 </project>
