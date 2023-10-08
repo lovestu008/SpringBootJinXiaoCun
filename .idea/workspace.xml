@@ -4,21 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47f004b4-5068-48b2-9225-7a541737bcc5" name="Changes" comment="menu 下js文件">
+    <list default="true" id="47f004b4-5068-48b2-9225-7a541737bcc5" name="Changes" comment="user操作 用户登录 user的session作用域">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/dao/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/dao/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/model/UserModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/model/UserModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/UserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/user/add.update.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/js/user/add.update.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/user/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/js/user/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/views/user/add_update.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/user/add_update.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/interceptors/NoLoginInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/interceptors/NoLoginInterceptor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +122,7 @@
       <option name="presentableId" value="Default" />
       <updated>1696490904462</updated>
       <workItem from="1696490905901" duration="35387000" />
-      <workItem from="1696752530180" duration="10551000" />
+      <workItem from="1696752530180" duration="12958000" />
     </task>
     <task id="LOCAL-00001" summary="role module">
       <created>1696554818830</created>
@@ -185,7 +173,21 @@
       <option name="project" value="LOCAL" />
       <updated>1696585138290</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="user操作 用户登录 user的session作用域">
+      <created>1696773854861</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1696773854861</updated>
+    </task>
+    <task id="LOCAL-00009" summary="user操作 用户登录 user的session作用域">
+      <created>1696774176244</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1696774176244</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,6 +224,7 @@
     <MESSAGE value="role.js操作" />
     <MESSAGE value="unversioned 问题" />
     <MESSAGE value="menu 下js文件" />
-    <option name="LAST_COMMIT_MESSAGE" value="menu 下js文件" />
+    <MESSAGE value="user操作 用户登录 user的session作用域" />
+    <option name="LAST_COMMIT_MESSAGE" value="user操作 用户登录 user的session作用域" />
   </component>
 </project>
