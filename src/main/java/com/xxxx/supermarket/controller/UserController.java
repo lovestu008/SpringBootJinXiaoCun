@@ -2,6 +2,7 @@ package com.xxxx.supermarket.controller;
 
 import com.xxxx.supermarket.base.BaseController;
 import com.xxxx.supermarket.base.ResultInfo;
+import com.xxxx.supermarket.entity.User;
 import com.xxxx.supermarket.model.UserModel;
 import com.xxxx.supermarket.query.UserQuery;
 import com.xxxx.supermarket.service.UserService;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 import java.util.Map;
 
 @Controller
@@ -44,6 +46,32 @@ public class UserController extends BaseController {
         return userService.queryByParamsForTable(userQuery);
     }
 
+    @RequestMapping("addOrUpdateUserPage")
+    public String addOrUpdateUserPage(Integer id, HttpServletRequest request){
+        if (id != null){
+            request.setAttribute("user",userService.selectByPrimaryKey(id));
+        }
+        return "user/add_update";
+    }
 
+    @RequestMapping("add")
+    @ResponseBody
+    public ResultInfo addUser(User user){
+        userService.addUser(user);
+        return success("用户添加成功");
+    }
 
+    @RequestMapping("update")
+    @ResponseBody
+    public ResultInfo updateUser(User user){
+        userService.updateUser(user);
+        return success("用户修改成功");
+    }
+
+    @RequestMapping("delete")
+    @ResponseBody
+    public ResultInfo deleteUser(Integer[] ids){
+        userService.deleteUser(ids);
+        return success("用户删除成功");
+    }
 }

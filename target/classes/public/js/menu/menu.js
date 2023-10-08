@@ -8,19 +8,19 @@ layui.use(['table', 'treetable'], function () {
         treeColIndex: 1,
         treeSpid: -1,
         treeIdName: 'id',
-        treePidName: 'parentId',
+        treePidName: 'pId',
         elem: '#munu-table',
-        url: ctx+'/module/list',
+        url: ctx+'/menu/list',
         toolbar: "#toolbarDemo",
         treeDefaultClose:true,
         page: true,
         cols: [[
             {type: 'numbers'},
-            {field: 'moduleName', minWidth: 100, title: '菜单名称'},
-            {field: 'optValue', title: '权限码'},
+            {field: 'name', minWidth: 100, title: '菜单名称'},
+            {field: 'icon', title: '菜单模块'},
+            {field: 'aclValue', title: '权限码'},
+            {field: 'state', title: '节点类型'},
             {field: 'url', title: '菜单url'},
-            {field: 'createDate', title: '创建时间'},
-            {field: 'updateDate', title: '更新时间'},
             {
                 field: 'grade', width: 80, align: 'center', templet: function (d) {
                     if (d.grade == 0) {
@@ -54,7 +54,7 @@ layui.use(['table', 'treetable'], function () {
                 break;
             case "add":
                 // 添加目录 层级=0 父菜单=-1
-                openAddModuleDialog(0, -1)
+                openAddMenuDialog(0, -1)
         };
     });
     /**
@@ -70,11 +70,11 @@ layui.use(['table', 'treetable'], function () {
                 return;
             }
             // 一级|二级菜单   grade=当前层级+1，parentId=当前资源的ID
-            openAddModuleDialog(data.data.grade+1, data.data.id);
+            openAddMenuDialog(data.data.grade+1, data.data.id);
 
         } else if (data.event == "edit") {
             // 修改资源
-            openUpdateModuleDialog(data.data.id);
+            openUpdateMenuDialog(data.data.id);
 
         } else if (data.event == "del") {
             var id = data.data.id;
@@ -83,7 +83,7 @@ layui.use(['table', 'treetable'], function () {
                 icon: 3,title:"菜单管理"
             },function (index) {
                 layer.close(index);
-                $.post(ctx+"/module/delete",{id:id},function (data) {
+                $.post(ctx+"/menu/delete",{id:id},function (data) {
                     if (data.code == 200){
                         layer.msg("操作成功");
                         window.location.reload();
@@ -99,9 +99,9 @@ layui.use(['table', 'treetable'], function () {
      * @param grade 层级
      * @param parentId 父菜单ID
      */
-    function openAddModuleDialog(grade,parentId){
+    function openAddMenuDialog(grade,parentId){
         var title = "<h3>资源管理 - 添加资源</h3>";
-        var url = ctx + "/module/toAddModulePage?grade=" + grade + "&parentId=" + parentId;
+        var url = ctx + "/menu/toAddMenuPage?grade=" + grade + "&parentId=" + parentId;
         layui.layer.open({
             type:2,
             title:title,
@@ -115,9 +115,9 @@ layui.use(['table', 'treetable'], function () {
      * 打开修改资源的对话框
      * @param id
      */
-    function openUpdateModuleDialog(id) {
+    function openUpdateMenuDialog(id) {
         var title = "<h3>资源管理 - 修改资源</h3>";
-        var url = ctx + "/module/toUpdateModulePage?id=" + id;
+        var url = ctx + "/Menu/toUpdateMenuPage?id=" + id;
 
         layui.layer.open({
             type:2,

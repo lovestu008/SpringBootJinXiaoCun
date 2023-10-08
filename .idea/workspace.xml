@@ -4,14 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40f461be-a2b8-43ab-8ffa-a1703898d0fb" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023_10_5_17_15__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023_10_5_17_15__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023_10_5_17_15__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023_10_5_17_15__Changes_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023_10_5_17_21__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023_10_5_17_21__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023_10_5_17_05__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023_10_5_17_05__Changes_.xml" afterDir="false" />
+    <list default="true" id="47f004b4-5068-48b2-9225-7a541737bcc5" name="Changes" comment="menu 下js文件">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/service/PurchaseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/service/PurchaseService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/views/return/return.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/views/return/return.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/dao/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/dao/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/model/UserModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/model/UserModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/user/add.update.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/js/user/add.update.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/user/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/js/user/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/views/user/add_update.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/user/add_update.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/service/UserService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +33,7 @@
     </option>
   </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="main" />
+    <option name="BRANCH" value="origin/sun" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -39,64 +46,48 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="localRepository" value="F:\install_path\apache-maven-3.6.2-bin\maven" />
-        <option name="mavenHome" value="$PROJECT_DIR$/../../install_path/apache-maven-3.6.2-bin/apache-maven-3.6.2" />
+        <option name="localRepository" value="D:\study\px\maven_rep\repository" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../downloadapp/apache-maven-3.9.4" />
         <option name="useMavenConfig" value="true" />
-        <option name="userSettingsFile" value="F:\install_path\apache-maven-3.6.2-bin\apache-maven-3.6.2\conf\settings.xml" />
+        <option name="userSettingsFile" value="D:\study\px\downloadapp\apache-maven-3.9.4\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectId" id="2WKpdl33uwNSkQAAf6Mp85xL7xK" />
+  <component name="ProjectId" id="2WKp0dODD9Slq5aYDzzTCORTx3j" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/SpringBootJinXiaoCun&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;46d7115f401497dd00b87ad0447a2608&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
-    ]
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/study/px/SpringStudy/crm",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "MavenSettings",
+    "spring.configuration.checksum": "46d7115f401497dd00b87ad0447a2608",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\idea\SpringBootJinXiaoCun\src\main\resources\public\js\return" />
-      <recent name="F:\idea\SpringBootJinXiaoCun\src\main\resources\views\return" />
-      <recent name="F:\idea\SpringBootJinXiaoCun\src\main\resources\views" />
-      <recent name="F:\idea\SpringBootJinXiaoCun\src\main\resources\public\js" />
-      <recent name="F:\idea\SpringBootJinXiaoCun\src\main\resources\views\purchase" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\idea\SpringBootJinXiaoCun\src\main\resources\public\js\purchase" />
-      <recent name="F:\idea\SpringBootJinXiaoCun\src\main\resources\views\purchase" />
-      <recent name="F:\idea\SpringBootJinXiaoCun\src\main\resources\public\js\return" />
-      <recent name="F:\idea\SpringBootJinXiaoCun\src\main\resources\views\return" />
-    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.xxxx.supermarket.querys" />
-      <recent name="com.xxxx.supermarket.service" />
-      <recent name="com.xxxx.supermarket.controller" />
+      <recent name="com.xxxx.supermarket" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.Starter">
-    <configuration name="mybatis-generator:generate -e" type="MavenRunConfiguration" factoryName="Maven">
+    <configuration name="supermarket [mybatis-generator:generate...]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
       <MavenSettings>
         <option name="myGeneralSettings" />
         <option name="myRunnerSettings" />
@@ -130,40 +121,71 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Maven.mybatis-generator:generate -e" />
+      <item itemvalue="Maven.supermarket [mybatis-generator:generate...]" />
       <item itemvalue="Spring Boot.Starter" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="40f461be-a2b8-43ab-8ffa-a1703898d0fb" name="Changes" comment="" />
-      <created>1696491215611</created>
+      <changelist id="47f004b4-5068-48b2-9225-7a541737bcc5" name="Changes" comment="" />
+      <created>1696490904462</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1696491215611</updated>
-      <workItem from="1696491216731" duration="4128000" />
-      <workItem from="1696497547744" duration="144000" />
-      <workItem from="1696497704630" duration="34936000" />
-      <workItem from="1696660594599" duration="122000" />
-      <workItem from="1696660821913" duration="21270000" />
-      <workItem from="1696751359835" duration="18727000" />
+      <updated>1696490904462</updated>
+      <workItem from="1696490905901" duration="35387000" />
+      <workItem from="1696752530180" duration="10551000" />
     </task>
-    <task id="LOCAL-00001" summary="孙娇 模块">
-      <created>1696562533118</created>
+    <task id="LOCAL-00001" summary="role module">
+      <created>1696554818830</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1696562533118</updated>
+      <updated>1696554818830</updated>
     </task>
-    <task id="LOCAL-00002" summary="孙娇 模块">
-      <created>1696563289291</created>
+    <task id="LOCAL-00002" summary="登录模块">
+      <created>1696560986248</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1696563289291</updated>
+      <updated>1696560986248</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="user更新">
+      <created>1696564079093</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1696564079093</updated>
+    </task>
+    <task id="LOCAL-00004" summary="user 与 menu 模块">
+      <created>1696584982153</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1696584982153</updated>
+    </task>
+    <task id="LOCAL-00005" summary="role.js操作">
+      <created>1696585021522</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1696585021522</updated>
+    </task>
+    <task id="LOCAL-00006" summary="unversioned 问题">
+      <created>1696585110928</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1696585110928</updated>
+    </task>
+    <task id="LOCAL-00007" summary="menu 下js文件">
+      <created>1696585138290</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1696585138290</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -180,7 +202,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="sun" />
+                        <option value="main" />
                       </list>
                     </value>
                   </entry>
@@ -193,7 +215,13 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="孙娇 模块" />
-    <option name="LAST_COMMIT_MESSAGE" value="孙娇 模块" />
+    <MESSAGE value="role module" />
+    <MESSAGE value="登录模块" />
+    <MESSAGE value="user更新" />
+    <MESSAGE value="user 与 menu 模块" />
+    <MESSAGE value="role.js操作" />
+    <MESSAGE value="unversioned 问题" />
+    <MESSAGE value="menu 下js文件" />
+    <option name="LAST_COMMIT_MESSAGE" value="menu 下js文件" />
   </component>
 </project>
