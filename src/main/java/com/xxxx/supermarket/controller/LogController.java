@@ -40,7 +40,6 @@ public class LogController extends BaseController {
     @RequestMapping("list")
     @ResponseBody //不加则认为返回视图
     public Map<String,Object> querySaleChanceByParams(LogQuery logQuery){
-        System.out.println(logQuery);
         return logService.querylogByParams(logQuery);
     }
     @PostMapping("delete")

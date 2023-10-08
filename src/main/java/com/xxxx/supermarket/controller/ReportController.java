@@ -2,7 +2,13 @@ package com.xxxx.supermarket.controller;
 
 import com.xxxx.supermarket.aspect.SupLog;
 import com.xxxx.supermarket.aspect.SupLogAop;
+import com.xxxx.supermarket.aspect.SysLog;
+import com.xxxx.supermarket.base.ResultInfo;
+import com.xxxx.supermarket.entity.SaleList;
+import com.xxxx.supermarket.query.SaleQuery;
+import com.xxxx.supermarket.service.SaleService;
 import com.xxxx.supermarket.utils.DataGridViewResult;
+import com.xxxx.supermarket.utils.DateUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,10 +27,10 @@ public class ReportController {
         return "report/report";
     }
 
-   /* @Autowired
-   /* private SaleService saleService;
+    @Resource
+   private SaleService saleService;
 
-    @Autowired
+    /* @Autowired
     private OutsaleService outsaleService;
 
     @Resource
@@ -34,47 +40,26 @@ public class ReportController {
     private OutportService outportService;
 
     @Autowired
-    private GoodsService goodsService;*//*
+    private GoodsService goodsService;*/
 
 
     @SupLog(content = "查询统计销售报表")
     @RequestMapping("/statisticsSales")
-    public DataGridViewResult statisticsSales(){
-        SupLogAop<Sale> queryWrapper = new QueryWrapper<>();
-        queryWrapper
-                .select("gid","sum(buyquantity) total,sum(realnumber) actualtotal")
-                .groupBy("gid")
-                .orderByAsc("total")
-                .last("limit 5");
-        List<Sale> salesList = saleService.list(queryWrapper);
-        Map<String, Object> map = new HashMap<>();
-        List<String> list1 = new ArrayList<>();
-        List<Integer> list2 = new ArrayList<>();
-        List<Integer> list3 = new ArrayList<>();
+    public Map<String,Object> statisticsSales(){
+        SaleQuery query = new SaleQuery();
+        Map<String,Object> salesMap = saleService.querySaleListParams(query);
 
-        for (Sale sale : salesList) {
-            Goods goods = goodsService.getById(sale.getGid());
-            if (null != goods) {
-                list1.add(goods.getGname()+goods.getGnumbering());
-                list2.add(sale.getTotal());
-                list3.add(sale.getActualtotal());
-            }
-        }
-        map.put("data1",list1);
-        map.put("data2",list2);
-        map.put("data3",list3);
-        return new DataGridViewResult(map);
-
+        return salesMap;
 
     }
 
-    @SysLog("查询统计退货报表")
+    /*@SysLog("查询统计退货报表")
     @RequestMapping("/statisticsinGoods")
     public DataGridViewResult statisticsinGoods(){
         QueryWrapper<Inport> queryWrapper = new QueryWrapper<>();
         queryWrapper
                 .select("sum( number ) as countnumbers,DATE_FORMAT( inptime, '%Y-%m' ) AS counttime")
-                .between("inptime",DateUtils.stepMonth(5),new Date())
+                .between("inptime", DateUtils.stepMonth(5),new Date())
                 .groupBy("counttime")
                 .orderByAsc("counttime");
         List<Inport> inportsList = inportService.list(queryWrapper);

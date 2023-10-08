@@ -4,58 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3286b870-ff35-4633-a223-fbd82b544e13" name="Changes" comment="---">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/public/css/layui.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/public/js/layui.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/views/report/report.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/aspect/SupLogAop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/aspect/SupLogAop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/base/LogBaseQuery.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/ReportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/ReportController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/RoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/RoleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/entity/Log.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/entity/Log.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/query/LogQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/query/LogQuery.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/service/LogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/service/LogService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/LogMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/LogMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/log/log.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/js/log/log.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/views/log/log.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/log/log.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/views/main.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/main.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/views/report/reportManager.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/report/reportManager.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/Starter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/Starter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/aspect/SupLogAop.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/aspect/SupLogAop.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/LogController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/LogController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/SaleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/SaleController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/dao/LogMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/dao/LogMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/dao/UserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/dao/UserMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/entity/Log.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/entity/Log.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/entity/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/enums/StateStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/enums/StateStatus.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/query/LogQuery.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/query/LogQuery.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/service/LogService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/service/LogService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/service/SaleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/service/SaleService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/generatorConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/generatorConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mappers/LogMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mappers/LogMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mappers/SaleListGoodsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mappers/SaleListGoodsMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mappers/SaleListMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mappers/SaleListMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mappers/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mappers/UserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/public/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/public/js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/public/js/log/log.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/public/js/log/log.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/public/js/role/role.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/public/js/role/role.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/public/js/saleChance/add.update.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/public/js/saleChance/sale.chance.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/public/js/user/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/public/js/user/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/views/log/log.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/views/log/log.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/views/main.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/views/main.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/views/role/add_update.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/views/role/add_update.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/views/role/role.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/views/role/role.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/views/sale/sale.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/views/sale/sale.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/views/saleChance/add_update.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/views/saleChance/sale_chance.ftl" beforeDir="false" />
-    </list>
+    <list default="true" id="3286b870-ff35-4633-a223-fbd82b544e13" name="Changes" comment="日志管理完成" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -222,7 +171,7 @@
       <workItem from="1696562742190" duration="5664000" />
       <workItem from="1696576347581" duration="3377000" />
       <workItem from="1696579756546" duration="5044000" />
-      <workItem from="1696679524362" duration="5895000" />
+      <workItem from="1696679524362" duration="6612000" />
     </task>
     <task id="LOCAL-00001" summary="Log日志管理">
       <created>1696564223103</created>
@@ -245,7 +194,21 @@
       <option name="project" value="LOCAL" />
       <updated>1696577127270</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="---">
+      <created>1696685637196</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1696685637196</updated>
+    </task>
+    <task id="LOCAL-00005" summary="日志管理完成">
+      <created>1696685854262</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1696685854262</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -279,7 +242,8 @@
     <MESSAGE value="Log日志管理" />
     <MESSAGE value="log日志切面修改" />
     <MESSAGE value="---" />
-    <option name="LAST_COMMIT_MESSAGE" value="---" />
+    <MESSAGE value="日志管理完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="日志管理完成" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
