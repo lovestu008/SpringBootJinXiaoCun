@@ -11,7 +11,7 @@
         <div class="layui-logo">
             <a href="">
                 <img src="images/logo.png" alt="logo">
-                <h1>超市进销管理系统</h1>
+                <h2>超市-管理系统</h2>
             </a>
         </div>
         <a>

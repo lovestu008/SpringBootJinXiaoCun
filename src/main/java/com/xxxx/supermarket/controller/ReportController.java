@@ -1,21 +1,12 @@
 package com.xxxx.supermarket.controller;
 
 import com.xxxx.supermarket.aspect.SupLog;
-import com.xxxx.supermarket.aspect.SupLogAop;
-import com.xxxx.supermarket.aspect.SysLog;
-import com.xxxx.supermarket.base.ResultInfo;
-import com.xxxx.supermarket.entity.SaleList;
 import com.xxxx.supermarket.query.SaleQuery;
 import com.xxxx.supermarket.service.SaleService;
-import com.xxxx.supermarket.utils.DataGridViewResult;
-import com.xxxx.supermarket.utils.DateUtils;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
-import java.text.SimpleDateFormat;
 import java.util.*;
 
 @Controller
