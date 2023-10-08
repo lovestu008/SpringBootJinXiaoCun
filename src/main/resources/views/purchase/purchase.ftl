@@ -9,10 +9,10 @@
 <form class="layui-form" >
     <blockquote class="layui-elem-quote quoteBox">
         <form class="layui-form">
-            <input type="hidden" id="providerId" value="${(purchase.provider)!}">
-            <input type="hidden" id="goodsId" value="${(purchase.goodsName)!}">
+            <input type="hidden" id="providerId" value="${(purchase.providerId)!}">
+            <input type="hidden" id="goodsId" value="${(purchase.goodsId)!}">
             <div class="layui-inline">
-                <div class="layui-input-inline layui-col-md3">
+                <div class="layui-input-inline layui-col-md4">
                     <label class="layui-form-label">供应商</label>
                     <div class="layui-input-block">
                         <select name="provider" id="provider">
@@ -20,38 +20,23 @@
                         </select>
                     </div>
                 </div>
-                <div class="layui-input-inline layui-col-md3 ">
+                <div class="layui-input-inline  layui-col-md4">
                     <label class="layui-form-label">商品</label>
                     <div class="layui-input-block">
-                        <select name="goodsName" id="provider">
+                        <select name="goodsName" id="goodsName">
                             <option value="">请选择商品</option>
                         </select>
                     </div>
                 </div>
-                <#--<div class="layui-input-inline layui-col-md2 ">
-                    <label class="layui-form-label">开始时间</label>
-                    <div class="layui-input-block">
-                    <input type="text" name="beginTime" class="layui-input
-					searchVal" placeholder="开始时间" />
-                    </div>
-                </div>
-                <div class="layui-input-inline layui-col-md2">
-                    <label class="layui-form-label">结束时间</label>
-                    <div class="layui-input-block">
-                    <input type="text" name="endTime" class="layui-input
-					searchVal" placeholder="结束时间" />
-                    </div>
-                </div>-->
-                <#--<div class="layui-input-inline layui-col-md2 ">
-                    <div class="layui-btn-container">
-                        <button type="button" class="layui-btn layui-btn-md  layui-btn-danger " ><i class="layui-icon layui-btn-md layui-bg-red">&#xe615;</i>查询</button>
-                        <button type="button" class="layui-btn layui-btn-md  layui-btn-danger " lay-even="rollback"><i class="layui-icon layui-btn-md layui-bg-red">&#xe615;</i>重置</button>
-                    </div>
-                </div>-->
-                <a class="layui-btn layui-btn-danger search_btn" data-type="reload"><i
+                &nbsp;&nbsp;
+                <a class="layui-btn layui-btn-danger layui-btn-radius search_btn" data-type="reload"><i
                             class="layui-icon layui-btn-md layui-bg-red">&#xe615;</i> 搜索</a>
-                <a class="layui-btn search_btn" data-type="rolleback"><i
-                            class="layui-icon layui-btn-warm layui-bg-orange">&#xe615;</i> 重置</a>
+                <#--<a class="layui-btn layui-btn-warm layui-btn-radius return_btn" data-type="rolleback"><i
+                            class="layui-icon layui-bg-orange">&#xe666;</i> 重置</a>-->
+
+
+                <button class="layui-btn layui-btn-warm layui-btn-radius"  type="reset" id="reset"><i
+                            class="layui-icon layui-bg-orange">&#xe666;</i> 重置</button>
             </div>
         </form>
     </blockquote>
@@ -61,7 +46,7 @@
     <script type="text/html" id="toolbarDemo">
         <div class="layui-btn-container">
             <a class="layui-btn layui-btn-normal addNews_btn" lay-event="input">
-                <i class="layui-icon">&#xe608;</i>
+                <i class="layui-icon">&#xe654;</i>
                 商品进货
             </a>
 
@@ -69,7 +54,11 @@
     </script>
     <!--操作-->
     <script id="purchaseListBar" type="text/html">
-        <a class="layui-btn layui-btn-xs" id="return" lay-event="edit">退货</a>
+        <a class="layui-btn layui-btn-xs layui-bg-red" id="return" lay-event="edit"><i
+                    class="layui-icon">&#xe642;</i> 修改</a>
+        <a class="layui-btn layui-btn-xs layui-bg-red" id="return" lay-event="return"><i
+                    class="layui-icon">&#xe67e;</i> 退货</a>
+
     </script>
 </form>
 <script type="text/javascript" src="${ctx}/js/purchase/purchase.js"></script>
