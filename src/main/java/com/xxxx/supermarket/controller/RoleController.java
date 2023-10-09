@@ -73,5 +73,18 @@ public class RoleController extends BaseController{
         roleService.deleteRole(id);
         return success("角色删除成功");
     }
+    /**
+     * 角色授权
+     *  将对应的角色ID与资源ID，添加到对应的权限表中
+     * @param roleId
+     * @param mIds
+     * @return
+     */
+    @RequestMapping("addGrant")
+    @ResponseBody
+    public ResultInfo addGrant(Integer roleId,Integer[] mIds){
+        roleService.addGrant(roleId,mIds);
+        return success("角色授权成功！");
+    }
 
 }
