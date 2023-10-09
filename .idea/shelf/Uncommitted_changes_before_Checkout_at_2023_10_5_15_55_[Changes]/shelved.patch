@@ -1,0 +1,129 @@
+Index: src/main/resources/generatorConfig.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<!DOCTYPE generatorConfiguration\r\n        PUBLIC \"-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN\"\r\n        \"http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd\">\r\n<generatorConfiguration>\r\n    <!-- 数据库驱动路径：在左侧project边栏的External Libraries中找到mysql的驱动，右键选择copy path -->\r\n    <classPathEntry\r\n            location=\"D:\\study\\px\\maven_rep\\repository\\mysql\\mysql-connector-java\\8.0.18\\mysql-connector-java-8.0.18.jar\"/>\r\n    <!-- context 是逆向⼯程的主要配置信息，id：起个名字，targetRuntime：设置⽣成的⽂件适⽤于哪个mybatis版\r\n   本 -->\r\n    <context id=\"DB2Tables\" targetRuntime=\"MyBatis3\">\r\n        <!--optional,指在创建class时，对注释进⾏控制-->\r\n        <commentGenerator>\r\n            <!-- 是否去除⽇期那⾏注释 -->\r\n            <property name=\"suppressDate\" value=\"true\"/>\r\n            <!-- 是否去除⾃动⽣成的注释 true：是 ： false:否 -->\r\n            <property name=\"suppressAllComments\" value=\"true\"/>\r\n        </commentGenerator>\r\n        <!-- 数据库链接地址账号密码 -->\r\n        <jdbcConnection\r\n                driverClass=\"com.mysql.cj.jdbc.Driver\"\r\n                connectionURL=\"jdbc:mysql://127.0.0.1:3306/crm?serverTimezone=GMT%2B8\"\r\n                userId=\"root\"\r\n                password=\"root\">\r\n        </jdbcConnection>\r\n        <!--\r\n        java类型处理器\r\n        ⽤于处理DB中的类型到Java中的类型，默认使⽤JavaTypeResolverDefaultImpl；\r\n        注意⼀点，默认会先尝试使⽤Integer，Long，Short等来对应DECIMAL和NUMERIC数据类型；\r\n        true：使⽤ BigDecimal对应DECIMAL和NUMERIC数据类型\r\n        false：默认，把JDBC DECIMAL和NUMERIC类型解析为Integer\r\n        -->\r\n        <javaTypeResolver>\r\n            <property name=\"forceBigDecimals\" value=\"false\"/>\r\n        </javaTypeResolver>\r\n        <!-- ⽣成Model类存放位置 -->\r\n        <javaModelGenerator targetPackage=\"com.xxxx.crm.vo\" targetProject=\"src/main/java\">\r\n            <!-- 在targetPackage的基础上，根据数据库的schema再⽣成⼀层package，⽣成的类放在这个package\r\n           下，默认为false -->\r\n            <property name=\"enableSubPackages\" value=\"true\"/>\r\n            <!-- 设置是否在getter⽅法中，对String类型字段调⽤trim()⽅法 -->\r\n            <property name=\"trimStrings\" value=\"true\"/>\r\n        </javaModelGenerator>\r\n        <!--⽣成映射⽂件存放位置-->\r\n        <sqlMapGenerator targetPackage=\"mappers\" targetProject=\"src/main/resources\">\r\n            <property name=\"enableSubPackages\" value=\"true\"/>\r\n        </sqlMapGenerator>\r\n        <!--⽣成Dao类存放位置-->\r\n        <javaClientGenerator type=\"XMLMAPPER\" targetPackage=\"com.xxxx.crm.dao\"\r\n                             targetProject=\"src/main/java\">\r\n            <property name=\"enableSubPackages\" value=\"true\"/>\r\n        </javaClientGenerator>\r\n        <!-- 数据库的表名与对应的实体类的名称，tableName是数据库中的表名，domainObjectName是⽣成的JAVA模\r\n       型名 -->\r\n        <table tableName=\"\" domainObjectName=\"\"\r\n               enableCountByExample=\"false\" enableUpdateByExample=\"false\"\r\n               enableDeleteByExample=\"false\" enableSelectByExample=\"false\"\r\n               selectByExampleQueryId=\"false\">\r\n        </table>\r\n    </context>\r\n</generatorConfiguration>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/generatorConfig.xml b/src/main/resources/generatorConfig.xml
+--- a/src/main/resources/generatorConfig.xml	
++++ b/src/main/resources/generatorConfig.xml	
+@@ -2,60 +2,71 @@
+ <!DOCTYPE generatorConfiguration
+         PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+         "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
++
+ <generatorConfiguration>
+-    <!-- 数据库驱动路径：在左侧project边栏的External Libraries中找到mysql的驱动，右键选择copy path -->
+-    <classPathEntry
+-            location="D:\study\px\maven_rep\repository\mysql\mysql-connector-java\8.0.18\mysql-connector-java-8.0.18.jar"/>
+-    <!-- context 是逆向⼯程的主要配置信息，id：起个名字，targetRuntime：设置⽣成的⽂件适⽤于哪个mybatis版
+-   本 -->
++
++    <!--
++        数据库驱动
++            在左侧project边栏的External Libraries中找到mysql的驱动，右键选择copy path
++    -->
++    <classPathEntry  location="D:\.m2\repository\mysql\mysql-connector-java\8.0.18\mysql-connector-java-8.0.18.jar"/>
++
+     <context id="DB2Tables" targetRuntime="MyBatis3">
+-        <!--optional,指在创建class时，对注释进⾏控制-->
++
+         <commentGenerator>
+-            <!-- 是否去除⽇期那⾏注释 -->
++            <!-- 是否去除日期那行注释 -->
+             <property name="suppressDate" value="true"/>
+-            <!-- 是否去除⾃动⽣成的注释 true：是 ： false:否 -->
++            <!-- 是否去除自动生成的注释 true：是 ： false:否 -->
+             <property name="suppressAllComments" value="true"/>
+         </commentGenerator>
++
+         <!-- 数据库链接地址账号密码 -->
+         <jdbcConnection
+                 driverClass="com.mysql.cj.jdbc.Driver"
+-                connectionURL="jdbc:mysql://127.0.0.1:3306/crm?serverTimezone=GMT%2B8"
++                connectionURL="jdbc:mysql://127.0.0.1:3306/supermarket?serverTimezone=GMT%2B8"
+                 userId="root"
+-                password="root">
++                password="mmm314627">
+         </jdbcConnection>
++
+         <!--
+-        java类型处理器
+-        ⽤于处理DB中的类型到Java中的类型，默认使⽤JavaTypeResolverDefaultImpl；
+-        注意⼀点，默认会先尝试使⽤Integer，Long，Short等来对应DECIMAL和NUMERIC数据类型；
+-        true：使⽤ BigDecimal对应DECIMAL和NUMERIC数据类型
+-        false：默认，把JDBC DECIMAL和NUMERIC类型解析为Integer
++             java类型处理器
++                用于处理DB中的类型到Java中的类型，默认使用JavaTypeResolverDefaultImpl；
++                注意一点，默认会先尝试使用Integer，Long，Short等来对应DECIMAL和NUMERIC数据类型；
++                true：使用 BigDecimal对应DECIMAL和NUMERIC数据类型
++                false：默认，把JDBC DECIMAL和NUMERIC类型解析为Integer
+         -->
+         <javaTypeResolver>
+             <property name="forceBigDecimals" value="false"/>
+         </javaTypeResolver>
+-        <!-- ⽣成Model类存放位置 -->
+-        <javaModelGenerator targetPackage="com.xxxx.crm.vo" targetProject="src/main/java">
+-            <!-- 在targetPackage的基础上，根据数据库的schema再⽣成⼀层package，⽣成的类放在这个package
+-           下，默认为false -->
++
++
++
++        <!-- 生成Model类存放位置 -->
++        <javaModelGenerator targetPackage="com.xxxx.supermarket.entity" targetProject="src/main/java">
++            <!-- 在targetPackage的基础上，根据数据库的schema再生成一层package，最终生成的类放在这个package下，默认为false -->
+             <property name="enableSubPackages" value="true"/>
+-            <!-- 设置是否在getter⽅法中，对String类型字段调⽤trim()⽅法 -->
++            <!-- 设置是否在getter方法中，对String类型字段调用trim()方法 -->
+             <property name="trimStrings" value="true"/>
+         </javaModelGenerator>
+-        <!--⽣成映射⽂件存放位置-->
++
++
++        <!--生成映射文件存放位置-->
+         <sqlMapGenerator targetPackage="mappers" targetProject="src/main/resources">
+             <property name="enableSubPackages" value="true"/>
+         </sqlMapGenerator>
+-        <!--⽣成Dao类存放位置-->
+-        <javaClientGenerator type="XMLMAPPER" targetPackage="com.xxxx.crm.dao"
+-                             targetProject="src/main/java">
++
++
++        <!--生成Dao类存放位置-->
++        <javaClientGenerator type="XMLMAPPER" targetPackage="com.xxxx.supermarket.dao" targetProject="src/main/java">
+             <property name="enableSubPackages" value="true"/>
+         </javaClientGenerator>
+-        <!-- 数据库的表名与对应的实体类的名称，tableName是数据库中的表名，domainObjectName是⽣成的JAVA模
+-       型名 -->
+-        <table tableName="" domainObjectName=""
++
++
++
++        <table tableName="t_log" domainObjectName="Log"
+                enableCountByExample="false" enableUpdateByExample="false"
+-               enableDeleteByExample="false" enableSelectByExample="false"
+-               selectByExampleQueryId="false">
+-        </table>
++               enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
++
+     </context>
+-</generatorConfiguration>
+\ No newline at end of file
++</generatorConfiguration>
++
+Index: .gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># 屏蔽.idea\r\n/.idea/\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.gitignore b/.gitignore
+--- a/.gitignore	
++++ b/.gitignore	
+@@ -1,2 +1,4 @@
+ # 屏蔽.idea
+ /.idea/
++!/src/main/resources/generatorConfig.xml
++!/src/main/resources/application.yml

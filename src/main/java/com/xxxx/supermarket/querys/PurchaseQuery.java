@@ -7,7 +7,6 @@ public class PurchaseQuery extends BaseQuery {
     private String provider;
     //商品名称
     private String goodsName;
-
     //开始时间
 
     //结束时间
