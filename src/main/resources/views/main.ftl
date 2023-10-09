@@ -93,11 +93,11 @@
                                 <dd>
                                     <a href="javascript:;" class="layui-menu-tips" data-type="tabAdd" data-tab-mpi="m-p-i-10" data-tab="user/index" target="_self"><i class="fa fa-tachometer"></i><span class="layui-left-nav"> 用户管理</span></a>
                                 </dd>
-                                <dd>
+<#--                                <dd>
                                     <a href="javascript:;" class="layui-menu-tips" data-type="tabAdd" data-tab-mpi="m-p-i-10" data-tab="permission/index" target="_self"><i class="fa fa-tachometer"></i><span class="layui-left-nav"> 权限管理</span></a>
-                                </dd>
+                                </dd>-->
                                 <dd>
-                                    <a href="javascript:;" class="layui-menu-tips" data-type="tabAdd" data-tab-mpi="m-p-i-10" data-tab="menu/index" target="_self"><i class="fa fa-tachometer"></i><span class="layui-left-nav"> 菜单管理</span></a>
+                                    <a href="javascript:;" class="layui-menu-tips" data-type="tabAdd" data-tab-mpi="m-p-i-10" data-tab="menu/index" target="_self"><i class="fa fa-tachometer"></i><span class="layui-left-nav"> 菜单权限管理</span></a>
                                 </dd>
                             </dl>
                         </li>

@@ -45,6 +45,7 @@
             <script id="userListBar" type="text/html">
                 <a class="layui-btn layui-btn-xs" id="edit" lay-event="edit">编辑</a>
                 <a class="layui-btn layui-btn-xs layui-btn-danger" lay-event="del">删除</a>
+                <a class="layui-btn layui-btn-xs layui-bg-green" lay-event="updatePwd">修改密码</a>
             </script>
         </form>
 

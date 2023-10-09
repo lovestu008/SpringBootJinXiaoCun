@@ -11,7 +11,9 @@
 <body>
 <div class="layuimini-container">
     <div class="layuimini-main">
-
+        <div>
+            <input type="hidden" id="userId" value="${(userId)!}">
+        </div>
         <div class="layui-form layuimini-form">
             <div class="layui-form-item">
                 <label class="layui-form-label required">旧的密码</label>

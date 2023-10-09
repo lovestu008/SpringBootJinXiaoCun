@@ -16,13 +16,16 @@ layui.use(['table', 'treetable'], function () {
         page: true,
         cols: [[
             {type: 'numbers'},
-            {field: 'name', minWidth: 100, title: '菜单名称'},
             {field: 'icon', title: '菜单模块'},
-            {field: 'aclValue', title: '权限码'},
+            {field: 'name', minWidth: 100, title: '菜单名称'},
             {field: 'state', title: '节点类型'},
+            {field: 'aclValue', title: '权限码'},
             {field: 'url', title: '菜单url'},
             {
                 field: 'grade', width: 80, align: 'center', templet: function (d) {
+                    if (d.grade == -1) {
+                        return '<span class="layui-badge layui-bg-blue">根目录</span>';
+                    }
                     if (d.grade == 0) {
                         return '<span class="layui-badge layui-bg-blue">目录</span>';
                     }
@@ -30,9 +33,9 @@ layui.use(['table', 'treetable'], function () {
                         return '<span class="layui-badge-rim">菜单</span>';
                     }
                     if (d.grade == 2) {
-                        return '<span class="layui-badge layui-bg-gray">按钮</span>';
+                        return '<span class="layui-badge layui-bg-green">按钮</span>';
                     }
-                }, title: '类型'
+                }, title: '类型',
             },
             {templet: '#auth-state', width: 180, align: 'center', title: '操作'}
         ]],
@@ -117,7 +120,7 @@ layui.use(['table', 'treetable'], function () {
      */
     function openUpdateMenuDialog(id) {
         var title = "<h3>资源管理 - 修改资源</h3>";
-        var url = ctx + "/Menu/toUpdateMenuPage?id=" + id;
+        var url = ctx + "/menu/toUpdateMenuPage?id=" + id;
 
         layui.layer.open({
             type:2,
@@ -127,43 +130,5 @@ layui.use(['table', 'treetable'], function () {
             maxmin:true
         });
     }
-
-    /**
-     * 删除操作
-     * @param id
-     */
-
-
-    /*//询问用户是否删除
-    layer.confirm("您确定要删除选中的记录吗？",{
-        btn:["确认","取消"],
-    },function (index) {
-        //关闭确认框
-        layer.close(index);
-        var ids = "ids=";
-        //遍历获取对应的id
-        for (var i = 0;i<saleChanceData.length;i++){
-            if (i<saleChanceData.length-1){
-                ids = ids+saleChanceData[i].id + "&ids=";
-            }else {
-                ids = ids +saleChanceData[i].id;
-            }
-        }
-        //发送ajax请求删除记录
-        $.ajax({
-            type:"post",
-            url:ctx+"/sale_chance/delete",
-            data:ids,
-            dataType: "json",
-            success:function (result) {
-                if (result.code == 200) {
-                    // 加载表格
-                    tableIns.reload();
-                } else {
-                    layer.msg(result.msg, {icon: 5});
-                }
-            }
-        });
-    });*/
 
 });

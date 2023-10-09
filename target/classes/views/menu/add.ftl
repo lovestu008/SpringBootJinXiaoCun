@@ -36,13 +36,14 @@
     <div class="layui-form-item layui-row layui-col-xs12">
         <label class="layui-form-label">菜单级别</label>
         <div class="layui-input-block">
-            <#if grade??>
+            <#--<#if grade??>-->
                 <select name="grade" >
+                    <option value="-1" <#if grade==-1>selected="selected"</#if> >根菜单</option>
                     <option value="0" <#if grade==0>selected="selected"</#if> >一级菜单</option>
                     <option value="1" <#if grade==1>selected="selected"</#if>>二级菜单</option>
                     <option value="2" <#if grade==2>selected="selected"</#if>>三级菜单</option>
                 </select>
-            </#if>
+            <#--</#if>-->
         </div>
     </div>
 

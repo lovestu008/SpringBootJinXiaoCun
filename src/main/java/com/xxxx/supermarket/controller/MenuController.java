@@ -26,5 +26,15 @@ public class MenuController extends BaseController {
         return menuService.menuList();
     }
 
+    @RequestMapping("toUpdateMenuPage")
+    public String toUpdateMenuPage(){
+        return "menu/update";
+    }
+
+    @RequestMapping("toAddMenuPage")
+    public String toAddMenuPage(){
+        return "menu/add";
+    }
+
 
 }

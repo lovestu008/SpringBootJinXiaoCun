@@ -6,6 +6,9 @@ import com.xxxx.supermarket.entity.User;
 import com.xxxx.supermarket.model.UserModel;
 import com.xxxx.supermarket.query.UserQuery;
 import com.xxxx.supermarket.service.UserService;
+import com.xxxx.supermarket.utils.LoginUserUtil;
+import com.xxxx.supermarket.utils.PhoneUtil;
+import com.xxxx.supermarket.utils.UserIDBase64;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -73,5 +76,27 @@ public class UserController extends BaseController {
     public ResultInfo deleteUser(Integer[] ids){
         userService.deleteUser(ids);
         return success("用户删除成功");
+    }
+
+    @RequestMapping("toPasswordPage")
+    public String toPasswordPage(HttpServletRequest request,Integer userId){
+        if (null!=userId){
+            request.setAttribute("userId",userId);
+        }
+        return "user/password";
+    }
+
+    @RequestMapping("updatePwd")
+    @ResponseBody
+    public ResultInfo updatePwd(HttpServletRequest request,String oldPassword,String newPassword,String repeatPassword,Integer userId){
+        Integer id = LoginUserUtil.releaseUserIdFromCookie(request);
+        userService.updatePwd(id,userId,oldPassword,newPassword,repeatPassword);
+        if (userId != null && id != userId){
+            ResultInfo resultInfo = new ResultInfo();
+            resultInfo.setMsg("修改密码成功");
+            resultInfo.setCode(201);
+            return resultInfo;
+        }
+        return success("修改密码成功");
     }
 }
