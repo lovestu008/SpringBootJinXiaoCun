@@ -16,7 +16,8 @@
             // 指定图表的配置项和数据
             var option = {
                 title: {
-                    text: '商品总销量前五统计'
+                    text: '商品总销量前五统计',
+                    left: 'center'
                 },
                 tooltip: {
                     trigger: 'axis',
@@ -26,7 +27,7 @@
                 },
                 color: ["#2f89cf"],
                 legend: {
-                    left: 'center',
+                    left: 'left',
                     data: ['总销量']
                 },
                 grid: {
@@ -55,67 +56,82 @@
         }
             });
         /**
-         * 进货报表
+         * 进货分布构成
+         * 发送ajax请求，查询饼状图所需的数据
          */
-        /*$.post("/report/statisticsinGoods",
-            function (data) {
+        $.ajax({
+            type:"get",
+            url:ctx + "/report/statisticsInGoods",
+            dataType:"json",
+            success:function (data) {
+                // 基于准备好的dom，初始化echarts实例
                 var myChart = echarts.init(document.getElementById('make1'));
+
                 // 指定图表的配置项和数据
-                option = {
+                var option = {
                     title: {
-                        text: '近6个月进货报表',
+                        text: '当月进货分布构成',
+                        left: 'center'
                     },
                     tooltip: {
-                        trigger: 'axis'
+                        trigger: 'item',
+                        formatter: '{a} <br/>{b} : {c} ({d}%)'
                     },
                     legend: {
-                        data: ['进货']
+                        left: 'center',
+                        top: 'bottom',
+                        data: data.data1
                     },
                     toolbox: {
                         show: true,
                         feature: {
-                            dataZoom: {
-                                yAxisIndex: 'none'
+                            mark: {show: true},
+                            dataView: {show: true, readOnly: false},
+                            magicType: {
+                                show: true,
+                                type: ['pie', 'funnel']
                             },
-                            dataView: {readOnly: false},
-                            magicType: {type: ['line', 'bar']},
-                            restore: {},
-                            saveAsImage: {}
+                            restore: {show: true},
+                            saveAsImage: {show: true}
                         }
-                    },
-                    xAxis: {
-                        type: 'category',
-                        boundaryGap: false,
-                        data: data.data.data1
-                    },
-                    yAxis: {
-                        type: 'value',
                     },
                     series: [
                         {
-                            name: '进货量',
-                            type: 'line',
-                            data: data.data.data2,
-                            markPoint: {
-                                data: [
-                                    {type: 'max', name: '最大值'},
-                                    {type: 'min', name: '最小值'}
-                                ]
+                            name: '半径模式',
+                            type: 'pie',
+                            radius: [20, 110],
+                            center: ['25%', '50%'],
+                            roseType: 'radius',
+                            label: {
+                                show: false
                             },
-                            markLine: {
-                                data: [
-                                    {type: 'average', name: '平均值'}
-                                ]
-                            }
+                            emphasis: {
+                                label: {
+                                    show: true
+                                }
+                            },
+                            data: data.data2
+                        },
+                        {
+                            name: '面积模式',
+                            type: 'pie',
+                            radius: [30, 110],
+                            center: ['75%', '50%'],
+                            roseType: 'area',
+                            data: data.data2
                         }
                     ]
                 };
-                myChart.setOption(option);
-            },"json");
 
-        /!**
+                // 使用刚指定的配置项和数据显示图表。
+                myChart.setOption(option);
+            }
+        });
+
+        /**
          * 退货报表
-         *!/
+         */
+        /*
         $.post("/report/statisticsoutGoods",
             function (data) {
                 var myChart = echarts.init(document.getElementById('make2'));

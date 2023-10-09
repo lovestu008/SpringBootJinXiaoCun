@@ -62,4 +62,8 @@ public class PurchaseService extends BaseService<Purchase,Integer> {
 
 
     }
+    //查询当月进货分布
+    public List<Purchase> selectByTime() {
+        return purchaseMapper.selectByTime();
+    }
 }

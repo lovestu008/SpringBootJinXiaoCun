@@ -4,7 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47f004b4-5068-48b2-9225-7a541737bcc5" name="Changes" comment="完善邮箱登录" />
+    <list default="true" id="47f004b4-5068-48b2-9225-7a541737bcc5" name="Changes" comment="数据报表显示">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/ReportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/ReportController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/dao/PurchaseMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/dao/PurchaseMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/service/PurchaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/service/PurchaseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/PurchaseMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/PurchaseMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/report/report.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/js/report/report.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/views/report/report.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/report/report.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/ReportController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/ReportController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/dao/PurchaseMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/dao/PurchaseMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/service/PurchaseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/service/PurchaseService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mappers/PurchaseMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mappers/PurchaseMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/public/js/report/report.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/public/js/report/report.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/views/report/report.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/views/report/report.ftl" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -215,7 +230,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="main" />
+                        <option value="gyj" />
                       </list>
                     </value>
                   </entry>

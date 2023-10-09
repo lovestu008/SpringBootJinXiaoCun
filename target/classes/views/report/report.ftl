@@ -9,13 +9,12 @@
 <#--    <link rel="stylesheet" href="${ctx}/css/public.css" media="all"/>-->
 </head>
 <body class="childrenBody">
-<div style="width: 1300px;height:350px;">
-    <div id="make" style="width: 700px;height:400px;float: left;"></div>
-    <div id="make1" style="width: 600px;height:300px;float: right"></div>
-
+<div style="width: 1300px;height:400px;">
+    <div id="make" style="width: 1300px;height:400px;float: left;"></div>
 </div>
-
+<br>
 <div style="width: 1300px;height:350px;">
+    <div id="make1" style="width: 1300px;height:400px;float: left"></div>
     <div id="make2" style="width: 600px;height:300px;float: left;"></div>
     <div id="make3" style="width: 600px;height:300px;float: right;"></div>
 

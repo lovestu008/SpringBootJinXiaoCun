@@ -198,7 +198,14 @@
         p.goods_name=g.name
     where p.is_valid=1
   </select>
-
+<select id="selectByTime" resultType="com.xxxx.supermarket.entity.Purchase">
+  select
+      <include refid="Base_Column_List"/>
+    from
+        t_purchase
+  where
+        YEAR(inp_time) = YEAR(NOW()) AND MONTH(inp_time) = MONTH(NOW());
+</select>
 
 
 </mapper>
