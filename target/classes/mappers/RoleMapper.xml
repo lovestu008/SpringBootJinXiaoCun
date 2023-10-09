@@ -107,6 +107,6 @@
     select <include refid="Base_Column_List"></include>
         from t_role
     where
-        name = #{name}
+     name = #{name}
   </select>
 </mapper>

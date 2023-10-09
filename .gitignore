@@ -1,3 +1,5 @@
 # 屏蔽.idea
 !/.idea/
 !/src/main/resources/generatorConfig.xml
+/target/
+/.idea/
