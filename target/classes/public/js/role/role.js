@@ -17,10 +17,9 @@ layui.use(['table','layer'],function(){
               cols : [[
                      {type:'checkbox', fixed:'center'}
                      ,{field: 'id', title: '编号',  sort: true, fixed: 'left'}
-                     ,{field: 'roleName', title: '角色名称', align:'center'}
-                     ,{field: 'roleRemark', title: '角色备注', align:'center'}
-                     ,{field: 'createDate', title: '创建时间', align:'center'}
-                     ,{field: 'updateDate', title: '修改时间', align:'center'}
+                     ,{field: 'name', title: '角色名称', align:'center'}
+                     ,{field: 'bz', title: '角色备注', align:'center'}
+                     ,{field: 'remarks', title: '描述', align:'center'}
                      ,{title:'操作',templet:'#roleListBar', fixed: 'right', align:'center', minWidth:150}
               ]]
        });
@@ -75,7 +74,7 @@ layui.use(['table','layer'],function(){
                                    type:"post",
                                    url : ctx+"/role/delete",
                                    data:{
-                                          roleId:data.id
+                                          id:data.id
                                    },
                                    dataType:"json",
                                    success:function (result) {
@@ -92,12 +91,12 @@ layui.use(['table','layer'],function(){
        });
 
        function openAddOrUpdateRoleDialog(roleId){
-              var title = "<h2>用户角色管理 - 角色添加 </h2>";
+              var title = "<h2>角色管理 - 角色添加 </h2>";
               var url = ctx + "/role/addOrUpdateRolePage";
               //通过id判断是添加还是修改操作
               if (roleId){
                      //如果id不为空，则为修改操作
-                     title = "<h2>用户角色管理 - 角色更新 </h2>";
+                     title = "<h2>角色管理 - 角色更新 </h2>";
                      url = url + "?id="+roleId;
               }
               layui.layer.open({
