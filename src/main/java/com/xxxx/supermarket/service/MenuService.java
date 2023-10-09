@@ -2,7 +2,9 @@ package com.xxxx.supermarket.service;
 
 import com.xxxx.supermarket.base.BaseService;
 import com.xxxx.supermarket.dao.MenuMapper;
+import com.xxxx.supermarket.dao.RoleMenuMapper;
 import com.xxxx.supermarket.entity.Menu;
+import com.xxxx.supermarket.entity.RoleMenu;
 import com.xxxx.supermarket.utils.AssertUtil;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
@@ -18,8 +20,13 @@ import java.util.Map;
 public class MenuService extends BaseService<Menu,Integer> {
     @Resource
     private MenuMapper menuMapper;
+    @Resource
+    private RoleMenuMapper roleMenuMapper;
 
-
+    /**
+     * 查询菜单集合
+     * @return
+     */
     public Map<String, Object> menuList() {
         Map<String,Object> result = new HashMap<>();
         List<Menu> menus = menuMapper.queryMenus();
@@ -100,7 +107,11 @@ public class MenuService extends BaseService<Menu,Integer> {
         AssertUtil.isTrue(count > 0 ,"存在子菜单，不允许删除");
 
         //权限表
-        //count =
-
+        count = roleMenuMapper.countRoleMenuByMenuId(id);
+        if (count > 0){
+            AssertUtil.isTrue(roleMenuMapper.deleteByMenuId(id) < count,"菜单删除失败");
+        }
+        temp.setIsDel(1);
+        AssertUtil.isTrue(updateByPrimaryKeySelective(temp)<1,"菜单删除失败");
     }
 }

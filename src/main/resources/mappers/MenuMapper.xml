@@ -162,9 +162,9 @@
     where is_del = 0 and acl_Value = #{aclValue}
   </select>
 
-  <select id="countSubMenuByParentId" >
+  <select id="countSubMenuByParentId" resultType="int">
     select count(*)
     from t_menu
-    where is_del = 0 and p_id = #{pId}
+    where is_del = 0 and p_id = #{id}
   </select>
 </mapper>
