@@ -65,8 +65,6 @@ layui.use(['form', 'layer' ,'formSelects'], function () {
         keyVal: 'id'
     },true);*/
 
-
-
     //查询⻆⾊记录时传⼊⽤⼾id
     var userId = $("[name='id']").val();
     formSelects.config('selectId',{

@@ -83,6 +83,7 @@ public class RoleController extends BaseController{
      */
     @RequestMapping("addGrant")
     @ResponseBody
+    @SupLog(content = "为角色授权")
     public ResultInfo addGrant(Integer roleId,Integer[] mIds){
         roleService.addGrant(roleId,mIds);
         return success("角色授权成功！");
