@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47f004b4-5068-48b2-9225-7a541737bcc5" name="Changes" comment="添加饼状图">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/505befc5-1725-44ef-bd78-81d271298580.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/505befc5-1725-44ef-bd78-81d271298580.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/PurchaseMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/PurchaseMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/views/report/report.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/views/report/report.ftl" afterDir="false" />
-    </list>
+    <list default="true" id="47f004b4-5068-48b2-9225-7a541737bcc5" name="Changes" comment="添加饼状图" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -125,7 +120,7 @@
       <updated>1696490904462</updated>
       <workItem from="1696490905901" duration="35387000" />
       <workItem from="1696752530180" duration="16642000" />
-      <workItem from="1696852223790" duration="1483000" />
+      <workItem from="1696852223790" duration="1788000" />
     </task>
     <task id="LOCAL-00001" summary="role module">
       <created>1696554818830</created>
@@ -211,7 +206,14 @@
       <option name="project" value="LOCAL" />
       <updated>1696852012771</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="添加饼状图">
+      <created>1696854042329</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1696854042329</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
