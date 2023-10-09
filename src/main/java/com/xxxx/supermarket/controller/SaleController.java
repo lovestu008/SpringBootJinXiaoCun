@@ -1,16 +1,23 @@
 package com.xxxx.supermarket.controller;
 
+import com.alibaba.fastjson.JSON;
 import com.xxxx.supermarket.base.BaseController;
 import com.xxxx.supermarket.base.ResultInfo;
 import com.xxxx.supermarket.entity.SaleList;
+import com.xxxx.supermarket.entity.SaleListGoods;
 import com.xxxx.supermarket.query.SaleQuery;
+import com.xxxx.supermarket.service.GoodsService;
 import com.xxxx.supermarket.service.SaleService;
+import com.xxxx.supermarket.utils.AssertUtil;
+import com.xxxx.supermarket.utils.LoginUserUtil;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 import java.util.Map;
 
 @RequestMapping("sale")
@@ -20,6 +27,9 @@ public class SaleController extends BaseController {
     @Resource
     private SaleService saleService;
 
+    @Resource
+    private GoodsService goodsService;
+
     /**
      * 销售主页
      *
@@ -28,7 +38,7 @@ public class SaleController extends BaseController {
      */
     @RequestMapping("index")
     public String index(HttpServletRequest request) {
-
+        request.setAttribute("saleNumber",saleService.getNextSaleNumber());
         return "sale/sale";
     }
     /**
@@ -49,7 +59,8 @@ public class SaleController extends BaseController {
     @RequestMapping("list")
     @ResponseBody
     public Map<String, Object> querySaleListParams(SaleQuery query) {
-        return saleService.querySaleListParams(query);
+        Map<String,Object> map  =saleService.querySaleListParams(query);
+        return map;
     }
 
     /**
@@ -64,40 +75,29 @@ public class SaleController extends BaseController {
 
 
     /**
-     * 删除销售单
-     *
-     * @return
-     */
-    @ResponseBody
-    @RequestMapping("delete")
-    public ResultInfo deleteSaleList(Integer[] ids) {
-        saleService.deleteSale(ids);
-        return success("销售单删除成功");
-    }
-
-    /**
      * 增加销售单
      *
      * @return
      */
     @ResponseBody
-    @RequestMapping("add")
-    public ResultInfo addSaleList(SaleList saleList) {
-        saleService.addSale(saleList);
-        return success("销售单添加成功");
+    @RequestMapping("save")
+    public ResultInfo addSaleList(SaleList saleList,String goodsJson,HttpServletRequest request) {
+        Integer userId = LoginUserUtil.releaseUserIdFromCookie(request);
+        saleList.setUserId(userId);
+        List<SaleListGoods> saleListGoods = JSON.parseArray(goodsJson, SaleListGoods.class);
+        saleService.saveSaleList(saleList,saleListGoods);
+        return success("商品销售出库成功");
     }
 
     /**
-     * 修改销售单
-     *
+     * 删除销售单
      * @return
      */
+    @PostMapping ("delete")
     @ResponseBody
-    @RequestMapping("update")
-    public ResultInfo updateSaleList(SaleList saleList) {
-        saleService.updateSale(saleList);
-        return success("销售单修改成功");
+    public ResultInfo delete(Integer id){
+        saleService.deleteById(id);
+
+        return success("删除货单成功");
     }
-
-
 }

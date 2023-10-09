@@ -96,41 +96,14 @@ layui.use(['form', 'layer', 'formSelects', 'util'], function () {
     }, true);
 
     $('#goodsName').click(function () {
-            layer.open({
+            layui.layer.open({
                 type: 2,
-                title: 'iframe test',
-                shadeClose: true,
-                shade: 0.8,
+                title: '商品出库 - 选择',
+                maxmin: true,
                 area: ['800px', '80%'],
                 content: ctx + '/common/toSelectGoodsPage' // iframe 的 url
             })
         }
     )
 
-
-
-
-
-        form.on('select(goodsByName)', function (data) {
-            var elem = data.elem; // 获得 select 原始 DOM 对象
-            var value = data.value; // 获得被选中的值
-            var othis = data.othis; // 获得 select 元素被替换后的 jQuery 对象
-
-            $.post(ctx + "/goods/queryAllGoods", function (data) {
-                if (data !== null) {//遍历返回的数据
-                    $.each(data, function (index, item) {//将下拉选项设置到下拉框中
-                        $("#goodsName").append("<option value='" + item.id + "' >" + item.name + "</option>");
-                    });
-                }
-                //重新渲染
-                form.render("select")
-            });
-
-            $.post(ctx + "/goods/queryGoodsByName", function (data) {
-                parent.location.reload();
-            })
-
-
-        })
-
-    });
+});

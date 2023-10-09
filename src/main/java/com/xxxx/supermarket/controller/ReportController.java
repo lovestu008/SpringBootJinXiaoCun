@@ -1,6 +1,7 @@
 package com.xxxx.supermarket.controller;
 
 import com.xxxx.supermarket.aspect.SupLog;
+import com.xxxx.supermarket.base.BaseController;
 import com.xxxx.supermarket.query.SaleQuery;
 import com.xxxx.supermarket.service.SaleService;
 import org.springframework.stereotype.Controller;
@@ -11,7 +12,7 @@ import java.util.*;
 
 @Controller
 @RequestMapping("/report")
-public class ReportController {
+public class ReportController extends BaseController {
     //进入统计报表界面
     @RequestMapping("index")
     public String index(){

@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @Service
@@ -31,5 +32,9 @@ public class CustomerService extends BaseService<Customer,Integer> {
         // 设置分页好的列表
         map.put("data",pageInfo.getList());
         return map;
+    }
+
+    public List<Customer> allCustomers() {
+       return baseMapper.allCustomers();
     }
 }

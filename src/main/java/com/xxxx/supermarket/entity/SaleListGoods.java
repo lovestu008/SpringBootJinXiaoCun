@@ -1,27 +1,30 @@
 package com.xxxx.supermarket.entity;
 
+import lombok.Data;
+
+@Data
 public class SaleListGoods {
-    private Integer id;
+    private Integer id;//主键
 
-    private String code;
+    private String code;//商品编码
 
-    private String model;
+    private String model;//商品型号
 
-    private String name;
+    private String name;//商品名称
 
-    private Integer num;
+    private Integer num;//数量
 
-    private Float price;
+    private Double price;//单价
 
-    private Float total;
+    private Double total;//总价
 
-    private String unit;
+    private String unit;//单位
 
-    private Integer saleListId;
+    private Integer saleListId;//销售单
 
-    private Integer typeId;
+    private Integer typeId;//商品类别
 
-    private Integer goodsId;
+    private Integer goodsId;//商品id
 
     public Integer getId() {
         return id;
@@ -63,19 +66,19 @@ public class SaleListGoods {
         this.num = num;
     }
 
-    public Float getPrice() {
+    public Double getPrice() {
         return price;
     }
 
-    public void setPrice(Float price) {
+    public void setPrice(Double price) {
         this.price = price;
     }
 
-    public Float getTotal() {
+    public Double getTotal() {
         return total;
     }
 
-    public void setTotal(Float total) {
+    public void setTotal(Double total) {
         this.total = total;
     }
 

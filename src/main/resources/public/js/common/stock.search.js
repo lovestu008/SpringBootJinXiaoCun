@@ -3,6 +3,9 @@ layui.use(['table','layer'],function(){
         $ = layui.jquery,
         table = layui.table;
 
+
+
+
     $.ajax({
         type:"post",
         url:ctx+"/goodsType/queryAllGoodsTypes",
@@ -43,34 +46,34 @@ layui.use(['table','layer'],function(){
     };
 
 
-    //角色列表展示
     var  tableIns = table.render({
         elem: '#goodsList',
-        url : ctx+'/goods/goodsList',
+        url : ctx+'/common/stockList',
         cellMinWidth : 95,
         page : true,
-        height : "full-75",
+        height : "full-125",
         limits : [10,15,20,25],
-        limit : 10,
+        limit : 20,
         toolbar: "#toolbarDemo",
         id : "goodsListTable",
         cols : [[
-            {field: "id", title:'编号',fixed:"true", width:80},
             {field: 'code', title: '商品编码', minWidth:50, align:"center"},
             {field: 'name', title: '商品名称', minWidth:100, align:'center'},
             {field: 'model', title: '商品型号', minWidth:100, align:'center'},
             {field: 'typeName', title: '商品类别', minWidth:100, align:'center'},
             {field: 'unitName', title: '单位', minWidth:100, align:'center'},
-            {field: 'lastPurchasingPrice', title: '上次进价', minWidth:100, align:'center'},
-            {field: 'purchasingPrice', title: '成本价', minWidth:100, align:'center'},
-            {field: 'inventoryQuantity', title: '当前库存', minWidth:100, align:'center'},
-            {title: '操作', minWidth:150, templet:'#goodsListBar',fixed:"right",align:"center"}
+            {field: 'producer', title: '生产厂商', align:'center',minWidth:150},
+            {field: 'inventoryQuantity', title: '库存量', minWidth:100, align:'center'},
+            {field: 'saleTotal', title: '销售总数', minWidth:100, align:'center'},
+            {field: 'lastPurchasingPrice', title: '上次进价(￥)', minWidth:100, align:'center'},
+            {field: 'purchasingPrice', title: '成本均价(￥)', minWidth:100, align:'center'},
+            {field: 'sellingPrice', title: '销售价(￥)', minWidth:100, align:'center'},
+            {field: 'amount', title: '库存总金额(￥)', minWidth:100, align:'center',templet: function (d) {
+                    return (d.inventoryQuantity * d.purchasingPrice).toFixed(2);
+                }
+             }
         ]]
     });
-
-
-
-
 
     // 多条件搜索
     $(".search_btn").on("click",function(){
@@ -85,31 +88,6 @@ layui.use(['table','layer'],function(){
     });
 
 
-
-    /**
-     * 行监听
-     */
-    table.on("tool(goods)", function(obj){
-        var layEvent = obj.event;
-        if(layEvent === "add") {
-            select(obj.data.id);
-        }
-    });
-
-
-
-    function select(gid){
-        var url  =  ctx+"/common/toAddGoodsInfoPage?gid="+gid;
-        layui.layer.open({
-            title : "商品信息设置",
-            type : 2,
-            area:["800px","550px"],
-            maxmin:true,
-            content : url
-
-        });
-
-    }
 
 
 

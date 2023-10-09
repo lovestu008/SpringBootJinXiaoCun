@@ -1,6 +1,7 @@
 package com.xxxx.supermarket.controller;
 
 import com.xxxx.supermarket.base.BaseController;
+import com.xxxx.supermarket.entity.Customer;
 import com.xxxx.supermarket.query.QueryCustomer;
 import com.xxxx.supermarket.service.CustomerService;
 import org.springframework.stereotype.Controller;
@@ -8,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
+import java.util.List;
 import java.util.Map;
 
 
@@ -36,5 +38,13 @@ public class CustomerController extends BaseController {
     @RequestMapping("index")
     public String index(){
         return "customer/customer";
+    }
+
+
+
+    @RequestMapping("allCustomers")
+    @ResponseBody
+    public List<Customer> allCustomers(){
+        return customerService.allCustomers();
     }
 }

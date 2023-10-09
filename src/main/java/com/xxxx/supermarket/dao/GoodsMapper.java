@@ -6,4 +6,6 @@ import com.xxxx.supermarket.entity.Goods;
 public interface GoodsMapper extends BaseMapper<Goods,Integer> {
 
     Goods queryGoodsByCode(Integer code);
+
+    Goods getGoodsById(Integer gid);
 }

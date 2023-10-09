@@ -101,7 +101,7 @@ layui.use(['laydate','table','layer'],function() {
                         tableIns.reload();
                         resetListGoodsTab();
                     }else{
-                        layer.msg(data.message, {icon: 5});
+                        layer.msg(data.message);
                     }
                 });
             })

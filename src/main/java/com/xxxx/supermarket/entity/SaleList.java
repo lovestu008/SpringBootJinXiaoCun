@@ -1,7 +1,10 @@
 package com.xxxx.supermarket.entity;
 
+import lombok.Data;
+
 import java.util.Date;
 
+@Data
 public class SaleList {
     private Integer id;
 
@@ -20,6 +23,10 @@ public class SaleList {
     private Integer userId;
 
     private Integer customerId;
+
+    private String userName;//操作员
+
+    private String customerName;//客户名
 
     public Integer getId() {
         return id;
