@@ -243,8 +243,9 @@
       </if>
     </where>
   </select>
-  
-  
-  
-  
+  <select id="queryGoodsByCode" resultType="com.xxxx.supermarket.entity.Goods">
+
+  </select>
+
+
 </mapper>

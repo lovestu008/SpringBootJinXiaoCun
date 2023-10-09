@@ -42,11 +42,7 @@ public class GoodsService extends BaseService<Goods,Integer> {
     }
 
 
-
-
-
-
-
-
-
+    public Goods queryGoodsByCode(Integer code) {
+        return goodsMapper.queryGoodsByCode(code);
+    }
 }
