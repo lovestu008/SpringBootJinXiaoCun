@@ -1,19 +1,29 @@
 package com.xxxx.supermarket.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
+import java.util.Date;
+
 public class User {
     private Integer id;
 
-    private String bz;
+    private String userName;
+
+    private String phone;
+
+    private String email;
 
     private String password;
 
     private String trueName;
 
-    private String userName;
-
     private String remarks;
 
     private Integer isDel;
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
+    private Date createtime;
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
+    private Date updatetime;
 
     public Integer getId() {
         return id;
@@ -23,12 +33,28 @@ public class User {
         this.id = id;
     }
 
-    public String getBz() {
-        return bz;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setBz(String bz) {
-        this.bz = bz == null ? null : bz.trim();
+    public void setUserName(String userName) {
+        this.userName = userName == null ? null : userName.trim();
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone == null ? null : phone.trim();
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email == null ? null : email.trim();
     }
 
     public String getPassword() {
@@ -47,14 +73,6 @@ public class User {
         this.trueName = trueName == null ? null : trueName.trim();
     }
 
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName == null ? null : userName.trim();
-    }
-
     public String getRemarks() {
         return remarks;
     }
@@ -69,5 +87,21 @@ public class User {
 
     public void setIsDel(Integer isDel) {
         this.isDel = isDel;
+    }
+
+    public Date getCreatetime() {
+        return createtime;
+    }
+
+    public void setCreatetime(Date createtime) {
+        this.createtime = createtime;
+    }
+
+    public Date getUpdatetime() {
+        return updatetime;
+    }
+
+    public void setUpdatetime(Date updatetime) {
+        this.updatetime = updatetime;
     }
 }

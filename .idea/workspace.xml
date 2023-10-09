@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="032ad28d-c204-47da-85a0-8c54e01a18e8" name="更改" comment="xml。。。">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-    </list>
+    <list default="true" id="47f004b4-5068-48b2-9225-7a541737bcc5" name="Changes" comment="完善邮箱登录" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,43 +18,27 @@
     </option>
   </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="origin/hwj" />
+    <option name="BRANCH" value="origin/gyj" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="zhou1" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;
-  }
-}</component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="selectedUrlAndAccountId">
-      <UrlAndAccount>
-        <option name="accountId" value="d4cf03a2-724f-4b23-849a-cd24d29a8201" />
-        <option name="url" value="git@github.com:lovestu008/SpringBootJinXiaoCun.git" />
-      </UrlAndAccount>
-    </option>
-  </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
+        <option name="localRepository" value="D:\study\px\maven_rep\repository" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../downloadapp/apache-maven-3.9.4" />
         <option name="useMavenConfig" value="true" />
+        <option name="userSettingsFile" value="D:\study\px\downloadapp\apache-maven-3.9.4\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="MavenRunner">
-    <option name="jreName" value="1.8 (2)" />
-  </component>
-  <component name="ProjectId" id="2WIkamT4y5nQUW7kZeOYqCKDjHv" />
+  <component name="ProjectId" id="2WKp0dODD9Slq5aYDzzTCORTx3j" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -70,84 +52,27 @@
     &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
     &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
     &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Warehouse/test/SpringBootJinXiaoCun/src/main/resources/views&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/study/px/SpringStudy/crm&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;模块&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
     &quot;spring.configuration.checksum&quot;: &quot;46d7115f401497dd00b87ad0447a2608&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
-    ]
   }
 }</component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Warehouse\test\SpringBootJinXiaoCun\src\main\resources\views" />
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.xxxx.supermarket" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.Starter">
-    <configuration name=".* 和其他 38 个" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <option name="TEST_OBJECT" value="pattern" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="wholeProject" />
-      </option>
-      <patterns>
-        <pattern testClass=".*" />
-        <pattern testClass="com.xxxx.supermarket.*" />
-        <pattern testClass="com.xxxx.supermarket.aspect.*" />
-        <pattern testClass="com.xxxx.supermarket.base.*" />
-        <pattern testClass="com.xxxx.supermarket.config.*" />
-        <pattern testClass="com.xxxx.supermarket.controller.*" />
-        <pattern testClass="com.xxxx.supermarket.dao.*" />
-        <pattern testClass="com.xxxx.supermarket.entity.*" />
-        <pattern testClass="com.xxxx.supermarket.enums.*" />
-        <pattern testClass="com.xxxx.supermarket.exceptions.*" />
-        <pattern testClass="com.xxxx.supermarket.interceptors.*" />
-        <pattern testClass="com.xxxx.supermarket.mapper.*" />
-        <pattern testClass="com.xxxx.supermarket.query.*" />
-        <pattern testClass="com.xxxx.supermarket.service.*" />
-        <pattern testClass="com.xxxx.supermarket.utils.*" />
-        <pattern testClass="com.xxxx.supermarket.vo.*" />
-        <pattern testClass="mappers.*" />
-        <pattern testClass="public.*" />
-        <pattern testClass="public.css.*" />
-        <pattern testClass="public.images.*" />
-        <pattern testClass="public.js.*" />
-        <pattern testClass="public.js.cusDevPlan.*" />
-        <pattern testClass="public.js.goods.*" />
-        <pattern testClass="public.js.lay-module.*" />
-        <pattern testClass="public.js.module.*" />
-        <pattern testClass="public.js.role.*" />
-        <pattern testClass="public.js.saleChance.*" />
-        <pattern testClass="public.js.user.*" />
-        <pattern testClass="public.js.zTree_v3-3.5.32.*" />
-        <pattern testClass="public.lib.*" />
-        <pattern testClass="views.*" />
-        <pattern testClass="views.category.*" />
-        <pattern testClass="views.cusDevPlan.*" />
-        <pattern testClass="views.goods.*" />
-        <pattern testClass="views.module.*" />
-        <pattern testClass="views.role.*" />
-        <pattern testClass="views.sale.*" />
-        <pattern testClass="views.saleChance.*" />
-        <pattern testClass="views.user.*" />
-      </patterns>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="mybatis-generator" type="MavenRunConfiguration" factoryName="Maven">
+    <configuration name="supermarket [mybatis-generator:generate...]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
       <MavenSettings>
         <option name="myGeneralSettings" />
         <option name="myRunnerSettings" />
@@ -174,8 +99,6 @@
       <method v="2" />
     </configuration>
     <configuration name="Starter" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="1.8 (2)" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <module name="supermarket" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.xxxx.supermarket.Starter" />
       <method v="2">
@@ -183,69 +106,99 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit..* 和其他 38 个" />
-      <item itemvalue="Maven.mybatis-generator" />
+      <item itemvalue="Maven.supermarket [mybatis-generator:generate...]" />
       <item itemvalue="Spring Boot.Starter" />
     </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JUnit..* 和其他 38 个" />
-        <item itemvalue="JUnit..* 和其他 38 个" />
-        <item itemvalue="JUnit..* 和其他 38 个" />
-        <item itemvalue="JUnit..* 和其他 38 个" />
-        <item itemvalue="JUnit..* 和其他 38 个" />
-      </list>
-    </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task active="true" id="Default" summary="默认任务">
-      <changelist id="032ad28d-c204-47da-85a0-8c54e01a18e8" name="更改" comment="" />
-      <created>1696427547948</created>
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="47f004b4-5068-48b2-9225-7a541737bcc5" name="Changes" comment="" />
+      <created>1696490904462</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1696427547948</updated>
-      <workItem from="1696427549121" duration="1117000" />
-      <workItem from="1696466694465" duration="3315000" />
-      <workItem from="1696487147153" duration="6037000" />
-      <workItem from="1696493838840" duration="217000" />
-      <workItem from="1696494061360" duration="7440000" />
-      <workItem from="1696553928760" duration="6420000" />
-      <workItem from="1696560371362" duration="180000" />
-      <workItem from="1696560556787" duration="320000" />
-      <workItem from="1696560885057" duration="15204000" />
-      <workItem from="1696759276976" duration="23000" />
-      <workItem from="1696810686810" duration="4487000" />
+      <updated>1696490904462</updated>
+      <workItem from="1696490905901" duration="35387000" />
+      <workItem from="1696752530180" duration="16642000" />
     </task>
-    <task id="LOCAL-00001" summary="更新">
-      <created>1696580805331</created>
+    <task id="LOCAL-00001" summary="role module">
+      <created>1696554818830</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1696580805332</updated>
+      <updated>1696554818830</updated>
     </task>
-    <task id="LOCAL-00002" summary="商品查询">
-      <created>1696816179577</created>
+    <task id="LOCAL-00002" summary="登录模块">
+      <created>1696560986248</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1696816179577</updated>
+      <updated>1696560986248</updated>
     </task>
-    <task id="LOCAL-00003" summary="xml">
-      <created>1696816215579</created>
+    <task id="LOCAL-00003" summary="user更新">
+      <created>1696564079093</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1696816215579</updated>
+      <updated>1696564079093</updated>
     </task>
-    <task id="LOCAL-00004" summary="xml。。。">
-      <created>1696816435922</created>
+    <task id="LOCAL-00004" summary="user 与 menu 模块">
+      <created>1696584982153</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1696816435923</updated>
+      <updated>1696584982153</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="role.js操作">
+      <created>1696585021522</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1696585021522</updated>
+    </task>
+    <task id="LOCAL-00006" summary="unversioned 问题">
+      <created>1696585110928</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1696585110928</updated>
+    </task>
+    <task id="LOCAL-00007" summary="menu 下js文件">
+      <created>1696585138290</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1696585138290</updated>
+    </task>
+    <task id="LOCAL-00008" summary="user操作 用户登录 user的session作用域">
+      <created>1696773854861</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1696773854861</updated>
+    </task>
+    <task id="LOCAL-00009" summary="user操作 用户登录 user的session作用域">
+      <created>1696774176244</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1696774176244</updated>
+    </task>
+    <task id="LOCAL-00010" summary="非法访问拦截">
+      <created>1696776102180</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1696776102180</updated>
+    </task>
+    <task id="LOCAL-00011" summary="完善邮箱登录">
+      <created>1696814791348</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1696814791348</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -262,7 +215,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="zhou" />
+                        <option value="main" />
                       </list>
                     </value>
                   </entry>
@@ -275,10 +228,16 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="更新" />
-    <MESSAGE value="商品查询" />
-    <MESSAGE value="xml" />
-    <MESSAGE value="xml。。。" />
-    <option name="LAST_COMMIT_MESSAGE" value="xml。。。" />
+    <MESSAGE value="role module" />
+    <MESSAGE value="登录模块" />
+    <MESSAGE value="user更新" />
+    <MESSAGE value="user 与 menu 模块" />
+    <MESSAGE value="role.js操作" />
+    <MESSAGE value="unversioned 问题" />
+    <MESSAGE value="menu 下js文件" />
+    <MESSAGE value="user操作 用户登录 user的session作用域" />
+    <MESSAGE value="非法访问拦截" />
+    <MESSAGE value="完善邮箱登录" />
+    <option name="LAST_COMMIT_MESSAGE" value="完善邮箱登录" />
   </component>
 </project>

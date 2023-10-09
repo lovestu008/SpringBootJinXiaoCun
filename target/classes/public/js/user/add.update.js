@@ -27,8 +27,6 @@ layui.use(['form', 'layer' ,'formSelects'], function () {
             // 更新操作
             url = ctx + "/user/update";
         }
-        console.log(data.field);
-        console.log(data.field);
         // 发送ajax请求
         $.post(url, data.field, function (result) {
             // 操作成功
@@ -70,7 +68,7 @@ layui.use(['form', 'layer' ,'formSelects'], function () {
 
 
     //查询⻆⾊记录时传⼊⽤⼾id
-    var userId = $("input[name='id']").val();
+    var userId = $("#id").val();
     formSelects.config('selectId',{
         type:"post",
         searchUrl:ctx+"/role/queryAllRoles?userId="+userId,

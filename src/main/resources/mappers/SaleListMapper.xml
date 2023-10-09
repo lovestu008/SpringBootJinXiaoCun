@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xxxx.supermarket.dao.SaleListMapper">
+  <resultMap id="BaseResultMap" type="com.xxxx.supermarket.entity.SaleList">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="amount_paid" jdbcType="REAL" property="amountPaid" />
+    <result column="amount_payable" jdbcType="REAL" property="amountPayable" />
+    <result column="remarks" jdbcType="VARCHAR" property="remarks" />
+    <result column="sale_date" jdbcType="TIMESTAMP" property="saleDate" />
+    <result column="sale_number" jdbcType="VARCHAR" property="saleNumber" />
+    <result column="state" jdbcType="INTEGER" property="state" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="customer_id" jdbcType="INTEGER" property="customerId" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, amount_paid, amount_payable, remarks, sale_date, sale_number, state, user_id, 
+    customer_id
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from t_sale_list
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  
+  <select id="selectByParams" parameterType="com.xxxx.supermarket.query.SaleQuery" resultType="com.xxxx.supermarket.entity.SaleListGoods">
+      select tslg.*
+    from t_sale_list sl
+    left join t_sale_list_goods tslg
+    on sl.id = tslg.sale_list_id
+      <where>
+          state>=1
+          <if test="customerId !=null">
+              and customer_id = #{customerId}
+          </if>
+          <if test="amountPaid !=null">
+              and customer_id = #{amountPaid}
+          </if>
+          <if test="amountPayable !=null">
+              and customer_id = #{amountPayable}
+          </if>
+          <if test="saleDate !=null">
+              and customer_id = #{saleDate}
+          </if>
+          <if test="remarks !=null">
+              and customer_id = #{remarks}
+          </if>
+          <if test="state !=null">
+              and customer_id = #{state}
+          </if>
+      </where>
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from t_sale_list
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.xxxx.supermarket.entity.SaleList">
+    insert into t_sale_list (id, amount_paid, amount_payable, 
+      remarks, sale_date, sale_number, 
+      state, user_id, customer_id
+      )
+    values (#{id,jdbcType=INTEGER}, #{amountPaid,jdbcType=REAL}, #{amountPayable,jdbcType=REAL}, 
+      #{remarks,jdbcType=VARCHAR}, #{saleDate,jdbcType=TIMESTAMP}, #{saleNumber,jdbcType=VARCHAR}, 
+      #{state,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, #{customerId,jdbcType=INTEGER}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.xxxx.supermarket.entity.SaleList">
+    insert into t_sale_list
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="amountPaid != null">
+        amount_paid,
+      </if>
+      <if test="amountPayable != null">
+        amount_payable,
+      </if>
+      <if test="remarks != null">
+        remarks,
+      </if>
+      <if test="saleDate != null">
+        sale_date,
+      </if>
+      <if test="saleNumber != null">
+        sale_number,
+      </if>
+      <if test="state != null">
+        state,
+      </if>
+      <if test="userId != null">
+        user_id,
+      </if>
+      <if test="customerId != null">
+        customer_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="amountPaid != null">
+        #{amountPaid,jdbcType=REAL},
+      </if>
+      <if test="amountPayable != null">
+        #{amountPayable,jdbcType=REAL},
+      </if>
+      <if test="remarks != null">
+        #{remarks,jdbcType=VARCHAR},
+      </if>
+      <if test="saleDate != null">
+        #{saleDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="saleNumber != null">
+        #{saleNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="state != null">
+        #{state,jdbcType=INTEGER},
+      </if>
+      <if test="userId != null">
+        #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="customerId != null">
+        #{customerId,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.xxxx.supermarket.entity.SaleList">
+    update t_sale_list
+    <set>
+      <if test="amountPaid != null">
+        amount_paid = #{amountPaid,jdbcType=REAL},
+      </if>
+      <if test="amountPayable != null">
+        amount_payable = #{amountPayable,jdbcType=REAL},
+      </if>
+      <if test="remarks != null">
+        remarks = #{remarks,jdbcType=VARCHAR},
+      </if>
+      <if test="saleDate != null">
+        sale_date = #{saleDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="saleNumber != null">
+        sale_number = #{saleNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="state != null">
+        state = #{state,jdbcType=INTEGER},
+      </if>
+      <if test="userId != null">
+        user_id = #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="customerId != null">
+        customer_id = #{customerId,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.xxxx.supermarket.entity.SaleList">
+    update t_sale_list
+    set amount_paid = #{amountPaid,jdbcType=REAL},
+      amount_payable = #{amountPayable,jdbcType=REAL},
+      remarks = #{remarks,jdbcType=VARCHAR},
+      sale_date = #{saleDate,jdbcType=TIMESTAMP},
+      sale_number = #{saleNumber,jdbcType=VARCHAR},
+      state = #{state,jdbcType=INTEGER},
+      user_id = #{userId,jdbcType=INTEGER},
+      customer_id = #{customerId,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

@@ -1,4 +1,4 @@
-layui.define(['layer', 'carousel'], function (exports) {
+﻿layui.define(['layer', 'carousel'], function (exports) {
     var $ = layui.jquery;
     var layer = layui.layer;
     var carousel = layui.carousel;

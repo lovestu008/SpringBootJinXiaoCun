@@ -1,0 +1,666 @@
+Index: src/main/java/com/xxxx/supermarket/Starter.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.xxxx.supermarket;\r\n\r\nimport org.springframework.boot.SpringApplication;\r\nimport org.springframework.boot.autoconfigure.SpringBootApplication;\r\n\r\n@SpringBootApplication\r\npublic class Starter {\r\n    public static void main(String[] args) {\r\n        SpringApplication.run(Starter.class);\r\n    }\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/xxxx/supermarket/Starter.java b/src/main/java/com/xxxx/supermarket/Starter.java
+--- a/src/main/java/com/xxxx/supermarket/Starter.java	(revision d1c062d15d49eb6483c6bb57cc573f4b97f91935)
++++ b/src/main/java/com/xxxx/supermarket/Starter.java	(date 1696496267684)
+@@ -8,5 +8,4 @@
+     public static void main(String[] args) {
+         SpringApplication.run(Starter.class);
+     }
+-
+ }
+Index: src/main/resources/generatorConfig.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<!DOCTYPE generatorConfiguration\r\n        PUBLIC \"-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN\"\r\n        \"http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd\">\r\n<generatorConfiguration>\r\n    <!-- 数据库驱动路径：在左侧project边栏的External Libraries中找到mysql的驱动，右键选择copy path -->\r\n    <classPathEntry location=\"D:\\study\\px\\maven_rep\\repository\\mysql\\mysql-connector-java\\8.0.18\\mysql-connector-java-8.0.18.jar\"/>\r\n    <!-- context 是逆向⼯程的主要配置信息，id：起个名字， targetRuntime：设置⽣成的⽂件适⽤于哪个mybatis版\r\n   本 -->\r\n    <context id=\"DB2Tables\" targetRuntime=\"MyBatis3\">\r\n        <!--optional,指在创建class时，对注释进⾏控制-->\r\n        <commentGenerator>\r\n            <!-- 是否去除⽇期那⾏注释 -->\r\n            <property name=\"suppressDate\" value=\"true\"/>\r\n            <!-- 是否去除⾃动⽣成的注释 true：是 ： false:否 -->\r\n            <property name=\"suppressAllComments\" value=\"true\"/>\r\n        </commentGenerator>\r\n        <!-- 数据库链接地址账号密码 -->\r\n        <jdbcConnection\r\n                driverClass=\"com.mysql.cj.jdbc.Driver\"\r\n                connectionURL=\"jdbc:mysql://127.0.0.1:3306/supermarket?serverTimezone=GMT%2B8\"\r\n                userId=\"root\"\r\n                password=\"root\">\r\n        </jdbcConnection>\r\n        <!--\r\n        java类型处理器\r\n        ⽤于处理DB中的类型到Java中的类型，默认使⽤JavaTypeResolverDefaultImpl；\r\n        注意⼀点，默认会先尝试使⽤Integer，Long，Short等来对应DECIMAL和NUMERIC数据类型；\r\n        true：使⽤ BigDecimal对应DECIMAL和NUMERIC数据类型\r\n        false：默认，把JDBC DECIMAL和NUMERIC类型解析为Integer\r\n        -->\r\n        <javaTypeResolver>\r\n            <property name=\"forceBigDecimals\" value=\"false\"/>\r\n        </javaTypeResolver>\r\n        <!-- ⽣成Model类存放位置 -->\r\n        <javaModelGenerator targetPackage=\"com.xxxx.supermarket.entity\" targetProject=\"src/main/java\">\r\n            <!-- 在targetPackage的基础上，根据数据库的schema再⽣成⼀层package，⽣成的类放在这个package\r\n           下，默认为false -->\r\n            <property name=\"enableSubPackages\" value=\"true\"/>\r\n            <!-- 设置是否在getter⽅法中，对String类型字段调⽤trim()⽅法 -->\r\n            <property name=\"trimStrings\" value=\"true\"/>\r\n        </javaModelGenerator>\r\n        <!--⽣成映射⽂件存放位置-->\r\n        <sqlMapGenerator targetPackage=\"mappers\" targetProject=\"src/main/resources\">\r\n            <property name=\"enableSubPackages\" value=\"true\"/>\r\n        </sqlMapGenerator>\r\n        <!--⽣成Dao类存放位置-->\r\n        <javaClientGenerator type=\"XMLMAPPER\" targetPackage=\"com.xxxx.supermarket.dao\"\r\n                             targetProject=\"src/main/java\">\r\n            <property name=\"enableSubPackages\" value=\"true\"/>\r\n        </javaClientGenerator>\r\n        <!-- 数据库的表名与对应的实体类的名称，tableName是数据库中的表名，domainObjectName是⽣成的JAVA模\r\n       型名 -->\r\n        <table tableName=\"t_user\" domainObjectName=\"User\"\r\n               enableCountByExample=\"false\" enableUpdateByExample=\"false\"\r\n               enableDeleteByExample=\"false\" enableSelectByExample=\"false\"\r\n               selectByExampleQueryId=\"false\">\r\n        </table>\r\n    </context>\r\n</generatorConfiguration>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/generatorConfig.xml b/src/main/resources/generatorConfig.xml
+--- a/src/main/resources/generatorConfig.xml	(revision d1c062d15d49eb6483c6bb57cc573f4b97f91935)
++++ b/src/main/resources/generatorConfig.xml	(date 1696496211776)
+@@ -4,7 +4,7 @@
+         "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+ <generatorConfiguration>
+     <!-- 数据库驱动路径：在左侧project边栏的External Libraries中找到mysql的驱动，右键选择copy path -->
+-    <classPathEntry location="D:\study\px\maven_rep\repository\mysql\mysql-connector-java\8.0.18\mysql-connector-java-8.0.18.jar"/>
++    <classPathEntry location="F:\install_path\apache-maven-3.6.2-bin\maven\mysql\mysql-connector-java\8.0.18\mysql-connector-java-8.0.18.jar"/>
+     <!-- context 是逆向⼯程的主要配置信息，id：起个名字， targetRuntime：设置⽣成的⽂件适⽤于哪个mybatis版
+    本 -->
+     <context id="DB2Tables" targetRuntime="MyBatis3">
+@@ -20,7 +20,7 @@
+                 driverClass="com.mysql.cj.jdbc.Driver"
+                 connectionURL="jdbc:mysql://127.0.0.1:3306/supermarket?serverTimezone=GMT%2B8"
+                 userId="root"
+-                password="root">
++                password="191011">
+         </jdbcConnection>
+         <!--
+         java类型处理器
+@@ -51,7 +51,7 @@
+         </javaClientGenerator>
+         <!-- 数据库的表名与对应的实体类的名称，tableName是数据库中的表名，domainObjectName是⽣成的JAVA模
+        型名 -->
+-        <table tableName="t_user" domainObjectName="User"
++        <table tableName="t_purchase_list_goods" domainObjectName="PurchaseListGoods"
+                enableCountByExample="false" enableUpdateByExample="false"
+                enableDeleteByExample="false" enableSelectByExample="false"
+                selectByExampleQueryId="false">
+Index: src/main/java/com/xxxx/supermarket/entity/PurchaseListGoods.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/xxxx/supermarket/entity/PurchaseListGoods.java b/src/main/java/com/xxxx/supermarket/entity/PurchaseListGoods.java
+new file mode 100644
+--- /dev/null	(date 1696496214356)
++++ b/src/main/java/com/xxxx/supermarket/entity/PurchaseListGoods.java	(date 1696496214356)
+@@ -0,0 +1,113 @@
++package com.xxxx.supermarket.entity;
++
++public class PurchaseListGoods {
++    private Integer id;
++
++    private String code;
++
++    private String model;
++
++    private String name;
++
++    private Integer num;
++
++    private Float price;
++
++    private Float total;
++
++    private String unit;
++
++    private Integer purchaseListId;
++
++    private Integer typeId;
++
++    private Integer goodsId;
++
++    public Integer getId() {
++        return id;
++    }
++
++    public void setId(Integer id) {
++        this.id = id;
++    }
++
++    public String getCode() {
++        return code;
++    }
++
++    public void setCode(String code) {
++        this.code = code == null ? null : code.trim();
++    }
++
++    public String getModel() {
++        return model;
++    }
++
++    public void setModel(String model) {
++        this.model = model == null ? null : model.trim();
++    }
++
++    public String getName() {
++        return name;
++    }
++
++    public void setName(String name) {
++        this.name = name == null ? null : name.trim();
++    }
++
++    public Integer getNum() {
++        return num;
++    }
++
++    public void setNum(Integer num) {
++        this.num = num;
++    }
++
++    public Float getPrice() {
++        return price;
++    }
++
++    public void setPrice(Float price) {
++        this.price = price;
++    }
++
++    public Float getTotal() {
++        return total;
++    }
++
++    public void setTotal(Float total) {
++        this.total = total;
++    }
++
++    public String getUnit() {
++        return unit;
++    }
++
++    public void setUnit(String unit) {
++        this.unit = unit == null ? null : unit.trim();
++    }
++
++    public Integer getPurchaseListId() {
++        return purchaseListId;
++    }
++
++    public void setPurchaseListId(Integer purchaseListId) {
++        this.purchaseListId = purchaseListId;
++    }
++
++    public Integer getTypeId() {
++        return typeId;
++    }
++
++    public void setTypeId(Integer typeId) {
++        this.typeId = typeId;
++    }
++
++    public Integer getGoodsId() {
++        return goodsId;
++    }
++
++    public void setGoodsId(Integer goodsId) {
++        this.goodsId = goodsId;
++    }
++}
+\ No newline at end of file
+Index: src/main/java/com/xxxx/supermarket/dao/PurchaseListGoodsMapper.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/xxxx/supermarket/dao/PurchaseListGoodsMapper.java b/src/main/java/com/xxxx/supermarket/dao/PurchaseListGoodsMapper.java
+new file mode 100644
+--- /dev/null	(date 1696496214356)
++++ b/src/main/java/com/xxxx/supermarket/dao/PurchaseListGoodsMapper.java	(date 1696496214356)
+@@ -0,0 +1,17 @@
++package com.xxxx.supermarket.dao;
++
++import com.xxxx.supermarket.entity.PurchaseListGoods;
++
++public interface PurchaseListGoodsMapper {
++    int deleteByPrimaryKey(Integer id);
++
++    int insert(PurchaseListGoods record);
++
++    int insertSelective(PurchaseListGoods record);
++
++    PurchaseListGoods selectByPrimaryKey(Integer id);
++
++    int updateByPrimaryKeySelective(PurchaseListGoods record);
++
++    int updateByPrimaryKey(PurchaseListGoods record);
++}
+\ No newline at end of file
+Index: src/main/resources/mappers/PurchaseListGoodsMapper.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/mappers/PurchaseListGoodsMapper.xml b/src/main/resources/mappers/PurchaseListGoodsMapper.xml
+new file mode 100644
+--- /dev/null	(date 1696496214355)
++++ b/src/main/resources/mappers/PurchaseListGoodsMapper.xml	(date 1696496214355)
+@@ -0,0 +1,163 @@
++<?xml version="1.0" encoding="UTF-8" ?>
++<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
++<mapper namespace="com.xxxx.supermarket.dao.PurchaseListGoodsMapper" >
++  <resultMap id="BaseResultMap" type="com.xxxx.supermarket.entity.PurchaseListGoods" >
++    <id column="id" property="id" jdbcType="INTEGER" />
++    <result column="code" property="code" jdbcType="VARCHAR" />
++    <result column="model" property="model" jdbcType="VARCHAR" />
++    <result column="name" property="name" jdbcType="VARCHAR" />
++    <result column="num" property="num" jdbcType="INTEGER" />
++    <result column="price" property="price" jdbcType="REAL" />
++    <result column="total" property="total" jdbcType="REAL" />
++    <result column="unit" property="unit" jdbcType="VARCHAR" />
++    <result column="purchase_list_id" property="purchaseListId" jdbcType="INTEGER" />
++    <result column="type_id" property="typeId" jdbcType="INTEGER" />
++    <result column="goods_id" property="goodsId" jdbcType="INTEGER" />
++  </resultMap>
++  <sql id="Base_Column_List" >
++    id, code, model, name, num, price, total, unit, purchase_list_id, type_id, goods_id
++  </sql>
++  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
++    select 
++    <include refid="Base_Column_List" />
++    from t_purchase_list_goods
++    where id = #{id,jdbcType=INTEGER}
++  </select>
++  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
++    delete from t_purchase_list_goods
++    where id = #{id,jdbcType=INTEGER}
++  </delete>
++  <insert id="insert" parameterType="com.xxxx.supermarket.entity.PurchaseListGoods" >
++    insert into t_purchase_list_goods (id, code, model, 
++      name, num, price, total, 
++      unit, purchase_list_id, type_id, 
++      goods_id)
++    values (#{id,jdbcType=INTEGER}, #{code,jdbcType=VARCHAR}, #{model,jdbcType=VARCHAR}, 
++      #{name,jdbcType=VARCHAR}, #{num,jdbcType=INTEGER}, #{price,jdbcType=REAL}, #{total,jdbcType=REAL}, 
++      #{unit,jdbcType=VARCHAR}, #{purchaseListId,jdbcType=INTEGER}, #{typeId,jdbcType=INTEGER}, 
++      #{goodsId,jdbcType=INTEGER})
++  </insert>
++  <insert id="insertSelective" parameterType="com.xxxx.supermarket.entity.PurchaseListGoods" >
++    insert into t_purchase_list_goods
++    <trim prefix="(" suffix=")" suffixOverrides="," >
++      <if test="id != null" >
++        id,
++      </if>
++      <if test="code != null" >
++        code,
++      </if>
++      <if test="model != null" >
++        model,
++      </if>
++      <if test="name != null" >
++        name,
++      </if>
++      <if test="num != null" >
++        num,
++      </if>
++      <if test="price != null" >
++        price,
++      </if>
++      <if test="total != null" >
++        total,
++      </if>
++      <if test="unit != null" >
++        unit,
++      </if>
++      <if test="purchaseListId != null" >
++        purchase_list_id,
++      </if>
++      <if test="typeId != null" >
++        type_id,
++      </if>
++      <if test="goodsId != null" >
++        goods_id,
++      </if>
++    </trim>
++    <trim prefix="values (" suffix=")" suffixOverrides="," >
++      <if test="id != null" >
++        #{id,jdbcType=INTEGER},
++      </if>
++      <if test="code != null" >
++        #{code,jdbcType=VARCHAR},
++      </if>
++      <if test="model != null" >
++        #{model,jdbcType=VARCHAR},
++      </if>
++      <if test="name != null" >
++        #{name,jdbcType=VARCHAR},
++      </if>
++      <if test="num != null" >
++        #{num,jdbcType=INTEGER},
++      </if>
++      <if test="price != null" >
++        #{price,jdbcType=REAL},
++      </if>
++      <if test="total != null" >
++        #{total,jdbcType=REAL},
++      </if>
++      <if test="unit != null" >
++        #{unit,jdbcType=VARCHAR},
++      </if>
++      <if test="purchaseListId != null" >
++        #{purchaseListId,jdbcType=INTEGER},
++      </if>
++      <if test="typeId != null" >
++        #{typeId,jdbcType=INTEGER},
++      </if>
++      <if test="goodsId != null" >
++        #{goodsId,jdbcType=INTEGER},
++      </if>
++    </trim>
++  </insert>
++  <update id="updateByPrimaryKeySelective" parameterType="com.xxxx.supermarket.entity.PurchaseListGoods" >
++    update t_purchase_list_goods
++    <set >
++      <if test="code != null" >
++        code = #{code,jdbcType=VARCHAR},
++      </if>
++      <if test="model != null" >
++        model = #{model,jdbcType=VARCHAR},
++      </if>
++      <if test="name != null" >
++        name = #{name,jdbcType=VARCHAR},
++      </if>
++      <if test="num != null" >
++        num = #{num,jdbcType=INTEGER},
++      </if>
++      <if test="price != null" >
++        price = #{price,jdbcType=REAL},
++      </if>
++      <if test="total != null" >
++        total = #{total,jdbcType=REAL},
++      </if>
++      <if test="unit != null" >
++        unit = #{unit,jdbcType=VARCHAR},
++      </if>
++      <if test="purchaseListId != null" >
++        purchase_list_id = #{purchaseListId,jdbcType=INTEGER},
++      </if>
++      <if test="typeId != null" >
++        type_id = #{typeId,jdbcType=INTEGER},
++      </if>
++      <if test="goodsId != null" >
++        goods_id = #{goodsId,jdbcType=INTEGER},
++      </if>
++    </set>
++    where id = #{id,jdbcType=INTEGER}
++  </update>
++  <update id="updateByPrimaryKey" parameterType="com.xxxx.supermarket.entity.PurchaseListGoods" >
++    update t_purchase_list_goods
++    set code = #{code,jdbcType=VARCHAR},
++      model = #{model,jdbcType=VARCHAR},
++      name = #{name,jdbcType=VARCHAR},
++      num = #{num,jdbcType=INTEGER},
++      price = #{price,jdbcType=REAL},
++      total = #{total,jdbcType=REAL},
++      unit = #{unit,jdbcType=VARCHAR},
++      purchase_list_id = #{purchaseListId,jdbcType=INTEGER},
++      type_id = #{typeId,jdbcType=INTEGER},
++      goods_id = #{goodsId,jdbcType=INTEGER}
++    where id = #{id,jdbcType=INTEGER}
++  </update>
++</mapper>
+\ No newline at end of file
+Index: src/main/java/com/xxxx/supermarket/entity/PurchaseList.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/xxxx/supermarket/entity/PurchaseList.java b/src/main/java/com/xxxx/supermarket/entity/PurchaseList.java
+new file mode 100644
+--- /dev/null	(date 1696496190683)
++++ b/src/main/java/com/xxxx/supermarket/entity/PurchaseList.java	(date 1696496190683)
+@@ -0,0 +1,95 @@
++package com.xxxx.supermarket.entity;
++
++import java.util.Date;
++
++public class PurchaseList {
++    private Integer id;
++
++    private Float amountPaid;
++
++    private Float amountPayable;
++
++    private Date purchaseDate;
++
++    private String remarks;
++
++    private Integer state;
++
++    private String purchaseNumber;
++
++    private Integer supplierId;
++
++    private Integer userId;
++
++    public Integer getId() {
++        return id;
++    }
++
++    public void setId(Integer id) {
++        this.id = id;
++    }
++
++    public Float getAmountPaid() {
++        return amountPaid;
++    }
++
++    public void setAmountPaid(Float amountPaid) {
++        this.amountPaid = amountPaid;
++    }
++
++    public Float getAmountPayable() {
++        return amountPayable;
++    }
++
++    public void setAmountPayable(Float amountPayable) {
++        this.amountPayable = amountPayable;
++    }
++
++    public Date getPurchaseDate() {
++        return purchaseDate;
++    }
++
++    public void setPurchaseDate(Date purchaseDate) {
++        this.purchaseDate = purchaseDate;
++    }
++
++    public String getRemarks() {
++        return remarks;
++    }
++
++    public void setRemarks(String remarks) {
++        this.remarks = remarks == null ? null : remarks.trim();
++    }
++
++    public Integer getState() {
++        return state;
++    }
++
++    public void setState(Integer state) {
++        this.state = state;
++    }
++
++    public String getPurchaseNumber() {
++        return purchaseNumber;
++    }
++
++    public void setPurchaseNumber(String purchaseNumber) {
++        this.purchaseNumber = purchaseNumber == null ? null : purchaseNumber.trim();
++    }
++
++    public Integer getSupplierId() {
++        return supplierId;
++    }
++
++    public void setSupplierId(Integer supplierId) {
++        this.supplierId = supplierId;
++    }
++
++    public Integer getUserId() {
++        return userId;
++    }
++
++    public void setUserId(Integer userId) {
++        this.userId = userId;
++    }
++}
+\ No newline at end of file
+Index: src/main/java/com/xxxx/supermarket/dao/PurchaseListMapper.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/xxxx/supermarket/dao/PurchaseListMapper.java b/src/main/java/com/xxxx/supermarket/dao/PurchaseListMapper.java
+new file mode 100644
+--- /dev/null	(date 1696496190684)
++++ b/src/main/java/com/xxxx/supermarket/dao/PurchaseListMapper.java	(date 1696496190684)
+@@ -0,0 +1,17 @@
++package com.xxxx.supermarket.dao;
++
++import com.xxxx.supermarket.entity.PurchaseList;
++
++public interface PurchaseListMapper {
++    int deleteByPrimaryKey(Integer id);
++
++    int insert(PurchaseList record);
++
++    int insertSelective(PurchaseList record);
++
++    PurchaseList selectByPrimaryKey(Integer id);
++
++    int updateByPrimaryKeySelective(PurchaseList record);
++
++    int updateByPrimaryKey(PurchaseList record);
++}
+\ No newline at end of file
+Index: src/main/resources/mappers/PurchaseListMapper.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/mappers/PurchaseListMapper.xml b/src/main/resources/mappers/PurchaseListMapper.xml
+new file mode 100644
+--- /dev/null	(date 1696496190682)
++++ b/src/main/resources/mappers/PurchaseListMapper.xml	(date 1696496190682)
+@@ -0,0 +1,142 @@
++<?xml version="1.0" encoding="UTF-8" ?>
++<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
++<mapper namespace="com.xxxx.supermarket.dao.PurchaseListMapper" >
++  <resultMap id="BaseResultMap" type="com.xxxx.supermarket.entity.PurchaseList" >
++    <id column="id" property="id" jdbcType="INTEGER" />
++    <result column="amount_paid" property="amountPaid" jdbcType="REAL" />
++    <result column="amount_payable" property="amountPayable" jdbcType="REAL" />
++    <result column="purchase_date" property="purchaseDate" jdbcType="TIMESTAMP" />
++    <result column="remarks" property="remarks" jdbcType="VARCHAR" />
++    <result column="state" property="state" jdbcType="INTEGER" />
++    <result column="purchase_number" property="purchaseNumber" jdbcType="VARCHAR" />
++    <result column="supplier_id" property="supplierId" jdbcType="INTEGER" />
++    <result column="user_id" property="userId" jdbcType="INTEGER" />
++  </resultMap>
++  <sql id="Base_Column_List" >
++    id, amount_paid, amount_payable, purchase_date, remarks, state, purchase_number, 
++    supplier_id, user_id
++  </sql>
++  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
++    select 
++    <include refid="Base_Column_List" />
++    from t_purchase_list
++    where id = #{id,jdbcType=INTEGER}
++  </select>
++  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
++    delete from t_purchase_list
++    where id = #{id,jdbcType=INTEGER}
++  </delete>
++  <insert id="insert" parameterType="com.xxxx.supermarket.entity.PurchaseList" >
++    insert into t_purchase_list (id, amount_paid, amount_payable, 
++      purchase_date, remarks, state, 
++      purchase_number, supplier_id, user_id
++      )
++    values (#{id,jdbcType=INTEGER}, #{amountPaid,jdbcType=REAL}, #{amountPayable,jdbcType=REAL}, 
++      #{purchaseDate,jdbcType=TIMESTAMP}, #{remarks,jdbcType=VARCHAR}, #{state,jdbcType=INTEGER}, 
++      #{purchaseNumber,jdbcType=VARCHAR}, #{supplierId,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}
++      )
++  </insert>
++  <insert id="insertSelective" parameterType="com.xxxx.supermarket.entity.PurchaseList" >
++    insert into t_purchase_list
++    <trim prefix="(" suffix=")" suffixOverrides="," >
++      <if test="id != null" >
++        id,
++      </if>
++      <if test="amountPaid != null" >
++        amount_paid,
++      </if>
++      <if test="amountPayable != null" >
++        amount_payable,
++      </if>
++      <if test="purchaseDate != null" >
++        purchase_date,
++      </if>
++      <if test="remarks != null" >
++        remarks,
++      </if>
++      <if test="state != null" >
++        state,
++      </if>
++      <if test="purchaseNumber != null" >
++        purchase_number,
++      </if>
++      <if test="supplierId != null" >
++        supplier_id,
++      </if>
++      <if test="userId != null" >
++        user_id,
++      </if>
++    </trim>
++    <trim prefix="values (" suffix=")" suffixOverrides="," >
++      <if test="id != null" >
++        #{id,jdbcType=INTEGER},
++      </if>
++      <if test="amountPaid != null" >
++        #{amountPaid,jdbcType=REAL},
++      </if>
++      <if test="amountPayable != null" >
++        #{amountPayable,jdbcType=REAL},
++      </if>
++      <if test="purchaseDate != null" >
++        #{purchaseDate,jdbcType=TIMESTAMP},
++      </if>
++      <if test="remarks != null" >
++        #{remarks,jdbcType=VARCHAR},
++      </if>
++      <if test="state != null" >
++        #{state,jdbcType=INTEGER},
++      </if>
++      <if test="purchaseNumber != null" >
++        #{purchaseNumber,jdbcType=VARCHAR},
++      </if>
++      <if test="supplierId != null" >
++        #{supplierId,jdbcType=INTEGER},
++      </if>
++      <if test="userId != null" >
++        #{userId,jdbcType=INTEGER},
++      </if>
++    </trim>
++  </insert>
++  <update id="updateByPrimaryKeySelective" parameterType="com.xxxx.supermarket.entity.PurchaseList" >
++    update t_purchase_list
++    <set >
++      <if test="amountPaid != null" >
++        amount_paid = #{amountPaid,jdbcType=REAL},
++      </if>
++      <if test="amountPayable != null" >
++        amount_payable = #{amountPayable,jdbcType=REAL},
++      </if>
++      <if test="purchaseDate != null" >
++        purchase_date = #{purchaseDate,jdbcType=TIMESTAMP},
++      </if>
++      <if test="remarks != null" >
++        remarks = #{remarks,jdbcType=VARCHAR},
++      </if>
++      <if test="state != null" >
++        state = #{state,jdbcType=INTEGER},
++      </if>
++      <if test="purchaseNumber != null" >
++        purchase_number = #{purchaseNumber,jdbcType=VARCHAR},
++      </if>
++      <if test="supplierId != null" >
++        supplier_id = #{supplierId,jdbcType=INTEGER},
++      </if>
++      <if test="userId != null" >
++        user_id = #{userId,jdbcType=INTEGER},
++      </if>
++    </set>
++    where id = #{id,jdbcType=INTEGER}
++  </update>
++  <update id="updateByPrimaryKey" parameterType="com.xxxx.supermarket.entity.PurchaseList" >
++    update t_purchase_list
++    set amount_paid = #{amountPaid,jdbcType=REAL},
++      amount_payable = #{amountPayable,jdbcType=REAL},
++      purchase_date = #{purchaseDate,jdbcType=TIMESTAMP},
++      remarks = #{remarks,jdbcType=VARCHAR},
++      state = #{state,jdbcType=INTEGER},
++      purchase_number = #{purchaseNumber,jdbcType=VARCHAR},
++      supplier_id = #{supplierId,jdbcType=INTEGER},
++      user_id = #{userId,jdbcType=INTEGER}
++    where id = #{id,jdbcType=INTEGER}
++  </update>
++</mapper>
+\ No newline at end of file
