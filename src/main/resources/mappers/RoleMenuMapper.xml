@@ -93,11 +93,6 @@
     delete from t_role_menu
     where menu_id = #{id}
   </delete>
-
-      role_id = #{roleId,jdbcType=INTEGER},
-      acl_value = #{aclValue,jdbcType=VARCHAR}
-    where id = #{id,jdbcType=INTEGER}
-  </update>
   <!--通过资源ID查询权限记录-->
   <select id="countPermissionByRoleId" parameterType="int" resultType="java.lang.Integer">
     select
@@ -107,8 +102,8 @@
     where
       role_id = #{roleId}
   </select>
-  <!--通过资源ID删除权限记录-->
-  <delete id="deleteMenuByRoleId" parameterType="int">
+  <!--通过角色ID删除权限记录-->
+  <delete id="deleteRoleMenuByRoleId" parameterType="int">
     delete from
       t_role_menu
     where
@@ -123,3 +118,5 @@
       (#{item.roleId},#{item.menuId},#{item.aclValue})
     </foreach>
   </insert>
+
+</mapper>

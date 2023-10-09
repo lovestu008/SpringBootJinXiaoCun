@@ -10,5 +10,5 @@ public interface RoleMenuMapper extends BaseMapper<RoleMenu,Integer> {
     int  deleteByMenuId(Integer id);
     Integer countPermissionByRoleId(Integer roleId);
 
-    void deleteMenuByRoleId(Integer roleId);
+    void deleteRoleMenuByRoleId(Integer roleId);
 }

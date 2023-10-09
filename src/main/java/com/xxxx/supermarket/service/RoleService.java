@@ -65,7 +65,7 @@ public class RoleService extends BaseService<Role, Integer> {
         //通过权限ID查询对应权限记录
        Integer count =  roleMenuMapper.countPermissionByRoleId(roleId);
         if (count>0){
-            roleMenuMapper.deleteMenuByRoleId(roleId);
+            roleMenuMapper.deleteRoleMenuByRoleId(roleId);
         }
         if (mIds != null && mIds.length>0){
             List<RoleMenu> roleMenuList = new ArrayList<>();

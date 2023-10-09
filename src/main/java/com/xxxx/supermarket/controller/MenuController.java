@@ -15,8 +15,6 @@ import java.util.Map;
 
 @Controller
 @RequestMapping("menu")
-@Slf4j
-@SupLog(type = "菜单管理")
 public class MenuController extends BaseController {
     @Resource
     private MenuService menuService;
@@ -47,7 +45,6 @@ public class MenuController extends BaseController {
 
     @RequestMapping("add")
     @ResponseBody
-    @SupLog(content = "添加菜单权限")
     public ResultInfo addMenu(Menu menu){
         menuService.addMenu(menu);
         return success("添加菜单成功");
