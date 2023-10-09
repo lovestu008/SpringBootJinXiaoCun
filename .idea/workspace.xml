@@ -4,9 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47f004b4-5068-48b2-9225-7a541737bcc5" name="Changes" comment="修改密码 修改role业务">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mappers/RoleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mappers/RoleMapper.xml" afterDir="false" />
+    <list default="true" id="47f004b4-5068-48b2-9225-7a541737bcc5" name="Changes" comment="ignore">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/MenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/dao/MenuMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/dao/MenuMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/service/MenuService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/service/MenuService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/MenuMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/MenuMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/menu/add.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/js/menu/add.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/menu/menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/js/menu/menu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/views/menu/add.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/menu/add.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/views/menu/update.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/menu/update.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/MenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/MenuController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/service/MenuService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/service/MenuService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/public/js/menu/add.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/public/js/menu/add.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/public/js/menu/menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/public/js/menu/menu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/views/menu/add.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/views/menu/add.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/views/menu/update.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/views/menu/update.ftl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +135,7 @@
       <option name="presentableId" value="Default" />
       <updated>1696490904462</updated>
       <workItem from="1696490905901" duration="35387000" />
-      <workItem from="1696752530180" duration="29612000" />
+      <workItem from="1696752530180" duration="38330000" />
     </task>
     <task id="LOCAL-00001" summary="role module">
       <created>1696554818830</created>
@@ -215,7 +228,21 @@
       <option name="project" value="LOCAL" />
       <updated>1696839389456</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="修改role业务">
+      <created>1696839500744</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1696839500744</updated>
+    </task>
+    <task id="LOCAL-00015" summary="ignore">
+      <created>1696839538908</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1696839538909</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -232,7 +259,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="main" />
+                        <option value="hwj" />
                       </list>
                     </value>
                   </entry>
@@ -257,6 +284,8 @@
     <MESSAGE value="完善邮箱登录" />
     <MESSAGE value="一堆xml" />
     <MESSAGE value="修改密码 修改role业务" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改密码 修改role业务" />
+    <MESSAGE value="修改role业务" />
+    <MESSAGE value="ignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="ignore" />
   </component>
 </project>

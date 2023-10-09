@@ -16,9 +16,8 @@ layui.use(['table', 'treetable'], function () {
         page: true,
         cols: [[
             {type: 'numbers'},
-            {field: 'icon', title: '菜单模块'},
             {field: 'name', minWidth: 100, title: '菜单名称'},
-            {field: 'state', title: '节点类型'},
+            /*{field: 'icon', title: '菜单模块'},*/
             {field: 'aclValue', title: '权限码'},
             {field: 'url', title: '菜单url'},
             {
@@ -30,10 +29,10 @@ layui.use(['table', 'treetable'], function () {
                         return '<span class="layui-badge layui-bg-blue">目录</span>';
                     }
                     if(d.grade==1){
-                        return '<span class="layui-badge-rim">菜单</span>';
+                        return '<span class="layui-badge-rim layui-bg-orange">菜单</span>';
                     }
                     if (d.grade == 2) {
-                        return '<span class="layui-badge layui-bg-green">按钮</span>';
+                        return '<span class="layui-badge layui-bg-green">子菜单</span>';
                     }
                 }, title: '类型',
             },
@@ -57,7 +56,7 @@ layui.use(['table', 'treetable'], function () {
                 break;
             case "add":
                 // 添加目录 层级=0 父菜单=-1
-                openAddMenuDialog(0, -1)
+                openAddMenuDialog(0, 1)
         };
     });
     /**
