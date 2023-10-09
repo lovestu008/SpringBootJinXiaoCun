@@ -6,21 +6,29 @@
 <body class="childrenBody">
 <form class="layui-form" style="width:80%;">
     <input name="id" type="hidden" value="${(role.id)!}"/>
+
     <div class="layui-form-item layui-row layui-col-xs12">
         <label class="layui-form-label">角色名</label>
         <div class="layui-input-block">
             <input type="text" class="layui-input userName"
-                   lay-verify="required" name="roleName" id="roleName"  value="${(role.roleName)!}" placeholder="角色名">
+                   lay-verify="required" name="name" id="name"  value="${(role.name)!}" placeholder="角色名">
         </div>
     </div>
     <div class="layui-form-item layui-row layui-col-xs12">
         <label class="layui-form-label">角色备注</label>
         <div class="layui-input-block">
             <input type="text" class="layui-input userName"
-                   lay-verify="required" name="roleRemark" id="roleRemark" value="${(role.roleRemark)!}" placeholder="请输入角色备注">
+                   lay-verify="required" name="bz" id="bz" value="${(role.bz)!}" placeholder="请输入角色备注">
         </div>
     </div>
 
+    <div class="layui-form-item layui-row layui-col-xs12">
+        <label class="layui-form-label">描述</label>
+        <div class="layui-input-block">
+            <input type="text" class="layui-input userName"
+                   lay-verify="required" name="remarks" id="remarks" value="${(role.remarks)!}" placeholder="请输入角色描述">
+        </div>
+    </div>
     <br/>
     <div class="layui-form-item layui-row layui-col-xs12">
         <div class="layui-input-block">

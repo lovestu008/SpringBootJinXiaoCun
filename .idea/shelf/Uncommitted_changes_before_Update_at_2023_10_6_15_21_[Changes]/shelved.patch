@@ -1,0 +1,21 @@
+Index: src/main/java/com/xxxx/supermarket/aspect/SysLog.java
+===================================================================
+diff --git a/src/main/java/com/xxxx/supermarket/aspect/SysLog.java b/src/main/java/com/xxxx/supermarket/aspect/SysLog.java
+deleted file mode 100644
+--- a/src/main/java/com/xxxx/supermarket/aspect/SysLog.java	(revision 2e486df8bb0db770bf07bb7893d59838d7796520)
++++ /dev/null	(revision 2e486df8bb0db770bf07bb7893d59838d7796520)
+@@ -1,14 +0,0 @@
+-package com.xxxx.supermarket.aspect;
+-
+-
+-import java.lang.annotation.*;
+-
+-/**
+- * 自定义日志注解
+- */
+-@Target(ElementType.METHOD)
+-@Retention(RetentionPolicy.RUNTIME)
+-@Documented
+-public @interface SysLog {
+-    String value() default "";
+-}

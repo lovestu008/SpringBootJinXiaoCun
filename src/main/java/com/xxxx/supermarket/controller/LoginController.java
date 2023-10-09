@@ -2,15 +2,14 @@ package com.xxxx.supermarket.controller;
 
 import com.xxxx.supermarket.base.BaseController;
 import com.xxxx.supermarket.entity.User;
-import com.xxxx.supermarket.utils.LoginUserUtil;
 import com.xxxx.supermarket.service.UserService;
+import com.xxxx.supermarket.utils.LoginUserUtil;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
-import java.util.List;
 
 @Controller
 public class LoginController extends BaseController {
@@ -19,14 +18,23 @@ public class LoginController extends BaseController {
     private UserService userService;
 
 
+
     /**
      * 系统登录⻚
-     *
      * @return
      */
     @RequestMapping("index")
     public String index() {
         return "index";
+    }
+
+    /**
+     * 系统欢迎页
+     * @return
+     */
+    @RequestMapping("welcome")
+    public String welcome() {
+        return "welcome";
     }
 
     /**
@@ -38,10 +46,8 @@ public class LoginController extends BaseController {
     public String main(HttpServletRequest request) {
         //查询用户对象,设置到session作用域
         Integer userId = LoginUserUtil.releaseUserIdFromCookie(request);
-
         User user = userService.selectByPrimaryKey(userId);
         request.getSession().setAttribute("user", user);
-
         return "main";
     }
 
