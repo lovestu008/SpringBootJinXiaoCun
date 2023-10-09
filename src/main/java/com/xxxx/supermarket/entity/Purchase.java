@@ -3,24 +3,25 @@ package com.xxxx.supermarket.entity;
 import java.util.Date;
 
 public class Purchase {
-    //id，自增，主键
     private Integer id;
-    //商品名称
+
     private String goodsName;
-    //供应商
+
     private String provider;
-    //进货价格
+
     private Integer inpPrice;
-    //进货总价
+
     private Integer allInpPrice;
-    //进货数量
+
     private Integer inpNum;
-    //进货时间
+
     private Date inpTime;
-    //操作人
+
     private String operatePerson;
-    //备注
+
     private String remark;
+
+    private Integer isValid;
 
     public Integer getId() {
         return id;
@@ -92,5 +93,13 @@ public class Purchase {
 
     public void setRemark(String remark) {
         this.remark = remark == null ? null : remark.trim();
+    }
+
+    public Integer getIsValid() {
+        return isValid;
+    }
+
+    public void setIsValid(Integer isValid) {
+        this.isValid = isValid;
     }
 }

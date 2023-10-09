@@ -11,7 +11,7 @@
         <div class="layui-logo">
             <a href="">
                 <img src="images/logo.png" alt="logo">
-                <h1>超市进销管理系统</h1>
+                <h2>超市-管理系统</h2>
             </a>
         </div>
         <a>
@@ -65,12 +65,12 @@
                             </dl>
                         </li>
                         <li class="layui-nav-item">
-                            <a href="javascript:;" class="layui-menu-tips"><i class="fa fa-flag"></i><span class="layui-left-nav"> 进退货管理</span> <span class="layui-nav-more"></span></a><dl class="layui-nav-child">
+                            <a href="javascript:;" class="layui-menu-tips"><i class="fa fa-exchange"></i><span class="layui-left-nav"> 进退货管理</span> <span class="layui-nav-more"></span></a><dl class="layui-nav-child">
                                 <dd>
-                                    <a href="javascript:;" class="layui-menu-tips" data-type="tabAdd" data-tab-mpi="m-p-i-3" data-tab="purchase/index" target="_self"><i class="fa fa-exchange"></i><span class="layui-left-nav"> 商品进货</span></a>
+                                    <a href="javascript:;" class="layui-menu-tips" data-type="tabAdd" data-tab-mpi="m-p-i-3" data-tab="purchase/index" target="_self"><i class="layui-icon">&#xe657;</i><span class="layui-left-nav"> 商品进货</span></a>
                                 </dd>
                                 <dd>
-                                    <a href="javascript:;" class="layui-menu-tips" data-type="tabAdd" data-tab-mpi="m-p-i-4" data-tab="return/index" target="_self"><i class="fa fa-user-times"></i><span class="layui-left-nav"> 商品退货查询</span></a>
+                                    <a href="javascript:;" class="layui-menu-tips" data-type="tabAdd" data-tab-mpi="m-p-i-4" data-tab="return/index" target="_self"><i class="layui-icon">&#xe63c;</i><span class="layui-left-nav"> 商品退货查询</span></a>
                                 </dd>
                             </dl>
                         </li>
@@ -97,7 +97,7 @@
                                     <a href="javascript:;" class="layui-menu-tips" data-type="tabAdd" data-tab-mpi="m-p-i-10" data-tab="permission/index" target="_self"><i class="fa fa-tachometer"></i><span class="layui-left-nav"> 权限管理</span></a>
                                 </dd>
                                 <dd>
-                                    <a href="javascript:;" class="layui-menu-tips" data-type="tabAdd" data-tab-mpi="m-p-i-10" data-tab="report/3" target="_self"><i class="fa fa-tachometer"></i><span class="layui-left-nav"> 菜单管理</span></a>
+                                    <a href="javascript:;" class="layui-menu-tips" data-type="tabAdd" data-tab-mpi="m-p-i-10" data-tab="menu/index" target="_self"><i class="fa fa-tachometer"></i><span class="layui-left-nav"> 菜单管理</span></a>
                                 </dd>
                             </dl>
                         </li>
@@ -105,10 +105,10 @@
                             <a href="javascript:;" class="layui-menu-tips"><i class="fa fa-gears"></i><span class="layui-left-nav"> 其他管理</span> <span class="layui-nav-more"></span></a>
                             <dl class="layui-nav-child">
                                 <dd>
-                                    <a href="javascript:;" class="layui-menu-tips" data-type="tabAdd" data-tab-mpi="m-p-i-10" data-tab="data_dic/index" target="_self"><i class="fa fa-tachometer"></i><span class="layui-left-nav"> 日志管理</span></a>
+                                    <a href="javascript:;" class="layui-menu-tips" data-type="tabAdd" data-tab-mpi="m-p-i-10" data-tab="log/index" target="_self"><i class="fa fa-tachometer"></i><span class="layui-left-nav"> 日志管理</span></a>
                                 </dd>
                                 <dd>
-                                    <a href="javascript:;" class="layui-menu-tips" data-type="tabAdd" data-tab-mpi="m-p-i-11" data-tab="user/index" target="_self"><i class="fa fa-user"></i><span class="layui-left-nav"> 统计报表</span></a>
+                                    <a href="javascript:;" class="layui-menu-tips" data-type="tabAdd" data-tab-mpi="m-p-i-11" data-tab="report/index" target="_self"><i class="fa fa-tachometer"></i><span class="layui-left-nav"> 统计报表</span></a>
                                 </dd>
                             </dl>
                         </li>

@@ -31,7 +31,7 @@ layui.use(['table','layer'],function(){
                             curr: 1 //重新从第 1 ⻚开始
                      },
                      where: {
-                            roleName: $("input[name='roleName']").val()
+                            roleName: $("input[name='rolaeaQ`ame']").val()
                      }
               })
        });
@@ -56,7 +56,7 @@ layui.use(['table','layer'],function(){
         * roles为table标签的lay-filter 属性值
         */
        table.on('tool(roles)',function (obj) {
-              var data = obj.data;//获得当前行数据
+              var data = obj.data;//获得当前行数据q11``1Q2WS
               var layEvent = obj.event;// 获得 lay-event 对应的值（也可以是表头的 event 参数对应的值）
               //判断事件类型
               if (layEvent === 'edit'){//编辑操作
@@ -81,7 +81,7 @@ layui.use(['table','layer'],function(){
                                           if (result.code == 200){
                                                  //加载表格
                                                  tableIns.reload();
-                                          }else {
+                                          }else {ASASASASASASASASASASASASASASASASASASASASASASASASASASASA
                                                  layer.msg(result.msg,{icon:5});
                                           }
                                    }
@@ -134,9 +134,5 @@ layui.use(['table','layer'],function(){
                      maxmin: true
               });
        }
-
-
-
-
 
 });

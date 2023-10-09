@@ -153,10 +153,9 @@
   <select id="selectByParams" parameterType="com.xxxx.supermarket.query.UserQuery" resultType="com.xxxx.supermarket.entity.User">
 
     select <include refid="Base_Column_List"></include>
-        from t_user
-    where
-        is_del = 0
+        from  t_user
     <where>
+      is_del = 0
       <if test="null != userName and '' != userName " >
         and user_name like concat('%',#{userName},'%')
       </if>
@@ -170,10 +169,29 @@
   </select>
 
   <!--通过用户名查询用户-->
-  <select id="selectByUserByName" resultType="com.xxxx.supermarket.entity.User" parameterType="string">
+  <select id="selectUserByName" resultType="com.xxxx.supermarket.entity.User" parameterType="string">
     select <include refid="Base_Column_List"></include>
         from t_user
     where
         is_del = 0 and user_name = #{userName}
   </select>
+  <!--通过邮箱查询用户-->
+  <select id="selectUserByEmail" resultType="com.xxxx.supermarket.entity.User" parameterType="string">
+    select <include refid="Base_Column_List"></include>
+        from t_user
+    where
+        is_del = 0 and email = #{email}
+  </select>
+
+
+  <update id="deleteBatch">
+    update t_user
+    set is_del = 1
+    where id in
+        <foreach collection="array" open="(" close=")" item="id" separator=",">
+            #{id}
+        </foreach>
+  </update>
+
+
 </mapper>

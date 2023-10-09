@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.xxxx.supermarket.dao.ReturnMapper" >
+  <resultMap id="BaseResultMap" type="com.xxxx.supermarket.entity.Return" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="goods_name" property="goodsName" jdbcType="VARCHAR" />
+    <result column="provider" property="provider" jdbcType="VARCHAR" />
+    <result column="all_ret_price" property="allRetPrice" jdbcType="INTEGER" />
+    <result column="ret_num" property="retNum" jdbcType="INTEGER" />
+    <result column="ret_time" property="retTime" jdbcType="TIMESTAMP" />
+    <result column="operate_person" property="operatePerson" jdbcType="VARCHAR" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+    <result column="is_valid" property="isValid" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, goods_name, provider, all_ret_price, ret_num, ret_time, operate_person, remark, 
+    is_valid
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_return
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from t_return
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.xxxx.supermarket.entity.Return" >
+    insert into t_return (id, goods_name, provider, 
+      all_ret_price, ret_num, ret_time, 
+      operate_person, remark, is_valid
+      )
+    values (#{id,jdbcType=INTEGER}, #{goodsName,jdbcType=VARCHAR}, #{provider,jdbcType=VARCHAR}, 
+      #{allRetPrice,jdbcType=INTEGER}, #{retNum,jdbcType=INTEGER}, #{retTime,jdbcType=TIMESTAMP}, 
+      #{operatePerson,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR}, #{isValid,jdbcType=INTEGER}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.xxxx.supermarket.entity.Return" >
+    insert into t_return
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="goodsName != null" >
+        goods_name,
+      </if>
+      <if test="provider != null" >
+        provider,
+      </if>
+      <if test="allRetPrice != null" >
+        all_ret_price,
+      </if>
+      <if test="retNum != null" >
+        ret_num,
+      </if>
+      <if test="retTime != null" >
+        ret_time,
+      </if>
+      <if test="operatePerson != null" >
+        operate_person,
+      </if>
+      <if test="remark != null" >
+        remark,
+      </if>
+      <if test="isValid != null" >
+        is_valid,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="goodsName != null" >
+        #{goodsName,jdbcType=VARCHAR},
+      </if>
+      <if test="provider != null" >
+        #{provider,jdbcType=VARCHAR},
+      </if>
+      <if test="allRetPrice != null" >
+        #{allRetPrice,jdbcType=INTEGER},
+      </if>
+      <if test="retNum != null" >
+        #{retNum,jdbcType=INTEGER},
+      </if>
+      <if test="retTime != null" >
+        #{retTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="operatePerson != null" >
+        #{operatePerson,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null" >
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="isValid != null" >
+        #{isValid,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.xxxx.supermarket.entity.Return" >
+    update t_return
+    <set >
+      <if test="goodsName != null" >
+        goods_name = #{goodsName,jdbcType=VARCHAR},
+      </if>
+      <if test="provider != null" >
+        provider = #{provider,jdbcType=VARCHAR},
+      </if>
+      <if test="allRetPrice != null" >
+        all_ret_price = #{allRetPrice,jdbcType=INTEGER},
+      </if>
+      <if test="retNum != null" >
+        ret_num = #{retNum,jdbcType=INTEGER},
+      </if>
+      <if test="retTime != null" >
+        ret_time = #{retTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="operatePerson != null" >
+        operate_person = #{operatePerson,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null" >
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="isValid != null" >
+        is_valid = #{isValid,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.xxxx.supermarket.entity.Return" >
+    update t_return
+    set goods_name = #{goodsName,jdbcType=VARCHAR},
+      provider = #{provider,jdbcType=VARCHAR},
+      all_ret_price = #{allRetPrice,jdbcType=INTEGER},
+      ret_num = #{retNum,jdbcType=INTEGER},
+      ret_time = #{retTime,jdbcType=TIMESTAMP},
+      operate_person = #{operatePerson,jdbcType=VARCHAR},
+      remark = #{remark,jdbcType=VARCHAR},
+      is_valid = #{isValid,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+  <select id="selectByParams" parameterType="com.xxxx.supermarket.querys.ReturnQuery" resultType="com.xxxx.supermarket.entity.Return">
+    select
+    <include refid="Base_Column_List" />
+    from
+    t_return
+    <where>
+      is_valid=1
+      <if test="provider != null and provider != ''">
+        and provider = #{provider}
+      </if>
+
+      <if test="goodsName != null and goodsName != ''">
+        and goods_name = #{goodsName}
+      </if>
+    </where>
+  </select>
+
+  <select id="selectAllProvider" resultType="java.util.Map">
+    select
+      distinct p.id as providerId,p.name as provider
+    from
+      t_return t
+
+        LEFT JOIN
+      t_provider p
+      on
+        p.name=t.provider
+    where t.is_valid=1
+  </select>
+  <select id="selectAllGoodsName" resultType="java.util.Map">
+    select
+      distinct g.id as goodsId,g.name as goodsName
+    from
+      t_return t
+        LEFT JOIN
+      t_goods g
+      on
+        t.goods_name=g.name
+    where t.is_valid=1
+  </select>
+</mapper>
