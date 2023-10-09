@@ -12,8 +12,24 @@ public class GoodsQuery extends BaseQuery {
 
 
     //商品管理 多条件查询
-    private String goodsName;
-    private Integer typeId;
+    private String name;//商品名称
 
 
+    private Integer typeId;//类别ID
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Integer getTypeId() {
+        return typeId;
+    }
+
+    public void setTypeId(Integer typeId) {
+        this.typeId = typeId;
+    }
 }
