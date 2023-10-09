@@ -9,23 +9,9 @@
         <label class="layui-form-label">菜单名</label>
         <div class="layui-input-block">
             <input type="text" class="layui-input userName"
-                   lay-verify="required" name="moduleName" id="moduleName"   placeholder="请输入菜单名">
+                   lay-verify="required" name="name" id="name"   placeholder="请输入菜单名">
         </div>
     </div>
-    <#--<div class="layui-form-item layui-row layui-col-xs12">
-        <label class="layui-form-label">菜单样式</label>
-        <div class="layui-input-block">
-            <input type="text" class="layui-input userName"
-                   name="moduleStyle" id="moduleStyle" placeholder="请输入菜单样式">
-        </div>
-    </div>
-    <div class="layui-form-item layui-row layui-col-xs12">
-        <label class="layui-form-label">排序</label>
-        <div class="layui-input-block">
-            <input type="text" class="layui-input userName"
-                    name="orders" id="orders" placeholder="请输入排序值">
-        </div>
-    </div>-->
     <div class="layui-form-item layui-row layui-col-xs12">
         <label class="layui-form-label">权限码</label>
         <div class="layui-input-block">
@@ -58,7 +44,7 @@
     <!--
        添加根级菜单
     -->
-    <input name="parentId" type="hidden" value="${parentId}"/>
+    <input name="pId" type="hidden" value="${pId}"/>
     <br/>
     <div class="layui-form-item layui-row layui-col-xs12">
         <div class="layui-input-block">

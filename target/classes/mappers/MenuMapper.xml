@@ -141,4 +141,25 @@
         from  t_menu
     where is_del = 0
   </select>
+
+  <select id="selectMenuByGradeAndMenuName" resultType="com.xxxx.supermarket.entity.Menu">
+    select <include refid="Base_Column_List"></include>
+    from t_menu
+    where is_del = 0
+    and grade = #{grade} and name = #{name}
+  </select>
+
+  <select id="selectMenuByGradeAndUrl" resultType="com.xxxx.supermarket.entity.Menu">
+    SELECT <include refid="Base_Column_List"></include>
+        from t_menu
+    where is_del = 0
+    and grade = #{grade} and url = #{url}
+  </select>
+
+  <select id="selectMenuByAclValue" resultType="com.xxxx.supermarket.entity.Menu">
+    select <include refid="Base_Column_List"></include>
+        from t_menu
+    where is_del = 0 and acl_Value = #{aclValue}
+  </select>
+
 </mapper>

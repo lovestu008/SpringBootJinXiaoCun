@@ -5,7 +5,7 @@ layui.use(['form', 'layer'], function () {
     form.on("submit(updateModule)", function (data) {
         var index = top.layer.msg('数据提交中，请稍候', {icon: 16, time: false, shade: 0.8});
         //弹出loading
-        $.post(ctx+"/module/update", data.field, function (res) {
+        $.post(ctx+"/menu/update", data.field, function (res) {
             if (res.code == 200) {
                 setTimeout(function () {
                     top.layer.close(index);

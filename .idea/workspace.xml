@@ -4,22 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47f004b4-5068-48b2-9225-7a541737bcc5" name="Changes" comment="ignore">
+    <list default="true" id="47f004b4-5068-48b2-9225-7a541737bcc5" name="Changes" comment="菜单管理">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/MenuController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/dao/MenuMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/dao/MenuMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/entity/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/entity/Menu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/service/MenuService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/service/MenuService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/MenuMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/MenuMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/menu/add.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/js/menu/add.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/menu/menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/js/menu/menu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/menu/update.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/js/menu/update.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/views/menu/add.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/menu/add.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/views/menu/update.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/menu/update.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/MenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/MenuController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/dao/MenuMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/dao/MenuMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/entity/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/entity/Menu.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/service/MenuService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/service/MenuService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mappers/MenuMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mappers/MenuMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/public/js/menu/add.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/public/js/menu/add.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/public/js/menu/menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/public/js/menu/menu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/public/js/menu/update.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/public/js/menu/update.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/views/menu/add.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/views/menu/add.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/views/menu/update.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/views/menu/update.ftl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +138,7 @@
       <option name="presentableId" value="Default" />
       <updated>1696490904462</updated>
       <workItem from="1696490905901" duration="35387000" />
-      <workItem from="1696752530180" duration="38330000" />
+      <workItem from="1696752530180" duration="42938000" />
     </task>
     <task id="LOCAL-00001" summary="role module">
       <created>1696554818830</created>
@@ -242,7 +245,14 @@
       <option name="project" value="LOCAL" />
       <updated>1696839538909</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="菜单管理">
+      <created>1696853965926</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1696853965926</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -286,6 +296,7 @@
     <MESSAGE value="修改密码 修改role业务" />
     <MESSAGE value="修改role业务" />
     <MESSAGE value="ignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="ignore" />
+    <MESSAGE value="菜单管理" />
+    <option name="LAST_COMMIT_MESSAGE" value="菜单管理" />
   </component>
 </project>

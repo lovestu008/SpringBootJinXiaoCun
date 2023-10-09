@@ -39,7 +39,7 @@ public class MenuController extends BaseController {
     @RequestMapping("toAddMenuPage")
     public String toAddMenuPage(HttpServletRequest request,Integer grade,Integer parentId){
         request.setAttribute("grade",grade);
-        request.setAttribute("parentId",parentId);
+        request.setAttribute("pId",parentId);
         return "menu/add";
     }
 
@@ -52,15 +52,15 @@ public class MenuController extends BaseController {
 
     @RequestMapping("update")
     @ResponseBody
-    public ResultInfo updateMenu(){
-        menuService.updateMenu();
+    public ResultInfo updateMenu(Menu menu){
+        menuService.updateMenu(menu);
         return success("更新菜单成功");
     }
 
     @RequestMapping("delete")
     @ResponseBody
-    public ResultInfo deleteMenu(){
-        menuService.deleteMenu();
+    public ResultInfo deleteMenu(Integer id){
+        menuService.deleteMenu(id);
         return success("菜单删除成功");
     }
 }

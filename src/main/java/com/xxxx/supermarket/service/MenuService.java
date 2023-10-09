@@ -8,7 +8,6 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.annotation.Resource;
 import java.util.HashMap;
@@ -31,10 +30,14 @@ public class MenuService extends BaseService<Menu,Integer> {
         return result;
     }
 
+    /**
+     * 菜单添加模块
+     * @param menu
+     */
     @Transactional(propagation = Propagation.REQUIRED)
     public void addMenu(Menu menu) {
         //参数校验
-        AssertUtil.isTrue(StringUtils.isBlank(menu.getName()),"模块名为不能为空");
+        AssertUtil.isTrue(StringUtils.isBlank(menu.getName()),"菜单名为不能为空");
         Integer grade = menu.getGrade();
         AssertUtil.isTrue(null == grade || !(grade == 0 || grade == 1|| grade ==2),"菜单层级不合法");
         AssertUtil.isTrue(null != menuMapper.selectMenuByGradeAndMenuName(menu.getGrade(),menu.getName()),"该层级下菜单重复");
@@ -56,12 +59,48 @@ public class MenuService extends BaseService<Menu,Integer> {
         //执行添加操作
         AssertUtil.isTrue(insertSelective(menu)<1,"菜单添加失败");
     }
-    @Transactional(propagation = Propagation.REQUIRED)
-    public void updateMenu() {
 
+    /**
+     * 菜单修改模块
+     * @param menu
+     */
+    @Transactional(propagation = Propagation.REQUIRED)
+    public void updateMenu(Menu menu) {
+        AssertUtil.isTrue(null == menu.getId() ,"待更新记录不存在");
+        Menu temp = menuMapper.selectByPrimaryKey(menu.getId());
+        AssertUtil.isTrue(null == temp,"待更新记录不存在");
+        //层级
+        Integer grade = menu.getGrade();
+        AssertUtil.isTrue(null == grade ||!(grade == 0 || grade == 1 || grade == 2), "菜单层级不合法！");
+        AssertUtil.isTrue(StringUtils.isBlank(menu.getName()),"菜单名为不能为空");
+        temp = menuMapper.selectMenuByGradeAndMenuName(grade, menu.getName());
+        if (temp != null){
+            AssertUtil.isTrue(!(temp.getId()).equals(menu.getpId()),"该层级下菜单名已经存在");
+        }
+        if (grade == 1){
+            AssertUtil.isTrue(StringUtils.isBlank(menu.getUrl()),"菜单url不能为空");
+            temp = menuMapper.selectMenuByGradeAndUrl(grade, menu.getUrl());
+            if (temp != null){
+                AssertUtil.isTrue(!(temp.getId().equals(menu.getpId())),"该层级下菜单地址已经存在");
+            }
+        }
+        AssertUtil.isTrue(StringUtils.isBlank(menu.getAclValue()),"权限码不能为空");
+        temp = menuMapper.selectMenuByAclValue(menu.getAclValue());
+        if (temp!=null){
+            AssertUtil.isTrue(!(temp.getId().equals(menu.getpId())),"权限码已经存在");
+        }
+        AssertUtil.isTrue(menuMapper.updateByPrimaryKeySelective(menu)<1,"菜单更新失败");
     }
     @Transactional(propagation = Propagation.REQUIRED)
-    public void deleteMenu() {
+    public void deleteMenu(Integer id) {
+        Menu temp = menuMapper.selectByPrimaryKey(id);
+        AssertUtil.isTrue(id == null || null == temp,"要删除的模块不存在");
+        //如果存在子菜单 不允许删除
+        int count = menuMapper.countSubMenuByParentId(id);
+        AssertUtil.isTrue(count > 0 ,"存在子菜单，不允许删除");
+
+        //权限表
+        //count =
 
     }
 }
