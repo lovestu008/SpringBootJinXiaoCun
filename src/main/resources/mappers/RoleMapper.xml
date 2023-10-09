@@ -90,7 +90,22 @@
       is_del = #{isDel,jdbcType=INTEGER}
     where id = #{id,jdbcType=INTEGER}
   </update>
-
+  <!--查询所有的角色列表-->
+  <select id="queryAllRoles" resultType="java.util.Map" parameterType="int">
+    select
+      r.id,r.name as roleName,
+      case
+        when IFNULL(temp.id,0) = 0 then ''
+        else 'selected'
+        end
+      as 'selected'
+    from
+      t_role r
+        left join (select r.id from t_role r left join t_user_role ur on r.id = ur.role_id where user_id = #{userId}) temp
+                  on r.id = temp.id
+    where
+      is_del = 0
+  </select>
   <!--多条件查询-->
   <select id="selectByParams" resultType="com.xxxx.supermarket.entity.Role" parameterType="com.xxxx.supermarket.query.RoleQuery">
     select    <include refid="Base_Column_List"></include>

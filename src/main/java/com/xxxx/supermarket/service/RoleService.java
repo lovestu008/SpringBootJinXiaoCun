@@ -13,6 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
 import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class RoleService extends BaseService<Role, Integer> {
@@ -79,5 +80,9 @@ public class RoleService extends BaseService<Role, Integer> {
             //批量添加
             AssertUtil.isTrue(roleMenuMapper.insertBatch(roleMenuList)!=roleMenuList.size(),"角色授权失败！");
         }
+    }
+    //查询所有的角色列表
+    public List<Map<String, Object>> queryAllRoles(Integer userId) {
+        return roleMapper.queryAllRoles(userId);
     }
 }

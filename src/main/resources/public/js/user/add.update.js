@@ -56,19 +56,19 @@ layui.use(['form', 'layer' ,'formSelects'], function () {
     /**
      * 加载下拉框
      */
-    formSelects.config('selectId',{
+    /*formSelects.config('selectId',{
         type:"post",
         searchUrl :ctx+"/role/queryAllRoles",
         //⾃定义返回数据中name的key, 默认 name
         keyName: 'roleName',
         //⾃定义返回数据中value的key, 默认 value
         keyVal: 'id'
-    },true);
+    },true);*/
 
 
 
     //查询⻆⾊记录时传⼊⽤⼾id
-    var userId = $("#id").val();
+    var userId = $("[name='id']").val();
     formSelects.config('selectId',{
         type:"post",
         searchUrl:ctx+"/role/queryAllRoles?userId="+userId,
