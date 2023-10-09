@@ -6,8 +6,15 @@ public class RoleMenu {
     private Integer menuId;
 
     private Integer roleId;
+    private String aclValue;
 
-    private Integer aclValue;
+    public String getAclValue() {
+        return aclValue;
+    }
+
+    public void setAclValue(String aclValue) {
+        this.aclValue = aclValue;
+    }
 
     public Integer getId() {
         return id;
@@ -31,13 +38,5 @@ public class RoleMenu {
 
     public void setRoleId(Integer roleId) {
         this.roleId = roleId;
-    }
-
-    public Integer getAclValue() {
-        return aclValue;
-    }
-
-    public void setAclValue(Integer aclValue) {
-        this.aclValue = aclValue;
     }
 }

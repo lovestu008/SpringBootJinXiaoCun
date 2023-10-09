@@ -5,9 +5,10 @@
     <id column="id" jdbcType="INTEGER" property="id" />
     <result column="menu_id" jdbcType="INTEGER" property="menuId" />
     <result column="role_id" jdbcType="INTEGER" property="roleId" />
+    <result column="acl_value" jdbcType="VARCHAR" property="aclValue" />
   </resultMap>
   <sql id="Base_Column_List">
-    id, menu_id, role_id
+    id, menu_id, role_id, acl_value
   </sql>
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
@@ -24,6 +25,10 @@
       )
     values (#{id,jdbcType=INTEGER}, #{menuId,jdbcType=INTEGER}, #{roleId,jdbcType=INTEGER}
       )
+    insert into t_role_menu (id, menu_id, role_id,
+      acl_value)
+    values (#{id,jdbcType=INTEGER}, #{menuId,jdbcType=INTEGER}, #{roleId,jdbcType=INTEGER},
+      #{aclValue,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.xxxx.supermarket.entity.RoleMenu">
     insert into t_role_menu
@@ -37,6 +42,9 @@
       <if test="roleId != null">
         role_id,
       </if>
+      <if test="aclValue != null">
+        acl_value,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -47,6 +55,9 @@
       </if>
       <if test="roleId != null">
         #{roleId,jdbcType=INTEGER},
+      </if>
+      <if test="aclValue != null">
+        #{aclValue,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -59,13 +70,17 @@
       <if test="roleId != null">
         role_id = #{roleId,jdbcType=INTEGER},
       </if>
+      <if test="aclValue != null">
+        acl_value = #{aclValue,jdbcType=VARCHAR},
+      </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.xxxx.supermarket.entity.RoleMenu">
     update t_role_menu
     set menu_id = #{menuId,jdbcType=INTEGER},
-      role_id = #{roleId,jdbcType=INTEGER}
+      role_id = #{roleId,jdbcType=INTEGER},
+    acl_value = #{aclValue,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
 
@@ -79,4 +94,32 @@
     where menu_id = #{id}
   </delete>
 
-</mapper>
+      role_id = #{roleId,jdbcType=INTEGER},
+      acl_value = #{aclValue,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <!--通过资源ID查询权限记录-->
+  <select id="countPermissionByRoleId" parameterType="int" resultType="java.lang.Integer">
+    select
+      count(1)
+    from
+      t_role_menu
+    where
+      role_id = #{roleId}
+  </select>
+  <!--通过资源ID删除权限记录-->
+  <delete id="deleteMenuByRoleId" parameterType="int">
+    delete from
+      t_role_menu
+    where
+      role_id = #{roleId}
+  </delete>
+  <!--批量添加-->
+  <insert id="insertBatch">
+    insert into
+    t_role_menu (role_id,menu_id,acl_value)
+    values
+    <foreach collection="list" item="item" separator=",">
+      (#{item.roleId},#{item.menuId},#{item.aclValue})
+    </foreach>
+  </insert>

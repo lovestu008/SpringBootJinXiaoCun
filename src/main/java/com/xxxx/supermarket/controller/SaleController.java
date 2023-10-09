@@ -1,10 +1,12 @@
 package com.xxxx.supermarket.controller;
 
+import com.xxxx.supermarket.aspect.SupLog;
 import com.xxxx.supermarket.base.BaseController;
 import com.xxxx.supermarket.base.ResultInfo;
 import com.xxxx.supermarket.entity.SaleList;
 import com.xxxx.supermarket.query.SaleQuery;
 import com.xxxx.supermarket.service.SaleService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -15,6 +17,8 @@ import java.util.Map;
 
 @RequestMapping("sale")
 @Controller
+@Slf4j
+@SupLog(type = "销售管理")
 public class SaleController extends BaseController {
 
     @Resource

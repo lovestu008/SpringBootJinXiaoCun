@@ -12,4 +12,5 @@ public interface PurchaseMapper extends BaseMapper<Purchase,Integer> {
     List<Map<String,Object>> selectAllProvider();
     List<Map<String, Object>> selectAllGoodsName();
 
+    List<Purchase> selectByTime();
 }

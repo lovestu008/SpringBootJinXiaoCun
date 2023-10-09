@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.xml.transform.Result;
+import java.util.List;
 import java.util.Map;
 
 @Controller
@@ -73,5 +74,24 @@ public class RoleController extends BaseController{
         roleService.deleteRole(id);
         return success("角色删除成功");
     }
-
+    /**
+     * 角色授权
+     *  将对应的角色ID与资源ID，添加到对应的权限表中
+     * @param roleId
+     * @param mIds
+     * @return
+     */
+    @RequestMapping("addGrant")
+    @ResponseBody
+    @SupLog(content = "为角色授权")
+    public ResultInfo addGrant(Integer roleId,Integer[] mIds){
+        roleService.addGrant(roleId,mIds);
+        return success("角色授权成功！");
+    }
+    //查询所有的角色列表
+    @RequestMapping("queryAllRoles")
+    @ResponseBody
+    public List<Map<String,Object>> queryAllRoles(Integer userId){
+        return roleService.queryAllRoles(userId);
+    }
 }
