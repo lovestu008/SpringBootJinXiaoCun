@@ -16,7 +16,7 @@
                         <option value="">请选择操作类型</option>
                         <option value="日志管理">日志管理</option>
                         <option value="角色管理">角色管理</option>
-                        <option value="添加操作">添加操作</option>
+                        <option value="商品进货">商品进货</option>
                         <option value="删除操作">删除操作</option>
                         <option value="修改操作">修改操作</option>
                         <option value="注销操作">注销操作</option>
@@ -38,6 +38,8 @@
                 <a class="layui-btn search_btn" data-type="reload">
                     <i class="layui-icon">&#xe615;</i> 搜索
                 </a>
+                <button class="layui-btn layui-btn-warm"  type="reset" id="reset"><i
+                            class="layui-icon layui-bg-orange">&#xe666;</i> 重置</button>
             </div>
         </form>
     </blockquote>

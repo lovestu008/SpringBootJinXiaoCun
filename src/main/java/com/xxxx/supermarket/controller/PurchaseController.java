@@ -1,10 +1,12 @@
 package com.xxxx.supermarket.controller;
 
+import com.xxxx.supermarket.aspect.SupLog;
 import com.xxxx.supermarket.base.BaseController;
 import com.xxxx.supermarket.base.ResultInfo;
 import com.xxxx.supermarket.entity.Purchase;
 import com.xxxx.supermarket.querys.PurchaseQuery;
 import com.xxxx.supermarket.service.PurchaseService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,6 +20,8 @@ import java.util.Map;
 
 @Controller
 @RequestMapping("purchase")
+@Slf4j
+@SupLog(type = "商品进货")
 public class PurchaseController extends BaseController {
     @Resource
     private PurchaseService purchaseService;
@@ -51,6 +55,7 @@ public class PurchaseController extends BaseController {
     }
     @PostMapping("add")
     @ResponseBody
+    @SupLog(content = "添加进货信息")
     public ResultInfo addPurchase(Purchase purchase){
         purchaseService.addPurchase(purchase);
         return success("进货信息添加成功");
@@ -61,6 +66,7 @@ public class PurchaseController extends BaseController {
     }
     @PostMapping("delete")
     @ResponseBody
+    @SupLog(content = "删除进货信息")
     public ResultInfo deletePurchase(Integer id){
         purchaseService.deletePurchase(id);
         return success("进货信息删除成功");

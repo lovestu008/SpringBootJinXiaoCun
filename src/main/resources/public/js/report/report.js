@@ -1,50 +1,22 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>统计报表</title>
-    <link rel="icon" href="/favicon.ico">
-    <link rel="stylesheet" href="/resources/layui/css/layui.css" media="all"/>
-    <link rel="stylesheet" href="/resources/css/public.css" media="all"/>
-</head>
-<body class="childrenBody">
-<div style="width: 1300px;height:350px;">
-    <div id="make" style="width: 600px;height:300px;float: left;"></div>
-    <div id="make1" style="width: 600px;height:300px;float: right"></div>
+    layui.use(['layer','echarts','jquery'], function () {
+    var $ = layui.jquery;
+    var echarts = layui.echarts;
 
-</div>
-
-<div style="width: 1300px;height:350px;">
-    <div id="make2" style="width: 600px;height:300px;float: left;"></div>
-    <div id="make3" style="width: 600px;height:300px;float: right;"></div>
-
-</div>
-
-
-
-<!-- 数据表格开始 -->
-
-<!-- 数据表格结束 -->
-<script type="text/javascript" src="/resources/layui/layui.js"></script>
-<script type="text/javascript">
-    layui.extend({
-        echarts: '/resources/js/echarts'
-    }).use(['layer','echarts','jquery'], function () {
-        var $ = layui.jquery;
-        var layer = layui.layer;
-        var echarts = layui.echarts;
-
-        /**
-         * 销量报表
-         */
-        $.post("/report/statisticsSales",
-            function (data) {
+    /**
+     * 销量报表
+     */
+    $.ajax({
+        type:"get",
+        url:ctx + "/report/statisticsSales",
+        dataType:"json",
+        success:function (data) {
+            // 基于准备好的dom，初始化echarts实例
             var myChart = echarts.init(document.getElementById('make'));
-            // 指定图表的配置项和数据
-            option = {
-                title: {
-                    text: '商品总销量前五统计',
 
+            // 指定图表的配置项和数据
+            var option = {
+                title: {
+                    text: '商品总销量前五统计'
                 },
                 tooltip: {
                     trigger: 'axis',
@@ -52,43 +24,40 @@
                         type: 'shadow'
                     }
                 },
+                color: ["#2f89cf"],
                 legend: {
-                    data: ['总销量', '实际销量']
+                    left: 'center',
+                    data: ['总销量']
                 },
                 grid: {
-                    left: '3%',
-                    right: '4%',
-                    bottom: '3%',
+                    left: "0%",
+                    top: "50px",
+                    right: "0%",
+                    bottom: "4%",
                     containLabel: true
                 },
                 xAxis: {
-                    type: 'value',
-                    boundaryGap: [0, 0.01]
+                    type: 'value'
                 },
                 yAxis: {
                     type: 'category',
-                    data: data.data.data1
+                    data: data.data1
                 },
                 series: [
                     {
                         name: '总销量',
                         type: 'bar',
-                        data: data.data.data2
-                    },
-                    {
-                        name: '实际销量',
-                        type: 'bar',
-                        data: data.data.data3
+                        data: data.data2
                     }
                 ]
             };
             myChart.setOption(option);
-        },"json");
-
+        }
+            });
         /**
          * 进货报表
          */
-        $.post("/report/statisticsinGoods",
+        /*$.post("/report/statisticsinGoods",
             function (data) {
                 var myChart = echarts.init(document.getElementById('make1'));
                 // 指定图表的配置项和数据
@@ -144,9 +113,9 @@
                 myChart.setOption(option);
             },"json");
 
-        /**
+        /!**
          * 退货报表
-         */
+         *!/
         $.post("/report/statisticsoutGoods",
             function (data) {
                 var myChart = echarts.init(document.getElementById('make2'));
@@ -203,9 +172,9 @@
                 myChart.setOption(option);
             },"json");
 
-        /**
+        /!**
          * 各种报表
-         */
+         *!/
         $.post("/report/profitStatement",
             function (data) {
                 var myChart = echarts.init(document.getElementById('make3'));
@@ -284,12 +253,8 @@
                     ]
                 };
                 myChart.setOption(option);
-            },"json");
+            },"json");*/
 
 
     });
-        // 基于准备好的dom，初始化echarts实例
-
-</script>
-</body>
-</html>
+    // 基于准备好的dom，初始化echarts实例
