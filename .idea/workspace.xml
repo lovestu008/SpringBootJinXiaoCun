@@ -4,20 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47f004b4-5068-48b2-9225-7a541737bcc5" name="Changes" comment="数据报表显示">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="47f004b4-5068-48b2-9225-7a541737bcc5" name="Changes" comment="添加饼状图">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/505befc5-1725-44ef-bd78-81d271298580.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/505befc5-1725-44ef-bd78-81d271298580.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/ReportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/ReportController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/dao/PurchaseMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/dao/PurchaseMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/service/PurchaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/service/PurchaseService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/PurchaseMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/PurchaseMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/report/report.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/js/report/report.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/views/report/report.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/report/report.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/ReportController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/ReportController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/dao/PurchaseMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/dao/PurchaseMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/service/PurchaseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/service/PurchaseService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mappers/PurchaseMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mappers/PurchaseMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/public/js/report/report.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/public/js/report/report.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/views/report/report.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/views/report/report.ftl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -135,6 +125,7 @@
       <updated>1696490904462</updated>
       <workItem from="1696490905901" duration="35387000" />
       <workItem from="1696752530180" duration="16642000" />
+      <workItem from="1696852223790" duration="1483000" />
     </task>
     <task id="LOCAL-00001" summary="role module">
       <created>1696554818830</created>
@@ -213,7 +204,14 @@
       <option name="project" value="LOCAL" />
       <updated>1696814791348</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="添加饼状图">
+      <created>1696852012771</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1696852012771</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -253,6 +251,7 @@
     <MESSAGE value="user操作 用户登录 user的session作用域" />
     <MESSAGE value="非法访问拦截" />
     <MESSAGE value="完善邮箱登录" />
-    <option name="LAST_COMMIT_MESSAGE" value="完善邮箱登录" />
+    <MESSAGE value="添加饼状图" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加饼状图" />
   </component>
 </project>

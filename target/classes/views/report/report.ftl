@@ -13,11 +13,8 @@
     <div id="make" style="width: 1300px;height:400px;float: left;"></div>
 </div>
 <br>
-<div style="width: 1300px;height:350px;">
+<div style="width: 1300px;height:400px;">
     <div id="make1" style="width: 1300px;height:400px;float: left"></div>
-    <div id="make2" style="width: 600px;height:300px;float: left;"></div>
-    <div id="make3" style="width: 600px;height:300px;float: right;"></div>
-
 </div>
 
 
