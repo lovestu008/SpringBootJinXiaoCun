@@ -7,12 +7,15 @@ import com.xxxx.supermarket.base.BaseService;
 import com.xxxx.supermarket.dao.SaleListGoodsMapper;
 import com.xxxx.supermarket.dao.SaleListMapper;
 import com.xxxx.supermarket.entity.SaleList;
+import com.xxxx.supermarket.entity.SaleListGoods;
+import com.xxxx.supermarket.model.SaleListGoodsModel;
 import com.xxxx.supermarket.query.SaleQuery;
 import com.xxxx.supermarket.utils.AssertUtil;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @Service
@@ -60,5 +63,11 @@ public class SaleService extends BaseService<SaleList, Integer> {
     }
 
     public void updateSale(SaleList saleList) {
+    }
+    /**
+     * 查询商品总销量前五
+     */
+    public List<SaleListGoodsModel> selectSaleListGoods(){
+        return saleListGoodsMapper.selectSaleListGoods();
     }
 }

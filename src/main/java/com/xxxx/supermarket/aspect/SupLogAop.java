@@ -2,6 +2,7 @@ package com.xxxx.supermarket.aspect;
 
 import com.xxxx.supermarket.dao.LogMapper;
 import com.xxxx.supermarket.entity.Log;
+import com.xxxx.supermarket.entity.User;
 import com.xxxx.supermarket.utils.AssertUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
@@ -50,7 +51,8 @@ public class SupLogAop implements Ordered {//Ordered接口用于排序，值越�
         Object target = proceedingJoinPoint.getTarget();
         MethodSignature signature = (MethodSignature) proceedingJoinPoint.getSignature();
         ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
-        HttpServletRequest request = attributes.getRequest();
+        HttpServletRequest request = attributes.getRequest();//通过作用域查询登录用户id
+        User user = (User) request.getSession().getAttribute("user");
         SupLog anno1 = target.getClass().getAnnotation(SupLog.class);
         SupLog anno2 = signature.getMethod().getAnnotation(SupLog.class);
         if (anno1!=null&&anno2!=null){
@@ -59,9 +61,10 @@ public class SupLogAop implements Ordered {//Ordered接口用于排序，值越�
             String logContent = anno2.content();
             log.setType(logType);
             log.setContent(logContent);
-            log.setUname("admin");//通过request作用域获取
-            log.setUserId(1);
+            log.setUname(user.getUserName());//通过request作用域获取
+            log.setUserId(user.getId());
             log.setTime(new Date());
+            System.out.println("添加日志");
             //保存业务操作日志信息
             AssertUtil.isTrue(logMapper.insertSelective(log)<1,"保存操作日志失败！");
         }
