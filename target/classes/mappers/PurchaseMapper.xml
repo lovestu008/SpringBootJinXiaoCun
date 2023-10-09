@@ -14,7 +14,7 @@
     <result column="is_valid" property="isValid" jdbcType="INTEGER" />
   </resultMap>
   <sql id="Base_Column_List" >
-    id, goods_name, provider, inp_price, all_inp_price, inp_num, inp_time, operate_person, 
+    id, goods_name, provider, inp_price, all_inp_price, inp_num, inp_time, operate_person,
     remark, is_valid
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
@@ -30,11 +30,11 @@
   <insert id="insert" parameterType="com.xxxx.supermarket.entity.Purchase" >
     insert into t_purchase (id, goods_name, provider, 
       inp_price, all_inp_price, inp_num, 
-      inp_time, operate_person, remark, 
+      inp_time, operate_person, remark,
       is_valid)
-    values (#{id,jdbcType=INTEGER}, #{goodsName,jdbcType=VARCHAR}, #{provider,jdbcType=VARCHAR}, 
-      #{inpPrice,jdbcType=INTEGER}, #{allInpPrice,jdbcType=INTEGER}, #{inpNum,jdbcType=INTEGER}, 
-      #{inpTime,jdbcType=TIMESTAMP}, #{operatePerson,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR}, 
+    values (#{id,jdbcType=INTEGER}, #{goodsName,jdbcType=VARCHAR}, #{provider,jdbcType=VARCHAR},
+      #{inpPrice,jdbcType=INTEGER}, #{allInpPrice,jdbcType=INTEGER}, #{inpNum,jdbcType=INTEGER},
+      #{inpTime,jdbcType=TIMESTAMP}, #{operatePerson,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR},
       #{isValid,jdbcType=INTEGER})
   </insert>
   <insert id="insertSelective" parameterType="com.xxxx.supermarket.entity.Purchase" >
@@ -159,9 +159,9 @@
     from
     t_purchase
     <where>
-    is_valid=1
+    1=1
       <if test="provider != null and provider != ''">
-        and provider = #{provider}
+        and provider like concat('%',#{provider},'%')
       </if>
 
       <if test="goodsName != null and goodsName != ''">
@@ -169,12 +169,12 @@
       </if>
     </where>
   </select>
-  <!--  <select id="selectAllProvider" resultType="java.util.Map">-->
-  <!--    select-->
-  <!--      id as providId,name as provider-->
-  <!--    from-->
-  <!--      t_provider p-->
-  <!--  </select>-->
+    <select id="selectAllProvider" resultType="java.util.Map">
+      select
+        id as providId,name as provider
+      from
+        t_provider p
+    </select>
   <select id="selectAllProvider" resultType="java.util.Map">
     select
       distinct p1.id as providerId,p1.name as provider
@@ -200,5 +200,11 @@
   </select>
 
 
+  <select id="selectAllProvider" resultType="java.util.Map">
+    select
+      id as providId,name as provider
+    from
+      t_provider
+  </select>
 
 </mapper>

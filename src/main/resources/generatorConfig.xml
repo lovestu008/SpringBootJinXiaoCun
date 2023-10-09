@@ -5,7 +5,7 @@
 <generatorConfiguration>
     <!-- 数据库驱动路径：在左侧project边栏的External Libraries中找到mysql的驱动，右键选择copy path -->
     <classPathEntry
-            location="D:\study\px\maven_rep\repository\mysql\mysql-connector-java\8.0.18\mysql-connector-java-8.0.18.jar"/>
+            location="F:\install_path\apache-maven-3.6.2-bin\maven\mysql\mysql-connector-java\8.0.18\mysql-connector-java-8.0.18.jar"/>
     <!-- context 是逆向⼯程的主要配置信息，id：起个名字，targetRuntime：设置⽣成的⽂件适⽤于哪个mybatis版
    本 -->
     <context id="DB2Tables" targetRuntime="MyBatis3">
@@ -52,7 +52,7 @@
         </javaClientGenerator>
         <!-- 数据库的表名与对应的实体类的名称，tableName是数据库中的表名，domainObjectName是⽣成的JAVA模
        型名 -->
-        <table tableName="t_menu" domainObjectName="Menu"
+        <table tableName="t_customer_return_list_goods" domainObjectName="CustomerReturnListGoods"
                enableCountByExample="false" enableUpdateByExample="false"
                enableDeleteByExample="false" enableSelectByExample="false"
                selectByExampleQueryId="false">
