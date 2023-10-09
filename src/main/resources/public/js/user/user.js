@@ -118,9 +118,27 @@ layui.use(['table','layer'],function(){
                     }
                 });
             });
+        }else if (layEvent == "updatePwd"){//绑定修改密码事件
+            var userId = data.id;
+            openUpdatePwdDialog(userId);
         }
     });
 
+    /**
+     * 用户模块 修改用户密码
+     * @param roleId
+     */
+    function openUpdatePwdDialog(userId){
+        var title = "<h2>用户管理 - 修改用户密码 </h2>";
+        var url = ctx + "/user/toPasswordPage?userId="+userId;
+        layui.layer.open({
+            title:title,
+            type: 2,
+            content:url,
+            area:['500px','400px'],
+            maxmin:true
+        });
+    }
 
     function deleteUser(data){
         // 获取所有被选中的记录对应的数据

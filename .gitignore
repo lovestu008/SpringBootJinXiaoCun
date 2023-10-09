@@ -2,4 +2,5 @@
 !/.idea/
 !/src/main/resources/generatorConfig.xml
 /target/
-!/.idea/workspace.xml
+/.idea/
+/target/

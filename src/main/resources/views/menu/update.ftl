@@ -9,47 +9,48 @@
         <label class="layui-form-label">菜单名</label>
         <div class="layui-input-block">
             <input type="text" class="layui-input userName"
-                   lay-verify="required" name="moduleName" id="moduleName" value="${(module.moduleName)!}"   placeholder="请输入菜单名">
+                   lay-verify="required" name="name" id="name" value="${(menu.name)!}"   placeholder="请输入菜单名">
         </div>
     </div>
-    <div class="layui-form-item layui-row layui-col-xs12">
+<#--    <div class="layui-form-item layui-row layui-col-xs12">
         <label class="layui-form-label">菜单样式</label>
         <div class="layui-input-block">
             <input type="text" class="layui-input userName"
-                   name="moduleStyle" id="moduleStyle" value="${(module.moduleStyle)!""}" placeholder="请输入菜单样式">
+                   name="moduleStyle" id="moduleStyle" value="${(menu.moduleStyle)!""}" placeholder="请输入菜单样式">
         </div>
-    </div>
-    <div class="layui-form-item layui-row layui-col-xs12">
+    </div>-->
+<#--    <div class="layui-form-item layui-row layui-col-xs12">
         <label class="layui-form-label">排序</label>
         <div class="layui-input-block">
             <input type="text" class="layui-input userName"
-                    name="orders" id="orders" placeholder="请输入排序值" value="${(module.orders)!""}">
+                    name="orders" id="orders" placeholder="请输入排序值" value="${(menu.orders)!""}">
         </div>
-    </div>
+    </div>-->
     <div class="layui-form-item layui-row layui-col-xs12">
         <label class="layui-form-label">权限码</label>
         <div class="layui-input-block">
             <input type="text" class="layui-input userName"
-                   lay-verify="required" name="optValue" id="optValue" placeholder="请输入菜单权限码" value="${(module.optValue)!}">
+                   lay-verify="required" name="aclValue" id="aclValue" placeholder="请输入菜单权限码" value="${(menu.aclValue)!}">
         </div>
     </div>
     <div class="layui-form-item layui-row layui-col-xs12">
         <label class="layui-form-label">菜单级别</label>
         <div class="layui-input-block">
                 <select name="grade" >
-                    <option value="0" <#if module.grade==0>selected="selected"</#if> >一级菜单</option>
-                    <option value="1" <#if module.grade==1>selected="selected"</#if>>二级菜单</option>
-                    <option value="2" <#if module.grade==2>selected="selected"</#if>>三级菜单</option>
+                    <option value="-1" <#if menu.grade==-1>selected="selected"</#if> >根菜单</option>
+                    <option value="0" <#if menu.grade==0>selected="selected"</#if> >一级菜单</option>
+                    <option value="1" <#if menu.grade==1>selected="selected"</#if>>二级菜单</option>
+                    <option value="2" <#if menu.grade==2>selected="selected"</#if>>三级菜单</option>
                 </select>
         </div>
     </div>
 
-    <#if module.grade==1>
+    <#if menu.grade==1>
         <div class="layui-form-item layui-row layui-col-xs12">
             <label class="layui-form-label">菜单url</label>
             <div class="layui-input-block">
                 <input type="text" class="layui-input userName"
-                       lay-verify="required" name="url" id="url" placeholder="请输入菜单url" value="${(module.url)!""}">
+                       lay-verify="required" name="url" id="url" placeholder="请输入菜单url" value="${(menu.url)!""}">
             </div>
         </div>
     </#if>
@@ -58,8 +59,8 @@
     <!--
        添加根级菜单
     -->
-    <input name="parentId" type="hidden" value="${module.parentId}"/>
-    <input name="id" type="hidden" value="${module.id}"/>
+    <input name="parentId" type="hidden" value="${menu.pId}"/>
+    <input name="id" type="hidden" value="${menu.id}"/>
     <br/>
     <div class="layui-form-item layui-row layui-col-xs12">
         <div class="layui-input-block">

@@ -40,6 +40,7 @@
 	<script id="roleListBar" type="text/html">
 		<a class="layui-btn layui-btn-xs" id="edit" lay-event="edit">编辑</a>
 		<a class="layui-btn layui-btn-xs layui-btn-danger" lay-event="del">删除</a>
+		<a class="layui-btn layui-btn-xs layui-bg-blue" id="grant" lay-event="grant">授权</a>
 	</script>
 </form>
 <script type="text/javascript" src="${ctx}/js/role/role.js"></script>

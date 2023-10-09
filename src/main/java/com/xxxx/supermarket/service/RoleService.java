@@ -5,6 +5,8 @@ import com.xxxx.supermarket.dao.RoleMapper;
 import com.xxxx.supermarket.entity.Role;
 import com.xxxx.supermarket.utils.AssertUtil;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 import java.util.HashMap;
@@ -23,6 +25,8 @@ public class RoleService extends BaseService<Role, Integer> {
      * @param role
      */
 
+
+    @Transactional(propagation = Propagation.REQUIRED)
     public void addRole(Role role) {
         AssertUtil.isTrue(null == role.getName(), "角色名不能为空");
         AssertUtil.isTrue(null == role.getBz(), "备注不能为空");
@@ -36,6 +40,7 @@ public class RoleService extends BaseService<Role, Integer> {
      *
      * @param role
      */
+    @Transactional(propagation = Propagation.REQUIRED)
     public void updateRole(Role role) {
         AssertUtil.isTrue(null == role.getName(), "角色名不能为空");
         AssertUtil.isTrue(null == role.getBz(), "备注不能为空");
@@ -45,12 +50,11 @@ public class RoleService extends BaseService<Role, Integer> {
         AssertUtil.isTrue(roleMapper.updateByPrimaryKeySelective(role) < 1,"角色更新失败");
     }
 
-
+    @Transactional(propagation = Propagation.REQUIRED)
     public void deleteRole(Integer id) {
         AssertUtil.isTrue( null == id,"请选择要删除的角色");
         Role role = roleMapper.selectByPrimaryKey(id);
         AssertUtil.isTrue(role == null,"要删除的角色不存在");
-        role.setIsDel(1);
-        AssertUtil.isTrue(roleMapper.updateByPrimaryKeySelective(role) < 1,"角色删除失败");
+        AssertUtil.isTrue(roleMapper.deleteByPrimaryKey(id) < 1,"角色删除失败");
     }
 }

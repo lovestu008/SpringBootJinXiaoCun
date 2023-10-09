@@ -129,6 +129,37 @@ public class UserService extends BaseService<User,Integer> {
     }
 
 
+    /**
+     * 修改密码的值校验
+     * @param oldPassword
+     * @param newPassword
+     * @param repeatPassword
+     */
+    private void checkParams(String oldPassword, String newPassword, String repeatPassword){
+        AssertUtil.isTrue(StringUtils.isBlank(oldPassword),"请输入旧密码");
+        AssertUtil.isTrue(StringUtils.isBlank(newPassword),"请输入新密码");
+        AssertUtil.isTrue(StringUtils.isBlank(repeatPassword),"请再次输入新密码");
+        AssertUtil.isTrue(!newPassword.equals(repeatPassword),"输入的新密码不一致");
+    }
 
-
+    /**
+     * 修改密码模块Service层
+     * @param oldPassword
+     * @param newPassword
+     * @param repeatPassword
+     */
+    public void updatePwd(Integer id,Integer userId,String oldPassword, String newPassword, String repeatPassword) {
+        checkParams(oldPassword, newPassword, repeatPassword);
+        User temp = null;
+        if (null == userId) {
+            temp = userMapper.selectByPrimaryKey(id);
+        }else {
+           temp = userMapper.selectByPrimaryKey(userId);
+        }
+        oldPassword = Md5Util.encode(oldPassword);
+        AssertUtil.isTrue(!temp.getPassword().equals(oldPassword),"旧密码错误");
+        //执行更新操作
+        temp.setPassword(Md5Util.encode(newPassword));
+        AssertUtil.isTrue(userMapper.updateByPrimaryKeySelective(temp) < 1,"密码修改失败");
+    }
 }
