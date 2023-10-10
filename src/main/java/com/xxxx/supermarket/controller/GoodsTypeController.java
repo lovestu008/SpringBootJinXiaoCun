@@ -35,6 +35,7 @@ public class GoodsTypeController extends BaseController {
     public String index(){
         return "goodsType/goods_type";
     }
+
     /**
      * 查询所有的商品类别
      * @param
@@ -44,6 +45,7 @@ public class GoodsTypeController extends BaseController {
     public List<TreeGoodsModel> queryAllGoodsTypes(){
         return goodsTypeService.queryAllGoodsTypes();
     }
+
     /**
      * 加载商品类别管理页面的表格数据
      * @param
@@ -68,6 +70,7 @@ public class GoodsTypeController extends BaseController {
         goodsTypeService.addGoodType(goodsType);
         return success("添加成功！");
     }
+
     /**
      * 删除商品类别
      * @param id

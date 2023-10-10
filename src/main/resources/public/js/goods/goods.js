@@ -4,6 +4,47 @@ layui.use(['element','table','layer'],function(){
         table = layui.table
 
 
+    /*zTree*/
+    $.ajax({
+        type:"post",
+        url:ctx+"/goodsType/queryAllGoodsTypes",
+        dataType:"json",
+        success:function (data) {
+            // zTree 的参数配置，深入使用请参考 API 文档（setting 配置详解）
+            var setting = {
+                data: {
+                    simpleData: {
+                        enable: true
+                    }
+                },
+                view:{
+                    showLine: false
+                },
+                callback: {
+                    onClick: zTreeOnClick
+                }
+            };
+            $.fn.zTree.init($("#goodsTypeTree"), setting, data);
+        }
+    })
+
+    function zTreeOnClick(event, treeId, treeNode) {
+        // 获取店家节点对应类型id
+        var typeId =  treeNode.id;
+        table.reload("goodsListTable",{
+            page: {
+                curr: 1 //重新从第 1 页开始
+            },
+            where: {
+                goodsName: $("input[name='goodsName']").val(),
+                typeId:typeId
+            }
+        })
+        // 设置商品类别查询条件到隐藏域
+        $("input[name='typeId']").val(typeId);
+    };
+
+
 
     //表格展示
     var tableIns = table.render({
