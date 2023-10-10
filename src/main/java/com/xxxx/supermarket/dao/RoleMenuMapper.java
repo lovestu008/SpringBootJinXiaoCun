@@ -15,4 +15,6 @@ public interface RoleMenuMapper extends BaseMapper<RoleMenu,Integer> {
     void deleteRoleMenuByRoleId(Integer roleId);
 
     List<Integer> queryRoleHasMenuIdsByRoleId(Integer roleId);
+
+    List<String> queryUserHasRoleHasPermissionByUserId(Integer userId);
 }

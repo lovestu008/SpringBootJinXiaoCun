@@ -1,6 +1,7 @@
 package com.xxxx.supermarket.controller;
 
 import com.xxxx.supermarket.base.BaseController;
+import com.xxxx.supermarket.dao.RoleMenuMapper;
 import com.xxxx.supermarket.entity.User;
 import com.xxxx.supermarket.service.UserService;
 import com.xxxx.supermarket.utils.LoginUserUtil;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 @Controller
 public class LoginController extends BaseController {
@@ -17,6 +19,8 @@ public class LoginController extends BaseController {
     @Resource
     private UserService userService;
 
+    @Resource
+    private RoleMenuMapper roleMenuMapper;
 
 
     /**
@@ -48,6 +52,9 @@ public class LoginController extends BaseController {
         Integer userId = LoginUserUtil.releaseUserIdFromCookie(request);
         User user = userService.selectByPrimaryKey(userId);
         request.getSession().setAttribute("user", user);
+
+        List<String> permissions = roleMenuMapper.queryUserHasRoleHasPermissionByUserId(userId);
+        request.getSession().setAttribute("permissions",permissions);
         return "main";
     }
 
