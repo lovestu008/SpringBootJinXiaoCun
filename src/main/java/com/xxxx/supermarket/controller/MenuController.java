@@ -4,6 +4,7 @@ import com.xxxx.supermarket.aspect.SupLog;
 import com.xxxx.supermarket.base.BaseController;
 import com.xxxx.supermarket.base.ResultInfo;
 import com.xxxx.supermarket.entity.Menu;
+import com.xxxx.supermarket.model.TreeModel;
 import com.xxxx.supermarket.service.MenuService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 import java.util.Map;
 
 @Controller
@@ -72,16 +74,16 @@ public class MenuController extends BaseController {
     @RequestMapping("update")
     @ResponseBody
     @SupLog(content = "修改菜单权限")
-    public ResultInfo updateMenu(){
-        menuService.updateMenu();
+    public ResultInfo updateMenu(Menu menu){
+        menuService.updateMenu(menu);
         return success("更新菜单成功");
     }
 
     @RequestMapping("delete")
     @ResponseBody
     @SupLog(content = "删除菜单权限")
-    public ResultInfo deleteMenu(){
-        menuService.deleteMenu();
+    public ResultInfo deleteMenu(Integer id){
+        menuService.deleteMenu(id);
         return success("菜单删除成功");
     }
 }
