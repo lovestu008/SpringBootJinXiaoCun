@@ -1,4 +1,4 @@
-<link rel="icon" href="${ctx}/images/favicon.ico" >
+<link rel="icon" href="${ctx}/images/logo0.png">
 <link rel="stylesheet" href="${ctx}/lib/layui-v2.5.5/css/layui.css" media="all">
 <link rel="stylesheet" href="${ctx}/css/layuimini.css" media="all">
 <link rel="stylesheet" href="${ctx}/lib/font-awesome-4.7.0/css/font-awesome.min.css" media="all">
