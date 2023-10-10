@@ -122,7 +122,7 @@
     update
         t_customer
     set
-        is_del=0
+        is_del=1
     where
         id
     in
@@ -138,7 +138,7 @@
     from
     t_customer
     <where>
-      is_del=1
+      is_del=0
       <if test="name!=null and name!=''">
         and name like concat('%',#{name},'%')
       </if>

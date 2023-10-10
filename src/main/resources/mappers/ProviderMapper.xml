@@ -124,7 +124,7 @@
     update
     t_provider
     set
-    is_del=0
+    is_del=1
     where
     id
     in
@@ -140,8 +140,8 @@
     from
         t_provider
     <where>
-      is_del=1
-      <if test="name!=null and name!=''">
+      is_del=0
+      <!--<if test="name!=null and name!=''">
         and name like concat ('%',#{name},'%')
       </if>
       <if test="contact!=null and contact!=''">
@@ -152,7 +152,7 @@
       </if>
       <if test="number!=null and number!=''">
         and number = #{number}
-      </if>
+      </if>-->
     </where>
   </select>
 </mapper>

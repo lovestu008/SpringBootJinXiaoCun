@@ -53,8 +53,8 @@ public class CustomerService extends BaseService<Customer,Integer> {
         /* 1.参数校验*/
         checkSaleChanceParams(customer.getAddress(), customer.getContact(), customer.getName(), customer.getNumber());
         /*2.设置相关参数默认值*/
-        // isValid是否有效  （0=无效，1=有效）
-        customer.setIsDel(1);
+        // isValid是否有效  （0=有效，1=无效）
+        customer.setIsDel(0);
         /* 3.判断受影响行数*/
         AssertUtil.isTrue(customerMapper.insertSelective(customer)!=1,"添加超市客户失败");
     }
@@ -89,7 +89,6 @@ public class CustomerService extends BaseService<Customer,Integer> {
         checkSaleChanceParams(customer.getAddress(), customer.getContact(), customer.getName(), customer.getNumber());
         /*2.设置相关参数默认值*/
         AssertUtil.isTrue(null==temp.getIsDel(),"数据状态不能为空 （0=无效，1=有效）");
-        // customer.setIsDel(1);
         /* 3.判断受影响行数*/
         AssertUtil.isTrue(customerMapper.updateByPrimaryKeySelective(customer) != 1, "更新超市客户失败！");
     }
