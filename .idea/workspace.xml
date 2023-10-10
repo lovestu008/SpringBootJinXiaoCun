@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47f004b4-5068-48b2-9225-7a541737bcc5" name="Changes" comment="" />
+    <list default="true" id="47f004b4-5068-48b2-9225-7a541737bcc5" name="Changes" comment="一些没用的东西" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -302,7 +302,21 @@
       <option name="project" value="LOCAL" />
       <updated>1696927872736</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="一些idea中的文件">
+      <created>1696937695756</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1696937695756</updated>
+    </task>
+    <task id="LOCAL-00027" summary="一些没用的东西">
+      <created>1696939304424</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1696939304424</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -355,6 +369,8 @@
     <MESSAGE value="角色小修改" />
     <MESSAGE value="添加主页权限,修改logo" />
     <MESSAGE value="修改logo" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改logo" />
+    <MESSAGE value="一些idea中的文件" />
+    <MESSAGE value="一些没用的东西" />
+    <option name="LAST_COMMIT_MESSAGE" value="一些没用的东西" />
   </component>
 </project>
