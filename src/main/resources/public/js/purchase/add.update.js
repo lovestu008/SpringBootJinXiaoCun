@@ -44,4 +44,27 @@ layui.use(['form', 'layer'], function () {
         var index =parent.layer.getFrameIndex(window.name);
         parent.layer.close(index);
     })
+    $.ajax({
+        type:"get",
+        url: ctx+"/purchase/selectAllGoodsNameById",
+        data:{},
+        success:function (data){
+            console.log(data)
+            if (data!=null){
+                var goodsId=$("#goodsId").val();
+                for (var i=0;i<data.length;i++){
+                    if (goodsId==data[i].goodsId){
+                        console.log(data[i].goodsId)
+                        opt ="<option value='"+data[i].goodsId+"'selected >"+data[i].goodsName+"</option>";
+                    }else {
+                        opt ="<option value='"+data[i].goodsId+"'>"+data[i].goodsName+"</option>";
+                    }
+                    $("#goodsName").append(opt);
+
+                }
+            }
+            //渲染下拉框的内容
+            layui.form.render("select");
+        }
+    })
 });

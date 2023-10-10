@@ -1,11 +1,13 @@
 package com.xxxx.supermarket.controller;
 
+import com.xxxx.supermarket.aspect.SupLog;
 import com.xxxx.supermarket.base.BaseController;
 import com.xxxx.supermarket.dao.ReturnMapper;
 import com.xxxx.supermarket.entity.Return;
 import com.xxxx.supermarket.querys.PurchaseQuery;
 import com.xxxx.supermarket.querys.ReturnQuery;
 import com.xxxx.supermarket.service.ReturnService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -26,7 +28,6 @@ public class ReturnController extends BaseController {
     @RequestMapping("list")
     @ResponseBody
     public Map<String,Object> selectByParams(ReturnQuery returnQuery){
-        System.out.println(returnQuery);
         if (returnQuery.getProvider()!=null){
             if (returnQuery.getProvider().equals("请选择供应商")) returnQuery.setProvider(null);
             if (returnQuery.getGoodsName().equals("请选择商品")) returnQuery.setGoodsName(null);

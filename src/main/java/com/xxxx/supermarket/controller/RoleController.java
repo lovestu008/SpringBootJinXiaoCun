@@ -1,5 +1,6 @@
 package com.xxxx.supermarket.controller;
 
+import com.xxxx.supermarket.annotation.RequiredPermission;
 import com.xxxx.supermarket.aspect.SupLog;
 import com.xxxx.supermarket.base.BaseController;
 import com.xxxx.supermarket.base.ResultInfo;
@@ -30,17 +31,18 @@ public class RoleController extends BaseController{
     @Resource
     private RoleMapper roleMapper;
 
+    @RequiredPermission(code = "5010")
     @RequestMapping("index")
     public String index(){
         return "role/role";
     }
-
+    @RequiredPermission(code = "5010")
     @ResponseBody
     @RequestMapping("list")
     public Map<String,Object> roleList(RoleQuery roleQuery){
         return roleService.queryByParamsForTable(roleQuery);
     }
-
+    @RequiredPermission(code = "5010")
     @RequestMapping("addOrUpdateRolePage")
     public String toAddOrUpdateRolePage(Integer id, HttpServletRequest request){
         if (null != id){
@@ -49,7 +51,7 @@ public class RoleController extends BaseController{
         }
         return "role/add_update";
     }
-
+    @RequiredPermission(code = "5010")
     @RequestMapping("add")
     @ResponseBody
     @SupLog(content = "添加角色记录")
@@ -58,7 +60,7 @@ public class RoleController extends BaseController{
         roleService.addRole(role);
         return success("角色添加成功");
     }
-
+    @RequiredPermission(code = "5010")
     @RequestMapping("update")
     @ResponseBody
     @SupLog(content = "修改角色记录")
@@ -66,7 +68,7 @@ public class RoleController extends BaseController{
         roleService.updateRole(role);
         return success("角色修改成功");
     }
-
+    @RequiredPermission(code = "5010")
     @RequestMapping("delete")
     @ResponseBody
     @SupLog(content = "删除角色记录")
@@ -81,6 +83,7 @@ public class RoleController extends BaseController{
      * @param mIds
      * @return
      */
+    @RequiredPermission(code = "5010")
     @RequestMapping("addGrant")
     @ResponseBody
     @SupLog(content = "为角色授权")
@@ -89,6 +92,7 @@ public class RoleController extends BaseController{
         return success("角色授权成功！");
     }
     //查询所有的角色列表
+    @RequiredPermission(code = "5010")
     @RequestMapping("queryAllRoles")
     @ResponseBody
     public List<Map<String,Object>> queryAllRoles(Integer userId){

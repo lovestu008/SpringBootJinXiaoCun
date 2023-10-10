@@ -10,8 +10,8 @@
     <div class="layui-header header">
         <div class="layui-logo">
             <a href="">
-                <img src="images/logo.png" alt="logo">
-                <h2>超市-管理系统</h2>
+                <img src="images/logo0.png" alt="logo"/>
+                <h1>超市-管理系统</h1>
             </a>
         </div>
         <a>
@@ -43,22 +43,39 @@
 
     <div class="layui-side layui-bg-black">
         <div class="layui-side-scroll layui-left-menu">
-            <#-- 判断当前登录用户是否拥有权限 -->
+            <#--判断当前登录用户是否拥有权限 -->
+            <#if permissions??>
                 <ul class="layui-nav layui-nav-tree layui-left-nav-tree layui-this" id="currency">
                     <#-- 通过freemarker中的seq_contains内建指令判断菜单是否显示 -->
-                        <li class="layui-nav-item">
+
+                    <li class="layui-nav-item">
                             <a href="javascript:;" class="layui-menu-tips"><i class="fa fa-street-view"></i><span class="layui-left-nav"> 基础管理</span> <span class="layui-nav-more"></span></a>
                             <dl class="layui-nav-child">
+                                <#if permissions?seq_contains("10")  >
                                     <dd>
                                         <a href="javascript:;" class="layui-menu-tips" data-type="tabAdd" data-tab-mpi="m-p-i-1" data-tab="customer/index" target="_self"><i class="fa fa-tachometer"></i><span class="layui-left-nav"> 客户管理</span></a>
                                     </dd>
                                     <dd>
+<<<<<<< HEAD
                                         <a href="javascript:;" class="layui-menu-tips" data-type="tabAdd" data-tab-mpi="m-p-i-2" data-tab="provider/index" target="_self"><i class="fa fa-tachometer"></i><span class="layui-left-nav"> 供应商管理</span></a>
+=======
+                                        <a href="javascript:;" class="layui-menu-tips" data-type="tabAdd" data-tab-mpi="m-p-i-2" data-tab="cus_dev_plan/index" target="_self"><i class="fa fa-ellipsis-h"></i><span class="layui-left-nav"> 供应商管理</span></a>
                                     </dd>
+                                </#if>
+                                <#if permissions?seq_contains("20") >
+                                    <dd>
+                                        <a href="javascript:;" class="layui-menu-tips" data-type="tabAdd" data-tab-mpi="m-p-i-1" data-tab="sale_chance/index" target="_self"><i class="fa fa-tty"></i><span class="layui-left-nav"> 商品管理</span></a>
+                                    </dd>
+                                    <dd>
+                                        <a href="javascript:;" class="layui-menu-tips" data-type="tabAdd" data-tab-mpi="m-p-i-2" data-tab="cus_dev_plan/index" target="_self"><i class="fa fa-ellipsis-h"></i><span class="layui-left-nav"> 商品类别管理</span></a>
+>>>>>>> origin/gyj
+                                    </dd>
+                                </#if>
 
 
                             </dl>
                         </li>
+                    <#if permissions?seq_contains("30") >
                         <li class="layui-nav-item">
                             <a href="javascript:;" class="layui-menu-tips"><i class="fa fa-exchange"></i><span class="layui-left-nav"> 进退货管理</span> <span class="layui-nav-more"></span></a><dl class="layui-nav-child">
                                 <dd>
@@ -69,6 +86,8 @@
                                 </dd>
                             </dl>
                         </li>
+                    </#if>
+                    <#if permissions?seq_contains("40") >
                         <li class="layui-nav-item">
                             <a href="javascript:;" class="layui-menu-tips"><i class="fa fa-desktop"></i><span class="layui-left-nav"> 销售管理</span> <span class="layui-nav-more"></span></a>
                             <dl class="layui-nav-child">
@@ -80,6 +99,8 @@
                                 </dd>
                             </dl>
                         </li>
+                    </#if>
+                    <#if permissions?seq_contains("50") >
                         <li class="layui-nav-item">
                             <a href="javascript:;" class="layui-menu-tips"><i class="fa fa-home"></i><span class="layui-left-nav"> 系统管理</span> <span class="layui-nav-more"></span></a><dl class="layui-nav-child">
                                 <dd>
@@ -96,6 +117,8 @@
                                 </dd>
                             </dl>
                         </li>
+                    </#if>
+                    <#if permissions?seq_contains("60") >
                         <li class="layui-nav-item">
                             <a href="javascript:;" class="layui-menu-tips"><i class="fa fa-gears"></i><span class="layui-left-nav"> 其他管理</span> <span class="layui-nav-more"></span></a>
                             <dl class="layui-nav-child">
@@ -107,8 +130,10 @@
                                 </dd>
                             </dl>
                         </li>
+                    </#if>
                     <span class="layui-nav-bar" style="top: 201px; height: 0px; opacity: 0;"></span>
                 </ul>
+            </#if>
         </div>
     </div>
 

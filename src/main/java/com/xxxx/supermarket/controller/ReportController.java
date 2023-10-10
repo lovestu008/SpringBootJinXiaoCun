@@ -1,5 +1,6 @@
 package com.xxxx.supermarket.controller;
 
+import com.xxxx.supermarket.annotation.RequiredPermission;
 import com.xxxx.supermarket.aspect.SupLog;
 import com.xxxx.supermarket.base.BaseController;
 import com.xxxx.supermarket.entity.Purchase;
@@ -22,6 +23,7 @@ import java.util.*;
 @RequestMapping("report")
 public class ReportController extends BaseController {
     //进入统计报表界面
+    @RequiredPermission(code = "6020")
     @RequestMapping("index")
     public String index(){
         return "report/report";
@@ -33,6 +35,7 @@ public class ReportController extends BaseController {
    private PurchaseService purchaseService;
 
 //查询商品总销量前五
+    @RequiredPermission(code = "6020")
     @RequestMapping("/statisticsSales")
     @ResponseBody
     public Map<String,Object> statisticsSales(){
@@ -51,6 +54,7 @@ public class ReportController extends BaseController {
         return map;
     }
 //查询当月进货分布
+    @RequiredPermission(code = "6020")
     @RequestMapping("/statisticsInGoods")
     @ResponseBody
     public Map<String,Object> statisticsInGoods(){
