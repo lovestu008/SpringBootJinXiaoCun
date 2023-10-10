@@ -1,8 +1,7 @@
 layui.use(['element','table','layer'],function(){
     var layer = parent.layer === undefined ? layui.layer : top.layer,
         $ = layui.jquery,
-        table = layui.table,
-        element = layui.element;
+        table = layui.table
 
 
 
@@ -30,7 +29,7 @@ layui.use(['element','table','layer'],function(){
             {field: 'sellingPrice', title: '出售价', minWidth:100, align:'center'},
             {field: 'minNum', title: '库存下限', minWidth:100, align:'center'},
             {field: 'producer', title: '生产厂商', align:'center',minWidth:150},
-            ,{title:'操作',templet:'#GoodsListBar', fixed: 'right', align:'center', minWidth:150}
+            ,{title:'操作',templet:'#goodsListBar', fixed: 'right', align:'center', minWidth:150}
         ]]
     });
 
@@ -39,17 +38,108 @@ layui.use(['element','table','layer'],function(){
 
     // 多条件搜索
     $(".search_btn").click(function(){
-
-
-        table.reload("goodsTable",{
+        tableIns.reload({
+            // 设置需要传递给后端的参数name
             where: {
-                goodsName: $("input[name='goodsName']").val()//商品名称
+                name: $("[name='goodsName']").val()//商品名称
             },
             page: {
                 curr: 1 //重新从第 1 页开始
             }
         })
     });
+
+
+
+
+    //头工具栏事件
+    table.on('toolbar(goods)', function(obj){
+        var checkStatus = table.checkStatus(obj.config.id);
+        switch(obj.event){
+            case "add":
+                openAddOrUpdateGoodsDialog();//添加页面
+                break;
+            case "goodsType":
+                addGoodsTypeManagerTab();
+
+        };
+    });
+
+
+
+
+
+
+
+    function addGoodsTypeManagerTab(){
+        //新增一个Tab项
+        window.parent.layui.element.tabAdd('bodyTab', {
+            title: '新选项'+ (Math.random()*1000|0)
+            ,content: '内容'+ (Math.random()*1000|0)
+            ,id: new Date().getTime()
+        })
+    }
+
+
+    /**
+     * 打开添加/修改页面
+     */
+    function openAddOrUpdateGoodsDialog(uid){
+        var title="商品管理-添加商品";
+        var url  =  ctx+"/goods/toAddOrUpdateGoodsPage";
+
+        if(uid){
+            url = url+"?id="+uid;
+            title="商品管理-更新商品";
+        }else{
+            if(null !=$("input[name='typeId']").val()){
+                url=url+"?typeId="+$("input[name='typeId']").val();
+            }
+        }
+        layui.layer.open({
+            title : title,
+            type : 2,
+            area:["800px","550px"],
+            maxmin:true,
+            content : url
+        });
+    }
+
+
+        /**
+         * 行监听
+         */
+        table.on("tool(goods)", function(obj){
+            var layEvent = obj.event;
+            if(layEvent === "edit") {
+                openAddOrUpdateGoodsDialog(obj.data.id);
+            }else if(layEvent === "del") {
+                layer.confirm('确定删除当前商品？', {icon: 3, title: "商品管理"}, function (index) {
+                    $.post(ctx+"/goods/delete",{id:obj.data.id},function (data) {
+                        if(data.code==200){
+                            layer.msg("操作成功！");
+                            tableIns.reload();
+                        }else{
+                            layer.msg(data.message, {icon: 5});
+                        }
+                    });
+                })
+            }
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 });

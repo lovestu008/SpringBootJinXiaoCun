@@ -1,6 +1,7 @@
 package com.xxxx.supermarket.controller;
 
 import com.alibaba.fastjson.JSON;
+import com.xxxx.supermarket.annotation.RequiredPermission;
 import com.xxxx.supermarket.base.BaseController;
 import com.xxxx.supermarket.base.ResultInfo;
 import com.xxxx.supermarket.entity.CustomerReturnList;
@@ -33,6 +34,7 @@ public class CustomerReturnListController extends BaseController {
      * 进入退货单主页
      * @return
      */
+    @RequiredPermission(code = "3020")
     @RequestMapping("index")
 
     public String index(HttpServletRequest request){
@@ -44,6 +46,7 @@ public class CustomerReturnListController extends BaseController {
      * 进入退货单查询页面
      * @return
      */
+    @RequiredPermission(code = "3020")
     @RequestMapping("searchPage")
     public String search(){
         return "customerReturn/customer_return_search";
@@ -56,6 +59,7 @@ public class CustomerReturnListController extends BaseController {
      * @param request
      * @return
      */
+    @RequiredPermission(code = "3020")
     @RequestMapping("save")
     @ResponseBody
     public ResultInfo addCustomerReturnSaleList(CustomerReturnList customerReturnList, String goodsJson, HttpServletRequest request){
@@ -74,6 +78,7 @@ public class CustomerReturnListController extends BaseController {
      * @param query
      * @return
      */
+    @RequiredPermission(code = "3020")
     @RequestMapping("list")
     @ResponseBody
     public Map<String,Object> queryCustomerReturnListParams(CustomerReturnListQuery query) {

@@ -1,5 +1,6 @@
 package com.xxxx.supermarket.controller;
 
+import com.xxxx.supermarket.annotation.RequiredPermission;
 import com.xxxx.supermarket.base.BaseController;
 import com.xxxx.supermarket.service.GoodsUnitService;
 import org.springframework.stereotype.Controller;
@@ -21,6 +22,7 @@ public class GoodsUnitController extends BaseController {
      * 查询所有的商品单位
      * @return
      */
+    @RequiredPermission(code = "102020")
     @RequestMapping("allGoodsUnits")
     @ResponseBody
     public List<Map<String,Object>> allGoodsUnits(){

@@ -1,5 +1,6 @@
 package com.xxxx.supermarket.controller;
 
+import com.xxxx.supermarket.annotation.RequiredPermission;
 import com.xxxx.supermarket.base.BaseController;
 import com.xxxx.supermarket.entity.CustomerReturnListGoods;
 import com.xxxx.supermarket.query.CustomerReturnListGoodsQuery;
@@ -19,6 +20,7 @@ public class CustomerReturnListGoodsController extends BaseController {
     @Resource
     private CustomerReturnListGoodsService customerReturnListGoodsService;
 
+    @RequiredPermission(code = "3020")
     @RequestMapping("list")
     @ResponseBody
     public Map<String,Object> queryCustomerReturnListGoodsByCustomerReturnListId(CustomerReturnListGoodsQuery customerReturnListGoodsQuery){

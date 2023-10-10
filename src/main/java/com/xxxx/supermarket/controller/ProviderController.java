@@ -1,5 +1,6 @@
 package com.xxxx.supermarket.controller;
 
+import com.xxxx.supermarket.annotation.RequiredPermission;
 import com.xxxx.supermarket.base.BaseController;
 import com.xxxx.supermarket.base.ResultInfo;
 import com.xxxx.supermarket.entity.Provider;
@@ -26,6 +27,7 @@ public class ProviderController extends BaseController {
      * @param queryProvider
      * @return
      */
+    @RequiredPermission(code = "101020")
     @RequestMapping("list")
     @ResponseBody
     public Map<String, Object> queryProviderByParams(QueryProvider queryProvider){
@@ -37,6 +39,7 @@ public class ProviderController extends BaseController {
      *返回供货商视图
      * @return
      */
+    @RequiredPermission(code = "101020")
     @RequestMapping("index")
     public String index(){
         return "provider/provider";
@@ -48,6 +51,7 @@ public class ProviderController extends BaseController {
      * @param provider
      * @return
      */
+    @RequiredPermission(code = "101020")
     @RequestMapping("add")
     @ResponseBody
     public ResultInfo addProvider(Provider provider){
@@ -63,6 +67,7 @@ public class ProviderController extends BaseController {
      * @param provider
      * @return com.xxxx.crm.base.ResultInfo
      */
+    @RequiredPermission(code = "101020")
     @PostMapping("/update")
     @ResponseBody
     public ResultInfo updateProvider(Provider provider) {
@@ -77,6 +82,7 @@ public class ProviderController extends BaseController {
      *进入添加/修改供应商数据页面
      * @return
      */
+    @RequiredPermission(code = "101020")
     @RequestMapping("toProviderPage")
     public String toProviderPage(Integer providerId, HttpServletRequest request){
         // 判断customerId是否为空
@@ -95,6 +101,7 @@ public class ProviderController extends BaseController {
      * @param ids
      * @return
      */
+    @RequiredPermission(code = "101020")
     @PostMapping("/delete")
     @ResponseBody
     public ResultInfo deleteBeach(Integer[] ids){

@@ -1,6 +1,7 @@
 package com.xxxx.supermarket.controller;
 
 
+import com.xxxx.supermarket.annotation.RequiredPermission;
 import com.xxxx.supermarket.base.BaseController;
 import com.xxxx.supermarket.base.ResultInfo;
 import com.xxxx.supermarket.entity.Goods;
@@ -30,6 +31,7 @@ public class GoodsController extends BaseController {
      *
      * @return
      */
+    @RequiredPermission(code = "102010")
     @RequestMapping("index")
     public String index(){
         return "goods/goodsManager";
@@ -40,6 +42,7 @@ public class GoodsController extends BaseController {
     /**
      * 多条件商品数据分页查询
      */
+    @RequiredPermission(code = "102010")
     @RequestMapping ("goodsList")
     @ResponseBody
     public Map<String, Object> selectByPrimaryKey(GoodsQuery goodsQuery){
@@ -51,6 +54,7 @@ public class GoodsController extends BaseController {
      * @param goodsModel
      * @return
      */
+    @RequiredPermission(code = "102010")
     @PostMapping("add")
     @ResponseBody
     public ResultInfo addGoods(GoodsModel goodsModel){
@@ -63,6 +67,7 @@ public class GoodsController extends BaseController {
      * @param goodsModel
      * @return
      */
+    @RequiredPermission(code = "102010")
     @PostMapping("update")
     @ResponseBody
     public ResultInfo updateGoods(GoodsModel goodsModel){
@@ -76,6 +81,7 @@ public class GoodsController extends BaseController {
      * @param id
      * @return
      */
+    @RequiredPermission(code = "102010")
     @PostMapping("delete")
     @ResponseBody
     public ResultInfo deleteGoods(Integer id){
@@ -90,6 +96,7 @@ public class GoodsController extends BaseController {
      * 进入 添加或修改 商品信息的页面
      * @return
      */
+    @RequiredPermission(code = "102010")
     @RequestMapping("toAddOrUpdateGoodsPage")
     public String toAddOrUpdateGoodsPage(Integer id,Integer typeId,HttpServletRequest request){
         //如果id不为空，则表示是修改操作，通过id查询角色记录，设置到请求域中
@@ -109,6 +116,7 @@ public class GoodsController extends BaseController {
      * @param request
      * @return
      */
+    @RequiredPermission(code = "102010")
     @RequestMapping("toGoodsTypePage")
     public String toGoodsTypePage(Integer typeId, HttpServletRequest request) {
         if(null != typeId){

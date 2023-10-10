@@ -1,5 +1,6 @@
 package com.xxxx.supermarket.controller;
 
+import com.xxxx.supermarket.annotation.RequiredPermission;
 import com.xxxx.supermarket.base.BaseController;
 import com.xxxx.supermarket.entity.Customer;
 import com.xxxx.supermarket.query.QueryCustomer;
@@ -24,6 +25,7 @@ public class CustomerController extends BaseController {
      * @param queryCustomer
      * @return
      */
+    @RequiredPermission(code = "101010")
     @RequestMapping("list")
     @ResponseBody
     public Map<String, Object> queryByParams(QueryCustomer queryCustomer){
@@ -35,13 +37,14 @@ public class CustomerController extends BaseController {
      *
      * @return
      */
+    @RequiredPermission(code = "101010")
     @RequestMapping("index")
     public String index(){
         return "customer/customer";
     }
 
 
-
+    @RequiredPermission(code = "101010")
     @RequestMapping("allCustomers")
     @ResponseBody
     public List<Customer> allCustomers(){

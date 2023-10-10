@@ -1,6 +1,7 @@
 package com.xxxx.supermarket.controller;
 
 
+import com.xxxx.supermarket.annotation.RequiredPermission;
 import com.xxxx.supermarket.query.SaleListGoodsQuery;
 import com.xxxx.supermarket.service.SaleListGoodsService;
 import org.springframework.stereotype.Controller;
@@ -19,7 +20,7 @@ public class SaleListGoodsController {
     @Resource
     private SaleListGoodsService saleListGoodsService;
 
-
+    @RequiredPermission(code = "3010")
     @RequestMapping("list")
     @ResponseBody
     public Map<String, Object> saleListGoodsList(SaleListGoodsQuery saleListGoodsQuery){

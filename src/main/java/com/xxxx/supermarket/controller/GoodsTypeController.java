@@ -1,5 +1,6 @@
 package com.xxxx.supermarket.controller;
 
+import com.xxxx.supermarket.annotation.RequiredPermission;
 import com.xxxx.supermarket.base.BaseController;
 import com.xxxx.supermarket.base.ResultInfo;
 import com.xxxx.supermarket.entity.GoodsType;
@@ -31,6 +32,7 @@ public class GoodsTypeController extends BaseController {
      * 进入商品类别管理页面
      * @return
      */
+    @RequiredPermission(code = "102020")
     @RequestMapping("index")
     public String index(){
         return "goodsType/goods_type";
@@ -39,6 +41,7 @@ public class GoodsTypeController extends BaseController {
      * 查询所有的商品类别
      * @param
      */
+    @RequiredPermission(code = "102020")
     @RequestMapping("queryAllGoodsTypes")
     @ResponseBody
     public List<TreeGoodsModel> queryAllGoodsTypes(){
@@ -49,6 +52,7 @@ public class GoodsTypeController extends BaseController {
      * @param
      * @return
      */
+    @RequiredPermission(code = "102020")
     @RequestMapping("list")
     @ResponseBody
     public Map<String,Object> queryGoodsTypeList(){
@@ -62,6 +66,7 @@ public class GoodsTypeController extends BaseController {
      * @param goodsType
      * @return
      */
+    @RequiredPermission(code = "102020")
     @ResponseBody
     @PostMapping("add")
     public ResultInfo addGoodType(GoodsType goodsType){
@@ -73,6 +78,7 @@ public class GoodsTypeController extends BaseController {
      * @param id
      * @return
      */
+    @RequiredPermission(code = "102020")
     @ResponseBody
     @PostMapping("delete")
     public ResultInfo deleteGoodsType(Integer id){

@@ -7,7 +7,6 @@ import com.xxxx.supermarket.entity.Goods;
 import com.xxxx.supermarket.model.GoodsModel;
 import com.xxxx.supermarket.service.GoodsService;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
