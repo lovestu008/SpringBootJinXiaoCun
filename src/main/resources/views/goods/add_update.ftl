@@ -10,7 +10,8 @@
 <form class="layui-form" style="width:80%;">
     <input name="id" type="hidden" value="${(goods.id)!}"/>
     <input name="goodsUnit" type="hidden" value="${(goods.unit)!}"/>
-    <div class="layui-form-item layui-row layui-col-xs12">
+    <#--商品类别弹出框-->
+<#--    <div class="layui-form-item layui-row layui-col-xs12">
         <label class="layui-form-label">商品类别</label>
         <div class="layui-input-block">
             <div class="layui-inline">
@@ -24,7 +25,7 @@
                             class="layui-icon">&#xe615;</i> 选择</a>
             </div>
         </div>
-    </div>
+    </div>-->
     <br/>
     <br/>
     <div class="layui-form-item layui-row layui-col-xs12">

@@ -5,8 +5,9 @@ layui.use(['form', 'layer'], function () {
 
 
     /**
-     *
+     *商品类别分配
      */
+/*
     $.ajax({
         type:"post",
         url:ctx+"/goodsType/queryAllGoodsTypes",
@@ -20,14 +21,15 @@ layui.use(['form', 'layer'], function () {
                 },
                 view:{
                     showLine: false
-                }/*,
+                }/!*,
                 callback: {
                     onClick: zTreeOnClick
-                }*/
+                }*!/
             };
             $.fn.zTree.init($("#treeDemo"), setting, data);
         }
     })
+*/
 
 
 
@@ -89,7 +91,7 @@ layui.use(['form', 'layer'], function () {
 
 
     //商品类别设置弹出框
-    $("#reloadGoodsType").click(function (){
+/*    $("#reloadGoodsType").click(function (){
         var url  =  ctx+"/goods/toGoodsTypePage?typeId="+$("input[name='typeId']").val();
         var title="商品管理-商品类别";
         layui.layer.open({
@@ -99,7 +101,7 @@ layui.use(['form', 'layer'], function () {
             maxmin:true,
             content : url
         });
-    })
+    })*/
 
 
     /**
@@ -118,7 +120,8 @@ layui.use(['form', 'layer'], function () {
  * @param typeName
  * @param typeId
  */
+/*
 function getVal(typeName,typeId){
     $("input[name='typeName']").val(typeName);
     $("input[name='typeId']").val(typeId);
-}
+}*/

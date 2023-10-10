@@ -7,7 +7,6 @@ import com.xxxx.supermarket.entity.Goods;
 import com.xxxx.supermarket.model.GoodsModel;
 import com.xxxx.supermarket.query.GoodsQuery;
 import com.xxxx.supermarket.service.GoodsService;
-import com.xxxx.supermarket.service.GoodsTypeService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,8 +22,7 @@ public class GoodsController extends BaseController {
 
     @Resource
     private GoodsService goodsService;
-/*    @Resource
-    private GoodsTypeService goodsTypeService;*/
+
     /**
      * 进入商品管理页面
      *
@@ -71,7 +69,7 @@ public class GoodsController extends BaseController {
         return success("商品数据修改成功！");
     }
     /**
-     *删除商品数据
+     *删除商品数据(单条删除)
      *
      * @param id
      * @return
@@ -81,6 +79,17 @@ public class GoodsController extends BaseController {
     public ResultInfo deleteGoods(Integer id){
         //调用service层方法
         goodsService.deleteGoods(id);
+        return success("删除成功！");
+    }
+    /**
+     * 删除商品数据(批量)
+     * @param ids
+     * @return
+     */
+    @ResponseBody
+    @PostMapping("allDelete")
+    public ResultInfo deleteAllGoods(Integer[] ids){
+        goodsService.deleteAllGoods(ids);
         return success("删除成功！");
     }
 
@@ -96,25 +105,10 @@ public class GoodsController extends BaseController {
         if (null != id){
             Goods goods =goodsService.selectByPrimaryKey(id);
             request.setAttribute("goods",goods);
-        }else if(null != typeId){  //如果typeId不为空，则表示是添加操作
-
         }
-
         return "goods/add_update";
     }
 
-    /**
-     *进入商品类别选择页
-     * @param typeId
-     * @param request
-     * @return
-     */
-    @RequestMapping("toGoodsTypePage")
-    public String toGoodsTypePage(Integer typeId, HttpServletRequest request) {
-        if(null != typeId){
-            request.setAttribute("typeId",typeId);
-        }
-        return "goodsType";
-    }
+
 
 }

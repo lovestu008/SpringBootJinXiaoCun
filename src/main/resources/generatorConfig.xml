@@ -33,6 +33,7 @@
         <javaTypeResolver>
             <property name="forceBigDecimals" value="false"/>
         </javaTypeResolver>
+
         <!-- ⽣成Model类存放位置 -->
         <javaModelGenerator targetPackage="com.xxxx.supermarket.entity" targetProject="src/main/java">
             <!-- 在targetPackage的基础上，根据数据库的schema再⽣成⼀层package，⽣成的类放在这个package
@@ -41,18 +42,19 @@
             <!-- 设置是否在getter⽅法中，对String类型字段调⽤trim()⽅法 -->
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
+
         <!--⽣成映射⽂件存放位置-->
         <sqlMapGenerator targetPackage="mappers" targetProject="src/main/resources">
             <property name="enableSubPackages" value="true"/>
         </sqlMapGenerator>
+
         <!--⽣成Dao类存放位置-->
-        <javaClientGenerator type="XMLMAPPER" targetPackage="com.xxxx.supermarket.dao"
-                             targetProject="src/main/java">
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.xxxx.supermarket.dao" targetProject="src/main/java">
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
-        <!-- 数据库的表名与对应的实体类的名称，tableName是数据库中的表名，domainObjectName是⽣成的JAVA模
-       型名 -->
-        <table tableName="t_menu" domainObjectName="Menu"
+
+        <!-- 数据库的表名与对应的实体类的名称，tableName是数据库中的表名，domainObjectName是⽣成的JAVA模型名 -->
+        <table tableName="t_goods_type" domainObjectName="GoodsType"
                enableCountByExample="false" enableUpdateByExample="false"
                enableDeleteByExample="false" enableSelectByExample="false"
                selectByExampleQueryId="false">
