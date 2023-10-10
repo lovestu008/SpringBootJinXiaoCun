@@ -1,5 +1,6 @@
 package com.xxxx.supermarket.controller;
 
+import com.xxxx.supermarket.annotation.RequiredPermission;
 import com.xxxx.supermarket.aspect.SupLog;
 import com.xxxx.supermarket.base.BaseController;
 import com.xxxx.supermarket.base.ResultInfo;
@@ -26,32 +27,38 @@ import java.util.Map;
 @Slf4j
 @SupLog(type = "商品进退货管理")
 public class PurchaseController extends BaseController {
+
     @Resource
     private PurchaseService purchaseService;
 
+    @RequiredPermission(code = "2020")
     @RequestMapping("index")
     public String index(){
         return "purchase/purchase";
     }
-
+    @RequiredPermission(code = "2020")
     @RequestMapping("list")
     @ResponseBody
     public Map<String,Object> selectByParams(PurchaseQuery purchaseQuery){
         System.out.println(purchaseQuery);
         return purchaseService.queryByParamsForTable(purchaseQuery);
     }
-
+    @RequiredPermission(code = "2020")
     @RequestMapping("selectAllProvider")
     @ResponseBody
     public List<Map<String,Object>> selectAllProvider(){
         System.out.println("----"+purchaseService.selectAllProvider());
         return purchaseService.selectAllProvider();
     }
+
+    @RequiredPermission(code = "2020")
     @RequestMapping("selectAllGoodsName")
     @ResponseBody
     public List<Map<String,Object>> selectAllGoodsName(){
         return purchaseService.selectAllGoodsName();
     }
+
+    @RequiredPermission(code = "2020")
     @PostMapping("add")
     @ResponseBody
     @SupLog(content = "添加进货信息")
@@ -64,6 +71,8 @@ public class PurchaseController extends BaseController {
         return success("进货信息添加成功");
     }
     //修改进货信息
+
+    @RequiredPermission(code = "2020")
     @PostMapping("update")
     @ResponseBody
     @SupLog(content = "修改进货信息")
@@ -71,10 +80,13 @@ public class PurchaseController extends BaseController {
         purchaseService.updatePurchase(purchase);
         return success("进货信息修改成功");
     }
+    @RequiredPermission(code = "2020")
     @RequestMapping("toAddPurchasePage")
     public String toAddPurchasePage(){
         return "purchase/add";
     }
+
+    @RequiredPermission(code = "2020")
     @RequestMapping("toUpdatePurchasePage")
     public String toUpdatePurchasePage(Integer id,HttpServletRequest request){
         AssertUtil.isTrue(null==id,"未选择，请重试");
@@ -82,6 +94,8 @@ public class PurchaseController extends BaseController {
         request.setAttribute("purchase",purchase);
         return "purchase/update";
     }
+
+    @RequiredPermission(code = "2020")
     @PostMapping("return")
     @ResponseBody
     @SupLog(content = "添加退货信息")
@@ -93,6 +107,8 @@ public class PurchaseController extends BaseController {
         purchaseService.returnPurchase(inpRetGoodsList);
         return success("进退货信息更新成功");
     }
+
+    @RequiredPermission(code = "2020")
     @RequestMapping("selectAllGoodsNameById")
     @ResponseBody
     public List<Map<String,Object>> selectAllGoodsNameById(){
@@ -101,6 +117,8 @@ public class PurchaseController extends BaseController {
         return list;
     }
 
+
+    @RequiredPermission(code = "2020")
     @RequestMapping("toReturnPurchasePage")
     public String toReturnPurchasePage(Integer id,HttpServletRequest request){
         AssertUtil.isTrue(null==id,"请选择要退货的信息！");

@@ -1,5 +1,6 @@
 package com.xxxx.supermarket.controller;
 
+import com.xxxx.supermarket.annotation.RequiredPermission;
 import com.xxxx.supermarket.aspect.SupLog;
 import com.xxxx.supermarket.base.BaseController;
 import com.xxxx.supermarket.dao.ReturnMapper;
@@ -21,10 +22,13 @@ import java.util.Map;
 public class ReturnController extends BaseController {
     @Resource
     private ReturnService returnService;
+    @RequiredPermission(code = "2010")
     @RequestMapping("index")
     public String index(){
         return "return/return";
     }
+
+    @RequiredPermission(code = "2010")
     @RequestMapping("list")
     @ResponseBody
     public Map<String,Object> selectByParams(ReturnQuery returnQuery){
@@ -35,11 +39,14 @@ public class ReturnController extends BaseController {
         System.out.println(returnQuery);
         return returnService.queryByParamsForTable(returnQuery);
     }
+    @RequiredPermission(code = "2010")
     @RequestMapping("selectAllProvider")
     @ResponseBody
     public List<Map<String,Object>> selectAllProvider(){
         return returnService.selectAllProvider();
     }
+
+    @RequiredPermission(code = "2010")
     @RequestMapping("selectAllGoodsName")
     @ResponseBody
     public List<Map<String,Object>> selectAllGoodsName(){
