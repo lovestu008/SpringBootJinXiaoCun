@@ -41,12 +41,12 @@ public class GoodsTypeController extends BaseController {
      * 查询所有的商品类别
      * @param
      */
-    @RequiredPermission(code = "102020")
+/*    @RequiredPermission(code = "102020")
     @RequestMapping("queryAllGoodsTypes")
     @ResponseBody
     public List<TreeGoodsModel> queryAllGoodsTypes(){
         return goodsTypeService.queryAllGoodsTypes();
-    }
+    }*/
     /**
      * 加载商品类别管理页面的表格数据
      * @param

@@ -9,6 +9,7 @@ import com.xxxx.supermarket.dao.SaleListMapper;
 import com.xxxx.supermarket.entity.Goods;
 import com.xxxx.supermarket.entity.SaleList;
 import com.xxxx.supermarket.entity.SaleListGoods;
+import com.xxxx.supermarket.model.SaleListGoodsModel;
 import com.xxxx.supermarket.query.SaleQuery;
 import com.xxxx.supermarket.utils.AssertUtil;
 import com.xxxx.supermarket.utils.DateUtil;
@@ -117,5 +118,12 @@ public class SaleService extends BaseService<SaleList, Integer> {
         //若有外键关联,则提示无法删除
         AssertUtil.isTrue(saleListGoodsMapper.querySaleListGoodsBySaleListId(id).size()>0,"该订单仍有内容,无法删除");
         AssertUtil.isTrue(saleListMapper.deleteById(id)<1,"删除失败");
+    }
+
+    /**
+     * 查询商品总销量前五
+     */
+    public List<SaleListGoodsModel> selectSaleListGoods(){
+        return saleListGoodsMapper.selectSaleListGoods();
     }
 }

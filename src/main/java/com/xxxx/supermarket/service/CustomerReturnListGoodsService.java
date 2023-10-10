@@ -5,7 +5,6 @@ import com.github.pagehelper.PageInfo;
 import com.xxxx.supermarket.base.BaseService;
 import com.xxxx.supermarket.dao.CustomerReturnListGoodsMapper;
 import com.xxxx.supermarket.entity.CustomerReturnListGoods;
-import com.xxxx.supermarket.entity.SaleListGoods;
 import com.xxxx.supermarket.query.CustomerReturnListGoodsQuery;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;

@@ -155,4 +155,10 @@
     </where>
 
   </select>
+
+
+    <select id="allCustomers" resultType="com.xxxx.supermarket.entity.Customer">
+      select * from t_customer where is_del =0
+    </select>
+
 </mapper>

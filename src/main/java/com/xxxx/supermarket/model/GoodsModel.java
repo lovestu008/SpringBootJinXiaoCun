@@ -97,22 +97,13 @@ public class GoodsModel extends Goods {
         this.producer = producer;
     }
 
-    @Override
-    public Double getPurchasingPrice() {
-        return purchasingPrice;
-    }
 
-    @Override
     public void setPurchasingPrice(Double purchasingPrice) {
         this.purchasingPrice = purchasingPrice;
     }
 
-    @Override
-    public Double getSellingPrice() {
-        return sellingPrice;
-    }
 
-    @Override
+
     public void setSellingPrice(Double sellingPrice) {
         this.sellingPrice = sellingPrice;
     }
