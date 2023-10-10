@@ -40,13 +40,13 @@ public class GoodsTypeController extends BaseController {
     }
 
     /**
-     * 查询所有的商品类别
-     * @param
+     * 查找所有商品类别
+     * @return
      */
     @RequestMapping("queryAllGoodsTypes")
     @ResponseBody
-    public List<TreeGoodsModel> queryAllGoodsTypes(){
-        return goodsTypeService.queryAllGoodsTypes();
+    public List<TreeDto> queryAllGoodsTypes(Integer typeId){
+        return goodsTypeService.queryAllGoodsTypes(typeId);
     }
 
     /**
@@ -102,13 +102,5 @@ public class GoodsTypeController extends BaseController {
 
 
 
-    /**
-     * 查找所有商品类别
-     * @return
-     */
-    @RequestMapping("queryAllGoodsTypes")
-    @ResponseBody
-    public List<TreeDto> queryAllGoodsTypes(Integer typeId){
-        return goodsTypeService.queryAllGoodsTypes(typeId);
-    }
+
 }

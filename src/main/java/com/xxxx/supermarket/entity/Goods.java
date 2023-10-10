@@ -16,13 +16,13 @@ public class Goods {
 
     private String name;//商品名称
 
-    private String producer;//生产厂商
+    private String producer;//供应商
 
-    private Double purchasingPrice;//采购价格
+    private Float purchasingPrice;//采购价格
 
     private String remarks;//备注
 
-    private Double sellingPrice;//出售价格
+    private Float sellingPrice;//出售价格
 
     private String unit;//商品单位
 

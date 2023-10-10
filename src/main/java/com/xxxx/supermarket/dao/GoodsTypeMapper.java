@@ -15,8 +15,6 @@ public interface GoodsTypeMapper extends BaseMapper<GoodsType,Integer> {
      * @param
      * @return
      */
-    public List<TreeGoodsModel> queryAllGoodsTypes();
-
     List<TreeDto> queryAllGoodsTypes();
 
     /**

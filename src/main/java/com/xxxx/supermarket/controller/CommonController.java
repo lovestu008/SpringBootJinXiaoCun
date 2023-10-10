@@ -4,7 +4,7 @@ package com.xxxx.supermarket.controller;
 import com.xxxx.supermarket.base.BaseController;
 import com.xxxx.supermarket.base.ResultInfo;
 import com.xxxx.supermarket.entity.Goods;
-import com.xxxx.supermarket.model.GoodsModel;
+import com.xxxx.supermarket.model.GoodsModels;
 import com.xxxx.supermarket.service.GoodsService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -62,7 +62,7 @@ public class CommonController extends BaseController {
      * @return
      */
     @RequestMapping("toUpdateGoodsInfoPage")
-    public String toUpdateGoodsInfoPage(GoodsModel goodsModel, HttpServletRequest request){
+    public String toUpdateGoodsInfoPage(GoodsModels goodsModel, HttpServletRequest request){
         //通过Id获取商品对象
         Goods goods = goodsService.getGoodsById(goodsModel.getId());
         //将商品对象的属性传入goodsModel

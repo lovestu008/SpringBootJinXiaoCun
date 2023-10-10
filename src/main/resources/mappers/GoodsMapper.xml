@@ -226,31 +226,46 @@
         t_goods g left join t_goods_unit gu on g.unit = gu.id left join t_goods_type gt on g.type_id = gt.id
     <where>
       g.is_del =0
-      <if test="null != goodsQuery.goodsName and goodsQuery.goodsName !=''">
-        and g.name like concat('%',#{goodsQuery.goodsName},'%')
+      <if test="null != goodsName and goodsName !=''">
+        and g.name like concat('%',#{goodsName},'%')
       </if>
 
-      <if test="null !=goodsQuery.type">
-        <if test="goodsQuery.type ==1 ">
+      <if test="null !=type">
+        <if test="type ==1 ">
           and inventory_quantity =0
         </if>
-        <if test="goodsQuery.type ==2 ">
+        <if test="type ==2 ">
           and inventory_quantity  &gt; 0
         </if>
-        <if test="goodsQuery.type ==3 ">
+        <if test="type ==3 ">
           and inventory_quantity  &lt; min_num
         </if>
       </if>
 
-      <if test="null !=goodsQuery.typeIds and goodsQuery.typeIds.size>0">
+      <if test="null !=typeIds and typeIds.size>0">
         and g.type_id in
-        <foreach collection="goodsQuery.typeIds" item="typeId" open="(" separator="," close=")">
+        <foreach collection="typeIds" item="typeId" open="(" separator="," close=")">
           #{typeId}
         </foreach>
       </if>
     </where>
   </select>
 
+  <select id="queryGoodsByCode" resultType="com.xxxx.supermarket.entity.Goods">
+    select g.*, gt.id as typeId, gt.name as typeName, gu.name as unitName
+    from t_goods g
+           left join t_goods_type gt on g.type_id = gt.id
+           left join t_goods_unit gu on g.unit = gu.id
+    where g.code = #{code}
+  </select>
+
+  <select id="getGoodsById" resultType="com.xxxx.supermarket.entity.Goods">
+    select g.*, gt.id as typeId, gt.name as typeName, gu.name as unitName
+    from t_goods g
+           left join t_goods_type gt on g.type_id = gt.id
+           left join t_goods_unit gu on g.unit = gu.id
+    where g.id = #{id}
+  </select>
   <!--通过角色名查询角色记录-->
   <select id="selectByGoodsName" parameterType="string" resultType="com.xxxx.supermarket.entity.Goods">
     select

@@ -25,9 +25,6 @@ public class GoodsTypeService extends BaseService<GoodsType,Integer> {
      * @param
      * @return
      */
-    public List<TreeGoodsModel> queryAllGoodsTypes() {
-        return  goodsTypeMapper.queryAllGoodsTypes();
-    }
 
     public List<TreeDto> queryAllGoodsTypes(Integer typeId) {
         List<TreeDto> treeDtos =goodsTypeMapper.queryAllGoodsTypes();
