@@ -45,6 +45,7 @@
                                 </div>
                             </form>
                         </blockquote>
+
                         <table id="goodsList" class="layui-table"  lay-filter="goods"></table>
 
                         <script type="text/html" id="toolbarDemo">

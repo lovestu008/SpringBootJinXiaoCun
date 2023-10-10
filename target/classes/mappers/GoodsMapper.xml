@@ -18,13 +18,14 @@
     <result column="last_purchasing_price" property="lastPurchasingPrice" jdbcType="REAL" />
     <result column="is_del" property="isDel" jdbcType="INTEGER" />
   </resultMap>
+
   <sql id="Base_Column_List" >
     id, code, inventory_quantity, min_num, model, name, producer, purchasing_price, remarks, 
     selling_price, unit, type_id, state, last_purchasing_price, is_del
   </sql>
 
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
-    select 
+    select
     <include refid="Base_Column_List" />
     from t_goods
     where id = #{id,jdbcType=INTEGER}
@@ -219,28 +220,11 @@
         t_goods g left join t_goods_unit gu on g.unit = gu.id left join t_goods_type gt on g.type_id = gt.id
     <where>
       g.is_del =0
-      <if test="null != goodsQuery.goodsName and goodsQuery.goodsName !=''">
-        and g.name like concat('%',#{goodsQuery.goodsName},'%')
+
+      <if test="name != null and name !=''">
+        and g.name like concat('%',#{name},'%')
       </if>
 
-      <if test="null !=goodsQuery.type">
-        <if test="goodsQuery.type ==1 ">
-          and inventory_quantity =0
-        </if>
-        <if test="goodsQuery.type ==2 ">
-          and inventory_quantity  &gt; 0
-        </if>
-        <if test="goodsQuery.type ==3 ">
-          and inventory_quantity  &lt; min_num
-        </if>
-      </if>
-
-      <if test="null !=goodsQuery.typeIds and goodsQuery.typeIds.size>0">
-        and g.type_id in
-        <foreach collection="goodsQuery.typeIds" item="typeId" open="(" separator="," close=")">
-          #{typeId}
-        </foreach>
-      </if>
     </where>
   </select>
   

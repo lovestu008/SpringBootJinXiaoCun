@@ -1,18 +1,15 @@
 package com.xxxx.supermarket.entity;
 
-import lombok.Data;
-
-@Data
 public class GoodsType {
-    private Integer id;//主键
+    private Integer id;
 
-    private String name;//类别名
+    private String name;
 
-    private Integer pId;//父级级别id
+    private Integer pId;
 
-    private Integer state;//节点类型
+    private Integer state;
 
-    private String icon;//节点图标
+    private String icon;
 
     public Integer getId() {
         return id;
@@ -27,7 +24,7 @@ public class GoodsType {
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.name = name == null ? null : name.trim();
     }
 
     public Integer getpId() {
@@ -51,6 +48,6 @@ public class GoodsType {
     }
 
     public void setIcon(String icon) {
-        this.icon = icon;
+        this.icon = icon == null ? null : icon.trim();
     }
 }
