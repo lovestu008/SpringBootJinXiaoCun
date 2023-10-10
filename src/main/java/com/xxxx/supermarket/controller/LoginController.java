@@ -1,9 +1,11 @@
 package com.xxxx.supermarket.controller;
 
+import com.xxxx.supermarket.annotation.SupLog;
 import com.xxxx.supermarket.base.BaseController;
 import com.xxxx.supermarket.dao.RoleMenuMapper;
 import com.xxxx.supermarket.entity.User;
 import com.xxxx.supermarket.service.UserService;
+import lombok.extern.slf4j.Slf4j;
 import org.mybatis.spring.annotation.MapperScan;
 import com.xxxx.supermarket.utils.LoginUserUtil;
 import org.springframework.stereotype.Controller;
@@ -15,6 +17,8 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 @Controller
+@Slf4j
+@SupLog(type = "登录管理")
 public class LoginController extends BaseController {
 
     @Resource
@@ -36,6 +40,7 @@ public class LoginController extends BaseController {
 
     // 系统界⾯欢迎⻚
     @RequestMapping("welcome")
+    @SupLog(content = "用户登录成功")
     public String welcome() {
         return "welcome";
     }

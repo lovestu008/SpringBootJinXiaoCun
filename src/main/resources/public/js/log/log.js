@@ -26,7 +26,7 @@ layui.use(['laydate','table','layer'],function(){
             {type: "checkbox", fixed:"center"},
             {field: "id", title:'日志编号',fixed:"true"},
             {field: 'content', title: '日志内容',align:"center"},
-            {field: 'time', title: '登录时间', align:'center'},
+            {field: 'time', title: '操作时间', align:'center'},
             {field: 'type', title: '操作类型', align:'center'},
             {field: 'uname', title: '操作用户', align:'center'},
         ]]

@@ -23,6 +23,7 @@
                         <option value="商品进退货管理">商品进退货管理</option>
                         <option value="销售管理">销售管理</option>
                         <option value="用户管理">用户管理</option>
+                        <option value="登录管理">登录管理</option>
                     </select>
                 </div>
                 <div class="layui-input-inline">
