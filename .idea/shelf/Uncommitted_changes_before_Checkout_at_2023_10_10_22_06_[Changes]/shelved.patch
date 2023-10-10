@@ -1,0 +1,961 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"47f004b4-5068-48b2-9225-7a541737bcc5\" name=\"Changes\" comment=\"一些没用的东西\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/Starter.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/Starter.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/application.yml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/application.yml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/com/xxxx/supermarket/Starter.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/com/xxxx/supermarket/Starter.class\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/com/xxxx/supermarket/aspect/AspectController.class\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/com/xxxx/supermarket/aspect/SysLog.class\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/LoginController.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/LoginController.class\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/PurchaseController.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/PurchaseController.class\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/RoleController.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/RoleController.class\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/SaleController.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/SaleController.class\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/UserController.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/UserController.class\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/com/xxxx/supermarket/dao/PurchaseMapper.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/com/xxxx/supermarket/dao/PurchaseMapper.class\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/com/xxxx/supermarket/dao/RoleMapper.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/com/xxxx/supermarket/dao/RoleMapper.class\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/com/xxxx/supermarket/dao/SaleListGoodsMapper.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/com/xxxx/supermarket/dao/SaleListGoodsMapper.class\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/com/xxxx/supermarket/dao/UserMapper.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/com/xxxx/supermarket/dao/UserMapper.class\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/com/xxxx/supermarket/entity/Purchase.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/com/xxxx/supermarket/entity/Purchase.class\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/com/xxxx/supermarket/entity/User.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/com/xxxx/supermarket/entity/User.class\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/com/xxxx/supermarket/interceptors/NoLoginInterceptor.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/com/xxxx/supermarket/interceptors/NoLoginInterceptor.class\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/com/xxxx/supermarket/model/UserModel.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/com/xxxx/supermarket/model/UserModel.class\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/com/xxxx/supermarket/querys/PurchaseQuery.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/com/xxxx/supermarket/querys/PurchaseQuery.class\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/com/xxxx/supermarket/service/PurchaseService.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/com/xxxx/supermarket/service/PurchaseService.class\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/com/xxxx/supermarket/service/RoleService.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/com/xxxx/supermarket/service/RoleService.class\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/com/xxxx/supermarket/service/SaleService.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/com/xxxx/supermarket/service/SaleService.class\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/com/xxxx/supermarket/service/UserService.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/com/xxxx/supermarket/service/UserService.class\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/generatorConfig.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/generatorConfig.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/mappers/PurchaseMapper.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/mappers/PurchaseMapper.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/mappers/RoleMapper.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/mappers/RoleMapper.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/mappers/SaleListGoodsMapper.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/mappers/SaleListGoodsMapper.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/mappers/UserMapper.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/mappers/UserMapper.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/public/css/index.css\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/public/css/index.css\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/public/css/layuimini.css\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/public/css/layuimini.css\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/public/js/index.js\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/public/js/index.js\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/public/js/module/add.js\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/public/js/module/module.js\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/public/js/module/update.js\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/public/js/purchase/purchase.js\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/public/js/purchase/purchase.js\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/public/js/role/grant.js\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/public/js/role/grant.js\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/public/js/role/role.js\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/public/js/role/role.js\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/public/js/user/add.update.js\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/public/js/user/add.update.js\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/public/js/user/password.js\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/public/js/user/password.js\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/public/js/user/user.js\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/public/js/user/user.js\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/views/common.ftl\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/views/common.ftl\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/views/index.ftl\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/views/index.ftl\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/views/main.ftl\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/views/main.ftl\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/views/module/add.ftl\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/views/module/module.ftl\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/views/module/update.ftl\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/views/purchase/purchase.ftl\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/views/purchase/purchase.ftl\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/views/role/role.ftl\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/views/role/role.ftl\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/views/user/add_update.ftl\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/views/user/add_update.ftl\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/views/user/password.ftl\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/views/user/password.ftl\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/views/user/user.ftl\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/views/user/user.ftl\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/views/welcome.ftl\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/views/welcome.ftl\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Merge.Settings\">\r\n    <option name=\"BRANCH\" value=\"origin/gyj\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"main\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n    <option name=\"RESET_MODE\" value=\"HARD\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"MavenImportPreferences\">\r\n    <option name=\"generalSettings\">\r\n      <MavenGeneralSettings>\r\n        <option name=\"localRepository\" value=\"D:\\.m2\\repository\" />\r\n        <option name=\"mavenHome\" value=\"$PROJECT_DIR$/../../apache-maven-3.9.4\" />\r\n        <option name=\"useMavenConfig\" value=\"true\" />\r\n        <option name=\"userSettingsFile\" value=\"D:\\apache-maven-3.9.4\\conf\\settings.xml\" />\r\n      </MavenGeneralSettings>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2WKp0dODD9Slq5aYDzzTCORTx3j\" />\r\n  <component name=\"ProjectLevelVcsManager\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,\r\n    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,\r\n    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,\r\n    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;D:/maven_code/SpringBootJinXiaoCun&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\r\n    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,\r\n    &quot;spring.configuration.checksum&quot;: &quot;46d7115f401497dd00b87ad0447a2608&quot;,\r\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"D:\\study\\px\\gitStudy\\SpringBootJinXiaoCun\\src\\main\\resources\\public\\images\" />\r\n    </key>\r\n    <key name=\"CopyClassDialog.RECENTS_KEY\">\r\n      <recent name=\"com.xxxx.supermarket\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"Spring Boot.Starter\">\r\n    <configuration name=\"supermarket [mybatis-generator:generate...]\" type=\"MavenRunConfiguration\" factoryName=\"Maven\" nameIsGenerated=\"true\">\r\n      <MavenSettings>\r\n        <option name=\"myGeneralSettings\" />\r\n        <option name=\"myRunnerSettings\" />\r\n        <option name=\"myRunnerParameters\">\r\n          <MavenRunnerParameters>\r\n            <option name=\"profiles\">\r\n              <set />\r\n            </option>\r\n            <option name=\"goals\">\r\n              <list>\r\n                <option value=\"mybatis-generator:generate\" />\r\n                <option value=\"-e\" />\r\n              </list>\r\n            </option>\r\n            <option name=\"pomFileName\" />\r\n            <option name=\"profilesMap\">\r\n              <map />\r\n            </option>\r\n            <option name=\"resolveToWorkspace\" value=\"false\" />\r\n            <option name=\"workingDirPath\" value=\"$PROJECT_DIR$\" />\r\n          </MavenRunnerParameters>\r\n        </option>\r\n      </MavenSettings>\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"Starter\" type=\"SpringBootApplicationConfigurationType\" factoryName=\"Spring Boot\" nameIsGenerated=\"true\">\r\n      <module name=\"supermarket\" />\r\n      <option name=\"SPRING_BOOT_MAIN_CLASS\" value=\"com.xxxx.supermarket.Starter\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <list>\r\n      <item itemvalue=\"Maven.supermarket [mybatis-generator:generate...]\" />\r\n      <item itemvalue=\"Spring Boot.Starter\" />\r\n    </list>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"47f004b4-5068-48b2-9225-7a541737bcc5\" name=\"Changes\" comment=\"\" />\r\n      <created>1696490904462</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1696490904462</updated>\r\n      <workItem from=\"1696490905901\" duration=\"35387000\" />\r\n      <workItem from=\"1696752530180\" duration=\"65979000\" />\r\n      <workItem from=\"1696940907888\" duration=\"849000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"role module\">\r\n      <created>1696554818830</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1696554818830</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"登录模块\">\r\n      <created>1696560986248</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1696560986248</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"user更新\">\r\n      <created>1696564079093</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1696564079093</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"user 与 menu 模块\">\r\n      <created>1696584982153</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1696584982153</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"role.js操作\">\r\n      <created>1696585021522</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1696585021522</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"unversioned 问题\">\r\n      <created>1696585110928</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1696585110928</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"menu 下js文件\">\r\n      <created>1696585138290</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1696585138290</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"user操作 用户登录 user的session作用域\">\r\n      <created>1696773854861</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1696773854861</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00009\" summary=\"user操作 用户登录 user的session作用域\">\r\n      <created>1696774176244</created>\r\n      <option name=\"number\" value=\"00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1696774176244</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00010\" summary=\"非法访问拦截\">\r\n      <created>1696776102180</created>\r\n      <option name=\"number\" value=\"00010\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1696776102180</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00011\" summary=\"完善邮箱登录\">\r\n      <created>1696814791348</created>\r\n      <option name=\"number\" value=\"00011\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1696814791348</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00012\" summary=\"一堆xml\">\r\n      <created>1696815588230</created>\r\n      <option name=\"number\" value=\"00012\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00012\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1696815588230</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00013\" summary=\"修改密码 修改role业务\">\r\n      <created>1696839389456</created>\r\n      <option name=\"number\" value=\"00013\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00013\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1696839389456</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00014\" summary=\"修改role业务\">\r\n      <created>1696839500744</created>\r\n      <option name=\"number\" value=\"00014\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00014\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1696839500744</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00015\" summary=\"ignore\">\r\n      <created>1696839538908</created>\r\n      <option name=\"number\" value=\"00015\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00015\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1696839538909</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00016\" summary=\"菜单管理\">\r\n      <created>1696853965926</created>\r\n      <option name=\"number\" value=\"00016\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00016\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1696853965926</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00017\" summary=\"菜单操作 增改\">\r\n      <created>1696858532443</created>\r\n      <option name=\"number\" value=\"00017\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00017\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1696858532443</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00018\" summary=\"角色菜单操作 增改\">\r\n      <created>1696862256417</created>\r\n      <option name=\"number\" value=\"00018\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00018\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1696862256417</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00019\" summary=\"错误修改\">\r\n      <created>1696863466901</created>\r\n      <option name=\"number\" value=\"00019\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00019\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1696863466901</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00020\" summary=\"用户绑定角色\">\r\n      <created>1696905979968</created>\r\n      <option name=\"number\" value=\"00020\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00020\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1696905979968</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00021\" summary=\"角色授权\">\r\n      <created>1696921341098</created>\r\n      <option name=\"number\" value=\"00021\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00021\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1696921341098</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00022\" summary=\"角色小修改\">\r\n      <created>1696922980357</created>\r\n      <option name=\"number\" value=\"00022\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00022\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1696922980357</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00023\" summary=\"添加主页权限,修改logo\">\r\n      <created>1696927404759</created>\r\n      <option name=\"number\" value=\"00023\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00023\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1696927404759</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00024\" summary=\"添加主页权限,修改logo\">\r\n      <created>1696927632166</created>\r\n      <option name=\"number\" value=\"00024\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00024\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1696927632166</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00025\" summary=\"修改logo\">\r\n      <created>1696927872736</created>\r\n      <option name=\"number\" value=\"00025\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00025\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1696927872736</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"26\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State>\r\n              <option name=\"FILTERS\">\r\n                <map>\r\n                  <entry key=\"branch\">\r\n                    <value>\r\n                      <list>\r\n                        <option value=\"hwj\" />\r\n                      </list>\r\n                    </value>\r\n                  </entry>\r\n                </map>\r\n              </option>\r\n            </State>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"role module\" />\r\n    <MESSAGE value=\"登录模块\" />\r\n    <MESSAGE value=\"user更新\" />\r\n    <MESSAGE value=\"user 与 menu 模块\" />\r\n    <MESSAGE value=\"role.js操作\" />\r\n    <MESSAGE value=\"unversioned 问题\" />\r\n    <MESSAGE value=\"menu 下js文件\" />\r\n    <MESSAGE value=\"user操作 用户登录 user的session作用域\" />\r\n    <MESSAGE value=\"非法访问拦截\" />\r\n    <MESSAGE value=\"完善邮箱登录\" />\r\n    <MESSAGE value=\"一堆xml\" />\r\n    <MESSAGE value=\"修改密码 修改role业务\" />\r\n    <MESSAGE value=\"修改role业务\" />\r\n    <MESSAGE value=\"ignore\" />\r\n    <MESSAGE value=\"菜单管理\" />\r\n    <MESSAGE value=\"菜单操作 增改\" />\r\n    <MESSAGE value=\"角色菜单操作 增改\" />\r\n    <MESSAGE value=\"错误修改\" />\r\n    <MESSAGE value=\"用户绑定角色\" />\r\n    <MESSAGE value=\"角色授权\" />\r\n    <MESSAGE value=\"角色小修改\" />\r\n    <MESSAGE value=\"添加主页权限,修改logo\" />\r\n    <MESSAGE value=\"修改logo\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"修改logo\" />\r\n  </component>\r\n</project>
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -4,60 +4,817 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="47f004b4-5068-48b2-9225-7a541737bcc5" name="Changes" comment="一些没用的东西">
++    <list default="true" id="47f004b4-5068-48b2-9225-7a541737bcc5" name="Changes" comment="111">
++      <change beforePath="$PROJECT_DIR$/.idea/dataSources/505befc5-1725-44ef-bd78-81d271298580.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/505befc5-1725-44ef-bd78-81d271298580.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/Starter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/Starter.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/Starter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/Starter.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/aspect/AspectController.class" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/aspect/SysLog.class" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/LoginController.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/PurchaseController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/PurchaseController.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/RoleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/RoleController.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/SaleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/SaleController.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/UserController.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/dao/PurchaseMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/dao/PurchaseMapper.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/dao/RoleMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/dao/RoleMapper.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/dao/SaleListGoodsMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/dao/SaleListGoodsMapper.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/dao/UserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/dao/UserMapper.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/entity/Purchase.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/entity/Purchase.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/entity/User.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/interceptors/NoLoginInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/interceptors/NoLoginInterceptor.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/model/UserModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/model/UserModel.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/querys/PurchaseQuery.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/querys/PurchaseQuery.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/service/PurchaseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/service/PurchaseService.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/service/RoleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/service/RoleService.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/service/SaleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/service/SaleService.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/service/UserService.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/generatorConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/generatorConfig.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/mappers/PurchaseMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mappers/PurchaseMapper.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/mappers/RoleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mappers/RoleMapper.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/mappers/SaleListGoodsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mappers/SaleListGoodsMapper.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/mappers/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mappers/UserMapper.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/public/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/public/css/index.css" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/public/css/layuimini.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/public/css/layuimini.css" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/public/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/public/js/index.js" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/public/js/module/add.js" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/public/js/module/module.js" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/public/js/module/update.js" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/public/js/purchase/purchase.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/public/js/purchase/purchase.js" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/public/js/role/grant.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/public/js/role/grant.js" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/public/js/role/role.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/public/js/role/role.js" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/public/js/user/add.update.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/public/js/user/add.update.js" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/public/js/user/password.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/public/js/user/password.js" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/public/js/user/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/public/js/user/user.js" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/views/common.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/views/common.ftl" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/views/index.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/views/index.ftl" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/views/main.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/views/main.ftl" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/views/module/add.ftl" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/views/module/module.ftl" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/views/module/update.ftl" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/views/purchase/purchase.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/views/purchase/purchase.ftl" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/views/role/role.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/views/role/role.ftl" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/views/user/add_update.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/views/user/add_update.ftl" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/views/user/password.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/views/user/password.ftl" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/views/user/user.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/views/user/user.ftl" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/views/welcome.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/views/welcome.ftl" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/GlobalExceptionResolver.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/Starter.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/base/BaseController.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/base/BaseMapper.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/base/BaseQuery.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/base/BaseService.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/base/ResultInfo.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/config/MyMvcConfig.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/CustomerController.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/LoginController.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/ProviderController.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/PurchaseController.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/RoleController.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/SaleController.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/UserController.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/dao/CustomerMapper.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/dao/CustomerReturnListGoodsMapper.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/dao/CustomerReturnListMapper.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/dao/ProviderMapper.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/dao/PurchaseMapper.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/dao/RoleMapper.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/dao/SaleListGoodsMapper.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/dao/SaleListMapper.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/dao/UserMapper.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/entity/Customer.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/entity/CustomerReturnList.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/entity/CustomerReturnListGoods.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/entity/Provider.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/entity/Purchase.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/entity/Role.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/entity/SaleList.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/entity/SaleListGoods.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/entity/User.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/enums/DevResult.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/enums/StateStatus.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/exceptions/AuthException.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/exceptions/NoLoginException.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/exceptions/ParamsException.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/interceptors/NoLoginInterceptor.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/model/UserModel.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/query/QueryCustomer.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/query/QueryProvider.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/query/RoleQuery.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/query/SaleQuery.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/query/UserQuery.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/querys/PurchaseQuery.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/service/CustomerService.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/service/ProviderService.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/service/PurchaseService.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/service/RoleService.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/service/SaleService.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/service/UserService.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/utils/AssertUtil.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/utils/CookieUtil.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/utils/DateUtils.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/utils/IPUtils.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/utils/LoginUserUtil.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/utils/Md5Util.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/utils/PhoneUtil.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/utils/UUIDUtil.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/utils/UserIDBase64.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/generatorConfig.xml" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/mappers/CustomerMapper.xml" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/mappers/CustomerReturnListGoodsMapper.xml" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/mappers/CustomerReturnListMapper.xml" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/mappers/ProviderMapper.xml" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/mappers/PurchaseMapper.xml" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/mappers/RoleMapper.xml" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/mappers/SaleListGoodsMapper.xml" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/mappers/SaleListMapper.xml" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/mappers/UserMapper.xml" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/css/formSelects-v4.css" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/css/index.css" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/css/layuimini.css" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/css/public.css" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/images/favicon.ico" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/images/logo.png" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/images/mm.png" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/images/timg.jpeg" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/cusDevPlan/add.update.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/cusDevPlan/cus.dev.plan.data.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/cusDevPlan/cus.dev.plan.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/customer/add.customer.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/customer/customer.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/index.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/lay-config.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/lay-module/body/bodyTab.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/lay-module/echarts/echarts.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/lay-module/echarts/echartsTheme.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/lay-module/formSelects/formSelects-v4.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/lay-module/iconPicker/iconPickerFa.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/lay-module/jquery-cookie/jquery.cookie.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/lay-module/layarea/layarea.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/lay-module/layuimini/layuimini.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/lay-module/step-lay/step.css" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/lay-module/step-lay/step.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/lay-module/tableSelect/tableSelect.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/lay-module/treetable-lay/treetable.css" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/lay-module/treetable-lay/treetable.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/lay-module/wangEditor/fonts/w-e-icon.woff" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/lay-module/wangEditor/wangEditor.css" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/lay-module/wangEditor/wangEditor.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/lay-module/wangEditor/wangEditor.min.css" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/lay-module/wangEditor/wangEditor.min.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/lay-module/wangEditor/wangEditor.min.js.map" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/main.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/provider/add.provider.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/provider/provider.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/purchase/purchase.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/role/add.update.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/role/grant.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/role/role.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/sale/add.update.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/sale/sale.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/user/add.update.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/user/password.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/user/user.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/README.md" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/API_cn.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/API_en.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/apiCss/api.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/apiCss/common.css" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/apiCss/common_ie6.css" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/apiCss/img/apiMenu.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/apiCss/img/apiMenu.png" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/apiCss/img/background.jpg" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/apiCss/img/chinese.png" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/apiCss/img/close.png" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/apiCss/img/contact-bg.png" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/apiCss/img/english.png" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/apiCss/img/header-bg.png" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/apiCss/img/lightbulb.png" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/apiCss/img/overlay_arrow.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/apiCss/img/overlay_arrow.png" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/apiCss/img/overlay_bg.png" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/apiCss/img/overlay_close_IE6.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/apiCss/img/zTreeStandard.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/apiCss/img/zTreeStandard.png" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/apiCss/jquery-1.6.2.min.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/apiCss/jquery.ztree.core.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/apiCss/zTreeStyleForApi.css" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/fn.zTree._z.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/fn.zTree.destroy.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/fn.zTree.getZTreeObj.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/fn.zTree.init.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.async.autoParam.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.async.contentType.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.async.dataFilter.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.async.dataType.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.async.enable.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.async.otherParam.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.async.type.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.async.url.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.callback.beforeAsync.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.callback.beforeCheck.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.callback.beforeClick.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.callback.beforeCollapse.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.callback.beforeDblClick.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.callback.beforeDrag.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.callback.beforeDragOpen.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.callback.beforeDrop.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.callback.beforeEditName.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.callback.beforeExpand.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.callback.beforeMouseDown.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.callback.beforeMouseUp.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.callback.beforeRemove.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.callback.beforeRename.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.callback.beforeRightClick.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.callback.onAsyncError.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.callback.onAsyncSuccess.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.callback.onCheck.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.callback.onClick.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.callback.onCollapse.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.callback.onDblClick.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.callback.onDrag.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.callback.onDragMove.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.callback.onDrop.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.callback.onExpand.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.callback.onMouseDown.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.callback.onMouseUp.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.callback.onNodeCreated.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.callback.onRemove.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.callback.onRename.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.callback.onRightClick.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.check.autoCheckTrigger.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.check.chkDisabledInherit.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.check.chkStyle.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.check.chkboxType.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.check.enable.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.check.nocheckInherit.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.check.radioType.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.data.keep.leaf.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.data.keep.parent.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.data.key.checked.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.data.key.children.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.data.key.isHidden.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.data.key.isParent.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.data.key.name.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.data.key.title.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.data.key.url.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.data.simpleData.enable.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.data.simpleData.idKey.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.data.simpleData.pIdKey.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.data.simpleData.rootPId.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.edit.drag.autoExpandTrigger.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.edit.drag.autoOpenTime.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.edit.drag.borderMax.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.edit.drag.borderMin.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.edit.drag.inner.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.edit.drag.isCopy.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.edit.drag.isMove.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.edit.drag.maxShowNodeNum.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.edit.drag.minMoveSize.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.edit.drag.next.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.edit.drag.prev.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.edit.editNameSelectAll.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.edit.enable.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.edit.removeTitle.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.edit.renameTitle.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.edit.showRemoveBtn.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.edit.showRenameBtn.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.treeId.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.treeObj.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.view.addDiyDom.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.view.addHoverDom.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.view.autoCancelSelected.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.view.dblClickExpand.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.view.expandSpeed.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.view.fontCss.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.view.nameIsHTML.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.view.removeHoverDom.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.view.selectedMulti.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.view.showIcon.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.view.showLine.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.view.showTitle.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/setting.view.txtSelectedEnable.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/treeNode.check_Child_State.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/treeNode.check_Focus.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/treeNode.checked.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/treeNode.checkedOld.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/treeNode.children.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/treeNode.chkDisabled.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/treeNode.click.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/treeNode.diy.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/treeNode.editNameFlag.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/treeNode.getCheckStatus.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/treeNode.getIndex.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/treeNode.getNextNode.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/treeNode.getParentNode.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/treeNode.getPath.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/treeNode.getPreNode.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/treeNode.halfCheck.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/treeNode.icon.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/treeNode.iconClose.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/treeNode.iconOpen.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/treeNode.iconSkin.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/treeNode.isAjaxing.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/treeNode.isFirstNode.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/treeNode.isHidden.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/treeNode.isHover.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/treeNode.isLastNode.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/treeNode.isParent.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/treeNode.level.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/treeNode.name.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/treeNode.nocheck.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/treeNode.open.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/treeNode.parentTId.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/treeNode.tId.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/treeNode.target.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/treeNode.url.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/treeNode.zAsync.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/zTreeObj.addNodes.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/zTreeObj.cancelEditName.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/zTreeObj.cancelSelectedNode.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/zTreeObj.checkAllNodes.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/zTreeObj.checkNode.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/zTreeObj.copyNode.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/zTreeObj.destroy.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/zTreeObj.editName.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/zTreeObj.expandAll.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/zTreeObj.expandNode.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/zTreeObj.getChangeCheckedNodes.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/zTreeObj.getCheckedNodes.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/zTreeObj.getNodeByParam.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/zTreeObj.getNodeByTId.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/zTreeObj.getNodeIndex.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/zTreeObj.getNodes.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/zTreeObj.getNodesByFilter.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/zTreeObj.getNodesByParam.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/zTreeObj.getNodesByParamFuzzy.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/zTreeObj.getSelectedNodes.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/zTreeObj.hideNode.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/zTreeObj.hideNodes.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/zTreeObj.moveNode.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/zTreeObj.reAsyncChildNodes.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/zTreeObj.reAsyncChildNodesPromise.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/zTreeObj.refresh.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/zTreeObj.removeChildNodes.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/zTreeObj.removeNode.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/zTreeObj.selectNode.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/zTreeObj.setChkDisabled.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/zTreeObj.setEditable.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/zTreeObj.setting.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/zTreeObj.showNode.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/zTreeObj.showNodes.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/zTreeObj.transformToArray.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/zTreeObj.transformTozTreeNodes.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/cn/zTreeObj.updateNode.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/fn.zTree._z.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/fn.zTree.destroy.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/fn.zTree.getZTreeObj.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/fn.zTree.init.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.async.autoParam.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.async.contentType.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.async.dataFilter.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.async.dataType.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.async.enable.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.async.otherParam.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.async.type.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.async.url.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.callback.beforeAsync.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.callback.beforeCheck.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.callback.beforeClick.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.callback.beforeCollapse.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.callback.beforeDblClick.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.callback.beforeDrag.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.callback.beforeDragOpen.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.callback.beforeDrop.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.callback.beforeEditName.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.callback.beforeExpand.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.callback.beforeMouseDown.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.callback.beforeMouseUp.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.callback.beforeRemove.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.callback.beforeRename.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.callback.beforeRightClick.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.callback.onAsyncError.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.callback.onAsyncSuccess.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.callback.onCheck.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.callback.onClick.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.callback.onCollapse.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.callback.onDblClick.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.callback.onDrag.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.callback.onDragMove.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.callback.onDrop.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.callback.onExpand.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.callback.onMouseDown.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.callback.onMouseUp.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.callback.onNodeCreated.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.callback.onRemove.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.callback.onRename.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.callback.onRightClick.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.check.autoCheckTrigger.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.check.chkDisabledInherit.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.check.chkStyle.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.check.chkboxType.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.check.enable.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.check.nocheckInherit.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.check.radioType.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.data.keep.leaf.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.data.keep.parent.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.data.key.checked.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.data.key.children.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.data.key.isHidden.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.data.key.isParent.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.data.key.name.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.data.key.title.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.data.key.url.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.data.simpleData.enable.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.data.simpleData.idKey.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.data.simpleData.pIdKey.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.data.simpleData.rootPId.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.edit.drag.autoExpandTrigger.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.edit.drag.autoOpenTime.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.edit.drag.borderMax.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.edit.drag.borderMin.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.edit.drag.inner.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.edit.drag.isCopy.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.edit.drag.isMove.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.edit.drag.maxShowNodeNum.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.edit.drag.minMoveSize.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.edit.drag.next.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.edit.drag.prev.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.edit.editNameSelectAll.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.edit.enable.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.edit.removeTitle.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.edit.renameTitle.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.edit.showRemoveBtn.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.edit.showRenameBtn.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.treeId.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.treeObj.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.view.addDiyDom.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.view.addHoverDom.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.view.autoCancelSelected.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.view.dblClickExpand.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.view.expandSpeed.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.view.fontCss.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.view.nameIsHTML.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.view.removeHoverDom.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.view.selectedMulti.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.view.showIcon.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.view.showLine.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.view.showTitle.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/setting.view.txtSelectedEnable.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/treeNode.check_Child_State.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/treeNode.check_Focus.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/treeNode.checked.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/treeNode.checkedOld.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/treeNode.children.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/treeNode.chkDisabled.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/treeNode.click.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/treeNode.diy.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/treeNode.editNameFlag.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/treeNode.getCheckStatus.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/treeNode.getIndex.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/treeNode.getNextNode.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/treeNode.getParentNode.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/treeNode.getPath.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/treeNode.getPreNode.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/treeNode.halfCheck.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/treeNode.icon.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/treeNode.iconClose.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/treeNode.iconOpen.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/treeNode.iconSkin.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/treeNode.isAjaxing.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/treeNode.isFirstNode.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/treeNode.isHidden.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/treeNode.isHover.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/treeNode.isLastNode.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/treeNode.isParent.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/treeNode.level.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/treeNode.name.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/treeNode.nocheck.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/treeNode.open.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/treeNode.parentTId.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/treeNode.tId.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/treeNode.target.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/treeNode.url.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/treeNode.zAsync.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/zTreeObj.addNodes.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/zTreeObj.cancelEditName.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/zTreeObj.cancelSelectedNode.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/zTreeObj.checkAllNodes.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/zTreeObj.checkNode.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/zTreeObj.copyNode.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/zTreeObj.destroy.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/zTreeObj.editName.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/zTreeObj.expandAll.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/zTreeObj.expandNode.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/zTreeObj.getChangeCheckedNodes.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/zTreeObj.getCheckedNodes.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/zTreeObj.getNodeByParam.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/zTreeObj.getNodeByTId.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/zTreeObj.getNodeIndex.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/zTreeObj.getNodes.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/zTreeObj.getNodesByFilter.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/zTreeObj.getNodesByParam.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/zTreeObj.getNodesByParamFuzzy.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/zTreeObj.getSelectedNodes.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/zTreeObj.hideNode.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/zTreeObj.hideNodes.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/zTreeObj.moveNode.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/zTreeObj.reAsyncChildNodes.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/zTreeObj.reAsyncChildNodesPromise.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/zTreeObj.refresh.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/zTreeObj.removeChildNodes.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/zTreeObj.removeNode.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/zTreeObj.selectNode.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/zTreeObj.setChkDisabled.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/zTreeObj.setEditable.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/zTreeObj.setting.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/zTreeObj.showNode.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/zTreeObj.showNodes.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/zTreeObj.transformToArray.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/zTreeObj.transformTozTreeNodes.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/api/en/zTreeObj.updateNode.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/css/awesomeStyle/awesome.css" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/css/awesomeStyle/awesome.less" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/css/awesomeStyle/fa.less" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/css/awesomeStyle/img/loading.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/css/demo.css" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/css/metroStyle/img/line_conn.png" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/css/metroStyle/img/loading.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/css/metroStyle/img/metro.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/css/metroStyle/img/metro.png" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/css/metroStyle/metroStyle.css" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/css/zTreeStyle/img/diy/1_close.png" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/css/zTreeStyle/img/diy/1_open.png" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/css/zTreeStyle/img/diy/2.png" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/css/zTreeStyle/img/diy/3.png" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/css/zTreeStyle/img/diy/4.png" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/css/zTreeStyle/img/diy/5.png" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/css/zTreeStyle/img/diy/6.png" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/css/zTreeStyle/img/diy/7.png" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/css/zTreeStyle/img/diy/8.png" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/css/zTreeStyle/img/diy/9.png" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/css/zTreeStyle/img/line_conn.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/css/zTreeStyle/img/loading.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/css/zTreeStyle/img/zTreeStandard.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/css/zTreeStyle/img/zTreeStandard.png" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/css/zTreeStyle/zTreeStyle.css" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/cn/asyncData/getNodes.php" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/cn/asyncData/getNodesForBigData.php" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/cn/bigdata/common.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/cn/bigdata/diy_async.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/cn/bigdata/page.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/cn/core/async.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/cn/core/async_fun.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/cn/core/click.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/cn/core/custom_font.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/cn/core/custom_icon.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/cn/core/custom_iconSkin.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/cn/core/expand.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/cn/core/noicon.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/cn/core/noline.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/cn/core/otherMouse.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/cn/core/searchNodes.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/cn/core/simpleData.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/cn/core/standardData.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/cn/core/update_fun.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/cn/core/url.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/cn/excheck/checkbox.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/cn/excheck/checkbox_chkDisabled.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/cn/excheck/checkbox_count.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/cn/excheck/checkbox_fun.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/cn/excheck/checkbox_halfCheck.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/cn/excheck/checkbox_nocheck.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/cn/excheck/radio.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/cn/excheck/radio_chkDisabled.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/cn/excheck/radio_fun.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/cn/excheck/radio_halfCheck.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/cn/excheck/radio_nocheck.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/cn/exedit/async_edit.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/cn/exedit/drag.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/cn/exedit/drag_fun.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/cn/exedit/drag_super.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/cn/exedit/edit.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/cn/exedit/edit_fun.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/cn/exedit/edit_super.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/cn/exedit/multiTree.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/cn/exhide/checkbox.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/cn/exhide/common.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/cn/exhide/radio.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/cn/index.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/cn/super/asyncForAll.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/cn/super/awesome.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/cn/super/checkbox_radio.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/cn/super/diydom.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/cn/super/dragWithOther.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/cn/super/left_menu.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/cn/super/left_menuForOutLook.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/cn/super/left_menuForOutLook.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/cn/super/left_menuForOutLook.png" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/cn/super/metro.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/cn/super/oneclick.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/cn/super/oneroot.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/cn/super/rightClickMenu.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/cn/super/select_menu.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/cn/super/select_menu_checkbox.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/cn/super/select_menu_radio.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/cn/super/singlepath.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/en/asyncData/getNodes.php" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/en/asyncData/getNodesForBigData.php" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/en/bigdata/common.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/en/bigdata/diy_async.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/en/bigdata/page.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/en/core/async.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/en/core/async_fun.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/en/core/click.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/en/core/custom_font.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/en/core/custom_icon.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/en/core/custom_iconSkin.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/en/core/expand.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/en/core/noicon.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/en/core/noline.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/en/core/otherMouse.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/en/core/searchNodes.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/en/core/simpleData.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/en/core/standardData.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/en/core/update_fun.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/en/core/url.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/en/excheck/checkbox.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/en/excheck/checkbox_chkDisabled.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/en/excheck/checkbox_count.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/en/excheck/checkbox_fun.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/en/excheck/checkbox_halfCheck.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/en/excheck/checkbox_nocheck.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/en/excheck/radio.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/en/excheck/radio_chkDisabled.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/en/excheck/radio_fun.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/en/excheck/radio_halfCheck.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/en/excheck/radio_nocheck.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/en/exedit/async_edit.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/en/exedit/drag.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/en/exedit/drag_fun.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/en/exedit/drag_super.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/en/exedit/edit.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/en/exedit/edit_fun.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/en/exedit/edit_super.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/en/exedit/multiTree.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/en/exhide/checkbox.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/en/exhide/common.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/en/exhide/radio.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/en/index.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/en/super/asyncForAll.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/en/super/awesome.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/en/super/checkbox_radio.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/en/super/diydom.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/en/super/dragWithOther.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/en/super/left_menu.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/en/super/left_menuForOutLook.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/en/super/left_menuForOutLook.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/en/super/left_menuForOutLook.png" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/en/super/metro.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/en/super/oneclick.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/en/super/oneroot.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/en/super/rightClickMenu.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/en/super/select_menu.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/en/super/select_menu_checkbox.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/en/super/select_menu_radio.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/en/super/singlepath.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/demo/en/super/ztree.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/js/jquery-1.4.4.min.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/js/jquery.ztree.all.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/js/jquery.ztree.all.min.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/js/jquery.ztree.core.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/js/jquery.ztree.core.min.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/js/jquery.ztree.excheck.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/js/jquery.ztree.excheck.min.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/js/jquery.ztree.exedit.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/js/jquery.ztree.exedit.min.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/js/jquery.ztree.exhide.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/js/jquery.ztree.exhide.min.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/log v3.x.txt" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/package.json" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/js/zTree_v3-3.5.32/zTree.v3.jquery.json" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/font-awesome-4.7.0/HELP-US-OUT.txt" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/font-awesome-4.7.0/css/font-awesome.css" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/font-awesome-4.7.0/css/font-awesome.min.css" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/font-awesome-4.7.0/fonts/FontAwesome.otf" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/font-awesome-4.7.0/fonts/fontawesome-webfont.eot" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/font-awesome-4.7.0/fonts/fontawesome-webfont.svg" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/font-awesome-4.7.0/fonts/fontawesome-webfont.woff" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/font-awesome-4.7.0/less/animated.less" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/font-awesome-4.7.0/less/bordered-pulled.less" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/font-awesome-4.7.0/less/core.less" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/font-awesome-4.7.0/less/fixed-width.less" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/font-awesome-4.7.0/less/font-awesome.less" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/font-awesome-4.7.0/less/icons.less" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/font-awesome-4.7.0/less/larger.less" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/font-awesome-4.7.0/less/list.less" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/font-awesome-4.7.0/less/mixins.less" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/font-awesome-4.7.0/less/path.less" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/font-awesome-4.7.0/less/rotated-flipped.less" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/font-awesome-4.7.0/less/screen-reader.less" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/font-awesome-4.7.0/less/stacked.less" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/font-awesome-4.7.0/less/variables.less" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/font-awesome-4.7.0/scss/_animated.scss" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/font-awesome-4.7.0/scss/_bordered-pulled.scss" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/font-awesome-4.7.0/scss/_core.scss" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/font-awesome-4.7.0/scss/_fixed-width.scss" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/font-awesome-4.7.0/scss/_icons.scss" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/font-awesome-4.7.0/scss/_larger.scss" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/font-awesome-4.7.0/scss/_list.scss" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/font-awesome-4.7.0/scss/_mixins.scss" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/font-awesome-4.7.0/scss/_path.scss" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/font-awesome-4.7.0/scss/_rotated-flipped.scss" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/font-awesome-4.7.0/scss/_screen-reader.scss" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/font-awesome-4.7.0/scss/_stacked.scss" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/font-awesome-4.7.0/scss/_variables.scss" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/font-awesome-4.7.0/scss/font-awesome.scss" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/jq-module/jquery.particleground.min.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/jq-module/paigusu.min.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/jq-module/zyupload/zyupload-1.0.0.min.css" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/jq-module/zyupload/zyupload-1.0.0.min.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/jquery-3.4.1/jquery-3.4.1.min.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/css/layui.css" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/css/layui.mobile.css" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/css/modules/code.css" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/css/modules/laydate/default/laydate.css" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/css/modules/layer/default/icon-ext.png" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/css/modules/layer/default/icon.png" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/css/modules/layer/default/layer.css" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/css/modules/layer/default/loading-0.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/css/modules/layer/default/loading-1.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/css/modules/layer/default/loading-2.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/font/iconfont.eot" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/font/iconfont.svg" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/font/iconfont.ttf" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/font/iconfont.woff" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/font/iconfont.woff2" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/images/face/0.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/images/face/1.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/images/face/10.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/images/face/11.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/images/face/12.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/images/face/13.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/images/face/14.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/images/face/15.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/images/face/16.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/images/face/17.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/images/face/18.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/images/face/19.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/images/face/2.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/images/face/20.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/images/face/21.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/images/face/22.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/images/face/23.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/images/face/24.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/images/face/25.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/images/face/26.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/images/face/27.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/images/face/28.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/images/face/29.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/images/face/3.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/images/face/30.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/images/face/31.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/images/face/32.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/images/face/33.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/images/face/34.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/images/face/35.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/images/face/36.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/images/face/37.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/images/face/38.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/images/face/39.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/images/face/4.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/images/face/40.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/images/face/41.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/images/face/42.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/images/face/43.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/images/face/44.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/images/face/45.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/images/face/46.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/images/face/47.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/images/face/48.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/images/face/49.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/images/face/5.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/images/face/50.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/images/face/51.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/images/face/52.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/images/face/53.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/images/face/54.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/images/face/55.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/images/face/56.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/images/face/57.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/images/face/58.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/images/face/59.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/images/face/6.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/images/face/60.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/images/face/61.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/images/face/62.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/images/face/63.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/images/face/64.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/images/face/65.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/images/face/66.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/images/face/67.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/images/face/68.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/images/face/69.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/images/face/7.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/images/face/70.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/images/face/71.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/images/face/8.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/images/face/9.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/lay/modules/carousel.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/lay/modules/code.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/lay/modules/colorpicker.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/lay/modules/element.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/lay/modules/flow.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/lay/modules/form.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/lay/modules/jquery.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/lay/modules/laydate.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/lay/modules/layedit.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/lay/modules/layer.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/lay/modules/laypage.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/lay/modules/laytpl.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/lay/modules/mobile.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/lay/modules/rate.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/lay/modules/slider.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/lay/modules/table.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/lay/modules/transfer.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/lay/modules/tree.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/lay/modules/upload.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/lay/modules/util.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/layui.all.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/public/lib/layui-v2.5.5/layui.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/views/common.ftl" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/views/cusDevPlan/add_update.ftl" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/views/cusDevPlan/cus_dev_plan.ftl" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/views/cusDevPlan/cus_dev_plan_data.ftl" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/views/customer/add_customer.ftl" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/views/customer/customer.ftl" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/views/error.ftl" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/views/index.ftl" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/views/main.ftl" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/views/provider/add_provider.ftl" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/views/provider/provider.ftl" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/views/purchase/purchase.ftl" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/views/role/add_update.ftl" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/views/role/grant.ftl" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/views/role/role.ftl" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/views/sale/add_update.ftl" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/views/sale/sale.ftl" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/views/user/add_update.ftl" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/views/user/password.ftl" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/views/user/user.ftl" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/views/welcome.ftl" beforeDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -104,26 +861,26 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent">{
+-  &quot;keyToString&quot;: {
+-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+-    &quot;last_opened_file_path&quot;: &quot;D:/maven_code/SpringBootJinXiaoCun&quot;,
+-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+-    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
+-    &quot;spring.configuration.checksum&quot;: &quot;46d7115f401497dd00b87ad0447a2608&quot;,
+-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "RequestMappingsPanelOrder0": "0",
++    "RequestMappingsPanelOrder1": "1",
++    "RequestMappingsPanelWidth0": "75",
++    "RequestMappingsPanelWidth1": "75",
++    "RunOnceActivity.OpenProjectViewOnStart": "true",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "WebServerToolWindowFactoryState": "false",
++    "last_opened_file_path": "D:/maven_code/crm",
++    "node.js.detected.package.eslint": "true",
++    "node.js.detected.package.tslint": "true",
++    "node.js.selected.package.eslint": "(autodetect)",
++    "node.js.selected.package.tslint": "(autodetect)",
++    "nodejs_package_manager_path": "npm",
++    "settings.editor.selected.configurable": "MavenSettings",
++    "spring.configuration.checksum": "46d7115f401497dd00b87ad0447a2608",
++    "vue.rearranger.settings.migration": "true"
+   }
+-}</component>
++}]]></component>
+   <component name="RecentsManager">
+     <key name="MoveFile.RECENT_KEYS">
+       <recent name="D:\study\px\gitStudy\SpringBootJinXiaoCun\src\main\resources\public\images" />
+@@ -181,7 +938,8 @@
+       <updated>1696490904462</updated>
+       <workItem from="1696490905901" duration="35387000" />
+       <workItem from="1696752530180" duration="65979000" />
+-      <workItem from="1696940907888" duration="849000" />
++      <workItem from="1696940907888" duration="1108000" />
++      <workItem from="1696942036207" duration="1697000" />
+     </task>
+     <task id="LOCAL-00001" summary="role module">
+       <created>1696554818830</created>
+@@ -358,7 +1116,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1696927872736</updated>
+     </task>
+-    <option name="localTasksCounter" value="26" />
++    <task id="LOCAL-00026" summary="111">
++      <created>1696941902632</created>
++      <option name="number" value="00026" />
++      <option name="presentableId" value="LOCAL-00026" />
++      <option name="project" value="LOCAL" />
++      <updated>1696941902632</updated>
++    </task>
++    <option name="localTasksCounter" value="27" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -411,6 +1176,7 @@
+     <MESSAGE value="角色小修改" />
+     <MESSAGE value="添加主页权限,修改logo" />
+     <MESSAGE value="修改logo" />
+-    <option name="LAST_COMMIT_MESSAGE" value="修改logo" />
++    <MESSAGE value="111" />
++    <option name="LAST_COMMIT_MESSAGE" value="111" />
+   </component>
+ </project>
+\ No newline at end of file
