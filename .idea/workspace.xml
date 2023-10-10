@@ -4,18 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47f004b4-5068-48b2-9225-7a541737bcc5" name="Changes" comment="用户绑定角色">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/model/TreeModel.java" afterDir="false" />
+    <list default="true" id="47f004b4-5068-48b2-9225-7a541737bcc5" name="Changes" comment="角色授权">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/MenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/dao/MenuMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/dao/MenuMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/dao/RoleMenuMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/dao/RoleMenuMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/aspect/SupLogAop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/aspect/SupLogAop.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/service/MenuService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/service/MenuService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/service/RoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/service/RoleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/MenuMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/MenuMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/RoleMenuMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/RoleMenuMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/role/grant.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/js/role/grant.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/role/role.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/js/role/role.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +129,7 @@
       <option name="presentableId" value="Default" />
       <updated>1696490904462</updated>
       <workItem from="1696490905901" duration="35387000" />
-      <workItem from="1696752530180" duration="61460000" />
+      <workItem from="1696752530180" duration="63079000" />
     </task>
     <task id="LOCAL-00001" summary="role module">
       <created>1696554818830</created>
@@ -279,7 +271,14 @@
       <option name="project" value="LOCAL" />
       <updated>1696905979968</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="角色授权">
+      <created>1696921341098</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1696921341098</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -328,6 +327,7 @@
     <MESSAGE value="角色菜单操作 增改" />
     <MESSAGE value="错误修改" />
     <MESSAGE value="用户绑定角色" />
-    <option name="LAST_COMMIT_MESSAGE" value="用户绑定角色" />
+    <MESSAGE value="角色授权" />
+    <option name="LAST_COMMIT_MESSAGE" value="角色授权" />
   </component>
 </project>

@@ -82,19 +82,19 @@ public class MenuService extends BaseService<Menu,Integer> {
         AssertUtil.isTrue(StringUtils.isBlank(menu.getName()),"菜单名为不能为空");
         temp = menuMapper.selectMenuByGradeAndMenuName(grade, menu.getName());
         if (temp != null){
-            AssertUtil.isTrue(!(temp.getId()).equals(menu.getpId()),"该层级下菜单名已经存在");
+            AssertUtil.isTrue(!(temp.getId()).equals(menu.getId()),"该层级下菜单名已经存在");
         }
         if (grade == 1){
             AssertUtil.isTrue(StringUtils.isBlank(menu.getUrl()),"菜单url不能为空");
             temp = menuMapper.selectMenuByGradeAndUrl(grade, menu.getUrl());
             if (temp != null){
-                AssertUtil.isTrue(!(temp.getId().equals(menu.getpId())),"该层级下菜单地址已经存在");
+                AssertUtil.isTrue(!(temp.getId().equals(menu.getId())),"该层级下菜单地址已经存在");
             }
         }
         AssertUtil.isTrue(StringUtils.isBlank(menu.getAclValue()),"权限码不能为空");
         temp = menuMapper.selectMenuByAclValue(menu.getAclValue());
         if (temp!=null){
-            AssertUtil.isTrue(!(temp.getId().equals(menu.getpId())),"权限码已经存在");
+            AssertUtil.isTrue(!(temp.getId().equals(menu.getId())),"权限码已经存在");
         }
         AssertUtil.isTrue(menuMapper.updateByPrimaryKeySelective(menu)<1,"菜单更新失败");
     }
