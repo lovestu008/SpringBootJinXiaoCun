@@ -137,11 +137,11 @@ layui.use(['table','layer'],function(){
     table.on('tool(purchases)',function (data) {
         // 判断lay-event属性
         if (data.event == "edit") { // 修改角色
-            // 打开添加/更新角色的对话框
+            // 打开编辑进货单
             openUpdatePurchaseDialog(data.data.id);
         } else if (data.event == "return") {
-            // 删除角色
-            deletePurchase(data.data.id);
+            // 打开退货单
+            returnPurchase(data.data.id);
         }
     });
     function openUpdatePurchaseDialog(id) {
@@ -155,33 +155,17 @@ layui.use(['table','layer'],function(){
             maxmin:true
         });
     }
-    function deletePurchase(id) {
-        // 弹出确认框，询问用户是否确认删除
-        layer.confirm('确定要删除该记录吗？',{icon:3, title:"进货明细"}, function (index) {
-            // 关闭确认框
-            layer.close(index);
-
-            // 发送ajax请求，删除记录
-            $.ajax({
-                type:"post",
-                url:ctx + "/purchase/delete",
-                data:{
-                    id:id
-                },
-                success:function (result) {
-                    // 判断删除结果
-                    if (result.code == 200) {
-                        // 提示成功
-                        layer.msg("删除成功！",{icon:6});
-                        // 刷新表格
-                        tableIns.reload();
-                    } else {
-                        // 提示失败
-                        layer.msg(result.msg, {icon:5});
-                    }
-                }
-            });
+    function returnPurchase(id) {
+        var title = "<h3>退货选择</h3>"
+        var url = ctx + "/purchase/toReturnPurchasePage?id="+id;
+        layui.layer.open({
+            title:title,
+            content:url,
+            area:["500px","550px"],
+            type:2,
+            maxmin:true
         });
+
     }
 
 });

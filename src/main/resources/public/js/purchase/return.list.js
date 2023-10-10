@@ -9,7 +9,7 @@ layui.use(['form', 'layer'], function () {
      * 监听submit事件
      * 实现营销机会的添加与更新
      */
-    form.on("submit(addOrUpdatePurchase)", function (data) {
+    form.on("submit(returnPurchase)", function (data) {
         // 提交数据时的加载层 （https://layer.layui.com/）
         var index = layer.msg("数据提交中,请稍后...",{
             icon:16, // 图标
@@ -17,7 +17,7 @@ layui.use(['form', 'layer'], function () {
             shade:0.8 // 设置遮罩的透明度
         });
         // 请求的地址
-        var url = ctx + "/purchase/add";
+        var url = ctx + "/purchase/return";
         var purchaseId = $("[name='id']").val();
         if (purchaseId !=null && purchaseId !='' ){
             url =ctx +"/purchase/update"

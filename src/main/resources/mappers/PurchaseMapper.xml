@@ -216,5 +216,21 @@
     where
         is_del=0
   </select>
+  <!--库存表查找库存-->
+  <select id="selectNumByGoodsName" parameterType="string" resultType="int">
+    select
+      inventory_quantity as goodsNum
+    from
+        t_goods
+    where
+        name=#{goodsName}
+  </select>
+  <!--修改商品数据库-->
+  <update id="updateGoodsNum" >
+    update t_goods
+    set inventory_quantity =#{goodsNum}
+    where
+        name=#{goodsName}
+  </update>
 
 </mapper>

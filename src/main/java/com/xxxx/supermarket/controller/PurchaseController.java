@@ -4,6 +4,7 @@ import com.xxxx.supermarket.aspect.SupLog;
 import com.xxxx.supermarket.base.BaseController;
 import com.xxxx.supermarket.base.ResultInfo;
 import com.xxxx.supermarket.entity.Purchase;
+import com.xxxx.supermarket.model.InpRetGoodsList;
 import com.xxxx.supermarket.querys.PurchaseQuery;
 import com.xxxx.supermarket.service.PurchaseService;
 import com.xxxx.supermarket.utils.AssertUtil;
@@ -82,12 +83,16 @@ public class PurchaseController extends BaseController {
         request.setAttribute("purchase",purchase);
         return "purchase/update";
     }
-    @PostMapping("delete")
+    @PostMapping("return")
     @ResponseBody
-    @SupLog(content = "删除进货信息")
-    public ResultInfo deletePurchase(Integer id){
-        purchaseService.deletePurchase(id);
-        return success("进货信息删除成功");
+    @SupLog(content = "添加退货信息")
+    public ResultInfo returnPurchase(InpRetGoodsList inpRetGoodsList,HttpServletRequest request){
+        //从cookie中获取用户姓名
+        String userName= CookieUtil.getCookieValue(request,"userName");
+        //设置营销机会的数据
+        inpRetGoodsList.setOperatePerson(userName);
+        purchaseService.returnPurchase(inpRetGoodsList);
+        return success("进退货信息更新成功");
     }
     @RequestMapping("selectAllGoodsNameById")
     @ResponseBody
@@ -95,6 +100,15 @@ public class PurchaseController extends BaseController {
         List list =  purchaseService.selectAllGoodsNameById();
         list.forEach(System.out::println);
         return list;
+    }
+
+    @RequestMapping("toReturnPurchasePage")
+    public String toReturnPurchasePage(Integer id,HttpServletRequest request){
+        AssertUtil.isTrue(null==id,"请选择要退货的信息！");
+        //设置要返回的数据
+        InpRetGoodsList inpRetGoodsList=purchaseService.setIntRetGoodsList(id);
+        request.setAttribute("inpRetGoodsList",inpRetGoodsList);
+        return "purchase/return_list";
     }
 
 }

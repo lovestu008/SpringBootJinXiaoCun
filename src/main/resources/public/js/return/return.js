@@ -22,7 +22,7 @@ layui.use(['table','layer'],function(){
             ,{field: 'goodsName', title: '商品名称', align:'center'}
             ,{field: 'provider', title: '供应商', align:'center'}
             ,{field: 'retNum', title: '退货数量', align:'center'}
-            ,{field: 'allretPrice', title: '退货总价格', align:'center'}
+            ,{field: 'allRetPrice', title: '退货总价格', align:'center'}
             ,{field: 'retTime', title: '退货时间', align:'center'}
             ,{field: 'operatePerson', title: '操作人', align:'center'}
             ,{field: 'remark', title: '备注', align:'center'}
