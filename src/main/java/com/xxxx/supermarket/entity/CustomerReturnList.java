@@ -1,25 +1,41 @@
 package com.xxxx.supermarket.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import io.swagger.annotations.ApiModel;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import org.springframework.format.annotation.DateTimeFormat;
+
+import java.io.Serializable;
 import java.util.Date;
 
-public class CustomerReturnList {
-    private Integer id;
+@Data
+@EqualsAndHashCode
+@ApiModel(value = "CustomerReturnList对象",description = "客户退货表单")
+public class CustomerReturnList implements Serializable {
+    private Integer id;//主键
 
-    private Float amountPaid;
+    private Float amountPaid=0.0F;//实付金额
 
-    private Float amountPayable;
+    private Float amountPayable=0.0F;//应付金额
 
-    private Date customerReturnDate;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @JsonFormat(pattern = "yyyy-MM-dd",timezone = "GMT+8")
+    private Date customerReturnDate = new Date();//退货日期
 
-    private String customerReturnNumber;
+    private String customerReturnNumber;//退货单号
 
-    private String remarks;
+    private String remarks;//备注
 
-    private Integer state;
+    private Integer state;//交易状态
 
-    private Integer userId;
+    private Integer userId;//操作用户
 
-    private Integer customerId;
+    private Integer customerId;//客户id
+
+    private String userName;//操作员名
+
+    private String customerName;//客户名
 
     public Integer getId() {
         return id;

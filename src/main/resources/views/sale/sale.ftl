@@ -40,7 +40,7 @@
                     <label class="layui-form-label">销售日期</label>
                     <div class="layui-input-block">
                         <input type="text" name="saleDate" id="saleDate" lay-verify="saleDate"
-                               placeholder="yyyy-MM-dd" autocomplete="off" readonly="readonly" class="layui-input">
+                               placeholder="yyyy-MM-dd" autocomplete="off" readonly="readonly" class="layui-input" value="">
                     </div>
                 </div>
             </div>

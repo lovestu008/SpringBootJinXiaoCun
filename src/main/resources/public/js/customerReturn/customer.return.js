@@ -1,4 +1,4 @@
-layui.use(['element', 'laydate', 'table', 'layer'], function () {
+layui.use(['laydate', 'table', 'layer'], function () {
     var layer = parent.layer === undefined ? layui.layer : top.layer,
         $ = layui.jquery,
         laydate = layui.laydate,
@@ -6,7 +6,7 @@ layui.use(['element', 'laydate', 'table', 'layer'], function () {
     table = layui.table;
 
     laydate.render({
-        elem: '#saleDate',
+        elem: '#customerReturnDate',
         value:new Date(),
         isInitValue:true
     });
@@ -28,10 +28,10 @@ layui.use(['element', 'laydate', 'table', 'layer'], function () {
 
 
     var tableIns = table.render({
-        elem: '#saleList',
+        elem: '#customerReturnList',
         height: "full-125",
         toolbar: "#toolbarDemo",
-        id: "saleListTable",
+        id: "customerReturnListTable",
         cols: [[
             {field: 'code', title: '商品编码', minWidth: 50, align: "center"},
             {field: 'name', title: '商品名称', minWidth: 100, align: 'center'},
@@ -46,18 +46,19 @@ layui.use(['element', 'laydate', 'table', 'layer'], function () {
     });
 
     //头工具栏事件
-    table.on('toolbar(sales)', function (obj) {
+    table.on('toolbar(customerReturns)', function (obj) {
         switch (obj.event) {
             case "add":
                 openGoodsDialog();
                 break;
 
-        };
+        }
+        ;
     });
 
     function openGoodsDialog() {
         var url = ctx + "/common/toSelectGoodsPage";
-        var title = "销售出库商品选择";
+        var title = "客户退货商品选择";
         layui.layer.open({
             title: title,
             type: 2,
@@ -70,7 +71,7 @@ layui.use(['element', 'laydate', 'table', 'layer'], function () {
     /**
      * 行监听
      */
-    table.on("tool(sales)", function (obj) {
+    table.on("tool(customerReturns)", function (obj) {
         var layEvent = obj.event;
         if (layEvent === "edit") {
             openUpdateGoodsInfoDialog(obj.data.id);
@@ -99,7 +100,7 @@ layui.use(['element', 'laydate', 'table', 'layer'], function () {
         var url = ctx + "/common/toUpdateGoodsInfoPage?id="
             + goods.goodsId + "&price=" + goods.price + "&num=" + goods.num + "&total=" + goods.total;
         layui.layer.open({
-            title: "商品信息更新",
+            title: "进货入库商品更新",
             type: 2,
             area: ["800px", "550px"],
             maxmin: true,
@@ -108,9 +109,10 @@ layui.use(['element', 'laydate', 'table', 'layer'], function () {
     }
 
 
-    form.on("submit(addSaleList)", function (data) {
+    form.on("submit(addCustomerReturnList)", function (data) {
         var index = top.layer.msg('数据提交中，请稍候', {icon: 16, time: false, shade: 0.8});
-        $.post(ctx + "/sale/save", data.field, function (res) {
+        console.log(data.field)
+        $.post(ctx + "/customerReturn/save", data.field, function (res) {
             if (res.code == 200) {
                 setTimeout(function () {
                     top.layer.close(index);
@@ -118,12 +120,11 @@ layui.use(['element', 'laydate', 'table', 'layer'], function () {
                     layer.closeAll("iframe");
                     //刷新父页面
                     parent.location.reload();
-                    window.location.href = ctx + "/sale/index";
+                    window.location.href = ctx + "/customerReturn/index";
                 }, 500);
             } else {
-                console.log(res)
-                layer.msg(
-                    res.msg
+                top.layer.msg(
+                    res.message,{area: ['500px','300px']}
                 );
             }
         });
@@ -134,8 +135,8 @@ layui.use(['element', 'laydate', 'table', 'layer'], function () {
 });
 
 var datas = [];
+
 function getGoodsSelectInfo(gid, gname, code, price, num, model, unit, typeId, flag) {
-    console.log(gid, gname, code, price, num, model, unit, typeId, flag, price * num)
     if (flag) {
         // 添加操作
         datas.push({
@@ -150,11 +151,11 @@ function getGoodsSelectInfo(gid, gname, code, price, num, model, unit, typeId, f
             "total": price * num
         });
     } else {
-        console.log("执行更新...")
         // 更新操作
         datas.forEach((item, i) => {
             if (item.goodsId == gid) {
                 // 修改价格、数量与总金额即可
+                alert("执行修改");
                 item.price = price;
                 item.num = num;
                 item.total = price * num;
@@ -170,7 +171,7 @@ function getGoodsSelectInfo(gid, gname, code, price, num, model, unit, typeId, f
 
 
 function reloadTableData() {
-    layui.table.reload("saleListTable", {
+    layui.table.reload("customerReturnListTable", {
         data: datas
     })
     var total = 0;
@@ -181,4 +182,7 @@ function reloadTableData() {
     layui.jquery("#amountPaid").val(total);
     // 设置选择商品json数据到隐藏域 便于后续表单提交
     layui.jquery("input[name='goodsJson']").val(JSON.stringify(datas));
+
 }
+
+

@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>退货出库</title>
+	<title>客户退货</title>
 	<#include "../common.ftl">
 </head>
 <body class="childrenBody">
 
 <form class="layui-form" >
-	<input type="hidden" name="returnNumber" value="${returnNumber!}" >
+	<input type="hidden" name="customerReturnNumber" value="${customerReturnNumber!}" >
 	<input type="hidden" name="goodsJson" >
 	<blockquote class="layui-elem-quote quoteBox">
 		<fieldset class="layui-elem-field site-demo-button" >
-			<legend>单号:${returnNumber!}</legend>
+			<legend>单号:${customerReturnNumber!}</legend>
 			<br/>
 			<div class="layui-row">
 				<div class="layui-col-xs3">
-					<label class="layui-form-label">供应商</label>
+					<label class="layui-form-label">客户</label>
 					<div class="layui-input-block">
-						<select id="providerId" name="providerId"  >
+						<select id="customerId" name="customerId"  >
 							<option value="0" >请选择</option>
 						</select>
 					</div>
@@ -37,9 +37,9 @@
 					</div>
 				</div>
 				<div class="layui-col-xs3">
-					<label class="layui-form-label">退货日期</label>
+					<label class="layui-form-label">日期</label>
 					<div class="layui-input-block">
-						<input type="text" name="returnDate" id="returnDate" lay-verify="returnDate"
+						<input type="text" name="customerReturnDate" id="customerReturnDate" lay-verify="customerReturnDate"
 							   placeholder="yyyy-MM-dd" autocomplete="off" readonly="readonly" class="layui-input">
 					</div>
 				</div>
@@ -65,14 +65,14 @@
 				<div class="layui-col-xs4">
 					<label class="layui-form-label"></label>
 					<button class="layui-btn layui-btn-lg" lay-submit=""
-							lay-filter="addReturnList">保存
+							lay-filter="addCustomerReturnList">保存
 					</button>
 				</div>
 
 			</div>
 		</fieldset>
 	</blockquote>
-	<table id="returnList" class="layui-table"  lay-filter="returns"></table>
+	<table id="customerReturnList" class="layui-table"  lay-filter="customerReturns"></table>
 
 	<#--操作-->
 	<script id="goodsListBar" type="text/html">
@@ -90,7 +90,7 @@
 		</div>
 	</script>
 </form>
-<script type="text/javascript" src="${ctx}/js/return/return.js"></script>
+<script type="text/javascript" src="${ctx}/js/customerReturn/customer.return.js"></script>
 
 </body>
 </html>

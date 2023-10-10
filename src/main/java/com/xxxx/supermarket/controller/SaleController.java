@@ -20,7 +20,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 import java.util.Map;
 
-@RequestMapping("sale")
+@RequestMapping("/sale")
 @Controller
 public class SaleController extends BaseController {
 
@@ -81,9 +81,11 @@ public class SaleController extends BaseController {
      */
     @ResponseBody
     @RequestMapping("save")
-    public ResultInfo addSaleList(SaleList saleList,String goodsJson,HttpServletRequest request) {
+    public ResultInfo save(SaleList saleList,String goodsJson,HttpServletRequest request) {
         Integer userId = LoginUserUtil.releaseUserIdFromCookie(request);
         saleList.setUserId(userId);
+        AssertUtil.isTrue(goodsJson==null||goodsJson=="","无记录不能保存");
+        AssertUtil.isTrue(saleList.getCustomerId()==null||saleList.getCustomerId()==0,"客户不能为空");
         List<SaleListGoods> saleListGoods = JSON.parseArray(goodsJson, SaleListGoods.class);
         saleService.saveSaleList(saleList,saleListGoods);
         return success("商品销售出库成功");

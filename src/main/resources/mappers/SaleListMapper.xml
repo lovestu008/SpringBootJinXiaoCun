@@ -89,9 +89,10 @@
 
     <!--获取下一个单号-->
     <select id="getNextSaleNumber" resultType="java.lang.String">
-        select max(sale_number) as saleNumber
+        SELECT max(sale_number) as saleNumber
         from t_sale_list
-        where to_days(sale_date) = to_days(now())
+        where TO_DAYS(now()) = (SELECT TO_DAYS(MAX(sale_date))
+                                from t_sale_list)
     </select>
 
 

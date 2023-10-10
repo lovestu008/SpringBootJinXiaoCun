@@ -67,9 +67,11 @@ public class SaleService extends BaseService<SaleList, Integer> {
         SaleList temp = saleListMapper.querySaleListBySaleNumber(saleList.getSaleNumber());
 
         saleListGoods.forEach(slg -> {
+            //将临时单内的编号赋予每一个商品对象
             slg.setSaleListId(temp.getId());
             //获取slg的goodsid来查询获取商品
             Goods goods = goodsService.getGoodsById(slg.getGoodsId());
+            AssertUtil.isTrue(slg.getNum()==null,"商品数量不能为空");
             //设置库存为原库存减去销售单内的数量
             goods.setInventoryQuantity(goods.getInventoryQuantity() - slg.getNum());
             //

@@ -22,10 +22,52 @@
     from t_customer_return_list
     where id = #{id,jdbcType=INTEGER}
   </select>
+  <!--通过退货单号查询所有对应的退货记录-->
+    <select id="queryCustomerReturnListByCustomerReturnNumber"
+            resultType="com.xxxx.supermarket.entity.CustomerReturnList">
+      select * from t_customer_return_list where customer_return_number = #{customerReturnNumber}
+    </select>
+  <!--根据query参数获取对应的退货单-->
+  <select id="querySaleListByParams" resultType="com.xxxx.supermarket.entity.CustomerReturnList">
+    SELECT
+    tcrl.*,
+    u.user_name AS userName,
+    c.NAME AS customerName
+    FROM
+    t_customer_return_list tcrl
+    LEFT JOIN t_user u ON tcrl.user_id = u.id
+    LEFT JOIN t_customer c ON tcrl.customer_id = c.id
+    <where>
+      <if test="null !=customerReturnNumber and customerReturnNumber !='' ">
+        tcrl.customer_return_number like concat('%',#{customerReturnNumber},'%')
+      </if>
+      <if test="null !=customerId">
+        and tcrl.customer_id=#{customerId}
+      </if>
+      <if test="null !=state">
+        and tcrl.state = #{state}
+      </if>
+      <if test="null != startDate and startDate !='' ">
+        and sale_date &gt;= #{startDate}
+      </if>
+      <if test="null !=endDate and endDate !='' ">
+        and sale_date &lt;= #{endDate}
+      </if>
+    </where>
+  </select>
+
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from t_customer_return_list
     where id = #{id,jdbcType=INTEGER}
   </delete>
+
+  <!--根据id删除记录-->
+  <delete id="deleteById">
+    delete from t_customer_return_list
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+
+
   <insert id="insert" parameterType="com.xxxx.supermarket.entity.CustomerReturnList">
     insert into t_customer_return_list (id, amount_paid, amount_payable, 
       customer_return_date, customer_return_number, 
