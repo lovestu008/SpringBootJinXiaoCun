@@ -1,5 +1,6 @@
 package com.xxxx.supermarket.service;
 
+import com.github.pagehelper.IPage;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.xxxx.supermarket.base.BaseService;
@@ -18,7 +19,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Service
-public class GoodsService extends BaseService<Goods,Integer> {
+public class GoodsService extends BaseService<Goods, Integer> {
 
     @Resource
     private GoodsMapper goodsMapper;
@@ -41,9 +42,40 @@ public class GoodsService extends BaseService<Goods,Integer> {
         map.put("msg","success");
         map.put("count",pageInfo.getTotal());//查到的数据的总数量
         // 设置分页好的列表
-        map.put("data",pageInfo.getList());
+        map.put("data", pageInfo.getList());
         return map;
     }
+
+    /**
+     * 通过code查商品
+     *
+     * @param code
+     * @return
+     */
+    public Goods queryGoodsByCode(Integer code) {
+        return goodsMapper.queryGoodsByCode(code);
+    }
+
+    /**
+     * 通过id查商品
+     *
+     * @param id
+     * @return
+     */
+    public Goods getGoodsById(Integer id) {
+
+        return goodsMapper.getGoodsById(id);
+    }
+
+    /**
+     * 根据goods更改数据
+     * @param goods
+     * @return
+     */@Transactional(propagation = Propagation.REQUIRED)
+    public Integer updateByGoods(Goods goods) {
+        return goodsMapper.updateByPrimaryKeySelective(goods);
+    }
+
     /**
      * 添加商品
      *  参数校验
@@ -66,6 +98,7 @@ public class GoodsService extends BaseService<Goods,Integer> {
         //执行添加操作，判断受影响的行数
         AssertUtil.isTrue(goodsMapper.insertSelective(goodsModel) !=1,"商品添加失败！");
     }
+
     /**
      * 更新商品数据
      *   参数校验
@@ -106,9 +139,6 @@ public class GoodsService extends BaseService<Goods,Integer> {
         AssertUtil.isTrue(null == id,"待删除记录不存在！");
         AssertUtil.isTrue(goodsMapper.deleteGoods(id) != 1,"商品删除失败！");
     }
-
-
-
     /**
      * 参数判断方法
      *
@@ -117,7 +147,7 @@ public class GoodsService extends BaseService<Goods,Integer> {
      * @param sellingPrice
      * @param minNum
      */
-    private void CheckGoodsParams(String name, Double purchasingPrice, Double sellingPrice, Integer minNum) {
+    private void CheckGoodsParams(String name, Float purchasingPrice, Float sellingPrice, Integer minNum) {
         //商品名  非空,唯一
         AssertUtil.isTrue(StringUtils.isBlank(name),"商品名不能为空！");
         Goods temp = goodsMapper.selectByGoodsName(name);
@@ -129,5 +159,4 @@ public class GoodsService extends BaseService<Goods,Integer> {
         //库存下限   非空，大于0
         AssertUtil.isTrue(null == minNum || minNum < 0 ,"库存下限错误！请重试！");
     }
-
 }

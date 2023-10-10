@@ -2,6 +2,7 @@ package com.xxxx.supermarket.service;
 
 import com.xxxx.supermarket.base.BaseService;
 import com.xxxx.supermarket.dao.GoodsTypeMapper;
+import com.xxxx.supermarket.dto.TreeDto;
 import com.xxxx.supermarket.entity.GoodsType;
 import com.xxxx.supermarket.model.TreeGoodsModel;
 import com.xxxx.supermarket.utils.AssertUtil;
@@ -24,9 +25,22 @@ public class GoodsTypeService extends BaseService<GoodsType,Integer> {
      * @param
      * @return
      */
-    public List<TreeGoodsModel> queryAllGoodsTypes() {
-        return  goodsTypeMapper.queryAllGoodsTypes();
+
+    public List<TreeDto> queryAllGoodsTypes(Integer typeId) {
+        List<TreeDto> treeDtos =goodsTypeMapper.queryAllGoodsTypes();
+        if (null != typeId){
+            for (TreeDto t:treeDtos
+            ) {
+                if (t.getId().equals(typeId)){
+                    //设置节点选中
+                    t.setChecked(true);
+                    break;
+                }
+            }
+        }
+        return treeDtos;
     }
+
 
     /**
      * 加载商品类别管理页面的表格数据
