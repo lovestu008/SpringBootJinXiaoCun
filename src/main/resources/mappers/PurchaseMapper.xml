@@ -145,7 +145,7 @@
     <include refid="Base_Column_List" />
     from
     t_purchase
-    <where>
+    <!--<where>
     1=1
       <if test="provider != null and provider != ''">
         and provider like concat('%',#{provider},'%')
@@ -154,7 +154,7 @@
       <if test="goodsName != null and goodsName != ''">
         and goods_name = #{goodsName}
       </if>
-    </where>
+    </where>-->
   </select>
   <select id="selectAllProvider" resultType="java.util.Map">
     select

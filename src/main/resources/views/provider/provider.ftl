@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>客户计划管理</title>
+    <title>供货商计划管理</title>
     <#include "../common.ftl">
 </head>
 <body class="childrenBody">
@@ -15,22 +15,22 @@
                 <div class="layui-input-inline">
                     <input type="text" name="address"
                            class="layui-input
-                           searchVal" placeholder="超市地址"/>
+                           searchVal" placeholder="供货公司地址"/>
                 </div>
                 <div class="layui-input-inline">
                     <input type="text" name="contact"
                            class="layui-input
-                           searchVal" placeholder="超市联络⼈"/>
+                           searchVal" placeholder="公司联络⼈"/>
                 </div>
                 <div class="layui-input-inline">
                     <input type="text" name="name"
                            class="layui-input
-                           searchVal" placeholder="超市名称"/>
+                           searchVal" placeholder="公司名称"/>
                 </div>
                 <div class="layui-input-inline">
                     <input type="text" name="number"
                            class="layui-input
-                           searchVal"  placeholder="超市电话号码"/>
+                           searchVal"  placeholder="公司电话号码"/>
                 </div>
                 <a class="layui-btn search_btn" data-type="reload">
                     <i class="layui-icon">&#xe615;</i> 搜索
@@ -38,7 +38,7 @@
             </div>
         </form>
     </blockquote>
-    <table id="customer" class="layui-table" lay-filter="customer"></table>
+    <table id="provider" class="layui-table" lay-filter="provider"></table>
 </form>
 
 <#--头部工具栏-->
@@ -57,11 +57,52 @@
     </div>
 </script>
 <!--操作-->
-<script id="customerListBar" type="text/html">
+<script id="providerListBar" type="text/html">
     <a class="layui-btn layui-btn-xs" id="edit" lay-event="edit">编辑</a>
     <a class="layui-btn layui-btn-xs layui-btn-danger" lay-event="del">删除</a>
 </script>
-    <script type="text/javascript" src="${ctx}/js/customer/customer.js"></script>
+<script type="text/javascript" src="${ctx}/js/provider/provider.js"></script>
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

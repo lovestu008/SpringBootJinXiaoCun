@@ -31,6 +31,7 @@
       #{name,jdbcType=VARCHAR}, #{number,jdbcType=VARCHAR}, #{remarks,jdbcType=VARCHAR}, 
       #{isDel,jdbcType=INTEGER})
   </insert>
+  <!--添加超市客户-->
   <insert id="insertSelective" parameterType="com.xxxx.supermarket.entity.Customer">
     insert into t_customer
     <trim prefix="(" suffix=")" suffixOverrides=",">
@@ -80,6 +81,7 @@
       </if>
     </trim>
   </insert>
+
   <update id="updateByPrimaryKeySelective" parameterType="com.xxxx.supermarket.entity.Customer">
     update t_customer
     <set>
@@ -114,25 +116,42 @@
       is_del = #{isDel,jdbcType=INTEGER}
     where id = #{id,jdbcType=INTEGER}
   </update>
+<!--删除超市客户-->
+  <update id="deleteBatch" >
+    update
+        t_customer
+    set
+        is_del=0
+    where
+        id
+    in
+        <foreach collection="array" separator="," open="("  close=")" item="id">
+          #{id}
+        </foreach>
+  </update>
 
+  <!--多条件查询-->
   <select id="selectByParams" parameterType="com.xxxx.supermarket.query.QueryCustomer" resultType="com.xxxx.supermarket.entity.Customer">
     select
     <include refid="Base_Column_List"></include>
     from
     t_customer
     <where>
-      <if test="null!=name and name!=''">
-        and name like concat ('%','#{name}','%')
+      is_del=1
+      <if test="name!=null and name!=''">
+        and name like concat('%',#{name},'%')
       </if>
-      <if test="null!=contact">
+      <if test="contact!=null and contact!=''">
         and contact = #{contact}
       </if>
-      <if test="null!=address">
+      <if test="address!=null and address!=''">
         and address = #{address}
       </if>
-      <if test="null!=number">
+      <if test="number!=null and number!=''">
         and number = #{number}
       </if>
+
     </where>
+
   </select>
 </mapper>

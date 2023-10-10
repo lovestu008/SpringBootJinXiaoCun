@@ -36,38 +36,14 @@ layui.use(['table','layer'],function(){
             ,{field: 'name', title: '超市名', align:'center'}
             ,{field: 'number', title: '电话号码', align:'center'}
             ,{field: 'remarks', title: '备注', align:'center'}
-            ,{field: 'isDel', title: '是否删除', align:'center'}
-            ,{title:'操作',templet:'#customer', fixed: 'right', align:'center', minWidth:150}
+            ,{field: 'isDel', title: '是否有效', align:'center'}
+            ,{title:'操作',templet:'#customerListBar'/*绑定的是script的行工具栏*/, fixed: 'right', align:'center', minWidth:150}
         ]]
     });
-    /**
-     * 格式化开发状态
-     * @param value
-     * @returns {string}
-     */
-    function formatterDevResult(value){
-        /**
-         * 0-未开发
-         * 1-开发中
-         * 2-开发成功
-         * 3-开发失败
-         */
-        if(value==0){
-            return "<div style='color: yellow'>未开发</div>";
-        }else if(value==1){
-            return "<div style='color: #00FF00;'>开发中</div>";
-        }else if(value==2){
-            return "<div style='color: #00B83F'>开发成功</div>";
-        }else if(value==3){
-            return "<div style='color: red'>开发失败</div>";
-        }else {
-            return "<div style='color: #af0000'>未知</div>"
-        }
-    }
 
 
     /**
-    绑定搜索事件
+    绑定搜索事件,表格重载，重载走的还是加载的地址
      */
     $(".search_btn").click(function () {
 
@@ -79,9 +55,10 @@ layui.use(['table','layer'],function(){
             // 设置需要传递给后端的参数
             where: { //设定异步数据接口的额外参数，任意设
                 // 通过文本框/下拉框的值，设置传递的参数
-                customerName: $("[name='customerName']").val() // 客户名称
-                ,createMan: $("[name='createMan']").val() // 创建人
-                ,devResult:$("#devResult").val() // 开发状态
+                address: $("[name='address']").val() // 地址
+                ,contact: $("[name='contact']").val() // 联络人
+                ,name:$("[name='name']").val() //超市名称
+                ,number:$("[name='number']").val() // 电话号码
             }
             ,page: {
                 curr: 1 // 重新从第 1 页开始
@@ -90,28 +67,46 @@ layui.use(['table','layer'],function(){
 
     });
 
+
     /**
-     * 行监听事件
+     * 监听头部工具栏事件
+     *  格式：
+     *      table.on('toolbar(数据表格的lay-filter属性值)', function (data) {
+     *
+            })
      */
-    table.on('tool(saleChances)', function (data) {
-        // 判断类型
-        if (data.event == "dev") { // 开发
+    table.on('toolbar(customer)', function (data) {
+        // data.event：对应的元素上设置的lay-event属性值
+         console.log(data);
+        // 判断对应的事件类型
+        if (data.event == "add") {
+            // 添加操作
+            openCustomerDialog();
 
-            // 打开计划项开发与详情页面
-            openCusDevPlanDialog('计划项数据开发',data.data.id);
-
-        } else if (data.event == "info") { // 详情
-
-            // 打开计划项开发与详情页面
-            openCusDevPlanDialog('计划项数据维护',data.data.id);
-
+        } else if (data.event == "del") {
+            // 删除操作
+            deleteCustomer(data);
         }
     });
 
     /**
-     * 打开开发计划对话框
+     * 打开添加/修改超市客户数据的窗口
+     *      如果营销机会ID为空，则为添加操作
+     *      如果营销机会ID不为空，则为修改操作
      */
-    function openCusDevPlanDialog(title, id) {
+    function openCustomerDialog(customerId) {
+        // 弹出层的标题
+        var title = "<h3>客户管理 - 添加超市客户</h3>";
+        var url = ctx + "/customer/toCustomerPage";
+
+        // 判断超市客户ID是否为空
+        if (customerId != null && customerId != '') {
+            // 更新操作
+            title  = "<h3>客户管理 - 添加超市客户</h3>";
+            // 请求地址传递营销机会的ID
+            url += '?customerId=' + customerId;
+        }
+
         // iframe层
         layui.layer.open({
             // 类型
@@ -119,12 +114,115 @@ layui.use(['table','layer'],function(){
             // 标题
             title: title,
             // 宽高
-            area: ['750px', '550px'],
+            area: ['500px', '620px'],
             // url地址
-            content: ctx + "/cus_dev_plan/toCusDevPlanDataPage?sid="+id,
+            content: url,
             // 可以最大化与最小化
             maxmin:true
         });
     }
+
+    /**
+     *删除超市客户
+     * @param data
+     */
+    function deleteCustomer(data) {
+        // 获取数据表格选中的行数据   table.checkStatus('数据表格的ID属性值');
+        var checkStatus = table.checkStatus("customerTable");/*saleChanceTable是表格加载大id*/
+        console.log(checkStatus);
+
+        // 获取所有被选中的记录对应的数据
+        var customerData = checkStatus.data;
+
+        // 判断用户是否选择的记录 (选中行的数量大于0)
+        if (customerData.length < 1) {
+            layer.msg("请选择要删除的记录！",{icon:5});
+            return;
+        }
+
+        // 询问用户是否确认删除
+        layer.confirm('您确定要删除选中的记录吗？',{icon:3, title:'超市客户管理'}, function (index) {
+            // 关闭确认框
+            layer.close(index);
+            // 传递的参数是数组   ids=1&ids=2&ids=3
+            var ids = "ids=";
+            // 循环选中的行记录的数据
+            for(var i = 0; i < customerData.length; i++) {
+                if(i < customerData.length -1) {
+                    ids = ids + customerData[i].id + "&ids="
+                } else {
+                    ids = ids + customerData[i].id;
+                }
+            }
+            //console.log(ids);
+
+            // 发送ajax请求，执行删除营销机会
+            $.ajax({
+                type:"post",
+                url:ctx + "/customer/delete",
+                data:ids,
+                 // 传递的参数是数组 ids=1&ids=2&ids=3
+                success:function (result) {
+                    // 判断删除结果
+                    if (result.code == 200) {
+                        // 提示成功
+                        layer.msg("删除成功！",{icon:6});
+                        // 刷新表格
+                        tableIns.reload();
+                    } else {
+                        // 提示失败
+                        layer.msg(result.msg, {icon:5});
+                    }
+                }
+            });
+        });
+    }
+
+
+    /**
+     * 行工具栏监听事件
+     table.on('tool(数据表格的lay-filter属性值)', function (data) {
+
+         });
+     */
+    table.on('tool(customer)', function (data) {
+        // console.log(data);
+        // 判断类型
+        if (data.event == "edit") { // 编辑操作
+
+            // 得到超市客户的ID
+            var providerId = data.data.id;
+            // 打开修改超市客户数据的窗口
+            openCustomerDialog(providerId)
+
+        } else if (data.event == "del") { // 删除操作
+            // 弹出确认框，询问用户是否确认删除
+            layer.confirm('确定要删除该记录吗？',{icon:3, title:"超市客户管理"}, function (index) {
+                // 关闭确认框
+                layer.close(index);
+
+                // 发送ajax请求，删除记录
+                $.ajax({
+                    type:"post",
+                    url:ctx + "/customer/delete",
+                    data:{
+                        ids:data.data.id
+                    },
+                    success:function (result) {
+                        // 判断删除结果
+                        if (result.code == 200) {
+                            // 提示成功
+                            layer.msg("删除成功！",{icon:6});
+                            // 刷新表格
+                            tableIns.reload();
+                        } else {
+                            // 提示失败
+                            layer.msg(result.msg, {icon:5});
+                        }
+                    }
+                });
+            });
+        }
+    });
 
 });
