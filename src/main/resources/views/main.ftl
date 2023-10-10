@@ -47,11 +47,11 @@
             <#if permissions??>
                 <ul class="layui-nav layui-nav-tree layui-left-nav-tree layui-this" id="currency">
                     <#-- 通过freemarker中的seq_contains内建指令判断菜单是否显示 -->
-
+                    <#if permissions?seq_contains("10") >
                     <li class="layui-nav-item">
                             <a href="javascript:;" class="layui-menu-tips"><i class="fa fa-street-view"></i><span class="layui-left-nav"> 基础管理</span> <span class="layui-nav-more"></span></a>
                             <dl class="layui-nav-child">
-                                <#if permissions?seq_contains("10")  >
+                                <#if permissions?seq_contains("1010") >
                                     <dd>
                                         <a href="javascript:;" class="layui-menu-tips" data-type="tabAdd" data-tab-mpi="m-p-i-1" data-tab="sale_chance/index" target="_self"><i class="fa fa-tty"></i><span class="layui-left-nav"> 客户管理</span></a>
                                     </dd>
@@ -59,7 +59,7 @@
                                         <a href="javascript:;" class="layui-menu-tips" data-type="tabAdd" data-tab-mpi="m-p-i-2" data-tab="cus_dev_plan/index" target="_self"><i class="fa fa-ellipsis-h"></i><span class="layui-left-nav"> 供应商管理</span></a>
                                     </dd>
                                 </#if>
-                                <#if permissions?seq_contains("20") >
+                                <#if permissions?seq_contains("1020") >
                                     <dd>
                                         <a href="javascript:;" class="layui-menu-tips" data-type="tabAdd" data-tab-mpi="m-p-i-1" data-tab="sale_chance/index" target="_self"><i class="fa fa-tty"></i><span class="layui-left-nav"> 商品管理</span></a>
                                     </dd>
@@ -67,10 +67,10 @@
                                         <a href="javascript:;" class="layui-menu-tips" data-type="tabAdd" data-tab-mpi="m-p-i-2" data-tab="cus_dev_plan/index" target="_self"><i class="fa fa-ellipsis-h"></i><span class="layui-left-nav"> 商品类别管理</span></a>
                                     </dd>
                                 </#if>
-
                             </dl>
                         </li>
-                    <#if permissions?seq_contains("30") >
+                    </#if>
+                    <#if permissions?seq_contains("20") >
                         <li class="layui-nav-item">
                             <a href="javascript:;" class="layui-menu-tips"><i class="fa fa-exchange"></i><span class="layui-left-nav"> 进退货管理</span> <span class="layui-nav-more"></span></a><dl class="layui-nav-child">
                                 <dd>
@@ -82,7 +82,7 @@
                             </dl>
                         </li>
                     </#if>
-                    <#if permissions?seq_contains("40") >
+                    <#if permissions?seq_contains("30") >
                         <li class="layui-nav-item">
                             <a href="javascript:;" class="layui-menu-tips"><i class="fa fa-desktop"></i><span class="layui-left-nav"> 销售管理</span> <span class="layui-nav-more"></span></a>
                             <dl class="layui-nav-child">
