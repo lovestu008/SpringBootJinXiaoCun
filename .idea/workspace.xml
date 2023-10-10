@@ -4,20 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47f004b4-5068-48b2-9225-7a541737bcc5" name="Changes" comment="添加日志注解标注">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/public/images/background.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/public/images/logo.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/public/images/logo0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/public/images/logo1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/public/images/main.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/css/layuimini.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/css/layuimini.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/views/index.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/index.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/views/main.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/main.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/views/welcome.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/welcome.ftl" afterDir="false" />
-    </list>
+    <list default="true" id="47f004b4-5068-48b2-9225-7a541737bcc5" name="Changes" comment="添加日志注解标注" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -64,27 +51,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/maven_code/SpringBootJinXiaoCun",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "MavenSettings",
-    "spring.configuration.checksum": "46d7115f401497dd00b87ad0447a2608",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/maven_code/SpringBootJinXiaoCun&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;46d7115f401497dd00b87ad0447a2608&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\maven_code\SpringBootJinXiaoCun\src\main\resources\public\images" />
