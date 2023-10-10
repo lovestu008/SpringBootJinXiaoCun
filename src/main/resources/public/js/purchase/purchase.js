@@ -68,7 +68,7 @@ layui.use(['table','layer'],function(){
         type:"get",
         url: ctx+"/purchase/selectAllProvider",
         success:function (data){
-            //console.log(data)
+            console.log(data);
             if (data!=null){
                 var providerId=$("#providerId").val();
                 for (var i=0;i<data.length;i++){
@@ -115,14 +115,13 @@ layui.use(['table','layer'],function(){
         // 判断lay-event属性
         if (data.event == "input") { // 添加操作
             // 打开添加/更新进货信息                                    的对话框
-            openAddOrUpdatePurchaseDialog();
+            openAddPurchaseDialog();
 
         }
     });
-    function openAddOrUpdatePurchaseDialog() {
+    function openAddPurchaseDialog() {
         var title = "<h3>进货明细 - 进货信息添加</h3>"
-        var url = ctx + "/purchase/toAddOrUpdatePurchasePage";
-        //TODO //思考一下传的是什么ID。23.14
+        var url = ctx + "/purchase/toAddPurchasePage";
         layui.layer.open({
             title:title,
             content:url,
@@ -139,12 +138,23 @@ layui.use(['table','layer'],function(){
         // 判断lay-event属性
         if (data.event == "edit") { // 修改角色
             // 打开添加/更新角色的对话框
-            openAddOrUpdatePurchaseDialog(data.data.id);
+            openUpdatePurchaseDialog(data.data.id);
         } else if (data.event == "return") {
             // 删除角色
             deletePurchase(data.data.id);
         }
     });
+    function openUpdatePurchaseDialog(id) {
+        var title = "<h3>进货明细 - 进货信息更改</h3>"
+        var url = ctx + "/purchase/toUpdatePurchasePage?id="+id;
+        layui.layer.open({
+            title:title,
+            content:url,
+            area:["500px","550px"],
+            type:2,
+            maxmin:true
+        });
+    }
     function deletePurchase(id) {
         // 弹出确认框，询问用户是否确认删除
         layer.confirm('确定要删除该记录吗？',{icon:3, title:"进货明细"}, function (index) {
@@ -173,7 +183,5 @@ layui.use(['table','layer'],function(){
             });
         });
     }
-
-
 
 });

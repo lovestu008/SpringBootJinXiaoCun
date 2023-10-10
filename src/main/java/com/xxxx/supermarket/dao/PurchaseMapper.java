@@ -12,4 +12,7 @@ public interface PurchaseMapper extends BaseMapper<Purchase,Integer> {
     List<Map<String,Object>> selectAllProvider();
     List<Map<String, Object>> selectAllGoodsName();
 
+    String selectProviderByGoodsNameFromGoods(String goodsName);
+
+    List<Map<String, Object>> selectAllGoodsNameById();
 }

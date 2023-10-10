@@ -2,14 +2,12 @@ layui.use(['form', 'layer'], function () {
     var form = layui.form,
         layer = parent.layer === undefined ? layui.layer : top.layer,
         $ = layui.jquery;
-
-
-
     /**
      * 监听submit事件
      * 实现营销机会的添加与更新
      */
-    form.on("submit(addOrUpdatePurchase)", function (data) {
+    form.on("submit(addPurchase)", function (data) {
+        console.log(data);
         // 提交数据时的加载层 （https://layer.layui.com/）
         var index = layer.msg("数据提交中,请稍后...",{
             icon:16, // 图标
@@ -18,10 +16,7 @@ layui.use(['form', 'layer'], function () {
         });
         // 请求的地址
         var url = ctx + "/purchase/add";
-        var purchaseId = $("[name='id']").val();
-        if (purchaseId !=null && purchaseId !='' ){
-            url =ctx +"/purchase/update"
-        }
+        data.field.goodsName=$("[name='goodsName']").find("option:selected").text()
         // 发送ajax请求
         $.post(url, data.field, function (result) {
             // 操作成功
@@ -43,7 +38,8 @@ layui.use(['form', 'layer'], function () {
     $("#closeBtn").click(function (){
         var index =parent.layer.getFrameIndex(window.name);
         parent.layer.close(index);
-    })
+    });
+
     $.ajax({
         type:"get",
         url: ctx+"/purchase/selectAllGoodsNameById",
@@ -67,4 +63,5 @@ layui.use(['form', 'layer'], function () {
             layui.form.render("select");
         }
     })
+
 });

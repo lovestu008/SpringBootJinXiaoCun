@@ -39,11 +39,11 @@
     <br/>
     <div class="layui-form-item layui-row layui-col-xs12">
         <div class="layui-input-block">
-            <button class="layui-btn layui-btn-lg" lay-submit=""  lay-filter="addOrUpdatePurchase">确认</button>
+            <button class="layui-btn layui-btn-lg" lay-submit=""  lay-filter="updatePurchase">确认</button>
             <button class="layui-btn layui-btn-lg layui-btn-normal" id="closeBtn">取消</button><#--记得一定要写id属性值-->
         </div>
     </div>
 </form>
-<script type="text/javascript" src="${ctx}/js/purchase/add.update.js"></script>
+<script type="text/javascript" src="${ctx}/js/purchase/update.js"></script>
 </body>
 </html>

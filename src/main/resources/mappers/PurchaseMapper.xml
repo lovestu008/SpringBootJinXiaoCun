@@ -180,7 +180,6 @@
       distinct p1.id as providerId,p1.name as provider
     from
       t_purchase p2
-
         LEFT JOIN
       t_provider p1
       on
@@ -199,6 +198,23 @@
     where p.is_valid=1
   </select>
 
+  <select id="selectProviderByGoodsNameFromGoods" parameterType="string" resultType="string">
+    select
+        producer
+    from
+        t_goods
+    where
+        name=#{goodsName}
+  </select>
 
+  <!--查询所有的商品id和名字-->
+  <select id="selectAllGoodsNameById" resultType="java.util.Map">
+    select
+        id as goodsId,name as goodsName
+    from
+        t_goods
+    where
+        is_del=0
+  </select>
 
 </mapper>

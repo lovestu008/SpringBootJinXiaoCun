@@ -11,12 +11,13 @@
         <form class="layui-form">
             <input type="hidden" id="providerId" value="${(purchase.providerId)!}">
             <input type="hidden" id="goodsId" value="${(purchase.goodsId)!}">
+            <input type="hidden" id="id" value="${(purchase.id)!}">
             <div class="layui-inline">
                 <div class="layui-input-inline layui-col-md4">
                     <label class="layui-form-label">供应商</label>
                     <div class="layui-input-block">
                         <select name="provider" id="provider">
-                            <option value="">请选择供应商</option>
+                            <option value="请选择供应商"></option>
                         </select>
                     </div>
                 </div>
@@ -24,7 +25,7 @@
                     <label class="layui-form-label">商品</label>
                     <div class="layui-input-block">
                         <select name="goodsName" id="goodsName">
-                            <option value="">请选择商品</option>
+                            <option value="请选择商品"></option>
                         </select>
                     </div>
                 </div>
@@ -54,7 +55,7 @@
     </script>
     <!--操作-->
     <script id="purchaseListBar" type="text/html">
-        <a class="layui-btn layui-btn-xs layui-bg-red" id="return" lay-event="edit"><i
+        <a class="layui-btn layui-btn-xs layui-bg-red" id="edit" lay-event="edit"><i
                     class="layui-icon">&#xe642;</i> 修改</a>
         <a class="layui-btn layui-btn-xs layui-bg-red" id="return" lay-event="return"><i
                     class="layui-icon">&#xe67e;</i> 退货</a>
