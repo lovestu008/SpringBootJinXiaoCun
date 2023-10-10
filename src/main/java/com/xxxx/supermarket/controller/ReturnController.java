@@ -26,7 +26,6 @@ public class ReturnController extends BaseController {
     @RequestMapping("list")
     @ResponseBody
     public Map<String,Object> selectByParams(ReturnQuery returnQuery){
-        System.out.println(returnQuery);
         if (returnQuery.getProvider()!=null){
             if (returnQuery.getProvider().equals("请选择供应商")) returnQuery.setProvider(null);
             if (returnQuery.getGoodsName().equals("请选择商品")) returnQuery.setGoodsName(null);

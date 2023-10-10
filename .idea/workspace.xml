@@ -4,7 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47f004b4-5068-48b2-9225-7a541737bcc5" name="Changes" comment="完善邮箱登录" />
+    <list default="true" id="47f004b4-5068-48b2-9225-7a541737bcc5" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/service/PurchaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/service/PurchaseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/PurchaseMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/PurchaseMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/ReturnMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/ReturnMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/purchase/add.update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/purchase/purchase.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/js/purchase/purchase.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/views/purchase/add.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/purchase/add.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/views/purchase/add_update.ftl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/views/purchase/purchase.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/purchase/purchase.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/views/purchase/update.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/purchase/update.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/views/return/return.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/return/return.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/service/PurchaseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/service/PurchaseService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mappers/PurchaseMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mappers/PurchaseMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mappers/ReturnMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mappers/ReturnMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/public/js/purchase/add.update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/public/js/purchase/purchase.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/public/js/purchase/purchase.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/views/purchase/add.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/views/purchase/add.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/views/purchase/add_update.ftl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/views/purchase/purchase.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/views/purchase/purchase.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/views/purchase/update.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/views/purchase/update.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/views/return/return.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/views/return/return.ftl" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,12 +35,13 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JavaScript File" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="origin/gyj" />
+    <option name="BRANCH" value="origin/sun" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -55,19 +78,20 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/study/px/SpringStudy/crm&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/idea/crm&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.tabs&quot;,
     &quot;spring.configuration.checksum&quot;: &quot;46d7115f401497dd00b87ad0447a2608&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.xxxx.supermarket.utils" />
       <recent name="com.xxxx.supermarket" />
     </key>
   </component>
@@ -119,7 +143,9 @@
       <option name="presentableId" value="Default" />
       <updated>1696490904462</updated>
       <workItem from="1696490905901" duration="35387000" />
-      <workItem from="1696752530180" duration="16642000" />
+      <workItem from="1696752530180" duration="12958000" />
+      <workItem from="1696813763871" duration="15687000" />
+      <workItem from="1696897459379" duration="26345000" />
     </task>
     <task id="LOCAL-00001" summary="role module">
       <created>1696554818830</created>
@@ -184,21 +210,56 @@
       <option name="project" value="LOCAL" />
       <updated>1696774176244</updated>
     </task>
-    <task id="LOCAL-00010" summary="非法访问拦截">
-      <created>1696776102180</created>
+    <task id="LOCAL-00010" summary="合并分支">
+      <created>1696776799182</created>
       <option name="number" value="00010" />
       <option name="presentableId" value="LOCAL-00010" />
       <option name="project" value="LOCAL" />
-      <updated>1696776102180</updated>
+      <updated>1696776799182</updated>
     </task>
-    <task id="LOCAL-00011" summary="完善邮箱登录">
-      <created>1696814791348</created>
+    <task id="LOCAL-00011" summary="增加功能简单实现，还未添加修改goods表数据">
+      <created>1696900298745</created>
       <option name="number" value="00011" />
       <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
-      <updated>1696814791348</updated>
+      <updated>1696900298745</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="修改信息功能简单实现，还未添加修改goods表数据">
+      <created>1696905765954</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1696905765954</updated>
+    </task>
+    <task id="LOCAL-00013" summary="退货功能完全实现，进货功能未完善">
+      <created>1696913455722</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1696913455722</updated>
+    </task>
+    <task id="LOCAL-00014" summary="退货功能完全实现，进货功能未完善">
+      <created>1696919518978</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1696919518978</updated>
+    </task>
+    <task id="LOCAL-00015" summary="进货功能完全实现，编辑功能未完善">
+      <created>1696924462288</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1696924462288</updated>
+    </task>
+    <task id="LOCAL-00016" summary="增删改功能已完善，查询bug正在修复...">
+      <created>1696927735347</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1696927735347</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,7 +276,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="main" />
+                        <option value="sun" />
                       </list>
                     </value>
                   </entry>
@@ -236,8 +297,12 @@
     <MESSAGE value="unversioned 问题" />
     <MESSAGE value="menu 下js文件" />
     <MESSAGE value="user操作 用户登录 user的session作用域" />
-    <MESSAGE value="非法访问拦截" />
-    <MESSAGE value="完善邮箱登录" />
-    <option name="LAST_COMMIT_MESSAGE" value="完善邮箱登录" />
+    <MESSAGE value="合并分支" />
+    <MESSAGE value="增加功能简单实现，还未添加修改goods表数据" />
+    <MESSAGE value="修改信息功能简单实现，还未添加修改goods表数据" />
+    <MESSAGE value="退货功能完全实现，进货功能未完善" />
+    <MESSAGE value="进货功能完全实现，编辑功能未完善" />
+    <MESSAGE value="增删改功能已完善，查询bug正在修复..." />
+    <option name="LAST_COMMIT_MESSAGE" value="增删改功能已完善，查询bug正在修复..." />
   </component>
 </project>

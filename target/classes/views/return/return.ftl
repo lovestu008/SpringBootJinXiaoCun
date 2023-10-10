@@ -16,7 +16,7 @@
                     <label class="layui-form-label">供应商</label>
                     <div class="layui-input-block">
                         <select name="provider" id="provider">
-                            <option value="">请选择供应商</option>
+                            <option value="请选择供应商"></option>
                         </select>
                     </div>
                 </div>
@@ -24,7 +24,7 @@
                     <label class="layui-form-label">商品</label>
                     <div class="layui-input-block">
                         <select name="goodsName" id="goodsName">
-                            <option value="">请选择商品</option>
+                            <option value="请选择商品"></option>
                         </select>
                     </div>
                 </div>

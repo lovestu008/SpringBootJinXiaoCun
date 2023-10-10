@@ -180,8 +180,7 @@
       distinct p1.id as providerId,p1.name as provider
     from
       t_purchase p2
-
-        LEFT JOIN
+        JOIN
       t_provider p1
       on
         p1.name=p2.provider
@@ -192,13 +191,74 @@
       distinct g.id as goodsId,g.name as goodsName
     from
       t_purchase p
-        LEFT JOIN
+         JOIN
       t_goods g
       on
         p.goods_name=g.name
     where p.is_valid=1
   </select>
 
+  <select id="selectProviderByGoodsNameFromGoods" parameterType="string" resultType="string">
+    select
+        producer
+    from
+        t_goods
+    where
+        name=#{goodsName}
+  </select>
 
+  <!--查询所有的商品id和名字-->
+  <select id="selectAllGoodsNameById" resultType="java.util.Map">
+    select
+        id as goodsId,name as goodsName
+    from
+        t_goods
+    where
+        is_del=0
+  </select>
+  <!--库存表查找库存-->
+  <select id="selectNumByGoodsName" parameterType="string" resultType="int">
+    select
+      inventory_quantity as goodsNum
+    from
+        t_goods
+    where
+        name=#{goodsName}
+  </select>
+  <!--修改商品数据库-->
+  <update id="updateGoodsNum" >
+    update t_goods
+    set inventory_quantity =#{goodsNum}
+    where
+        name=#{goodsName}
+  </update>
+  <!--查询上次进价-->
+  <select id="selectPurchasingPriceByGoodsName" parameterType="string" resultType="int">
+    select
+        purchasing_price
+    from
+        t_goods
+    where
+        name=#{goodsName}
+  </select>
+  <!--更新库存信息-->
+  <update id="updateGoodsNumAndLastPurchasingPrice">
+    update t_goods
+    set
+        purchasing_price=#{purchasingPrice},
+        last_purchasing_price=#{lastPurchasingPrice},
+        inventory_quantity=#{goodsNum}
+    where
+        name=#{goodsName}
+  </update>
 
+  <!--修改进货单后更新库存信息-->
+  <update id="updateGoodsNumAndPurchasingPrice">
+    update t_goods
+    set
+      purchasing_price=#{purchasingPrice},
+      inventory_quantity=#{goodsNum}
+    where
+      name=#{goodsName}
+  </update>
 </mapper>

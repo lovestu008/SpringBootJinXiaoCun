@@ -163,7 +163,7 @@
     from
       t_return t
 
-        LEFT JOIN
+        JOIN
       t_provider p
       on
         p.name=t.provider
@@ -174,7 +174,7 @@
       distinct g.id as goodsId,g.name as goodsName
     from
       t_return t
-        LEFT JOIN
+         JOIN
       t_goods g
       on
         t.goods_name=g.name
