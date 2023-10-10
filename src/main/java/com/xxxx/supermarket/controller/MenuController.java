@@ -1,7 +1,7 @@
 package com.xxxx.supermarket.controller;
 
 import com.xxxx.supermarket.annotation.RequiredPermission;
-import com.xxxx.supermarket.aspect.SupLog;
+import com.xxxx.supermarket.annotation.SupLog;
 import com.xxxx.supermarket.base.BaseController;
 import com.xxxx.supermarket.base.ResultInfo;
 import com.xxxx.supermarket.entity.Menu;
@@ -9,7 +9,6 @@ import com.xxxx.supermarket.model.TreeModel;
 import com.xxxx.supermarket.service.MenuService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 

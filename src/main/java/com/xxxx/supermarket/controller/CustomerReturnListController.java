@@ -2,18 +2,16 @@ package com.xxxx.supermarket.controller;
 
 import com.alibaba.fastjson.JSON;
 import com.xxxx.supermarket.annotation.RequiredPermission;
+import com.xxxx.supermarket.annotation.SupLog;
 import com.xxxx.supermarket.base.BaseController;
 import com.xxxx.supermarket.base.ResultInfo;
 import com.xxxx.supermarket.entity.CustomerReturnList;
 import com.xxxx.supermarket.entity.CustomerReturnListGoods;
-import com.xxxx.supermarket.entity.SaleList;
-import com.xxxx.supermarket.entity.SaleListGoods;
 import com.xxxx.supermarket.query.CustomerReturnListQuery;
-import com.xxxx.supermarket.query.SaleQuery;
 import com.xxxx.supermarket.service.CustomerReturnListService;
 import com.xxxx.supermarket.utils.AssertUtil;
 import com.xxxx.supermarket.utils.LoginUserUtil;
-import io.swagger.models.auth.In;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -25,6 +23,8 @@ import java.util.Map;
 
 @Controller
 @RequestMapping("customerReturn")
+@Slf4j
+@SupLog(type = "客户管理")
 public class CustomerReturnListController extends BaseController {
 
     @Resource
@@ -62,6 +62,7 @@ public class CustomerReturnListController extends BaseController {
     @RequiredPermission(code = "3020")
     @RequestMapping("save")
     @ResponseBody
+    @SupLog(content = "客户添加退货单")
     public ResultInfo addCustomerReturnSaleList(CustomerReturnList customerReturnList, String goodsJson, HttpServletRequest request){
         Integer userId = LoginUserUtil.releaseUserIdFromCookie(request);
         customerReturnList.setUserId(userId);

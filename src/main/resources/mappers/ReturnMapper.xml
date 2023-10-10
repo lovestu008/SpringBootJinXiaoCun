@@ -140,7 +140,7 @@
     where id = #{id,jdbcType=INTEGER}
   </update>
 
-  <select id="selectByParams" parameterType="com.xxxx.supermarket.querys.ReturnQuery" resultType="com.xxxx.supermarket.entity.Return">
+  <select id="selectByParams" parameterType="com.xxxx.supermarket.query.ReturnQuery" resultType="com.xxxx.supermarket.entity.Return">
     select
     <include refid="Base_Column_List" />
     from

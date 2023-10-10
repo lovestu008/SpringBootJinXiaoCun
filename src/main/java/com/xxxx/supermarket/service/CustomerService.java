@@ -15,6 +15,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @Service
@@ -103,5 +104,9 @@ public class CustomerService extends BaseService<Customer,Integer> {
         AssertUtil.isTrue(null==ids,"待删除记录不存在");
         //判断受影响行数
         AssertUtil.isTrue(customerMapper.deleteBatch(ids)!=ids.length,"超市客户删除失败");
+    }
+
+    public List<Customer> allCustomers() {
+        return customerMapper.allCustomers();
     }
 }

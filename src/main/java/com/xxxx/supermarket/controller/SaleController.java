@@ -2,6 +2,7 @@ package com.xxxx.supermarket.controller;
 
 import com.alibaba.fastjson.JSON;
 import com.xxxx.supermarket.annotation.RequiredPermission;
+import com.xxxx.supermarket.annotation.SupLog;
 import com.xxxx.supermarket.base.BaseController;
 import com.xxxx.supermarket.base.ResultInfo;
 import com.xxxx.supermarket.entity.SaleList;
@@ -11,6 +12,7 @@ import com.xxxx.supermarket.service.GoodsService;
 import com.xxxx.supermarket.service.SaleService;
 import com.xxxx.supermarket.utils.AssertUtil;
 import com.xxxx.supermarket.utils.LoginUserUtil;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,6 +25,8 @@ import java.util.Map;
 
 @RequestMapping("/sale")
 @Controller
+@Slf4j
+@SupLog(type = "销售管理")
 public class SaleController extends BaseController {
 
     @Resource
@@ -87,6 +91,7 @@ public class SaleController extends BaseController {
     @RequiredPermission(code = "30")
     @ResponseBody
     @RequestMapping("save")
+    @SupLog(content = "销售单添加操作")
     public ResultInfo save(SaleList saleList,String goodsJson,HttpServletRequest request) {
         Integer userId = LoginUserUtil.releaseUserIdFromCookie(request);
         saleList.setUserId(userId);
@@ -104,6 +109,7 @@ public class SaleController extends BaseController {
     @RequiredPermission(code = "30")
     @PostMapping ("delete")
     @ResponseBody
+    @SupLog(content = "销售单删除操作")
     public ResultInfo delete(Integer id){
         saleService.deleteById(id);
 

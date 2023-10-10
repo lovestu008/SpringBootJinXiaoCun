@@ -1,4 +1,4 @@
-package com.xxxx.supermarket.aspect;
+package com.xxxx.supermarket.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

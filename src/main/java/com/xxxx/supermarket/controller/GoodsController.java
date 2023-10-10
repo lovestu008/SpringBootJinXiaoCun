@@ -2,13 +2,14 @@ package com.xxxx.supermarket.controller;
 
 
 import com.xxxx.supermarket.annotation.RequiredPermission;
+import com.xxxx.supermarket.annotation.SupLog;
 import com.xxxx.supermarket.base.BaseController;
 import com.xxxx.supermarket.base.ResultInfo;
 import com.xxxx.supermarket.entity.Goods;
 import com.xxxx.supermarket.model.GoodsModel;
 import com.xxxx.supermarket.query.GoodsQuery;
 import com.xxxx.supermarket.service.GoodsService;
-import com.xxxx.supermarket.service.GoodsTypeService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,6 +21,8 @@ import java.util.Map;
 
 @Controller
 @RequestMapping("goods")
+@Slf4j
+@SupLog(type = "商品管理")
 public class GoodsController extends BaseController {
 
     @Resource
@@ -57,6 +60,7 @@ public class GoodsController extends BaseController {
     @RequiredPermission(code = "102010")
     @PostMapping("add")
     @ResponseBody
+    @SupLog(content = "商品数据添加操作")
     public ResultInfo addGoods(GoodsModel goodsModel){
         goodsService.addGoods(goodsModel);
         return success("商品添加成功！");
@@ -70,6 +74,7 @@ public class GoodsController extends BaseController {
     @RequiredPermission(code = "102010")
     @PostMapping("update")
     @ResponseBody
+    @SupLog(content = "商品数据修改操作")
     public ResultInfo updateGoods(GoodsModel goodsModel){
         //调用service层方法
         goodsService.updateGoods(goodsModel);
@@ -84,6 +89,7 @@ public class GoodsController extends BaseController {
     @RequiredPermission(code = "102010")
     @PostMapping("delete")
     @ResponseBody
+    @SupLog(content = "商品数据删除操作")
     public ResultInfo deleteGoods(Integer id){
         //调用service层方法
         goodsService.deleteGoods(id);

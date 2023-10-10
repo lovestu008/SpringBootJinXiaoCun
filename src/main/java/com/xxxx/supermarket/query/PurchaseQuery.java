@@ -1,4 +1,4 @@
-package com.xxxx.supermarket.querys;
+package com.xxxx.supermarket.query;
 
 import com.xxxx.supermarket.base.BaseQuery;
 

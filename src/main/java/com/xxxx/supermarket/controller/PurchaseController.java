@@ -1,18 +1,17 @@
 package com.xxxx.supermarket.controller;
 
 import com.xxxx.supermarket.annotation.RequiredPermission;
-import com.xxxx.supermarket.aspect.SupLog;
+import com.xxxx.supermarket.annotation.SupLog;
 import com.xxxx.supermarket.base.BaseController;
 import com.xxxx.supermarket.base.ResultInfo;
 import com.xxxx.supermarket.entity.Purchase;
 import com.xxxx.supermarket.model.InpRetGoodsList;
-import com.xxxx.supermarket.querys.PurchaseQuery;
+import com.xxxx.supermarket.query.PurchaseQuery;
 import com.xxxx.supermarket.service.PurchaseService;
 import com.xxxx.supermarket.utils.AssertUtil;
 import com.xxxx.supermarket.utils.CookieUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;

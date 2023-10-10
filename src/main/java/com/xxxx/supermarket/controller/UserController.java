@@ -1,7 +1,7 @@
 package com.xxxx.supermarket.controller;
 
 import com.xxxx.supermarket.annotation.RequiredPermission;
-import com.xxxx.supermarket.aspect.SupLog;
+import com.xxxx.supermarket.annotation.SupLog;
 import com.xxxx.supermarket.base.BaseController;
 import com.xxxx.supermarket.base.ResultInfo;
 import com.xxxx.supermarket.entity.User;
@@ -9,8 +9,6 @@ import com.xxxx.supermarket.model.UserModel;
 import com.xxxx.supermarket.query.UserQuery;
 import com.xxxx.supermarket.service.UserService;
 import com.xxxx.supermarket.utils.LoginUserUtil;
-import com.xxxx.supermarket.utils.PhoneUtil;
-import com.xxxx.supermarket.utils.UserIDBase64;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

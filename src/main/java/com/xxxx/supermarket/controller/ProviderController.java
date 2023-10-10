@@ -1,11 +1,13 @@
 package com.xxxx.supermarket.controller;
 
 import com.xxxx.supermarket.annotation.RequiredPermission;
+import com.xxxx.supermarket.annotation.SupLog;
 import com.xxxx.supermarket.base.BaseController;
 import com.xxxx.supermarket.base.ResultInfo;
 import com.xxxx.supermarket.entity.Provider;
 import com.xxxx.supermarket.query.QueryProvider;
 import com.xxxx.supermarket.service.ProviderService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,6 +19,8 @@ import java.util.Map;
 
 @Controller
 @RequestMapping("provider")
+@Slf4j
+@SupLog(type = "供应商管理")
 public class ProviderController extends BaseController {
 
     @Resource
@@ -54,6 +58,7 @@ public class ProviderController extends BaseController {
     @RequiredPermission(code = "101020")
     @RequestMapping("add")
     @ResponseBody
+    @SupLog(content = "添加供应商数据")
     public ResultInfo addProvider(Provider provider){
 
         // 调用service层的方法
@@ -70,6 +75,7 @@ public class ProviderController extends BaseController {
     @RequiredPermission(code = "101020")
     @PostMapping("/update")
     @ResponseBody
+    @SupLog(content = "更新供应商数据")
     public ResultInfo updateProvider(Provider provider) {
         // 调用Service层的添加方法
         providerService.updateProvider(provider);
@@ -104,6 +110,7 @@ public class ProviderController extends BaseController {
     @RequiredPermission(code = "101020")
     @PostMapping("/delete")
     @ResponseBody
+    @SupLog(content = "删除供应商数据")
     public ResultInfo deleteBeach(Integer[] ids){
         providerService.deleteBeach(ids);
         return success("供应商数据删除成功");//这里需要返回的是一个成功与否的结果，而不是删除了几行

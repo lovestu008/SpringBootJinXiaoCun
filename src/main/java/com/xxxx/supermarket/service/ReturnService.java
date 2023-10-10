@@ -3,9 +3,7 @@ package com.xxxx.supermarket.service;
 import com.xxxx.supermarket.base.BaseService;
 import com.xxxx.supermarket.dao.ReturnMapper;
 import com.xxxx.supermarket.entity.Return;
-import com.xxxx.supermarket.querys.ReturnQuery;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.annotation.Resource;
 import java.util.List;

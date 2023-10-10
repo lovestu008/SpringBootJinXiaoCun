@@ -1,4 +1,4 @@
-package com.xxxx.supermarket.dto;
+package com.xxxx.supermarket.model;
 
 
 /**

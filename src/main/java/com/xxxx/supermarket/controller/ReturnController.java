@@ -1,14 +1,9 @@
 package com.xxxx.supermarket.controller;
 
 import com.xxxx.supermarket.annotation.RequiredPermission;
-import com.xxxx.supermarket.aspect.SupLog;
 import com.xxxx.supermarket.base.BaseController;
-import com.xxxx.supermarket.dao.ReturnMapper;
-import com.xxxx.supermarket.entity.Return;
-import com.xxxx.supermarket.querys.PurchaseQuery;
-import com.xxxx.supermarket.querys.ReturnQuery;
+import com.xxxx.supermarket.query.ReturnQuery;
 import com.xxxx.supermarket.service.ReturnService;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
