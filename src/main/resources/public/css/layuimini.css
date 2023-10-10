@@ -3,7 +3,7 @@
  */
 /**头部-配色*/
 .layui-layout-admin .layui-header{background-color:chocolate!important;}
-.layui-header>ul>.layui-nav-item.layui-this,.layuimini-tool i:hover{background-color:coral!important;}
+.layui-header>ul>.layui-nav-item.layui-this,.layuimini-tool i:hover{background-color:chocolate!important;}
 /**logo-配色*/
 .layui-layout-admin .layui-logo {background-color:saddlebrown!important;}
 /**左侧-配色*/
