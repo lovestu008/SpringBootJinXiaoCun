@@ -24,8 +24,8 @@ public class GoodsController extends BaseController {
 
     @Resource
     private GoodsService goodsService;
-    @Resource
-    private GoodsTypeService goodsTypeService;
+/*    @Resource
+    private GoodsTypeService goodsTypeService;*/
     /**
      * 进入商品管理页面
      *
