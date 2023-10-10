@@ -74,6 +74,7 @@ public class SaleController extends BaseController {
      */
     @ResponseBody
     @RequestMapping("delete")
+    @SupLog(content = "删除销售单")
     public ResultInfo deleteSaleList(Integer[] ids) {
         saleService.deleteSale(ids);
         return success("销售单删除成功");
@@ -86,6 +87,7 @@ public class SaleController extends BaseController {
      */
     @ResponseBody
     @RequestMapping("add")
+    @SupLog(content = "添加销售单")
     public ResultInfo addSaleList(SaleList saleList) {
         saleService.addSale(saleList);
         return success("销售单添加成功");
@@ -98,6 +100,7 @@ public class SaleController extends BaseController {
      */
     @ResponseBody
     @RequestMapping("update")
+    @SupLog(content = "修改销售单")
     public ResultInfo updateSaleList(SaleList saleList) {
         saleService.updateSale(saleList);
         return success("销售单修改成功");

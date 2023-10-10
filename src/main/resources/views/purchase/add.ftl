@@ -7,6 +7,7 @@
 <form class="layui-form" style="width:80%;">
     <#--<input type="hidden" id="operatePerson" value="${(purchase.operatePerson)!}">&lt;#&ndash;操作人&ndash;&gt;
     <input type="hidden" name="id" value="${(purchase.id)!}">-->
+    <input type="hidden" name="id" value="${(purchase.id)!}">
     <input type="hidden" name="goodsId" id="goodsId" value="${(purchase.goodsName)!}">
     <div class="layui-input-inline  layui-col-md4">
         <label class="layui-form-label">商品</label>
@@ -39,11 +40,11 @@
     <br/>
     <div class="layui-form-item layui-row layui-col-xs12">
         <div class="layui-input-block">
-            <button class="layui-btn layui-btn-lg" lay-submit=""  lay-filter="addOrUpdatePurchase">确认</button>
+            <button class="layui-btn layui-btn-lg" lay-submit=""  lay-filter="addPurchase">确认</button>
             <button class="layui-btn layui-btn-lg layui-btn-normal" id="closeBtn">取消</button><#--记得一定要写id属性值-->
         </div>
     </div>
 </form>
-<script type="text/javascript" src="${ctx}/js/purchase/add.update.js"></script>
+<script type="text/javascript" src="${ctx}/js/purchase/add.js"></script>
 </body>
 </html>

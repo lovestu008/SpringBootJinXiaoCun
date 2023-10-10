@@ -18,7 +18,7 @@ import java.util.Map;
 @Controller
 @RequestMapping("menu")
 @Slf4j
-@SupLog(type = "菜单管理")
+@SupLog(type = "菜单权限管理")
 public class MenuController extends BaseController {
     @Resource
     private MenuService menuService;

@@ -16,10 +16,10 @@
                         <option value="">请选择操作类型</option>
                         <option value="日志管理">日志管理</option>
                         <option value="角色管理">角色管理</option>
-                        <option value="商品进货">商品进货</option>
-                        <option value="删除操作">删除操作</option>
-                        <option value="修改操作">修改操作</option>
-                        <option value="注销操作">注销操作</option>
+                        <option value="商品进退货管理">商品进退货管理</option>
+                        <option value="菜单权限管理">菜单权限管理</option>
+                        <option value="用户管理">用户管理</option>
+                        <option value="销售管理">销售管理</option>
                     </select>
                 </div>
                 <div class="layui-input-inline">
