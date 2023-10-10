@@ -2,16 +2,16 @@
 配色方案（如有需要，请自行配置）
  */
 /**头部-配色*/
-.layui-layout-admin .layui-header{background-color:#1aa094!important;}
-.layui-header>ul>.layui-nav-item.layui-this,.layuimini-tool i:hover{background-color:#197971!important;}
+.layui-layout-admin .layui-header{background-color:chocolate!important;}
+.layui-header>ul>.layui-nav-item.layui-this,.layuimini-tool i:hover{background-color:coral!important;}
 /**logo-配色*/
-.layui-layout-admin .layui-logo {background-color:#243346!important;}
+.layui-layout-admin .layui-logo {background-color:saddlebrown!important;}
 /**左侧-配色*/
-.layui-side.layui-bg-black,.layui-side.layui-bg-black>.layui-left-menu>ul {background-color:#2f4056!important;}
-.layui-left-menu .layui-nav .layui-nav-child a:hover:not(.layui-this) {background-color:#3b3f4b;}
+.layui-side.layui-bg-black,.layui-side.layui-bg-black>.layui-left-menu>ul {background-color:chocolate!important;}
+.layui-left-menu .layui-nav .layui-nav-child a:hover:not(.layui-this) {background-color:chocolate;}
 /**左侧菜单选中-配色*/
 .layui-layout-admin .layui-nav-tree .layui-this, .layui-layout-admin .layui-nav-tree .layui-this>a, .layui-layout-admin .layui-nav-tree .layui-nav-child dd.layui-this, .layui-layout-admin .layui-nav-tree .layui-nav-child dd.layui-this a {
-    background-color: #1aa094 !important;
+    background-color: sandybrown !important;
 }
 
 
@@ -68,9 +68,9 @@
 
 /**左侧菜单栏 (通用) */
 .layui-side.layui-bg-black {transition:all .2s;}
-.layui-side.layui-bg-black>.layui-left-menu>ul {transition:all .2s;}
-.layui-side.layui-bg-black>.layui-left-menu > ul > .layui-nav-item:first-child {border-top:1px solid #4b5461;}
-.layui-left-menu .layui-nav .layui-nav-item a {height:40px;line-height:40px;padding-right:30px;}
+.layui-side.layui-bg-black>.layui-left-menu>ul {transition:all .2s;solid-color: #c24f4a}
+.layui-side.layui-bg-black>.layui-left-menu > ul > .layui-nav-item:first-child {border-top:1px solid;}
+.layui-left-menu .layui-nav .layui-nav-item a {height:40px;line-height:40px;padding-right:30px;background: 0}
 .layui-left-menu .layui-nav .layui-nav-item>a {padding-top:5px;padding-bottom:5px;}
 .layui-left-menu .layui-nav .layui-nav-child .layui-nav-child {background:0 0!important}
 .layui-left-menu .layui-nav .layui-nav-more {right:15px;}

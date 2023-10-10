@@ -4,11 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47f004b4-5068-48b2-9225-7a541737bcc5" name="Changes" comment="为用户赋予角色">
+    <list default="true" id="47f004b4-5068-48b2-9225-7a541737bcc5" name="Changes" comment="添加日志注解标注">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/public/images/background.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/public/images/logo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/public/images/logo0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/public/images/logo1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/public/images/main.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/MenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/RoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/RoleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/SaleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/SaleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/css/layuimini.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/css/layuimini.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/views/index.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/index.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/views/main.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/main.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/views/welcome.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/welcome.ftl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +74,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/maven_code/crm",
+    "last_opened_file_path": "D:/maven_code/SpringBootJinXiaoCun",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -78,6 +86,9 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\maven_code\SpringBootJinXiaoCun\src\main\resources\public\images" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.xxxx.supermarket" />
     </key>
@@ -131,6 +142,7 @@
       <updated>1696490904462</updated>
       <workItem from="1696490905901" duration="35387000" />
       <workItem from="1696752530180" duration="38330000" />
+      <workItem from="1696900329958" duration="10983000" />
     </task>
     <task id="LOCAL-00001" summary="role module">
       <created>1696554818830</created>
@@ -258,7 +270,14 @@
       <option name="project" value="LOCAL" />
       <updated>1696860146650</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="添加日志注解标注">
+      <created>1696862130028</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1696862130028</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -305,6 +324,7 @@
     <MESSAGE value="ignore" />
     <MESSAGE value="添加RoleMenuMapper" />
     <MESSAGE value="为用户赋予角色" />
-    <option name="LAST_COMMIT_MESSAGE" value="为用户赋予角色" />
+    <MESSAGE value="添加日志注解标注" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加日志注解标注" />
   </component>
 </project>
