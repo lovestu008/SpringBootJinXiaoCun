@@ -24,7 +24,7 @@ public class CustomerService extends BaseService<Customer,Integer> {
     private CustomerMapper customerMapper;
 
     /**
-     * 多篇条件查询
+     * 多条件查询
      * @param queryCustomer
      * @return
      */
@@ -79,7 +79,7 @@ public class CustomerService extends BaseService<Customer,Integer> {
     @Transactional(propagation = Propagation.REQUIRED)
     public void updateCustomer(Customer customer){
         /* 1. 参数校验  */
-        //  营销机会ID  非空，数据库中对应的记录存在
+        //  超市客户ID  非空，数据库中对应的记录存在
         AssertUtil.isTrue(null == customer.getId(), "待更新记录不存在！");
         // 通过主键查询对象
         Customer temp = customerMapper.selectByPrimaryKey(customer.getId());
