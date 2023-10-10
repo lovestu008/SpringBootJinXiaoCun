@@ -151,8 +151,6 @@
     where id = #{id,jdbcType=INTEGER}
   </update>
 
-
-
   <select id="selectByParams" parameterType="com.xxxx.supermarket.querys.PurchaseQuery" resultType="com.xxxx.supermarket.entity.Purchase">
     select
     <include refid="Base_Column_List" />
