@@ -26,7 +26,7 @@
 
     </select>
 
-    <!--通过订单编号判断属于该订单的记录数-->
+    <!--通过订单编号判断属于该订单的记录-->
     <select id="querySaleListGoodsBySaleListId" resultType="com.xxxx.supermarket.entity.SaleListGoods">
         select
         *
