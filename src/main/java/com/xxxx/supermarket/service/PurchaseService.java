@@ -62,6 +62,8 @@ public class PurchaseService extends BaseService<Purchase,Integer> {
 
         //进货单添加一条数据
         AssertUtil.isTrue(purchaseMapper.insertSelective(purchase)!=1,"添加进货信息失败，请重试");
+
+
         //goods商品表中库存需要更新
         //库存等于原库存加现库存
         Integer goodsNum = purchaseMapper.selectNumByGoodsName(purchase.getGoodsName())+purchase.getInpNum();
@@ -87,17 +89,33 @@ public class PurchaseService extends BaseService<Purchase,Integer> {
      */
     @Transactional(propagation = Propagation.REQUIRED)
     public void updatePurchase(Purchase purchase) {
-        System.out.println("商品名字："+purchase.getGoodsName());
         AssertUtil.isTrue(StringUtils.isBlank(purchase.getGoodsName()),"商品名称不能为空");
         AssertUtil.isTrue(purchase.getInpNum()<=0,"进货数量不能小于零");
         AssertUtil.isTrue(purchase.getInpPrice()<=0,"进货价格不能小于零");
-        //设置默认值
-        purchase.setInpTime(new Date());
+        Purchase temp =selectByPrimaryKey(purchase.getId());
+
         String provider =purchaseMapper.selectProviderByGoodsNameFromGoods(purchase.getGoodsName());
+        //设置进货总价
         purchase.setAllInpPrice(PriceUtil.priceProduct(purchase.getInpPrice(),purchase.getInpNum()));
+        //设置供应商
         purchase.setProvider(provider);
-        //受影响行数判断
+        //更新完成，受影响行数判断
         AssertUtil.isTrue(purchaseMapper.updateByPrimaryKeySelective(purchase)!=1,"修改进货信息失败，请重试");
+
+        //goods商品表中库存需要更新
+        //库存等于现库存+（修改后进货量purchase.getInpNum-修改前进货量temp.getInpNum）
+        Integer goodsNum = purchaseMapper.selectNumByGoodsName(purchase.getGoodsName())+(purchase.getInpNum()-temp.getInpNum());
+        //判断上次进价和本次进价是否相同，如果不相同，讲上次进价设置为last_purchasing_price中，将本次进价设置为库存进价
+        //现进价=现进价+（修改后进价purchase.getInpPrice-修改前进价temp.getInpNum）
+        //获取上次进价
+        Integer purchasingPrice = purchaseMapper.selectPurchasingPriceByGoodsName(purchase.getGoodsName())+(purchase.getInpPrice()-temp.getInpPrice());
+        if (!purchasingPrice.equals(purchase.getInpPrice())){
+            //将进价赋值给库存进货价格
+            purchasingPrice=purchase.getInpPrice();
+        }
+        //更新库存，进购价格和上次进购价格传入商品名称goodsName，商品现有库存goodsNum，进购价格purchasingPrice，上次进购价格lastPurchasingPrice
+        AssertUtil.isTrue(purchaseMapper.updateGoodsNumAndPurchasingPrice(purchase.getGoodsName(),goodsNum,purchasingPrice)!=1,"库存表进购信息更新失败，请及时检查！");
+
 
     }
 

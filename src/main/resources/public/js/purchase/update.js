@@ -51,7 +51,7 @@ layui.use(['form', 'layer'], function () {
                 var goodsId=$("#goodsId").val();
                 for (var i=0;i<data.length;i++){
                     if (goodsId==data[i].goodsName){
-                        console.log(data[i].goodsId)
+                        /*console.log(data[i].goodsId)*/
                         opt ="<option value='"+data[i].goodsId+"'selected >"+data[i].goodsName+"</option>";
                     }else {
                         opt ="<option value='"+data[i].goodsId+"'>"+data[i].goodsName+"</option>";

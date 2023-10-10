@@ -252,4 +252,13 @@
         name=#{goodsName}
   </update>
 
+  <!--修改进货单后更新库存信息-->
+  <update id="updateGoodsNumAndPurchasingPrice">
+    update t_goods
+    set
+      purchasing_price=#{purchasingPrice},
+      inventory_quantity=#{goodsNum}
+    where
+      name=#{goodsName}
+  </update>
 </mapper>

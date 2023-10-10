@@ -18,9 +18,11 @@ public interface PurchaseMapper extends BaseMapper<Purchase,Integer> {
 
     Integer selectNumByGoodsName(String goodsName);
 
-    int updateGoodsNum(Integer goodsNum,String goodsName);
+    Integer updateGoodsNum(Integer goodsNum,String goodsName);
 
     Integer selectPurchasingPriceByGoodsName(String goodsName);
 
     Integer updateGoodsNumAndLastPurchasingPrice(String goodsName, Integer goodsNum,Integer purchasingPrice,Integer lastPurchasingPrice);
+
+    Integer updateGoodsNumAndPurchasingPrice(String goodsName, Integer goodsNum, Integer purchasingPrice);
 }

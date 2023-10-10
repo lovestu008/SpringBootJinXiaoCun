@@ -63,12 +63,11 @@ public class PurchaseController extends BaseController {
         purchaseService.addPurchase(purchase);
         return success("进货信息添加成功");
     }
+    //修改进货信息
     @PostMapping("update")
     @ResponseBody
     @SupLog(content = "修改进货信息")
     public ResultInfo updatePurchase(Purchase purchase){
-        System.out.println(purchase.getGoodsName());
-        System.out.println(purchase.getId());
         purchaseService.updatePurchase(purchase);
         return success("进货信息修改成功");
     }
@@ -98,7 +97,7 @@ public class PurchaseController extends BaseController {
     @ResponseBody
     public List<Map<String,Object>> selectAllGoodsNameById(){
         List list =  purchaseService.selectAllGoodsNameById();
-        list.forEach(System.out::println);
+        /*list.forEach(System.out::println);*/
         return list;
     }
 

@@ -6,18 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="47f004b4-5068-48b2-9225-7a541737bcc5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/PurchaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/PurchaseController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/dao/PurchaseMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/dao/PurchaseMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/service/PurchaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/service/PurchaseService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/PurchaseMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/PurchaseMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/purchase/purchase.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/js/purchase/purchase.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/views/purchase/add.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/purchase/add.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/views/purchase/purchase.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/purchase/purchase.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/purchase/update.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/js/purchase/update.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/PurchaseController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/PurchaseController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/dao/PurchaseMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/dao/PurchaseMapper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/service/PurchaseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/service/PurchaseService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/mappers/PurchaseMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mappers/PurchaseMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/public/js/purchase/purchase.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/public/js/purchase/purchase.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/views/purchase/add.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/views/purchase/add.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/views/purchase/purchase.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/views/purchase/purchase.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/public/js/purchase/update.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/public/js/purchase/update.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +135,7 @@
       <workItem from="1696490905901" duration="35387000" />
       <workItem from="1696752530180" duration="12958000" />
       <workItem from="1696813763871" duration="15687000" />
-      <workItem from="1696897459379" duration="20199000" />
+      <workItem from="1696897459379" duration="23526000" />
     </task>
     <task id="LOCAL-00001" summary="role module">
       <created>1696554818830</created>
@@ -237,7 +235,14 @@
       <option name="project" value="LOCAL" />
       <updated>1696919518978</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="进货功能完全实现，编辑功能未完善">
+      <created>1696924462288</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1696924462288</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -279,6 +284,7 @@
     <MESSAGE value="增加功能简单实现，还未添加修改goods表数据" />
     <MESSAGE value="修改信息功能简单实现，还未添加修改goods表数据" />
     <MESSAGE value="退货功能完全实现，进货功能未完善" />
-    <option name="LAST_COMMIT_MESSAGE" value="退货功能完全实现，进货功能未完善" />
+    <MESSAGE value="进货功能完全实现，编辑功能未完善" />
+    <option name="LAST_COMMIT_MESSAGE" value="进货功能完全实现，编辑功能未完善" />
   </component>
 </project>
