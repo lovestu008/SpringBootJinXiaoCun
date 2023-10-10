@@ -124,4 +124,10 @@
     from t_role_menu
     where role_id = #{roleId}
   </select>
+
+  <select id="queryUserHasRoleHasPermissionByUserId" parameterType="int" resultType="java.lang.String">
+    select distinct (acl_value)
+    from t_user_role u left join t_role_menu m on u.role_id = m.role_id
+    where u.user_id = #{userId}
+  </select>
 </mapper>
