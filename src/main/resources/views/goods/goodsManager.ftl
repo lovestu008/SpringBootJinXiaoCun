@@ -24,6 +24,7 @@
                 <input type="hidden" name="typeId"/>
             </div>
         </div>
+
         <!-- 右表 -->
         <div class="layui-col-sm12 layui-col-md8 layui-col-lg9" style="width: 88%">
             <div class="layui-card">
@@ -45,6 +46,7 @@
                                 </div>
                             </form>
                         </blockquote>
+
                         <table id="goodsList" class="layui-table"  lay-filter="goods"></table>
 
                         <script type="text/html" id="toolbarDemo">

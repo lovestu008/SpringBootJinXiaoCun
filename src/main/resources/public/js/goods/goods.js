@@ -1,8 +1,48 @@
 layui.use(['element','table','layer'],function(){
     var layer = parent.layer === undefined ? layui.layer : top.layer,
         $ = layui.jquery,
-        table = layui.table,
-        element = layui.element;
+        table = layui.table
+
+
+    /*zTree*/
+    $.ajax({
+        type:"post",
+        url:ctx+"/goodsType/queryAllGoodsTypes",
+        dataType:"json",
+        success:function (data) {
+            // zTree 的参数配置，深入使用请参考 API 文档（setting 配置详解）
+            var setting = {
+                data: {
+                    simpleData: {
+                        enable: true
+                    }
+                },
+                view:{
+                    showLine: false
+                },
+                callback: {
+                    onClick: zTreeOnClick
+                }
+            };
+            $.fn.zTree.init($("#goodsTypeTree"), setting, data);
+        }
+    })
+
+    function zTreeOnClick(event, treeId, treeNode) {
+        // 获取店家节点对应类型id
+        var typeId =  treeNode.id;
+        table.reload("goodsListTable",{
+            page: {
+                curr: 1 //重新从第 1 页开始
+            },
+            where: {
+                goodsName: $("input[name='goodsName']").val(),
+                typeId:typeId
+            }
+        })
+        // 设置商品类别查询条件到隐藏域
+        $("input[name='typeId']").val(typeId);
+    };
 
 
 
@@ -17,7 +57,7 @@ layui.use(['element','table','layer'],function(){
         , page: true //开启分页
         ,limit:10// 默认每页显示的数量
         ,limits:[10,15,20,25]// 每页页数的可选项
-        , toolbar: '#goodsToolBar'// 开启头部工具栏
+        , toolbar: '#toolbarDemo'// 开启头部工具栏
         , cols: [[
             {type: "checkbox", fixed:"left", width:50},
             {field: "id", title:'编号',fixed:"true", width:80},
@@ -28,188 +68,105 @@ layui.use(['element','table','layer'],function(){
             {field: 'unitName', title: '单位', minWidth:100, align:'center'},
             {field: 'purchasingPrice', title: '采购价', minWidth:100, align:'center'},
             {field: 'sellingPrice', title: '出售价', minWidth:100, align:'center'},
+            {field: 'minNum', title: '库存下限', minWidth:100, align:'center'},
             {field: 'producer', title: '生产厂商', align:'center',minWidth:150},
-            ,{title:'操作',templet:'#GoodsListBar', fixed: 'right', align:'center', minWidth:150}
+            ,{title:'操作',templet:'#goodsListBar', fixed: 'right', align:'center', minWidth:150}
         ]]
     });
 
 
 
 
-
-    //搜索
-    form.on("submit(doSearch)", function (data) {
-        //表格数据重新加载
-        console.log(data);
+    // 多条件搜索
+    $(".search_btn").click(function(){
         tableIns.reload({
-            where: data.field //额外的参数
-            , page: {
+            // 设置需要传递给后端的参数name
+            where: {
+                name: $("[name='goodsName']").val()//商品名称
+            },
+            page: {
                 curr: 1 //重新从第 1 页开始
             }
-        });
-        return false; //关闭跳转页面
+        })
+    });
+
+
+
+
+    //头工具栏事件
+    table.on('toolbar(goods)', function(obj){
+        var checkStatus = table.checkStatus(obj.config.id);
+        switch(obj.event){
+            case "add":
+                openAddOrUpdateGoodsDialog();//添加页面
+                break;
+            case "goodsType":
+                addGoodsTypeManagerTab();
+
+        };
     });
 
 
 
 
 
-    //监听添加按钮
-    table.on('toolbar(goodsTable)', function (obj) {
-        switch (obj.event) {
-            //添加栏触发事件
-            case 'add':
-                openAddGoodsWindow();//添加方法
-                break;
+
+
+    function addGoodsTypeManagerTab(){
+        //新增一个Tab项
+        window.parent.layui.element.tabAdd('bodyTab', {
+            title: '新选项'+ (Math.random()*1000|0)
+            ,content: '内容'+ (Math.random()*1000|0)
+            ,id: new Date().getTime()
+        })
+    }
+
+
+    /**
+     * 打开添加/修改页面
+     */
+    function openAddOrUpdateGoodsDialog(uid){
+        var title="商品管理-添加商品";
+        var url  =  ctx+"/goods/toAddOrUpdateGoodsPage";
+
+        if(uid){
+            url = url+"?id="+uid;
+            title="商品管理-更新商品";
+        }else{
+            if(null !=$("input[name='typeId']").val()){
+                url=url+"?typeId="+$("input[name='typeId']").val();
+            }
         }
-    });
-
-
-
-
-    var mainIndex;//弹出层的索引下标
-    var url;//提交路径
-
-
-
-
-
-
-    //弹出添加框函数
-    function openAddGoodsWindow() {
-        mainIndex = layer.open({
-            type:1,
-            title:"添加商品",
-            area:["600px","350px"],
-            content:$("#addOrUpdateDiv"),//内容窗口
-            success:function () {
-                //每次开启清空弹出框数据
-                $("#dataFrm")[0].reset();
-                url="/goods/addgoods";
-            }
+        layui.layer.open({
+            title : title,
+            type : 2,
+            area:["800px","550px"],
+            maxmin:true,
+            content : url
         });
     }
 
 
-
-
-
-
-    //监听添加和修改窗口的提交按钮
-    form.on("submit(doSubmit)", function (data) {
-        //表格数据重新加载
-        console.log(data);
-        $.post(url,data.field,function (result) {
-            //判断是否成功
-            if (result.status){
-                //成功表格刷新
-                tableIns.reload();
-            }
-            //弹出是否成功消息
-            layer.msg(result.message);
-            //关闭窗口
-            layer.close(mainIndex)
-        },"json");
-        return false; //关闭跳转页面
-    });
-
-
-
-
-    //监听修改和删除按钮
-    table.on("tool(goodsTable)", function (obj) {
-        var data =obj.data;
-        switch (obj.event) {
-            //修改数据
-            case 'update':
-                openUpdateGoodsWindow(data);
-                break;
-            case 'delete':
-                deleteGoods(data);
-                break;
-            case 'selectGoodsCategory':
-                selectGoodsCategory(data);
-                break;
-        }
-    });
-
-
-
-
-
-    //分配角色
-    function selectGoodsCategory(data){
-        mainIndex = layer.open({
-            type:1,
-            title:"分配"+data.gname+"的类别",
-            area:["500px","400px"],
-            content:$("#selectGoodsCategoryDiv"),//内容窗口
-            btn: ['确定', '取消'],
-            btnAlign: 'c',
-            yes: function (index, layero) {
-                //获取所有选中节点
-                var checkData = table.checkStatus('categoryTable');//获取选中行的数据
-                if (checkData.data.length==0){
-                    layer.msg("未选中")
-                }else{
-                    console.log(checkData.data)
-                    var idArr =[];
-                    for (var i=0;i<checkData.data.length;i++){
-                        idArr.push(checkData.data[i].cateid);
-                    }
-                    var ids = idArr.join(",");
-                    $.post("/goods/saveGoodsCategory",{"categoryids":ids,"goodsid":data.gid},function (result) {
-                        layer.msg(result.message)
-                    },"json");
-                    layer.close(index);//关闭提示框
-                }
-            },
-            btn2: function (index, layero) {
-            },
-            success:function () {
-                initCategoryTable(data);
+        /**
+         * 行监听
+         */
+        table.on("tool(goods)", function(obj){
+            var layEvent = obj.event;
+            if(layEvent === "edit") {
+                openAddOrUpdateGoodsDialog(obj.data.id);
+            }else if(layEvent === "del") {
+                layer.confirm('确定删除当前商品？', {icon: 3, title: "商品管理"}, function (index) {
+                    $.post(ctx+"/goods/delete",{id:obj.data.id},function (data) {
+                        if(data.code==200){
+                            layer.msg("操作成功！");
+                            tableIns.reload();
+                        }else{
+                            layer.msg(data.message, {icon: 5});
+                        }
+                    });
+                })
             }
         });
-    }
-
-
-
-
-
-    //初始化角色列表
-    function initCategoryTable(data){
-        table.render({
-            elem: '#categoryTable'//绑定表格组件的id
-            , url: '/goods/initGoodsByCategoryId/' //数据接口
-            ,where:{
-                "id":data.gid
-            }
-            , cols: [ [
-                {type: 'checkbox', fixed: 'center'}
-                , {field: 'cateid', title: 'ID', align: 'center'}
-                , {field: 'catename', title: '类别名称', align: 'center'}
-            ] ]
-        });
-    }
-
-
-
-
-
-
-    //修改
-    function openUpdateGoodsWindow(data) {
-        mainIndex = layer.open({
-            type:1,
-            title:"修改类别",
-            area:["500px","350px"],
-            content:$("#addOrUpdateDiv"),//内容窗口
-            success:function () {
-                form.val("dataFrm",data);
-                url="/goods/updategoods";
-            }
-        });
-    }
 
 
 
@@ -217,18 +174,13 @@ layui.use(['element','table','layer'],function(){
 
 
 
-    //删除单条数据
-    function deleteGoods(data) {
-        layer.confirm('是否要删除这条数据吗?', {icon: 3, title: '提示'}, function (index) {
-            $.post("/goods/deleteOne", {"id": data.gid}, function (result) {
-                if (result.status) {
-                    //删除成功后刷新数据表格
-                    tableIns.reload();
-                }
-                layer.msg(result.message);
-            }, "json");
-            layer.close(index);//关闭提示框
-        });
-    }
+
+
+
+
+
+
+
+
 
 });
