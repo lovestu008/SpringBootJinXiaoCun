@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47f004b4-5068-48b2-9225-7a541737bcc5" name="Changes" comment="marge sj" />
+    <list default="true" id="47f004b4-5068-48b2-9225-7a541737bcc5" name="Changes" comment="goods 修改">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -128,6 +130,8 @@
       <workItem from="1696752530180" duration="67263000" />
       <workItem from="1696929214588" duration="42000" />
       <workItem from="1696929262026" duration="2188000" />
+      <workItem from="1696931493907" duration="390000" />
+      <workItem from="1696935536182" duration="315000" />
     </task>
     <task id="LOCAL-00001" summary="role module">
       <created>1696554818830</created>
@@ -325,7 +329,14 @@
       <option name="project" value="LOCAL" />
       <updated>1696931264273</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="goods 修改">
+      <created>1696931709318</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1696931709318</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -347,7 +358,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/zhou" />
+                        <option value="origin/hwj" />
                       </list>
                     </value>
                   </entry>
@@ -360,7 +371,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="user 与 menu 模块" />
     <MESSAGE value="role.js操作" />
     <MESSAGE value="unversioned 问题" />
     <MESSAGE value="menu 下js文件" />
@@ -385,6 +395,7 @@
     <MESSAGE value="合并 Wf wxh zjh" />
     <MESSAGE value="xml" />
     <MESSAGE value="marge sj" />
-    <option name="LAST_COMMIT_MESSAGE" value="marge sj" />
+    <MESSAGE value="goods 修改" />
+    <option name="LAST_COMMIT_MESSAGE" value="goods 修改" />
   </component>
 </project>
