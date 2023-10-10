@@ -4,6 +4,7 @@ import com.xxxx.supermarket.base.BaseController;
 import com.xxxx.supermarket.dao.RoleMenuMapper;
 import com.xxxx.supermarket.entity.User;
 import com.xxxx.supermarket.service.UserService;
+import org.mybatis.spring.annotation.MapperScan;
 import com.xxxx.supermarket.utils.LoginUserUtil;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,6 +26,7 @@ public class LoginController extends BaseController {
 
     /**
      * 系统登录⻚
+     *
      * @return
      */
     @RequestMapping("index")
@@ -32,10 +34,7 @@ public class LoginController extends BaseController {
         return "index";
     }
 
-    /**
-     * 系统欢迎页
-     * @return
-     */
+    // 系统界⾯欢迎⻚
     @RequestMapping("welcome")
     public String welcome() {
         return "welcome";

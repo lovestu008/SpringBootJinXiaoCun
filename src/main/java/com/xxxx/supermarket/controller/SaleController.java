@@ -1,28 +1,34 @@
 package com.xxxx.supermarket.controller;
 
-import com.xxxx.supermarket.aspect.SupLog;
+import com.alibaba.fastjson.JSON;
 import com.xxxx.supermarket.base.BaseController;
 import com.xxxx.supermarket.base.ResultInfo;
 import com.xxxx.supermarket.entity.SaleList;
+import com.xxxx.supermarket.entity.SaleListGoods;
 import com.xxxx.supermarket.query.SaleQuery;
+import com.xxxx.supermarket.service.GoodsService;
 import com.xxxx.supermarket.service.SaleService;
-import lombok.extern.slf4j.Slf4j;
+import com.xxxx.supermarket.utils.AssertUtil;
+import com.xxxx.supermarket.utils.LoginUserUtil;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 import java.util.Map;
 
-@RequestMapping("sale")
+@RequestMapping("/sale")
 @Controller
-@Slf4j
-@SupLog(type = "销售管理")
 public class SaleController extends BaseController {
 
     @Resource
     private SaleService saleService;
+
+    @Resource
+    private GoodsService goodsService;
 
     /**
      * 销售主页
@@ -32,8 +38,15 @@ public class SaleController extends BaseController {
      */
     @RequestMapping("index")
     public String index(HttpServletRequest request) {
-
+        request.setAttribute("saleNumber",saleService.getNextSaleNumber());
         return "sale/sale";
+    }
+    /**
+     * 单据查询主页
+     */
+    @RequestMapping("searchPage")
+    public String searchPage(HttpServletRequest request){
+        return "sale/sale_search";
     }
 
     /**
@@ -46,7 +59,8 @@ public class SaleController extends BaseController {
     @RequestMapping("list")
     @ResponseBody
     public Map<String, Object> querySaleListParams(SaleQuery query) {
-        return saleService.querySaleListParams(query);
+        Map<String,Object> map  =saleService.querySaleListParams(query);
+        return map;
     }
 
     /**
@@ -54,31 +68,11 @@ public class SaleController extends BaseController {
      *
      * @return
      */
-    @RequestMapping("addOrUpdateSalePage")
-    public String addOrUpdateSalePage(Integer id, HttpServletRequest request) {
-        //判断saleChanceId是否为空
-        if (id != null) {
-            //通过Id查询营销机会数据
-            SaleList saleList = saleService.selectByPrimaryKey(id);
-            //将数据设置到请求域中
-            request.setAttribute("saleList", saleList);
-        }
+    @RequestMapping("addSalePage")
+    public String addSalePage() {
         return "sale/add_update";
     }
 
-
-    /**
-     * 删除销售单
-     *
-     * @return
-     */
-    @ResponseBody
-    @RequestMapping("delete")
-    @SupLog(content = "删除销售单")
-    public ResultInfo deleteSaleList(Integer[] ids) {
-        saleService.deleteSale(ids);
-        return success("销售单删除成功");
-    }
 
     /**
      * 增加销售单
@@ -86,25 +80,26 @@ public class SaleController extends BaseController {
      * @return
      */
     @ResponseBody
-    @RequestMapping("add")
-    @SupLog(content = "添加销售单")
-    public ResultInfo addSaleList(SaleList saleList) {
-        saleService.addSale(saleList);
-        return success("销售单添加成功");
+    @RequestMapping("save")
+    public ResultInfo save(SaleList saleList,String goodsJson,HttpServletRequest request) {
+        Integer userId = LoginUserUtil.releaseUserIdFromCookie(request);
+        saleList.setUserId(userId);
+        AssertUtil.isTrue(goodsJson==null||goodsJson=="","无记录不能保存");
+        AssertUtil.isTrue(saleList.getCustomerId()==null||saleList.getCustomerId()==0,"客户不能为空");
+        List<SaleListGoods> saleListGoods = JSON.parseArray(goodsJson, SaleListGoods.class);
+        saleService.saveSaleList(saleList,saleListGoods);
+        return success("商品销售出库成功");
     }
 
     /**
-     * 修改销售单
-     *
+     * 删除销售单
      * @return
      */
+    @PostMapping ("delete")
     @ResponseBody
-    @RequestMapping("update")
-    @SupLog(content = "修改销售单")
-    public ResultInfo updateSaleList(SaleList saleList) {
-        saleService.updateSale(saleList);
-        return success("销售单修改成功");
+    public ResultInfo delete(Integer id){
+        saleService.deleteById(id);
+
+        return success("删除货单成功");
     }
-
-
 }

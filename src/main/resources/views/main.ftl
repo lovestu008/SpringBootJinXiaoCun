@@ -61,10 +61,10 @@
                                 </#if>
                                 <#if permissions?seq_contains("1020") >
                                     <dd>
-                                        <a href="javascript:;" class="layui-menu-tips" data-type="tabAdd" data-tab-mpi="m-p-i-1" data-tab="sale_chance/index" target="_self"><i class="fa fa-tty"></i><span class="layui-left-nav"> 商品管理</span></a>
+                                        <a href="javascript:;" class="layui-menu-tips" data-type="tabAdd" data-tab-mpi="m-p-i-1" data-tab="goods/index" target="_self"><i class="fa fa-tty"></i><span class="layui-left-nav"> 商品管理</span></a>
                                     </dd>
                                     <dd>
-                                        <a href="javascript:;" class="layui-menu-tips" data-type="tabAdd" data-tab-mpi="m-p-i-2" data-tab="cus_dev_plan/index" target="_self"><i class="fa fa-ellipsis-h"></i><span class="layui-left-nav"> 商品类别管理</span></a>
+                                        <a href="javascript:;" class="layui-menu-tips" data-type="tabAdd" data-tab-mpi="m-p-i-2" data-tab="category/index" target="_self"><i class="fa fa-ellipsis-h"></i><span class="layui-left-nav"> 商品类别管理</span></a>
                                     </dd>
                                 </#if>
                             </dl>
@@ -87,10 +87,17 @@
                             <a href="javascript:;" class="layui-menu-tips"><i class="fa fa-desktop"></i><span class="layui-left-nav"> 销售管理</span> <span class="layui-nav-more"></span></a>
                             <dl class="layui-nav-child">
                                 <dd>
-                                    <a href="javascript:;" class="layui-menu-tips" data-type="tabAdd" data-tab-mpi="m-p-i-5" data-tab="sale/index" target="_self"><i class="fa fa-tachometer"></i><span class="layui-left-nav"> 商品销售</span></a>
+                                    <a href="javascript:;" class="layui-menu-tips" data-type="tabAdd" data-tab-mpi="m-p-i-11" data-tab="sale/index" target="_self"><i class="fa fa-user"></i><span class="layui-left-nav"> 销售出库</span></a>
                                 </dd>
-                                <dd>
-                                    <a href="javascript:;" class="layui-menu-tips" data-type="tabAdd" data-tab-mpi="m-p-i-6" data-tab="sale_return/index" target="_self"><i class="fa fa-tachometer"></i><span class="layui-left-nav"> 商品销售退货</span></a>
+
+                                <dd class="">
+                                    <a href="javascript:;" class="layui-menu-tips" data-type="tabAdd" data-tab-mpi="m-p-i-12" data-tab="customerReturn/index" target="_self"><i class="fa fa-tachometer"></i><span class="layui-left-nav"> 客户退货</span></a>
+                                </dd>
+                                <dd class="">
+                                    <a href="javascript:;" class="layui-menu-tips" data-type="tabAdd" data-tab-mpi="m-p-i-13" data-tab="sale/searchPage" target="_self"><i class="fa fa-tachometer"></i><span class="layui-left-nav"> 销售单据查询</span></a>
+                                </dd>
+                                <dd class="">
+                                    <a href="javascript:;" class="layui-menu-tips" data-type="tabAdd" data-tab-mpi="m-p-i-13" data-tab="customerReturn/searchPage" target="_self"><i class="fa fa-tachometer"></i><span class="layui-left-nav"> 客户退货查询</span></a>
                                 </dd>
                             </dl>
                         </li>
