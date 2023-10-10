@@ -33,7 +33,6 @@ public class UserController extends BaseController {
      * 登录模块
      * @return
      */
-    @RequiredPermission(code = "5020")
     @RequestMapping("login")
     @ResponseBody
     public ResultInfo userLogin(String userName,String userPwd){

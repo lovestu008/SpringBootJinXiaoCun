@@ -24,7 +24,6 @@
                 <input type="hidden" name="typeId"/>
             </div>
         </div>
-
         <!-- 右表 -->
         <div class="layui-col-sm12 layui-col-md8 layui-col-lg9" style="width: 88%">
             <div class="layui-card">

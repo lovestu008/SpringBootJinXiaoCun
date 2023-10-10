@@ -14,9 +14,9 @@ layui.use(['table', 'treetable'], function () {
         toolbar: "#toolbarDemo",
         cols: [[
             {type: 'numbers'},
-            {field: 'name', minWidth: 300, title: '类别名称'},
+            {field: 'name', minWidth: 100, title: '类别名称'},
             {
-                field: 'state', width: 100, align: 'center', templet: function (d) {
+                field: 'state', width: 80, align: 'center', templet: function (d) {
                     if (d.state == 1) {  //节点类型
                         return '<span class="layui-badge layui-bg-blue">父节点</span>';
                     }
@@ -25,7 +25,7 @@ layui.use(['table', 'treetable'], function () {
                     }
                 }, title: '类型'
             },
-            {templet: '#auth-state', width: 300, align: 'center', title: '操作'}
+            {templet: '#auth-state', width: 180, align: 'center', title: '操作'}
         ]],
         done: function () {
             layer.closeAll('loading');

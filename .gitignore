@@ -9,3 +9,6 @@
 /target/
 /.idea/
 /.idea/
+!/target/
+/target/
+!/.gitignore

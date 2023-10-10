@@ -4,21 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47f004b4-5068-48b2-9225-7a541737bcc5" name="Changes" comment="xml">
+    <list default="true" id="47f004b4-5068-48b2-9225-7a541737bcc5" name="Changes" comment="fixup! 除商品分类外，都已完成的提交">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/public/js/goodsType/add.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/views/goodsType/goods_type.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/GoodsTypeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/GoodsTypeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/dao/SaleListGoodsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/dao/SaleListGoodsMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/entity/Goods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/entity/Goods.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/model/GoodsModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/model/GoodsModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/service/CustomerReturnListGoodsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/service/CustomerReturnListGoodsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/service/GoodsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/service/GoodsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/service/SaleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/service/SaleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/SaleListGoodsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/SaleListGoodsMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/SaleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/SaleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/goods/goods.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/js/goods/goods.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/goods/goods.type.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/goodsType/goods.type.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/js/goodsType/goods.type.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/views/goods/goodsManager.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/goods/goodsManager.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/views/goods/goods_type.ftl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/views/log/log.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/log/log.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/GoodsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/GoodsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/dao/GoodsMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/dao/GoodsMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/entity/Goods.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/entity/Goods.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/service/GoodsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/service/GoodsService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mappers/GoodsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mappers/GoodsMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/public/js/goods/goods.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/public/js/goods/goods.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/views/goods/goodsManager.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/views/goods/goodsManager.ftl" afterDir="false" />
     </list>
@@ -35,7 +35,7 @@
     </option>
   </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="origin/wxh" />
+    <option name="BRANCH" value="origin/zhou" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -146,7 +146,7 @@
       <workItem from="1696929214588" duration="42000" />
       <workItem from="1696929262026" duration="2188000" />
       <workItem from="1696931493907" duration="390000" />
-      <workItem from="1696935536182" duration="3531000" />
+      <workItem from="1696935536182" duration="4794000" />
     </task>
     <task id="LOCAL-00001" summary="role module">
       <created>1696554818830</created>
@@ -358,7 +358,14 @@
       <option name="project" value="LOCAL" />
       <updated>1696935997053</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="合并wf">
+      <created>1696939615855</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1696939615855</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -393,7 +400,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="role.js操作" />
     <MESSAGE value="unversioned 问题" />
     <MESSAGE value="menu 下js文件" />
     <MESSAGE value="user操作 用户登录 user的session作用域" />
@@ -418,6 +424,7 @@
     <MESSAGE value="marge sj" />
     <MESSAGE value="goods 修改" />
     <MESSAGE value="xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="xml" />
+    <MESSAGE value="合并wf" />
+    <option name="LAST_COMMIT_MESSAGE" value="合并wf" />
   </component>
 </project>

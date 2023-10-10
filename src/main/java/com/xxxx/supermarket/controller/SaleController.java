@@ -37,7 +37,7 @@ public class SaleController extends BaseController {
      * @param request
      * @return
      */
-    @RequiredPermission(code = "3010")
+    @RequiredPermission(code = "30")
     @RequestMapping("index")
     public String index(HttpServletRequest request) {
         request.setAttribute("saleNumber",saleService.getNextSaleNumber());
@@ -46,7 +46,7 @@ public class SaleController extends BaseController {
     /**
      * 单据查询主页
      */
-    @RequiredPermission(code = "3010")
+    @RequiredPermission(code = "30")
     @RequestMapping("searchPage")
     public String searchPage(HttpServletRequest request){
         return "sale/sale_search";
@@ -59,7 +59,7 @@ public class SaleController extends BaseController {
      * @return
      */
 
-    @RequiredPermission(code = "3010")
+    @RequiredPermission(code = "30")
     @RequestMapping("list")
     @ResponseBody
     public Map<String, Object> querySaleListParams(SaleQuery query) {
@@ -72,7 +72,7 @@ public class SaleController extends BaseController {
      *
      * @return
      */
-    @RequiredPermission(code = "3010")
+    @RequiredPermission(code = "30")
     @RequestMapping("addSalePage")
     public String addSalePage() {
         return "sale/add_update";
@@ -84,7 +84,7 @@ public class SaleController extends BaseController {
      *
      * @return
      */
-    @RequiredPermission(code = "3010")
+    @RequiredPermission(code = "30")
     @ResponseBody
     @RequestMapping("save")
     public ResultInfo save(SaleList saleList,String goodsJson,HttpServletRequest request) {
@@ -101,7 +101,7 @@ public class SaleController extends BaseController {
      * 删除销售单
      * @return
      */
-    @RequiredPermission(code = "3010")
+    @RequiredPermission(code = "30")
     @PostMapping ("delete")
     @ResponseBody
     public ResultInfo delete(Integer id){
