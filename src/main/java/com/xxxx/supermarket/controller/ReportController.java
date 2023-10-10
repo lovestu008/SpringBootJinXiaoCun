@@ -1,21 +1,16 @@
 package com.xxxx.supermarket.controller;
 
-import com.xxxx.supermarket.aspect.SupLog;
 import com.xxxx.supermarket.base.BaseController;
 import com.xxxx.supermarket.entity.Purchase;
-import com.xxxx.supermarket.entity.SaleListGoods;
 import com.xxxx.supermarket.model.SaleListGoodsModel;
-import com.xxxx.supermarket.query.SaleQuery;
 import com.xxxx.supermarket.service.PurchaseService;
 import com.xxxx.supermarket.service.SaleService;
-import com.xxxx.supermarket.utils.DataGridViewResult;
-import com.xxxx.supermarket.utils.DateUtils;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
-import java.text.SimpleDateFormat;
 import java.util.*;
 
 @Controller
