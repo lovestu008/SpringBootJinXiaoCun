@@ -95,7 +95,6 @@ layui.use(['table','layer'],function(){
                 var goodsId=$("#goodsId").val();
                 for (var i=0;i<data.length;i++){
                     if (goodsId==data[i].goodsId){
-                        console.log(data[i].goodsId)
                         var opt ="<option value='"+data[i].goodsId+"'selected >"+data[i].goodsName+"</option>";
                     }else {
                         var opt ="<option value='"+data[i].goodsId+"'>"+data[i].goodsName+"</option>";
@@ -125,7 +124,7 @@ layui.use(['table','layer'],function(){
         layui.layer.open({
             title:title,
             content:url,
-            area:["650px","450px"],
+            area:["620px","420px"],
             type:2,
             maxmin:true
         });
@@ -150,7 +149,7 @@ layui.use(['table','layer'],function(){
         layui.layer.open({
             title:title,
             content:url,
-            area:["500px","550px"],
+            area:["620px","420px"],
             type:2,
             maxmin:true
         });
@@ -161,7 +160,7 @@ layui.use(['table','layer'],function(){
         layui.layer.open({
             title:title,
             content:url,
-            area:["500px","550px"],
+            area:["500px","400px"],
             type:2,
             maxmin:true
         });

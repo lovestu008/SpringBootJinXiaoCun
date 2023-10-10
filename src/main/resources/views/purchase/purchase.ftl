@@ -32,7 +32,7 @@
                 &nbsp;&nbsp;
                 <a class="layui-btn layui-btn-danger layui-btn-radius search_btn" data-type="reload"><i
                             class="layui-icon layui-btn-md layui-bg-red">&#xe615;</i> 搜索</a>
-                <button class="layui-btn layui-btn-warm layui-btn-radius"  type="reset" id="reset"><i
+                <button class="layui-btn layui-btn-warm layui-btn-radius"   id="reset"><i
                             class="layui-icon layui-bg-orange">&#xe666;</i> 重置</button>
             </div>
         </form>
@@ -42,7 +42,7 @@
 
     <script type="text/html" id="toolbarDemo">
         <div class="layui-btn-container">
-            <a class="layui-btn layui-btn-normal addNews_btn" lay-event="input">
+            <a class="layui-btn layui-btn-normal layui-bg-red addNews_btn" lay-event="input">
                 <i class="layui-icon">&#xe654;</i>
                 商品进货
             </a>
