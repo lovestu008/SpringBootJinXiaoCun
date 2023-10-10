@@ -1,6 +1,6 @@
 $(function () {
     // 加载树形结构
-    loadModuleData();
+    loadMenuData();
 });
 
 // 定义树形结构对象
@@ -9,7 +9,7 @@ var zTreeObj;
 /**
  * 加载资源树形数据
  */
-function loadModuleData() {
+function loadMenuData() {
     // 配置信息对象  zTree的参数配置
     var setting = {
         // 使用复选框
@@ -32,7 +32,7 @@ function loadModuleData() {
     // 通过ajax查询资源列表
     $.ajax({
         type:"get",
-        url:ctx + "/module/queryAllModules",
+        url:ctx + "/menu/queryAllMenus",
         // 查询所有的资源列表时，传递角色ID，查询当前角色对应的已经授权的资源
         data:{
             roleId:$("[name='roleId']").val()

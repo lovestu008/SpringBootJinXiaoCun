@@ -24,6 +24,26 @@
     from t_customer_return_list_goods
     where id = #{id,jdbcType=INTEGER}
   </select>
+  <!--获取下一个退货单号-->
+    <select id="getNextSaleNumber" resultType="java.lang.String">
+        SELECT max(customer_return_number) as CustomerReturnListNumber
+        from t_customer_return_list
+        where TO_DAYS(now()) = (SELECT TO_DAYS(MAX(customer_return_date))
+                                from t_customer_return_list)
+    </select>
+  <!--通过退货单号返回该退货单的明细-->
+  <select id="queryCustomerReturnListGoodsByCustomerReturnListId"
+          resultType="com.xxxx.supermarket.entity.CustomerReturnListGoods">
+      select
+      *
+      from t_customer_return_list_goods
+      <where>
+          <if test="id!=null">
+              customer_return_list_id = #{id,jdbcType=INTEGER}
+          </if>
+      </where>
+  </select>
+
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from t_customer_return_list_goods
     where id = #{id,jdbcType=INTEGER}

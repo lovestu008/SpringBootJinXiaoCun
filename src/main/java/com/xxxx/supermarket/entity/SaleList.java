@@ -1,17 +1,29 @@
 package com.xxxx.supermarket.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import io.swagger.annotations.ApiModel;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import org.springframework.format.annotation.DateTimeFormat;
+
+import java.io.Serializable;
 import java.util.Date;
 
-public class SaleList {
+@Data
+@EqualsAndHashCode(callSuper = false)
+@ApiModel(value="SaleList对象", description="销售单表")
+public class SaleList implements Serializable {
     private Integer id;
 
-    private Float amountPaid;//实付金额
+    private Float amountPaid = 0.0F;//实付金额
 
-    private Float amountPayable;//应付金额
+    private Float amountPayable =0.0F;//应付金额
 
     private String remarks;
 
-    private Date saleDate;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @JsonFormat(pattern = "yyyy-MM-dd",timezone = "GMT+8")
+    private Date saleDate = new Date();
 
     private String saleNumber;
 
@@ -21,75 +33,7 @@ public class SaleList {
 
     private Integer customerId;
 
-    public Integer getId() {
-        return id;
-    }
+    private String userName;//操作员
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public Float getAmountPaid() {
-        return amountPaid;
-    }
-
-    public void setAmountPaid(Float amountPaid) {
-        this.amountPaid = amountPaid;
-    }
-
-    public Float getAmountPayable() {
-        return amountPayable;
-    }
-
-    public void setAmountPayable(Float amountPayable) {
-        this.amountPayable = amountPayable;
-    }
-
-    public String getRemarks() {
-        return remarks;
-    }
-
-    public void setRemarks(String remarks) {
-        this.remarks = remarks == null ? null : remarks.trim();
-    }
-
-    public Date getSaleDate() {
-        return saleDate;
-    }
-
-    public void setSaleDate(Date saleDate) {
-        this.saleDate = saleDate;
-    }
-
-    public String getSaleNumber() {
-        return saleNumber;
-    }
-
-    public void setSaleNumber(String saleNumber) {
-        this.saleNumber = saleNumber == null ? null : saleNumber.trim();
-    }
-
-    public Integer getState() {
-        return state;
-    }
-
-    public void setState(Integer state) {
-        this.state = state;
-    }
-
-    public Integer getUserId() {
-        return userId;
-    }
-
-    public void setUserId(Integer userId) {
-        this.userId = userId;
-    }
-
-    public Integer getCustomerId() {
-        return customerId;
-    }
-
-    public void setCustomerId(Integer customerId) {
-        this.customerId = customerId;
-    }
+    private String customerName;//客户名
 }

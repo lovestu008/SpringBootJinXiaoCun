@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.xxxx.supermarket.dao.GoodsTypeMapper" >
+  <resultMap id="BaseResultMap" type="com.xxxx.supermarket.entity.GoodsType" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="p_id" property="pId" jdbcType="INTEGER" />
+    <result column="state" property="state" jdbcType="INTEGER" />
+    <result column="icon" property="icon" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, name, p_id, state, icon
+  </sql>
+
+  <!--根据id查询商品类别数据-->
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_goods_type
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+
+  <!--删除商品类别-->
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from t_goods_type
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+
+  <insert id="insert" parameterType="com.xxxx.supermarket.entity.GoodsType" >
+    insert into t_goods_type (id, name, p_id, 
+      state, icon)
+    values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{pId,jdbcType=INTEGER}, 
+      #{state,jdbcType=INTEGER}, #{icon,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.xxxx.supermarket.entity.GoodsType" >
+    insert into t_goods_type
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="name != null" >
+        name,
+      </if>
+      <if test="pId != null" >
+        p_id,
+      </if>
+      <if test="state != null" >
+        state,
+      </if>
+      <if test="icon != null" >
+        icon,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="pId != null" >
+        #{pId,jdbcType=INTEGER},
+      </if>
+      <if test="state != null" >
+        #{state,jdbcType=INTEGER},
+      </if>
+      <if test="icon != null" >
+        #{icon,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+
+  <update id="updateByPrimaryKeySelective" parameterType="com.xxxx.supermarket.entity.GoodsType" >
+    update t_goods_type
+    <set >
+      <if test="name != null" >
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="pId != null" >
+        p_id = #{pId,jdbcType=INTEGER},
+      </if>
+      <if test="state != null" >
+        state = #{state,jdbcType=INTEGER},
+      </if>
+      <if test="icon != null" >
+        icon = #{icon,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.xxxx.supermarket.entity.GoodsType" >
+    update t_goods_type
+    set name = #{name,jdbcType=VARCHAR},
+      p_id = #{pId,jdbcType=INTEGER},
+      state = #{state,jdbcType=INTEGER},
+      icon = #{icon,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+  <!--查询所有的商品类别-->
+  <select id="queryAllGoodsTypes" resultType="com.xxxx.supermarket.model.TreeGoodsModel">
+    select id,name,p_id as pId
+    from t_goods_type
+
+  </select>
+
+  <!--查询所有的表格数据-->
+  <select id="queryGoodsTypeList" resultType="com.xxxx.supermarket.entity.GoodsType">
+    select
+        <include refid="Base_Column_List"></include>
+    from
+        t_goods_type
+  </select>
+
+  <!--把id当做父级id(pId)查询父级类别下是否存在子类-->
+  <select id="queryCountGoodsTypeByParentId" parameterType="int" resultType="Integer">
+    select
+        count(1)
+    from
+        t_goods_type
+    where
+        p_id = #{id}
+  </select>
+
+  <!--通过父类id获取所有goodstype-->
+  <select id="queryGoodsTypeByParentId" parameterType="integer" resultType="GoodsType">
+    select *
+    from t_goods_type
+    where p_id = #{id}
+  </select>
+
+  <!--通过类型Id获取类型-->
+  <select id="queryGoodsTypeByTypeId" resultType="com.xxxx.supermarket.entity.GoodsType">
+    select *
+    from t_goods_type
+    where id = #{typeId}
+  </select>
+  <!--添加商品类别-->
+  <insert id="insertGoodsType" parameterType="com.xxxx.supermarket.entity.GoodsType">
+    insert into t_goods_type (name, p_id, state)
+    values ( #{name,jdbcType=VARCHAR},
+            #{id,jdbcType=INTEGER},
+            #{state,jdbcType=INTEGER}
+            )
+  </insert>
+
+</mapper>

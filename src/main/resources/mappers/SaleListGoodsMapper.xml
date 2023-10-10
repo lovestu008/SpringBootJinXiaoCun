@@ -1,172 +1,199 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.xxxx.supermarket.dao.SaleListGoodsMapper">
-  <resultMap id="BaseResultMap" type="com.xxxx.supermarket.entity.SaleListGoods">
-    <id column="id" jdbcType="INTEGER" property="id" />
-    <result column="code" jdbcType="VARCHAR" property="code" />
-    <result column="model" jdbcType="VARCHAR" property="model" />
-    <result column="name" jdbcType="VARCHAR" property="name" />
-    <result column="num" jdbcType="INTEGER" property="num" />
-    <result column="price" jdbcType="REAL" property="price" />
-    <result column="total" jdbcType="REAL" property="total" />
-    <result column="unit" jdbcType="VARCHAR" property="unit" />
-    <result column="sale_list_id" jdbcType="INTEGER" property="saleListId" />
-    <result column="type_id" jdbcType="INTEGER" property="typeId" />
-    <result column="goods_id" jdbcType="INTEGER" property="goodsId" />
-  </resultMap>
-  <sql id="Base_Column_List">
-    id, code, model, name, num, price, total, unit, sale_list_id, type_id, goods_id
-  </sql>
-  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
-    select 
-    <include refid="Base_Column_List" />
-    from t_sale_list_goods
-    where id = #{id,jdbcType=INTEGER}
-  </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
-    delete from t_sale_list_goods
-    where id = #{id,jdbcType=INTEGER}
-  </delete>
-  <delete id="deleteBatch">
-      delete from t_sale_list_goods
-      where id in
-      <foreach collection="array" item="id" open="(" close=")" separator=",">
-          #{id}
-      </foreach>
-  </delete>
+    <resultMap id="BaseResultMap" type="com.xxxx.supermarket.entity.SaleListGoods">
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="code" jdbcType="VARCHAR" property="code"/>
+        <result column="model" jdbcType="VARCHAR" property="model"/>
+        <result column="name" jdbcType="VARCHAR" property="name"/>
+        <result column="num" jdbcType="INTEGER" property="num"/>
+        <result column="price" jdbcType="REAL" property="price"/>
+        <result column="total" jdbcType="REAL" property="total"/>
+        <result column="unit" jdbcType="VARCHAR" property="unit"/>
+        <result column="sale_list_id" jdbcType="INTEGER" property="saleListId"/>
+        <result column="type_id" jdbcType="INTEGER" property="typeId"/>
+        <result column="goods_id" jdbcType="INTEGER" property="goodsId"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        id, code, model, name, num, price, total, unit, sale_list_id, type_id, goods_id
+    </sql>
 
-  <insert id="insert" parameterType="com.xxxx.supermarket.entity.SaleListGoods">
-    insert into t_sale_list_goods (id, code, model, 
-      name, num, price, total, 
-      unit, sale_list_id, type_id, 
-      goods_id)
-    values (#{id,jdbcType=INTEGER}, #{code,jdbcType=VARCHAR}, #{model,jdbcType=VARCHAR}, 
-      #{name,jdbcType=VARCHAR}, #{num,jdbcType=INTEGER}, #{price,jdbcType=REAL}, #{total,jdbcType=REAL}, 
-      #{unit,jdbcType=VARCHAR}, #{saleListId,jdbcType=INTEGER}, #{typeId,jdbcType=INTEGER}, 
-      #{goodsId,jdbcType=INTEGER})
-  </insert>
-  <insert id="insertSelective" parameterType="com.xxxx.supermarket.entity.SaleListGoods">
-    insert into t_sale_list_goods
-    <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="id != null">
-        id,
-      </if>
-      <if test="code != null">
-        code,
-      </if>
-      <if test="model != null">
-        model,
-      </if>
-      <if test="name != null">
-        name,
-      </if>
-      <if test="num != null">
-        num,
-      </if>
-      <if test="price != null">
-        price,
-      </if>
-      <if test="total != null">
-        total,
-      </if>
-      <if test="unit != null">
-        unit,
-      </if>
-      <if test="saleListId != null">
-        sale_list_id,
-      </if>
-      <if test="typeId != null">
-        type_id,
-      </if>
-      <if test="goodsId != null">
-        goods_id,
-      </if>
-    </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="id != null">
-        #{id,jdbcType=INTEGER},
-      </if>
-      <if test="code != null">
-        #{code,jdbcType=VARCHAR},
-      </if>
-      <if test="model != null">
-        #{model,jdbcType=VARCHAR},
-      </if>
-      <if test="name != null">
-        #{name,jdbcType=VARCHAR},
-      </if>
-      <if test="num != null">
-        #{num,jdbcType=INTEGER},
-      </if>
-      <if test="price != null">
-        #{price,jdbcType=REAL},
-      </if>
-      <if test="total != null">
-        #{total,jdbcType=REAL},
-      </if>
-      <if test="unit != null">
-        #{unit,jdbcType=VARCHAR},
-      </if>
-      <if test="saleListId != null">
-        #{saleListId,jdbcType=INTEGER},
-      </if>
-      <if test="typeId != null">
-        #{typeId,jdbcType=INTEGER},
-      </if>
-      <if test="goodsId != null">
-        #{goodsId,jdbcType=INTEGER},
-      </if>
-    </trim>
-  </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.xxxx.supermarket.entity.SaleListGoods">
-    update t_sale_list_goods
-    <set>
-      <if test="code != null">
-        code = #{code,jdbcType=VARCHAR},
-      </if>
-      <if test="model != null">
-        model = #{model,jdbcType=VARCHAR},
-      </if>
-      <if test="name != null">
-        name = #{name,jdbcType=VARCHAR},
-      </if>
-      <if test="num != null">
-        num = #{num,jdbcType=INTEGER},
-      </if>
-      <if test="price != null">
-        price = #{price,jdbcType=REAL},
-      </if>
-      <if test="total != null">
-        total = #{total,jdbcType=REAL},
-      </if>
-      <if test="unit != null">
-        unit = #{unit,jdbcType=VARCHAR},
-      </if>
-      <if test="saleListId != null">
-        sale_list_id = #{saleListId,jdbcType=INTEGER},
-      </if>
-      <if test="typeId != null">
-        type_id = #{typeId,jdbcType=INTEGER},
-      </if>
-      <if test="goodsId != null">
-        goods_id = #{goodsId,jdbcType=INTEGER},
-      </if>
-    </set>
-    where id = #{id,jdbcType=INTEGER}
-  </update>
-  <update id="updateByPrimaryKey" parameterType="com.xxxx.supermarket.entity.SaleListGoods">
-    update t_sale_list_goods
-    set code = #{code,jdbcType=VARCHAR},
-      model = #{model,jdbcType=VARCHAR},
-      name = #{name,jdbcType=VARCHAR},
-      num = #{num,jdbcType=INTEGER},
-      price = #{price,jdbcType=REAL},
-      total = #{total,jdbcType=REAL},
-      unit = #{unit,jdbcType=VARCHAR},
-      sale_list_id = #{saleListId,jdbcType=INTEGER},
-      type_id = #{typeId,jdbcType=INTEGER},
-      goods_id = #{goodsId,jdbcType=INTEGER}
-    where id = #{id,jdbcType=INTEGER}
-  </update>
+    <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        select
+        *
+        from t_sale_list_goods
+        where id = #{id,jdbcType=INTEGER}
 
+    </select>
+
+    <!--通过订单编号判断属于该订单的记录数-->
+    <select id="querySaleListGoodsBySaleListId" resultType="com.xxxx.supermarket.entity.SaleListGoods">
+        select
+        *
+        from t_sale_list_goods
+        <where>
+            <if test="id!=null">
+                sale_list_id = #{id,jdbcType=INTEGER}
+            </if>
+        </where>
+
+    </select>
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+        delete
+        from t_sale_list_goods
+        where id = #{id,jdbcType=INTEGER}
+    </delete>
+
+    <delete id="deleteBatch">
+        delete from t_sale_list_goods
+        where id in
+        <foreach collection="array" item="id" open="(" close=")" separator=",">
+            #{id}
+        </foreach>
+    </delete>
+
+    <insert id="insert" parameterType="com.xxxx.supermarket.entity.SaleListGoods">
+        insert into t_sale_list_goods (id, code, model,
+                                       name, num, price, total,
+                                       unit, sale_list_id, type_id,
+                                       goods_id)
+        values (#{id,jdbcType=INTEGER}, #{code,jdbcType=VARCHAR}, #{model,jdbcType=VARCHAR},
+                #{name,jdbcType=VARCHAR}, #{num,jdbcType=INTEGER}, #{price,jdbcType=REAL}, #{total,jdbcType=REAL},
+                #{unit,jdbcType=VARCHAR}, #{saleListId,jdbcType=INTEGER}, #{typeId,jdbcType=INTEGER},
+                #{goodsId,jdbcType=INTEGER})
+    </insert>
+    <insert id="insertSelective" parameterType="com.xxxx.supermarket.entity.SaleListGoods">
+        insert into t_sale_list_goods
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="code != null">
+                code,
+            </if>
+            <if test="model != null">
+                model,
+            </if>
+            <if test="name != null">
+                name,
+            </if>
+            <if test="num != null">
+                num,
+            </if>
+            <if test="price != null">
+                price,
+            </if>
+            <if test="total != null">
+                total,
+            </if>
+            <if test="unit != null">
+                unit,
+            </if>
+            <if test="saleListId != null">
+                sale_list_id,
+            </if>
+            <if test="typeId != null">
+                type_id,
+            </if>
+            <if test="goodsId != null">
+                goods_id,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="code != null">
+                #{code,jdbcType=VARCHAR},
+            </if>
+            <if test="model != null">
+                #{model,jdbcType=VARCHAR},
+            </if>
+            <if test="name != null">
+                #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="num != null">
+                #{num,jdbcType=INTEGER},
+            </if>
+            <if test="price != null">
+                #{price,jdbcType=REAL},
+            </if>
+            <if test="total != null">
+                #{total,jdbcType=REAL},
+            </if>
+            <if test="unit != null">
+                #{unit,jdbcType=VARCHAR},
+            </if>
+            <if test="saleListId != null">
+                #{saleListId,jdbcType=INTEGER},
+            </if>
+            <if test="typeId != null">
+                #{typeId,jdbcType=INTEGER},
+            </if>
+            <if test="goodsId != null">
+                #{goodsId,jdbcType=INTEGER},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.xxxx.supermarket.entity.SaleListGoods">
+        update t_sale_list_goods
+        <set>
+            <if test="code != null">
+                code = #{code,jdbcType=VARCHAR},
+            </if>
+            <if test="model != null">
+                model = #{model,jdbcType=VARCHAR},
+            </if>
+            <if test="name != null">
+                name = #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="num != null">
+                num = #{num,jdbcType=INTEGER},
+            </if>
+            <if test="price != null">
+                price = #{price,jdbcType=REAL},
+            </if>
+            <if test="total != null">
+                total = #{total,jdbcType=REAL},
+            </if>
+            <if test="unit != null">
+                unit = #{unit,jdbcType=VARCHAR},
+            </if>
+            <if test="saleListId != null">
+                sale_list_id = #{saleListId,jdbcType=INTEGER},
+            </if>
+            <if test="typeId != null">
+                type_id = #{typeId,jdbcType=INTEGER},
+            </if>
+            <if test="goodsId != null">
+                goods_id = #{goodsId,jdbcType=INTEGER},
+            </if>
+        </set>
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.xxxx.supermarket.entity.SaleListGoods">
+        update t_sale_list_goods
+        set code         = #{code,jdbcType=VARCHAR},
+            model        = #{model,jdbcType=VARCHAR},
+            name         = #{name,jdbcType=VARCHAR},
+            num          = #{num,jdbcType=INTEGER},
+            price        = #{price,jdbcType=REAL},
+            total        = #{total,jdbcType=REAL},
+            unit         = #{unit,jdbcType=VARCHAR},
+            sale_list_id = #{saleListId,jdbcType=INTEGER},
+            type_id      = #{typeId,jdbcType=INTEGER},
+            goods_id     = #{goodsId,jdbcType=INTEGER}
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+    <!--查询商品销量前五-->
+    <select id="selectSaleListGoods" resultType="com.xxxx.supermarket.model.SaleListGoodsModel">
+        select
+            goods_id,code,model,name,id,price,sum(total) allTotal,sale_list_id
+        from
+            t_sale_list_goods
+        group by goods_id
+        order by allTotal desc
+            limit 5
+    </select>
 </mapper>
