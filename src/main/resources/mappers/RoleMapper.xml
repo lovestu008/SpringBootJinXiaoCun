@@ -110,12 +110,12 @@
   <select id="selectByParams" resultType="com.xxxx.supermarket.entity.Role" parameterType="com.xxxx.supermarket.query.RoleQuery">
     select    <include refid="Base_Column_List"></include>
         from t_role
-    <where>
+    <!--<where>
         is_del = 0
       <if test="null != roleName and '' != roleName">
         and name like concat('%',#{name},'%')
       </if>
-    </where>
+    </where>-->
   </select>
   <!--通过角色名查找角色-->
   <select id="selectByRoleName" resultType="com.xxxx.supermarket.entity.Role" parameterType="string">
