@@ -14,7 +14,7 @@
 
   <!--根据id查询商品类别数据-->
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
-    select 
+    select
     <include refid="Base_Column_List" />
     from t_goods_type
     where id = #{id,jdbcType=INTEGER}
@@ -27,9 +27,9 @@
   </delete>
 
   <insert id="insert" parameterType="com.xxxx.supermarket.entity.GoodsType" >
-    insert into t_goods_type (id, name, p_id, 
+    insert into t_goods_type (id, name, p_id,
       state, icon)
-    values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{pId,jdbcType=INTEGER}, 
+    values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{pId,jdbcType=INTEGER},
       #{state,jdbcType=INTEGER}, #{icon,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.xxxx.supermarket.entity.GoodsType" >
@@ -113,7 +113,7 @@
   </select>
 
   <!--把id当做父级id(pId)查询父级类别下是否存在子类-->
-  <select id="queryGoodsTypeByParentId" parameterType="int" resultType="Integer">
+  <select id="queryGoodsTypeCountByParentId" parameterType="int" resultType="Integer">
     select
         count(1)
     from
@@ -121,6 +121,19 @@
     where
         p_id = #{id}
   </select>
+    <!--通过父类id获取所有goodstype-->
+    <select id="queryGoodsTypeByParentId" parameterType="integer" resultType="GoodsType">
+        select *
+        from t_goods_type
+        where p_id = #{id}
+    </select>
+
+    <!--通过类型Id获取类型-->
+    <select id="queryGoodsTypeByTypeId" resultType="com.xxxx.supermarket.entity.GoodsType">
+        select *
+        from t_goods_type
+        where id = #{typeId}
+    </select>
 
   <!--添加商品类别-->
   <insert id="insertGoodsType" parameterType="com.xxxx.supermarket.entity.GoodsType">

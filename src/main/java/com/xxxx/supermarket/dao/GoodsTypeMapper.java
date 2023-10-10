@@ -28,7 +28,14 @@ public interface GoodsTypeMapper extends BaseMapper<GoodsType,Integer> {
      * @param id
      * @return
      */
-    public Integer queryGoodsTypeByParentId(Integer id);
+    Integer queryGoodsTypeCountByParentId(Integer id);
+
+    /**
+     * 通过父类id获取所有goodstype
+     * @param id
+     * @return
+     */
+    List<GoodsType> queryGoodsTypeByParentId(Integer id);
 
     /**
      * 将id添加 当做pId 添加数据
@@ -36,4 +43,9 @@ public interface GoodsTypeMapper extends BaseMapper<GoodsType,Integer> {
      * @return
      */
     Integer insertGoodsType(GoodsType goodsType);
+
+
+    GoodsType queryGoodsTypeByTypeId(Integer typeId);
+
+
 }
