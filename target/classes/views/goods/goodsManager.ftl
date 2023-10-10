@@ -9,23 +9,8 @@
 </head>
 <body class="childrenBody">
 
-<div class="layui-fluid">
-    <div class="layui-row layui-col-space15">
-        <!-- 左树 -->
-        <div class="layui-col-sm12 layui-col-md4 layui-col-lg3" style="width: 12%" >
-
-            <div class="layui-card-body">
-                <fieldset class="layui-elem-field layui-field-title" >
-                    <legend style="font-size: 15px">商品类别</legend>
-                </fieldset>
-
-                <div id="goodsTypeTree" class="ztree">
-                </div>
-                <input type="hidden" name="typeId"/>
-            </div>
-        </div>
         <!-- 右表 -->
-        <div class="layui-col-sm12 layui-col-md8 layui-col-lg9" style="width: 88%">
+        <div class="layui-col-sm12 layui-col-md8 layui-col-lg9" style="width: 100%">
             <div class="layui-card">
                 <fieldset class="layui-elem-field layui-field-title" >
                     <legend style="font-size: 15px">商品管理</legend>
