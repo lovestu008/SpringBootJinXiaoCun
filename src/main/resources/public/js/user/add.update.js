@@ -18,15 +18,13 @@ layui.use(['form', 'layer' ,'formSelects'], function () {
         // 请求的地址 添加操作
         var url = ctx + "/user/add";
 
-        // 通过营销机会的ID来判断当前需要执行添加操作还是修改操作
-        // 如果营销机会的ID为空，则表示执行添加操作；如果ID不为空，则表示执行更新操作
-        // 通过获取隐藏域中的ID
         var userId = $("[name='id']").val();
         // 判断ID是否为空
         if (userId != null && userId != '') {
             // 更新操作
             url = ctx + "/user/update";
         }
+        console.log(data.field);
         // 发送ajax请求
         $.post(url, data.field, function (result) {
             // 操作成功

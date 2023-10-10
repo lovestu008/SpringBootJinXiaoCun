@@ -36,7 +36,7 @@
       #{remarks,jdbcType=VARCHAR}, #{isDel,jdbcType=INTEGER}, #{createtime,jdbcType=TIMESTAMP}, 
       #{updatetime,jdbcType=TIMESTAMP})
   </insert>
-  <insert id="insertSelective" parameterType="com.xxxx.supermarket.entity.User">
+  <insert id="insertSelective" parameterType="com.xxxx.supermarket.entity.User" useGeneratedKeys="true" keyProperty="id">
     insert into t_user
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">

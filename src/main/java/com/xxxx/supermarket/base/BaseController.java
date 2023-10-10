@@ -3,7 +3,7 @@ package com.xxxx.supermarket.base;
 
 import org.springframework.web.bind.annotation.ModelAttribute;
 
-import javax.naming.ldap.BasicControl;
+
 import javax.servlet.http.HttpServletRequest;
 
 public class BaseController  {

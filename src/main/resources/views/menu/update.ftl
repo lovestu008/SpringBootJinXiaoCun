@@ -54,7 +54,15 @@
             </div>
         </div>
     </#if>
-
+    <#if menu.grade==2>
+        <div class="layui-form-item layui-row layui-col-xs12">
+            <label class="layui-form-label">菜单url</label>
+            <div class="layui-input-block">
+                <input type="text" class="layui-input userName"
+                       lay-verify="required" name="url" id="url" placeholder="请输入菜单url" value="${(menu.url)!""}">
+            </div>
+        </div>
+    </#if>
 
     <!--
        添加根级菜单
