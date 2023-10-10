@@ -125,7 +125,7 @@ layui.use(['table','layer'],function(){
         layui.layer.open({
             title:title,
             content:url,
-            area:["500px","550px"],
+            area:["650px","450px"],
             type:2,
             maxmin:true
         });

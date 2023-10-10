@@ -32,10 +32,6 @@
                 &nbsp;&nbsp;
                 <a class="layui-btn layui-btn-danger layui-btn-radius search_btn" data-type="reload"><i
                             class="layui-icon layui-btn-md layui-bg-red">&#xe615;</i> 搜索</a>
-                <#--<a class="layui-btn layui-btn-warm layui-btn-radius return_btn" data-type="rolleback"><i
-                            class="layui-icon layui-bg-orange">&#xe666;</i> 重置</a>-->
-
-
                 <button class="layui-btn layui-btn-warm layui-btn-radius"  type="reset" id="reset"><i
                             class="layui-icon layui-bg-orange">&#xe666;</i> 重置</button>
             </div>

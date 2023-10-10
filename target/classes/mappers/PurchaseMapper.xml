@@ -232,5 +232,24 @@
     where
         name=#{goodsName}
   </update>
+  <!--查询上次进价-->
+  <select id="selectPurchasingPriceByGoodsName" parameterType="string" resultType="int">
+    select
+        purchasing_price
+    from
+        t_goods
+    where
+        name=#{goodsName}
+  </select>
+  <!--更新库存信息-->
+  <update id="updateGoodsNumAndLastPurchasingPrice">
+    update t_goods
+    set
+        purchasing_price=#{purchasingPrice},
+        last_purchasing_price=#{lastPurchasingPrice},
+        inventory_quantity=#{goodsNum}
+    where
+        name=#{goodsName}
+  </update>
 
 </mapper>
