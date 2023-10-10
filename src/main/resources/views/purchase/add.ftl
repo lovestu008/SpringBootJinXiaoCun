@@ -13,7 +13,7 @@
         <label class="layui-form-label">商品</label>
         <div class="layui-input-block">
             <select name="goodsName" id="goodsName">
-                <option value="">请选择</option>
+                <option value="请选择商品"></option>
             </select>
         </div>
     </div>
