@@ -4,24 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47f004b4-5068-48b2-9225-7a541737bcc5" name="Changes" comment="fixup! 除商品分类外，都已完成的提交">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/public/js/goodsType/add.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/views/goodsType/goods_type.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/SaleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/SaleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/goods/goods.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/js/goods/goods.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/goods/goods.type.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/goodsType/goods.type.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/js/goodsType/goods.type.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/views/goods/goodsManager.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/goods/goodsManager.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/views/goods/goods_type.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/views/log/log.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/log/log.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/GoodsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/GoodsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/public/js/goods/goods.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/public/js/goods/goods.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/views/goods/goodsManager.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/views/goods/goodsManager.ftl" afterDir="false" />
-    </list>
+    <list default="true" id="47f004b4-5068-48b2-9225-7a541737bcc5" name="Changes" comment="合并" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,7 +23,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="hwj" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -146,7 +129,7 @@
       <workItem from="1696929214588" duration="42000" />
       <workItem from="1696929262026" duration="2188000" />
       <workItem from="1696931493907" duration="390000" />
-      <workItem from="1696935536182" duration="4794000" />
+      <workItem from="1696935536182" duration="5119000" />
     </task>
     <task id="LOCAL-00001" summary="role module">
       <created>1696554818830</created>
@@ -365,7 +348,14 @@
       <option name="project" value="LOCAL" />
       <updated>1696939615855</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="合并">
+      <created>1696940894997</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1696940894997</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -387,7 +377,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="hwj" />
+                        <option value="hwj1" />
                       </list>
                     </value>
                   </entry>
@@ -400,7 +390,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="unversioned 问题" />
     <MESSAGE value="menu 下js文件" />
     <MESSAGE value="user操作 用户登录 user的session作用域" />
     <MESSAGE value="非法访问拦截" />
@@ -425,6 +414,7 @@
     <MESSAGE value="goods 修改" />
     <MESSAGE value="xml" />
     <MESSAGE value="合并wf" />
-    <option name="LAST_COMMIT_MESSAGE" value="合并wf" />
+    <MESSAGE value="合并" />
+    <option name="LAST_COMMIT_MESSAGE" value="合并" />
   </component>
 </project>
