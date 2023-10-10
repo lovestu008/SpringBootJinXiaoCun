@@ -119,4 +119,9 @@
     </foreach>
   </insert>
 
+  <select id="queryRoleHasMenuIdsByRoleId" resultType="java.lang.Integer">
+    select menu_id
+    from t_role_menu
+    where role_id = #{roleId}
+  </select>
 </mapper>

@@ -3,12 +3,14 @@ package com.xxxx.supermarket.controller;
 import com.xxxx.supermarket.base.BaseController;
 import com.xxxx.supermarket.base.ResultInfo;
 import com.xxxx.supermarket.entity.Menu;
+import com.xxxx.supermarket.model.TreeModel;
 import com.xxxx.supermarket.service.MenuService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 import java.util.Map;
 
 @Controller
@@ -40,6 +42,20 @@ public class MenuController extends BaseController {
         request.setAttribute("pId",parentId);
         return "menu/add";
     }
+
+    @RequestMapping("toAddGrantPage")
+    public String toAddGrantPage(HttpServletRequest request,Integer roleId){
+        request.setAttribute("roleId",roleId);
+        return "role/grant";
+    }
+
+    @RequestMapping("queryAllMenus")
+    @ResponseBody
+    public List<TreeModel> queryAllMenus(Integer roleId){
+        return menuService.selectAllMenus(roleId);
+    }
+
+
 
     @RequestMapping("add")
     @ResponseBody

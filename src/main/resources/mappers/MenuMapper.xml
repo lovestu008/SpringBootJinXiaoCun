@@ -167,4 +167,14 @@
     from t_menu
     where is_del = 0 and p_id = #{id}
   </select>
+
+  <select id="selectAllMenus" resultType="com.xxxx.supermarket.model.TreeModel">
+      select id,
+             p_id,
+             name
+      from t_menu
+      where is_del = 0
+  </select>
+
+
 </mapper>

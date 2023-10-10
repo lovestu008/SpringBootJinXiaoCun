@@ -4,7 +4,7 @@ import com.xxxx.supermarket.base.BaseService;
 import com.xxxx.supermarket.dao.MenuMapper;
 import com.xxxx.supermarket.dao.RoleMenuMapper;
 import com.xxxx.supermarket.entity.Menu;
-import com.xxxx.supermarket.entity.RoleMenu;
+import com.xxxx.supermarket.model.TreeModel;
 import com.xxxx.supermarket.utils.AssertUtil;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
@@ -98,6 +98,11 @@ public class MenuService extends BaseService<Menu,Integer> {
         }
         AssertUtil.isTrue(menuMapper.updateByPrimaryKeySelective(menu)<1,"菜单更新失败");
     }
+
+    /**
+     * 删除菜单
+     * @param id
+     */
     @Transactional(propagation = Propagation.REQUIRED)
     public void deleteMenu(Integer id) {
         Menu temp = menuMapper.selectByPrimaryKey(id);
@@ -113,5 +118,27 @@ public class MenuService extends BaseService<Menu,Integer> {
         }
         temp.setIsDel(1);
         AssertUtil.isTrue(updateByPrimaryKeySelective(temp)<1,"菜单删除失败");
+    }
+
+    /**
+     * 查询所有菜单
+     * @return
+     */
+    public List<TreeModel> selectAllMenus(Integer roleId) {
+        // 查询所有的资源列表
+        List<TreeModel> treeModelList = menuMapper.selectAllMenus();
+        // 查询指定角色已经授权过的资源列表 (查询角色拥有的资源ID)
+        List<Integer> permisssionIds = roleMenuMapper.queryRoleHasMenuIdsByRoleId(roleId);
+        permisssionIds.forEach(System.out::println);
+        if (permisssionIds != null && permisssionIds.size() > 0 ){
+            // 循环所有的资源列表，判断用户拥有的资源ID中是否有匹配的，如果有，则设置checked属性为true
+            treeModelList.forEach(treeModel -> {
+                System.out.println("======"+treeModel.getId());
+                if (permisssionIds.contains(treeModel.getId())){
+                    treeModel.setChecked(true);
+                }
+            });
+        }
+        return treeModelList;
     }
 }

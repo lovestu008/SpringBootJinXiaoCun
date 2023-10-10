@@ -2,6 +2,7 @@ package com.xxxx.supermarket.dao;
 
 import com.xxxx.supermarket.base.BaseMapper;
 import com.xxxx.supermarket.entity.Menu;
+import com.xxxx.supermarket.model.TreeModel;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
@@ -17,4 +18,6 @@ public interface MenuMapper extends BaseMapper<Menu,Integer> {
     Menu selectMenuByAclValue(String aclValue);
 
     int countSubMenuByParentId(Integer id);
+
+    List<TreeModel> selectAllMenus();
 }

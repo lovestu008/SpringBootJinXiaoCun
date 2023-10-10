@@ -3,6 +3,8 @@ package com.xxxx.supermarket.dao;
 import com.xxxx.supermarket.base.BaseMapper;
 import com.xxxx.supermarket.entity.RoleMenu;
 
+import java.util.List;
+
 public interface RoleMenuMapper extends BaseMapper<RoleMenu,Integer> {
 
     int countRoleMenuByMenuId(Integer id);
@@ -11,4 +13,6 @@ public interface RoleMenuMapper extends BaseMapper<RoleMenu,Integer> {
     Integer countPermissionByRoleId(Integer roleId);
 
     void deleteRoleMenuByRoleId(Integer roleId);
+
+    List<Integer> queryRoleHasMenuIdsByRoleId(Integer roleId);
 }
