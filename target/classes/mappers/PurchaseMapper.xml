@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.xxxx.supermarket.dao.PurchaseMapper" >
+  <resultMap id="BaseResultMap" type="com.xxxx.supermarket.entity.Purchase" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="goods_name" property="goodsName" jdbcType="VARCHAR" />
+    <result column="provider" property="provider" jdbcType="VARCHAR" />
+    <result column="inp_price" property="inpPrice" jdbcType="INTEGER" />
+    <result column="all_inp_price" property="allInpPrice" jdbcType="INTEGER" />
+    <result column="inp_num" property="inpNum" jdbcType="INTEGER" />
+    <result column="inp_time" property="inpTime" jdbcType="TIMESTAMP" />
+    <result column="operate_person" property="operatePerson" jdbcType="VARCHAR" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+    <result column="is_valid" property="isValid" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, goods_name, provider, inp_price, all_inp_price, inp_num, inp_time, operate_person, 
+    remark, is_valid
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_purchase
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from t_purchase
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.xxxx.supermarket.entity.Purchase" >
+    insert into t_purchase (id, goods_name, provider, 
+      inp_price, all_inp_price, inp_num, 
+      inp_time, operate_person, remark, 
+      is_valid)
+    values (#{id,jdbcType=INTEGER}, #{goodsName,jdbcType=VARCHAR}, #{provider,jdbcType=VARCHAR}, 
+      #{inpPrice,jdbcType=INTEGER}, #{allInpPrice,jdbcType=INTEGER}, #{inpNum,jdbcType=INTEGER}, 
+      #{inpTime,jdbcType=TIMESTAMP}, #{operatePerson,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR}, 
+      #{isValid,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.xxxx.supermarket.entity.Purchase" >
+    insert into t_purchase
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="goodsName != null" >
+        goods_name,
+      </if>
+      <if test="provider != null" >
+        provider,
+      </if>
+      <if test="inpPrice != null" >
+        inp_price,
+      </if>
+      <if test="allInpPrice != null" >
+        all_inp_price,
+      </if>
+      <if test="inpNum != null" >
+        inp_num,
+      </if>
+      <if test="inpTime != null" >
+        inp_time,
+      </if>
+      <if test="operatePerson != null" >
+        operate_person,
+      </if>
+      <if test="remark != null" >
+        remark,
+      </if>
+      <if test="isValid != null" >
+        is_valid,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="goodsName != null" >
+        #{goodsName,jdbcType=VARCHAR},
+      </if>
+      <if test="provider != null" >
+        #{provider,jdbcType=VARCHAR},
+      </if>
+      <if test="inpPrice != null" >
+        #{inpPrice,jdbcType=INTEGER},
+      </if>
+      <if test="allInpPrice != null" >
+        #{allInpPrice,jdbcType=INTEGER},
+      </if>
+      <if test="inpNum != null" >
+        #{inpNum,jdbcType=INTEGER},
+      </if>
+      <if test="inpTime != null" >
+        #{inpTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="operatePerson != null" >
+        #{operatePerson,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null" >
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="isValid != null" >
+        #{isValid,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.xxxx.supermarket.entity.Purchase" >
+    update t_purchase
+    <set >
+      <if test="goodsName != null" >
+        goods_name = #{goodsName,jdbcType=VARCHAR},
+      </if>
+      <if test="provider != null" >
+        provider = #{provider,jdbcType=VARCHAR},
+      </if>
+      <if test="inpPrice != null" >
+        inp_price = #{inpPrice,jdbcType=INTEGER},
+      </if>
+      <if test="allInpPrice != null" >
+        all_inp_price = #{allInpPrice,jdbcType=INTEGER},
+      </if>
+      <if test="inpNum != null" >
+        inp_num = #{inpNum,jdbcType=INTEGER},
+      </if>
+      <if test="inpTime != null" >
+        inp_time = #{inpTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="operatePerson != null" >
+        operate_person = #{operatePerson,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null" >
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="isValid != null" >
+        is_valid = #{isValid,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.xxxx.supermarket.entity.Purchase" >
+    update t_purchase
+    set goods_name = #{goodsName,jdbcType=VARCHAR},
+      provider = #{provider,jdbcType=VARCHAR},
+      inp_price = #{inpPrice,jdbcType=INTEGER},
+      all_inp_price = #{allInpPrice,jdbcType=INTEGER},
+      inp_num = #{inpNum,jdbcType=INTEGER},
+      inp_time = #{inpTime,jdbcType=TIMESTAMP},
+      operate_person = #{operatePerson,jdbcType=VARCHAR},
+      remark = #{remark,jdbcType=VARCHAR},
+      is_valid = #{isValid,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+
+
+  <select id="selectByParams" parameterType="com.xxxx.supermarket.querys.PurchaseQuery" resultType="com.xxxx.supermarket.entity.Purchase">
+    select
+    <include refid="Base_Column_List" />
+    from
+    t_purchase
+    <where>
+    is_valid=1
+      <if test="provider != null and provider != ''">
+        and provider = #{provider}
+      </if>
+
+      <if test="goodsName != null and goodsName != ''">
+        and goods_name = #{goodsName}
+      </if>
+    </where>
+  </select>
+  <!--  <select id="selectAllProvider" resultType="java.util.Map">-->
+  <!--    select-->
+  <!--      id as providId,name as provider-->
+  <!--    from-->
+  <!--      t_provider p-->
+  <!--  </select>-->
+  <select id="selectAllProvider" resultType="java.util.Map">
+    select
+      distinct p1.id as providerId,p1.name as provider
+    from
+      t_purchase p2
+        LEFT JOIN
+      t_provider p1
+      on
+        p1.name=p2.provider
+    where p2.is_valid=1
+  </select>
+  <select id="selectAllGoodsName" resultType="java.util.Map">
+    select
+      distinct g.id as goodsId,g.name as goodsName
+    from
+      t_purchase p
+        LEFT JOIN
+      t_goods g
+      on
+        p.goods_name=g.name
+    where p.is_valid=1
+  </select>
+
+  <select id="selectProviderByGoodsNameFromGoods" parameterType="string" resultType="string">
+    select
+        producer
+    from
+        t_goods
+    where
+        name=#{goodsName}
+  </select>
+
+  <!--查询所有的商品id和名字-->
+  <select id="selectAllGoodsNameById" resultType="java.util.Map">
+    select
+        id as goodsId,name as goodsName
+    from
+        t_goods
+    where
+        is_del=0
+  </select>
+  <!--库存表查找库存-->
+  <select id="selectNumByGoodsName" parameterType="string" resultType="int">
+    select
+      inventory_quantity as goodsNum
+    from
+        t_goods
+    where
+        name=#{goodsName}
+  </select>
+  <!--修改商品数据库-->
+  <update id="updateGoodsNum" >
+    update t_goods
+    set inventory_quantity =#{goodsNum}
+    where
+        name=#{goodsName}
+  </update>
+
+</mapper>
