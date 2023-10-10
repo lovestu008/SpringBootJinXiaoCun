@@ -124,7 +124,7 @@ layui.use(['laydate', 'table', 'layer'], function () {
                 }, 500);
             } else {
                 top.layer.msg(
-                    res.message,{area: ['500px','300px']}
+                    res.msg
                 );
             }
         });

@@ -4,44 +4,51 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47f004b4-5068-48b2-9225-7a541737bcc5" name="Changes" comment="合并">
+    <list default="true" id="47f004b4-5068-48b2-9225-7a541737bcc5" name="Changes" comment="合并最终">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023_10_4_22_34_49__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023_10_4_22_34_49__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023_10_5_15_55__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023_10_5_15_55__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023_10_5_15_55__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023_10_5_15_55__Changes_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023_10_5_17_15__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023_10_5_17_15__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023_10_5_17_15__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023_10_5_17_15__Changes_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023_10_5_17_21__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023_10_5_17_21__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023_10_9_19_17__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023_10_9_19_17__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_2023_10_5_16_14__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_2023_10_5_16_14__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023_10_5_16_14__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023_10_5_16_14__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023_10_5_17_05__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023_10_5_17_05__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023_10_6_15_21__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023_10_6_15_21__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/aspect/SupLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/annotation/SupLog.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/aspect/SupLogAop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/aspect/SupLogAop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/CommonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/CommonController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/CustomerReturnListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/CustomerReturnListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/GoodsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/GoodsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/GoodsTypeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/GoodsTypeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/LogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/LogController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/MenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/ProviderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/ProviderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/PurchaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/PurchaseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/ReportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/ReportController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/ReturnController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/ReturnController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/RoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/RoleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/SaleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/SaleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/dao/GoodsTypeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/dao/GoodsTypeMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/dao/ReturnMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/dao/ReturnMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/dto/TreeDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/model/TreeDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/querys/PurchaseQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/query/PurchaseQuery.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/querys/ReturnQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/query/ReturnQuery.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/service/CustomerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/service/GoodsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/service/GoodsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/service/GoodsTypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/service/GoodsTypeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/service/ReturnService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/service/ReturnService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/GoodsTypeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/GoodsTypeMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/PurchaseMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/PurchaseMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/ReturnMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/ReturnMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/RoleMenuMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/RoleMenuMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/customerReturn/customer.return.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/js/customerReturn/customer.return.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/views/log/log.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/log/log.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/views/main.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/main.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/views/return/return.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/return/return.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/GoodsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/GoodsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/service/CustomerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/service/CustomerService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/service/GoodsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/service/GoodsService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/service/PurchaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/service/PurchaseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/CommonController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/CommonController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/CustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/CustomerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/CustomerReturnListController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/CustomerReturnListController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/GoodsTypeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/GoodsTypeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/MenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/MenuController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/ProviderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/ProviderController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/PurchaseController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/PurchaseController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/ReportController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/ReportController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/ReturnController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/ReturnController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/RoleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/RoleController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/dao/GoodsTypeMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/dao/GoodsTypeMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/dto/TreeDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/query/GoodsQuery.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/query/GoodsQuery.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/querys/PurchaseQuery.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/querys/ReturnQuery.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/service/GoodsTypeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/service/GoodsTypeService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/service/PurchaseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/service/PurchaseService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/service/ReturnService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/service/ReturnService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mappers/GoodsTypeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mappers/GoodsTypeMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mappers/MenuMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mappers/MenuMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mappers/PurchaseMapper.xml~origin_wxh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mappers/ReturnMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mappers/ReturnMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mappers/RoleMenuMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mappers/RoleMenuMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mappers/UserRoleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mappers/UserRoleMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/public/js/customerReturn/customer.return.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/public/js/customerReturn/customer.return.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/views/goods/goodsManager.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/views/goods/goodsManager.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/views/goods/goods_type.ftl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/views/return/return.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/views/return/return.ftl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -428,7 +435,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="menu 下js文件" />
     <MESSAGE value="user操作 用户登录 user的session作用域" />
     <MESSAGE value="非法访问拦截" />
     <MESSAGE value="完善邮箱登录" />
@@ -453,6 +459,7 @@
     <MESSAGE value="xml" />
     <MESSAGE value="合并wf" />
     <MESSAGE value="合并" />
-    <option name="LAST_COMMIT_MESSAGE" value="合并" />
+    <MESSAGE value="合并最终" />
+    <option name="LAST_COMMIT_MESSAGE" value="合并最终" />
   </component>
 </project>

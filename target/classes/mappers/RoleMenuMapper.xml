@@ -126,8 +126,13 @@
   </select>
 
   <select id="queryUserHasRoleHasPermissionByUserId" parameterType="int" resultType="java.lang.String">
-    select distinct (acl_value)
-    from t_user_role u left join t_role_menu m on u.role_id = m.role_id
-    where u.user_id = #{userId}
+    SELECT DISTINCT
+      ( acl_value )
+    FROM
+      t_user u
+        LEFT JOIN t_user_role r ON u.id = r.user_id
+        LEFT JOIN t_role_menu m ON r.role_id = m.role_id
+    WHERE
+      u.id = #{userId};
   </select>
 </mapper>
