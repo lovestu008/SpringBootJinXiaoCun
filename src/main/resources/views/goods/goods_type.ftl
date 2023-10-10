@@ -18,7 +18,7 @@
 	</div>
 </div>-->
 
-<input type="hidden" name="typeId" value="${typeId!""}"/>
+<input type="hidden" name="typeId"/>
 <script type="text/javascript" src="${ctx}/js/goods/goods.type.js"></script>
 </body>
 </html>
