@@ -9,8 +9,8 @@
 <form class="layui-form" >
     <blockquote class="layui-elem-quote quoteBox">
         <form class="layui-form">
-            <input type="hidden" id="providerId" value="${(purchase.providerId)!}">
-            <input type="hidden" id="goodsId" value="${(purchase.goodsId)!}">
+            <input type="hidden" id="providerId" value="${(purchase.provider)!}">
+            <input type="hidden" id="goodsId" value="${(purchase.goodsName)!}">
             <input type="hidden" id="id" value="${(purchase.id)!}">
             <div class="layui-inline">
                 <div class="layui-input-inline layui-col-md4">

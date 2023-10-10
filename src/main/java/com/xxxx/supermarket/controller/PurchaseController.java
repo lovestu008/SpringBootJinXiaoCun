@@ -66,6 +66,8 @@ public class PurchaseController extends BaseController {
     @ResponseBody
     @SupLog(content = "修改进货信息")
     public ResultInfo updatePurchase(Purchase purchase){
+        System.out.println(purchase.getGoodsName());
+        System.out.println(purchase.getId());
         purchaseService.updatePurchase(purchase);
         return success("进货信息修改成功");
     }
@@ -92,7 +94,6 @@ public class PurchaseController extends BaseController {
     public List<Map<String,Object>> selectAllGoodsNameById(){
         List list =  purchaseService.selectAllGoodsNameById();
         list.forEach(System.out::println);
-
         return list;
     }
 

@@ -78,13 +78,17 @@ public class PurchaseService extends BaseService<Purchase,Integer> {
      * 更新进货单
      * @param purchase
      */
+    @Transactional(propagation = Propagation.REQUIRED)
     public void updatePurchase(Purchase purchase) {
+        System.out.println("商品名字："+purchase.getGoodsName());
         AssertUtil.isTrue(StringUtils.isBlank(purchase.getGoodsName()),"商品名称不能为空");
         AssertUtil.isTrue(purchase.getInpNum()<=0,"进货数量不能小于零");
         AssertUtil.isTrue(purchase.getInpPrice()<=0,"进货价格不能小于零");
         //设置默认值
         purchase.setInpTime(new Date());
+        String provider =purchaseMapper.selectProviderByGoodsNameFromGoods(purchase.getGoodsName());
         purchase.setAllInpPrice(PriceUtil.priceProduct(purchase.getInpPrice(),purchase.getInpNum()));
+        purchase.setProvider(provider);
         //受影响行数判断
         AssertUtil.isTrue(purchaseMapper.updateByPrimaryKeySelective(purchase)!=1,"修改进货信息失败，请重试");
 

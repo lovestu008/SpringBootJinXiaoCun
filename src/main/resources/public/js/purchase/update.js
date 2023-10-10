@@ -18,6 +18,7 @@ layui.use(['form', 'layer'], function () {
         });
         // 请求的地址
         var url = ctx + "/purchase/update";
+        data.field.goodsName=$("[name='goodsName']").find("option:selected").text()
         // 发送ajax请求
         $.post(url, data.field, function (result) {
             // 操作成功
@@ -45,11 +46,11 @@ layui.use(['form', 'layer'], function () {
         url: ctx+"/purchase/selectAllGoodsNameById",
         data:{},
         success:function (data){
-            console.log(data)
+            console.log(data);
             if (data!=null){
                 var goodsId=$("#goodsId").val();
                 for (var i=0;i<data.length;i++){
-                    if (goodsId==data[i].goodsId){
+                    if (goodsId==data[i].goodsName){
                         console.log(data[i].goodsId)
                         opt ="<option value='"+data[i].goodsId+"'selected >"+data[i].goodsName+"</option>";
                     }else {

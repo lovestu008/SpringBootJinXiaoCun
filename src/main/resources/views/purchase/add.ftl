@@ -7,6 +7,7 @@
 <form class="layui-form" style="width:80%;">
     <#--<input type="hidden" id="operatePerson" value="${(purchase.operatePerson)!}">&lt;#&ndash;操作人&ndash;&gt;
     <input type="hidden" name="id" value="${(purchase.id)!}">-->
+    <input type="hidden" name="id" value="${(purchase.id)!}">
     <input type="hidden" name="goodsId" id="goodsId" value="${(purchase.goodsName)!}">
     <div class="layui-input-inline  layui-col-md4">
         <label class="layui-form-label">商品</label>
