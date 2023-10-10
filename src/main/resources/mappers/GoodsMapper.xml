@@ -30,10 +30,12 @@
     from t_goods
     where id = #{id,jdbcType=INTEGER}
   </select>
+
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from t_goods
     where id = #{id,jdbcType=INTEGER}
   </delete>
+
   <insert id="insert" parameterType="com.xxxx.supermarket.entity.Goods" >
     insert into t_goods (id, code, inventory_quantity, 
       min_num, model, name, 
@@ -48,6 +50,7 @@
       #{state,jdbcType=INTEGER}, #{lastPurchasingPrice,jdbcType=REAL}, #{isDel,jdbcType=INTEGER}
       )
   </insert>
+  <!--添加商品-->
   <insert id="insertSelective" parameterType="com.xxxx.supermarket.entity.Goods" >
     insert into t_goods
     <trim prefix="(" suffix=")" suffixOverrides="," >
@@ -145,6 +148,8 @@
       </if>
     </trim>
   </insert>
+
+  <!--更新商品数据-->
   <update id="updateByPrimaryKeySelective" parameterType="com.xxxx.supermarket.entity.Goods" >
     update t_goods
     <set >
@@ -193,6 +198,7 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
+
   <update id="updateByPrimaryKey" parameterType="com.xxxx.supermarket.entity.Goods" >
     update t_goods
     set code = #{code,jdbcType=VARCHAR},
@@ -213,7 +219,7 @@
   </update>
 
   <!--商品管理多条件查询-->
-  <select id="selectByParams" parameterType="com.xxxx.supermarket.query.GoodsQuery" resultType="com.xxxx.supermarket.entity.Goods">
+  <select id="selectByParams" parameterType="com.xxxx.supermarket.query.GoodsQuery" resultType="com.xxxx.supermarket.model.GoodsModel">
     SELECT
         g.*,gu.name as unitName,gt.name as typeName
     FROM
@@ -228,7 +234,23 @@
     </where>
   </select>
   
-  
-  
-  
+  <!--通过角色名查询角色记录-->
+  <select id="selectByGoodsName" parameterType="string" resultType="com.xxxx.supermarket.entity.Goods">
+    select
+        <include refid="Base_Column_List"></include>
+    from
+        t_goods
+    where
+        is_del = 0 and name = #{name}
+  </select>
+
+  <!--单条删除(修改is_del)-->
+  <delete id="deleteGoods" >
+    update
+        t_goods
+    set
+        is_del = 1
+    where
+        id = #{id}
+  </delete>
 </mapper>

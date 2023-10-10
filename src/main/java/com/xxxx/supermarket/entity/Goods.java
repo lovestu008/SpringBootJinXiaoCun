@@ -13,7 +13,7 @@ public class Goods {
 
     private String name;//商品名称
 
-    private String producer;//供应商
+    private String producer;//生产厂商
 
     private Float purchasingPrice;//采购价格
 

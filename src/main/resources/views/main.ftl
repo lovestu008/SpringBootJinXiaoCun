@@ -59,7 +59,7 @@
                                         <a href="javascript:;" class="layui-menu-tips" data-type="tabAdd" data-tab-mpi="m-p-i-1" data-tab="goods/index" target="_self"><i class="fa fa-tty"></i><span class="layui-left-nav"> 商品管理</span></a>
                                     </dd>
                                     <dd>
-                                        <a href="javascript:;" class="layui-menu-tips" data-type="tabAdd" data-tab-mpi="m-p-i-2" data-tab="category/index" target="_self"><i class="fa fa-ellipsis-h"></i><span class="layui-left-nav"> 商品类别管理</span></a>
+                                        <a href="javascript:;" class="layui-menu-tips" data-type="tabAdd" data-tab-mpi="m-p-i-2" data-tab="goodsType/index" target="_self"><i class="fa fa-ellipsis-h"></i><span class="layui-left-nav"> 商品类别管理</span></a>
                                     </dd>
 
                             </dl>

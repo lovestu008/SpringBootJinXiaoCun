@@ -13,9 +13,15 @@ public class GoodsQuery extends BaseQuery {
 
     //商品管理 多条件查询
     private String name;//商品名称
+    private Integer typeId;//商品类别id
 
+    public Integer getTypeId() {
+        return typeId;
+    }
 
-    private Integer typeId;//类别ID
+    public void setTypeId(Integer typeId) {
+        this.typeId = typeId;
+    }
 
     public String getName() {
         return name;
@@ -25,11 +31,4 @@ public class GoodsQuery extends BaseQuery {
         this.name = name;
     }
 
-    public Integer getTypeId() {
-        return typeId;
-    }
-
-    public void setTypeId(Integer typeId) {
-        this.typeId = typeId;
-    }
 }
