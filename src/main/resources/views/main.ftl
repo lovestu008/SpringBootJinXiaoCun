@@ -10,7 +10,7 @@
     <div class="layui-header header">
         <div class="layui-logo">
             <a href="">
-                <img src="images/main.png" alt="logo"/>
+                <img src="images/logo2.png" alt="logo"/>
                 <h1>超市-管理系统</h1>
             </a>
         </div>
