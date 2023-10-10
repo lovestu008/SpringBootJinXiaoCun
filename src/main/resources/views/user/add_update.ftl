@@ -5,26 +5,26 @@
     </head>
     <body class="childrenBody">
         <form class="layui-form" style="width:80%;">
-            <input name="id" type="hidden" value="${(user.id)!}"/>
+            <input name="id" type="hidden" value="${(userById.id)!}"/>
             <div class="layui-form-item layui-row layui-col-xs12">
                 <label class="layui-form-label">用户名</label>
                 <div class="layui-input-block">
                     <input type="text" class="layui-input userName"
-                           lay-verify="required" name="userName" id="userName"  value="${(user.userName)!}" placeholder="请输入用户名">
+                           lay-verify="required" name="userName" id="userName"  value="${(userById.userName)!}" placeholder="请输入用户名">
                 </div>
             </div>
             <div class="layui-form-item layui-row layui-col-xs12">
                 <label class="layui-form-label">真实姓名</label>
                 <div class="layui-input-block">
                     <input type="text" class="layui-input userName"
-                           lay-verify="required" name="trueName" id="trueName" value="${(user.trueName)!}" placeholder="请输入真实姓名">
+                           lay-verify="required" name="trueName" id="trueName" value="${(userById.trueName)!}" placeholder="请输入真实姓名">
                 </div>
             </div>
             <div class="layui-form-item layui-row layui-col-xs12">
                 <label class="layui-form-label">邮箱</label>
                 <div class="layui-input-block">
                     <input type="text" class="layui-input userEmail"
-                           lay-verify="email" name="email" value="${(user.email)!}" id="email" placeholder="请输入邮箱">
+                           lay-verify="email" name="email" value="${(userById.email)!}" id="email" placeholder="请输入邮箱">
                 </div>
             </div>
 
@@ -32,7 +32,7 @@
                 <label class="layui-form-label">手机号</label>
                 <div class="layui-input-block">
                     <input type="text" class="layui-input userEmail"
-                           lay-verify="phone" name="phone" value="${(user.phone)!}" id="phone" placeholder="请输入手机号">
+                           lay-verify="phone" name="phone" value="${(userById.phone)!}" id="phone" placeholder="请输入手机号">
                 </div>
             </div>
 
@@ -40,7 +40,7 @@
                 <label class="layui-form-label">备注</label>
                 <div class="layui-input-block">
                     <input type="text" class="layui-input userEmail"
-                           lay-verify="remarks" name="remarks" value="${(user.remarks)!}" id="remarks" placeholder="请输入备注">
+                           lay-verify="remarks" name="remarks" value="${(userById.remarks)!}" id="remarks" placeholder="请输入备注">
                 </div>
             </div>
 
@@ -48,7 +48,6 @@
                 <label class="layui-form-label">⻆⾊</label>
                 <div class="layui-input-block">
                     <select name="roleIds" xm-select="selectId">
-
                     </select>
                 </div>
             </div>

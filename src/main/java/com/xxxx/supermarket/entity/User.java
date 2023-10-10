@@ -2,6 +2,7 @@ package com.xxxx.supermarket.entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
+import java.util.Arrays;
 import java.util.Date;
 
 public class User {
@@ -20,10 +21,21 @@ public class User {
     private String remarks;
 
     private Integer isDel;
+
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private Date createtime;
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private Date updatetime;
+
+    private String roleIds;
+
+    public String getRoleIds() {
+        return roleIds;
+    }
+
+    public void setRoleIds(String roleIds) {
+        this.roleIds = roleIds;
+    }
 
     public Integer getId() {
         return id;
@@ -103,5 +115,22 @@ public class User {
 
     public void setUpdatetime(Date updatetime) {
         this.updatetime = updatetime;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", userName='" + userName + '\'' +
+                ", phone='" + phone + '\'' +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", trueName='" + trueName + '\'' +
+                ", remarks='" + remarks + '\'' +
+                ", isDel=" + isDel +
+                ", createtime=" + createtime +
+                ", updatetime=" + updatetime +
+                ", roleIds=" + roleIds +
+                '}';
     }
 }

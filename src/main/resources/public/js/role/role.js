@@ -47,7 +47,7 @@ layui.use(['table','layer'],function(){
                      openAddOrUpdateRoleDialog();
               }else if (data.event == "grant"){
                      var checkStatus = table.checkStatus(data.config.id);
-                     openAddGrantDialog(checkStatus.data);
+                     openAddGrantDialogBar(checkStatus.data);
               }
        });
 
@@ -81,12 +81,15 @@ layui.use(['table','layer'],function(){
                                           if (result.code == 200){
                                                  //加载表格
                                                  tableIns.reload();
-                                          }else {ASASASASASASASASASASASASASASASASASASASASASASASASASASASA
+                                          }else {
                                                  layer.msg(result.msg,{icon:5});
                                           }
                                    }
                             });
                      });
+              }else if (layEvent == "grant"){
+                     var checkData = data.id;
+                     openAddGrantDialog(checkData);
               }
        });
 
@@ -112,7 +115,7 @@ layui.use(['table','layer'],function(){
        /**
         * 打开授权页面
         */
-       function openAddGrantDialog(data) {
+       function openAddGrantDialogBar(data) {
               // 判断是否选择了角色记录
               if (data.length == 0) {
                      layer.msg("请选择要授权的角色！",{icon:5});
@@ -123,8 +126,22 @@ layui.use(['table','layer'],function(){
                      layer.msg("暂不支持批量角色授权！",{icon:5});
                      return;
               }
+              var url = ctx + "/menu/toAddGrantPage?roleId="+data[0].id;
+              var title = "<h3>角色管理 - 角色授权</h3>";
+              layui.layer.open({
+                     title:title,
+                     content:url,
+                     type:2,
+                     area:["600px","600px"],
+                     maxmin: true
+              });
+       }
 
-              var url = ctx + "/module/toAddGrantPage?roleId="+data[0].id;
+       /**
+        * 行监听打开授权页面
+        */
+       function openAddGrantDialog(data) {
+              var url = ctx + "/menu/toAddGrantPage?roleId="+data;
               var title = "<h3>角色管理 - 角色授权</h3>";
               layui.layer.open({
                      title:title,

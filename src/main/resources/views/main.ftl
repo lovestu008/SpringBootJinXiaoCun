@@ -24,9 +24,9 @@
             <li class="layui-nav-item layuimini-setting">
                 <a href="javascript:;">${(user.userName)!""}</a>
                 <dl class="layui-nav-child">
-                    <dd>
+<#--                    <dd>
                         <a href="javascript:;" data-iframe-tab="${ctx}/user/toSettingPage" data-title="基本资料" data-icon="fa fa-gears">基本资料</a>
-                    </dd>
+                    </dd>-->
                     <dd>
                         <a href="javascript:;" data-iframe-tab="${ctx}/user/toPasswordPage" data-title="修改密码" data-icon="fa fa-gears">修改密码</a>
                     </dd>

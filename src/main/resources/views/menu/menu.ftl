@@ -10,7 +10,9 @@
     <!-- 操作列 -->
     <script type="text/html" id="auth-state">
         <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="add">添加子项</a>
+        <span>  </span>
         <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="edit">修改</a>
+        <span>  </span>
         <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
     </script>
 

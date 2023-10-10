@@ -56,7 +56,7 @@ public class UserController extends BaseController {
     @RequestMapping("addOrUpdateUserPage")
     public String addOrUpdateUserPage(Integer id, HttpServletRequest request){
         if (id != null){
-            request.setAttribute("user",userService.selectByPrimaryKey(id));
+            request.setAttribute("userById",userService.selectByPrimaryKey(id));
         }
         return "user/add_update";
     }

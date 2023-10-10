@@ -90,4 +90,19 @@ public class Menu {
     public void setIsDel(Integer isDel) {
         this.isDel = isDel;
     }
+
+    @Override
+    public String toString() {
+        return "Menu{" +
+                "id=" + id +
+                ", icon='" + icon + '\'' +
+                ", name='" + name + '\'' +
+                ", state=" + state +
+                ", url='" + url + '\'' +
+                ", pId=" + pId +
+                ", aclValue='" + aclValue + '\'' +
+                ", grade=" + grade +
+                ", isDel=" + isDel +
+                '}';
+    }
 }

@@ -4,34 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47f004b4-5068-48b2-9225-7a541737bcc5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023_10_9_19_17_[Changes]/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023_10_9_19_17_[Changes]1/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023_10_9_19_17__Changes_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/model/InpRetGoodsList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/utils/PriceUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/public/js/purchase/add.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/public/js/purchase/update.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/views/purchase/add.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/views/purchase/update.ftl" afterDir="false" />
+    <list default="true" id="47f004b4-5068-48b2-9225-7a541737bcc5" name="Changes" comment="为用户赋予角色">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/MenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/PurchaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/PurchaseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/ReturnController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/ReturnController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/RoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/RoleController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/SaleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/SaleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/dao/PurchaseMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/dao/PurchaseMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/service/PurchaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/service/PurchaseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/service/ReturnService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/service/ReturnService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/PurchaseMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/PurchaseMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/purchase/add.update.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/js/purchase/add.update.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/purchase/purchase.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/js/purchase/purchase.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/purchase/return.list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/js/purchase/return.list.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/return/return.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/js/return/return.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/views/log/log.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/log/log.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/views/purchase/add_update.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/purchase/add_update.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/views/purchase/purchase.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/purchase/purchase.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/views/purchase/return_list.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/purchase/return_list.ftl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,31 +56,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/maven_code/SpringBootJinXiaoCun&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;46d7115f401497dd00b87ad0447a2608&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/maven_code/crm",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "MavenSettings",
+    "spring.configuration.checksum": "46d7115f401497dd00b87ad0447a2608",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\maven_code\SpringBootJinXiaoCun\src\main\resources\public\images" />
-    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.xxxx.supermarket" />
     </key>
@@ -157,7 +131,6 @@
       <updated>1696490904462</updated>
       <workItem from="1696490905901" duration="35387000" />
       <workItem from="1696752530180" duration="38330000" />
-      <workItem from="1696900329958" duration="10983000" />
     </task>
     <task id="LOCAL-00001" summary="role module">
       <created>1696554818830</created>
@@ -285,14 +258,7 @@
       <option name="project" value="LOCAL" />
       <updated>1696860146650</updated>
     </task>
-    <task id="LOCAL-00019" summary="添加日志注解标注">
-      <created>1696862130028</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1696862130028</updated>
-    </task>
-    <option name="localTasksCounter" value="20" />
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -339,7 +305,6 @@
     <MESSAGE value="ignore" />
     <MESSAGE value="添加RoleMenuMapper" />
     <MESSAGE value="为用户赋予角色" />
-    <MESSAGE value="添加日志注解标注" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加日志注解标注" />
+    <option name="LAST_COMMIT_MESSAGE" value="为用户赋予角色" />
   </component>
 </project>

@@ -43,9 +43,23 @@ public class MenuController extends BaseController {
     @RequestMapping("toAddMenuPage")
     public String toAddMenuPage(HttpServletRequest request,Integer grade,Integer parentId){
         request.setAttribute("grade",grade);
-        request.setAttribute("parentId",parentId);
+        request.setAttribute("pId",parentId);
         return "menu/add";
     }
+
+    @RequestMapping("toAddGrantPage")
+    public String toAddGrantPage(HttpServletRequest request,Integer roleId){
+        request.setAttribute("roleId",roleId);
+        return "role/grant";
+    }
+
+    @RequestMapping("queryAllMenus")
+    @ResponseBody
+    public List<TreeModel> queryAllMenus(Integer roleId){
+        return menuService.selectAllMenus(roleId);
+    }
+
+
 
     @RequestMapping("add")
     @ResponseBody

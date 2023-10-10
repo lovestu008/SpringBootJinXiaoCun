@@ -21,9 +21,13 @@
     where id = #{id,jdbcType=INTEGER}
   </delete>
   <insert id="insert" parameterType="com.xxxx.supermarket.entity.RoleMenu">
-    insert into t_role_menu (id, menu_id, role_id, 
+    insert into t_role_menu (id, menu_id, role_id
+      )
+    values (#{id,jdbcType=INTEGER}, #{menuId,jdbcType=INTEGER}, #{roleId,jdbcType=INTEGER}
+      )
+    insert into t_role_menu (id, menu_id, role_id,
       acl_value)
-    values (#{id,jdbcType=INTEGER}, #{menuId,jdbcType=INTEGER}, #{roleId,jdbcType=INTEGER}, 
+    values (#{id,jdbcType=INTEGER}, #{menuId,jdbcType=INTEGER}, #{roleId,jdbcType=INTEGER},
       #{aclValue,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.xxxx.supermarket.entity.RoleMenu">
@@ -76,9 +80,19 @@
     update t_role_menu
     set menu_id = #{menuId,jdbcType=INTEGER},
       role_id = #{roleId,jdbcType=INTEGER},
-      acl_value = #{aclValue,jdbcType=VARCHAR}
+    acl_value = #{aclValue,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
+
+  <select id="countRoleMenuByMenuId" resultType="int">
+    select count(1) from t_role_menu
+    where menu_id = #{id}
+  </select>
+
+  <delete id="deleteByMenuId">
+    delete from t_role_menu
+    where menu_id = #{id}
+  </delete>
   <!--通过资源ID查询权限记录-->
   <select id="countPermissionByRoleId" parameterType="int" resultType="java.lang.Integer">
     select
@@ -88,8 +102,8 @@
     where
       role_id = #{roleId}
   </select>
-  <!--通过资源ID删除权限记录-->
-  <delete id="deleteMenuByRoleId" parameterType="int">
+  <!--通过角色ID删除权限记录-->
+  <delete id="deleteRoleMenuByRoleId" parameterType="int">
     delete from
       t_role_menu
     where
@@ -104,4 +118,10 @@
       (#{item.roleId},#{item.menuId},#{item.aclValue})
     </foreach>
   </insert>
+
+  <select id="queryRoleHasMenuIdsByRoleId" resultType="java.lang.Integer">
+    select menu_id
+    from t_role_menu
+    where role_id = #{roleId}
+  </select>
 </mapper>

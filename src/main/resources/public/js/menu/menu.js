@@ -56,7 +56,7 @@ layui.use(['table', 'treetable'], function () {
                 break;
             case "add":
                 // 添加目录 层级=0 父菜单=-1
-                openAddMenuDialog(0, 1)
+                openAddMenuDialog(0, -1)
         };
     });
     /**
