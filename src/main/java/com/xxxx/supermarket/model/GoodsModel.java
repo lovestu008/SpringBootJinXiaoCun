@@ -9,9 +9,12 @@ public class GoodsModel extends Goods {
     private String model;//商品型号
     private String typeName;//商品类别
     private String unitName;//单位
-    private Float purchasingPrice;//采购价格
-    private Float sellingPrice;//出售价格
+    private Double purchasingPrice;//采购价格
+    private Double sellingPrice;//出售价格
     private Integer minNum;//库存下限
+
+
+
     private String producer;//生产厂商
     private int isDel;
 
@@ -75,21 +78,8 @@ public class GoodsModel extends Goods {
         this.unitName = unitName;
     }
 
-    public Float getPurchasingPrice() {
-        return purchasingPrice;
-    }
 
-    public void setPurchasingPrice(Float purchasingPrice) {
-        this.purchasingPrice = purchasingPrice;
-    }
 
-    public Float getSellingPrice() {
-        return sellingPrice;
-    }
-
-    public void setSellingPrice(Float sellingPrice) {
-        this.sellingPrice = sellingPrice;
-    }
 
     public Integer getMinNum() {
         return minNum;
@@ -105,5 +95,25 @@ public class GoodsModel extends Goods {
 
     public void setProducer(String producer) {
         this.producer = producer;
+    }
+
+    @Override
+    public Double getPurchasingPrice() {
+        return purchasingPrice;
+    }
+
+    @Override
+    public void setPurchasingPrice(Double purchasingPrice) {
+        this.purchasingPrice = purchasingPrice;
+    }
+
+    @Override
+    public Double getSellingPrice() {
+        return sellingPrice;
+    }
+
+    @Override
+    public void setSellingPrice(Double sellingPrice) {
+        this.sellingPrice = sellingPrice;
     }
 }

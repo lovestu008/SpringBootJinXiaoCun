@@ -117,7 +117,7 @@ public class GoodsService extends BaseService<Goods,Integer> {
      * @param sellingPrice
      * @param minNum
      */
-    private void CheckGoodsParams(String name, Float purchasingPrice, Float sellingPrice, Integer minNum) {
+    private void CheckGoodsParams(String name, Double purchasingPrice, Double sellingPrice, Integer minNum) {
         //商品名  非空,唯一
         AssertUtil.isTrue(StringUtils.isBlank(name),"商品名不能为空！");
         Goods temp = goodsMapper.selectByGoodsName(name);
