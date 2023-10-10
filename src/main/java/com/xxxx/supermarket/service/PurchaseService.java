@@ -27,8 +27,6 @@ public class PurchaseService extends BaseService<Purchase,Integer> {
     private ReturnMapper returnMapper;
 
     public List<Map<String,Object>> selectAllProvider(){
-        List<Map<String, Object>> maps = purchaseMapper.selectAllProvider();
-        //System.out.println(maps);
         return purchaseMapper.selectAllProvider();
     }
 

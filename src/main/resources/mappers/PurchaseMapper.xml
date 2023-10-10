@@ -178,7 +178,7 @@
       distinct p1.id as providerId,p1.name as provider
     from
       t_purchase p2
-        LEFT JOIN
+        JOIN
       t_provider p1
       on
         p1.name=p2.provider
@@ -189,7 +189,7 @@
       distinct g.id as goodsId,g.name as goodsName
     from
       t_purchase p
-        LEFT JOIN
+         JOIN
       t_goods g
       on
         p.goods_name=g.name
