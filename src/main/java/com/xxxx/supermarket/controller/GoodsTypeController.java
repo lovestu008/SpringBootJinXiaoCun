@@ -3,6 +3,7 @@ package com.xxxx.supermarket.controller;
 import com.xxxx.supermarket.annotation.RequiredPermission;
 import com.xxxx.supermarket.base.BaseController;
 import com.xxxx.supermarket.base.ResultInfo;
+import com.xxxx.supermarket.dto.TreeDto;
 import com.xxxx.supermarket.entity.GoodsType;
 import com.xxxx.supermarket.model.TreeGoodsModel;
 import com.xxxx.supermarket.service.GoodsTypeService;
@@ -38,15 +39,14 @@ public class GoodsTypeController extends BaseController {
         return "goodsType/goods_type";
     }
     /**
-     * 查询所有的商品类别
-     * @param
+     * 查找所有商品类别
+     * @return
      */
-/*    @RequiredPermission(code = "102020")
     @RequestMapping("queryAllGoodsTypes")
     @ResponseBody
-    public List<TreeGoodsModel> queryAllGoodsTypes(){
-        return goodsTypeService.queryAllGoodsTypes();
-    }*/
+    public List<TreeDto> queryAllGoodsTypes(Integer typeId){
+        return goodsTypeService.queryAllGoodsTypes(typeId);
+    }
     /**
      * 加载商品类别管理页面的表格数据
      * @param

@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 import java.util.Map;
 
 
@@ -96,6 +97,16 @@ public class CustomerController extends BaseController {
     public ResultInfo deleteBeach(Integer[] ids){
         customerService.deleteBeach(ids);
         return success("超市客户数据删除成功");//这里需要返回的是一个成功与否的结果，而不是删除了几行
+    }
+
+    /**
+     * 返回所有客户
+     * @return
+     */
+    @RequestMapping("allCustomers")
+    @ResponseBody
+    public List<Customer> allCustomers(){
+        return customerService.allCustomers();
     }
 
 }

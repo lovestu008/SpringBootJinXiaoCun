@@ -111,7 +111,6 @@ layui.use(['laydate', 'table', 'layer'], function () {
 
     form.on("submit(addCustomerReturnList)", function (data) {
         var index = top.layer.msg('数据提交中，请稍候', {icon: 16, time: false, shade: 0.8});
-        console.log(data.field)
         $.post(ctx + "/customerReturn/save", data.field, function (res) {
             if (res.code == 200) {
                 setTimeout(function () {
@@ -123,8 +122,9 @@ layui.use(['laydate', 'table', 'layer'], function () {
                     window.location.href = ctx + "/customerReturn/index";
                 }, 500);
             } else {
-                top.layer.msg(
-                    res.message,{area: ['500px','300px']}
+                console.log(res)
+                layer.msg(
+                    res.msg
                 );
             }
         });

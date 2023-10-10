@@ -123,6 +123,12 @@ public class GoodsTypeService extends BaseService<GoodsType,Integer> {
         return getSubTypeIds(typeId,integers);
     }
 
+    /**
+     * 获取指定类型Id下所有的商品Id
+     * @param typeId
+     * @param result
+     * @return
+     */
     private List<Integer> getSubTypeIds(Integer typeId, List<Integer> result) {
         List<GoodsType> goodsTypes = goodsTypeMapper.queryGoodsTypeByParentId(typeId);
         if(goodsTypes!=null&&goodsTypes.size()>0){
