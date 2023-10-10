@@ -50,7 +50,7 @@ public class ProviderService extends BaseService<Provider,Integer> {
         checkSaleChanceParams(provider.getAddress(), provider.getContact(), provider.getName(), provider.getNumber());
         /*2.设置相关参数默认值*/
         // isDel是否有效  （0=无效，1=有效）
-        provider.setIsDel(1);
+        provider.setIsDel(0);
         /* 3.判断受影响行数*/
         AssertUtil.isTrue(providerMapper.insertSelective(provider)!=1,"添加供应商失败");
     }
@@ -85,7 +85,6 @@ public class ProviderService extends BaseService<Provider,Integer> {
         checkSaleChanceParams(provider.getAddress(), provider.getContact(), provider.getName(), provider.getNumber());
         /*2.设置相关参数默认值*/
         AssertUtil.isTrue(null==temp.getIsDel(),"数据状态不能为空 （0=无效，1=有效）");
-        // customer.setIsDel(1);
         /* 3.判断受影响行数*/
         AssertUtil.isTrue(providerMapper.updateByPrimaryKeySelective(provider) != 1, "更新供应商失败！");
     }
