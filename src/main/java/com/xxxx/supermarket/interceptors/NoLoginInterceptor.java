@@ -1,5 +1,7 @@
 package com.xxxx.supermarket.interceptors;
 
+import com.xxxx.supermarket.exceptions.NoLoginException;
+import com.xxxx.supermarket.service.UserService;
 import com.xxxx.supermarket.utils.LoginUserUtil;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
@@ -11,6 +13,9 @@ import javax.servlet.http.HttpServletResponse;
  * ⾮法访问拦截
  */
 public class NoLoginInterceptor extends HandlerInterceptorAdapter {
+
+    @Resource
+    private UserService userService;
 
 
     /**
@@ -29,9 +34,9 @@ public class NoLoginInterceptor extends HandlerInterceptorAdapter {
         //获取cookie中的用户id
         Integer userId = LoginUserUtil.releaseUserIdFromCookie(request);
         //判断用户id是否不为空，且数据库中存在对应的用户记录
-        /*if (null == userId || null == userService.selectByPrimaryKey(userId)){
+        if (null == userId || null == userService.selectByPrimaryKey(userId)){
             throw new NoLoginException();
-        }*/
+        }
         return true;
     }
 

@@ -1,18 +1,18 @@
-layui.use(['form', 'layer'], function () {
+layui.use(['form', 'layer', 'formSelects', 'util'], function () {
     var form = layui.form,
         layer = parent.layer === undefined ? layui.layer : top.layer,
         $ = layui.jquery;
+    var formSelects = layui.formSelects;
+    const util = layui.util;
 
 
-
-
-    $("#closeBtn").click(function (){console.log(1)
-       //先得到当前iframe层的索引
+    $("#closeBtn").click(function () {
+        console.log(1)
+        //先得到当前iframe层的索引
         var index = parent.layer.getFrameIndex(window.name);
         //再执行关闭
         parent.layer.close(index);
     });
-
 
 
     /**
@@ -52,7 +52,7 @@ layui.use(['form', 'layer'], function () {
                 // 刷新⽗⻚⾯，重新渲染表格数据
                 parent.location.reload();
             } else {
-                layer.msg(result.msg, {icon:5});
+                layer.msg(result.msg, {icon: 5});
             }
         });
         return false; // 阻⽌表单提交
@@ -62,12 +62,12 @@ layui.use(['form', 'layer'], function () {
      * 加载下拉框
      */
     $.ajax({
-        type:"post",
-        url:ctx+"/customer/allCustomers",
-        success:function (data){
-            if (data!== null) {//遍历返回的数据
-                $.each(data, function(index, item) {//将下拉选项设置到下拉框中
-                    $("#customerId").append("<option value='"+item.id+"' >"+item.name+"</option>");
+        type: "post",
+        url: ctx + "/customer/allCustomers",
+        success: function (data) {
+            if (data !== null) {//遍历返回的数据
+                $.each(data, function (index, item) {//将下拉选项设置到下拉框中
+                    $("#customerId").append("<option value='" + item.id + "' >" + item.name + "</option>");
                 });
             }
             //重新渲染
@@ -75,26 +75,35 @@ layui.use(['form', 'layer'], function () {
         }
     })
 
-    form.on('select(goodsByName)',function (data){
-        var elem = data.elem; // 获得 select 原始 DOM 对象
-        var value = data.value; // 获得被选中的值
-        var othis = data.othis; // 获得 select 元素被替换后的 jQuery 对象
 
-        $.post(ctx+"/goods/queryAllGoods",function (data){
-            if (data!== null) {//遍历返回的数据
-                $.each(data, function(index, item) {//将下拉选项设置到下拉框中
-                    $("#goodsName").append("<option value='"+item.id+"' >"+item.name+"</option>");
-                });
-            }
-            //重新渲染
-            form.render("select")
-        });
+    /**
+     * 加载角色下拉框
+     *
+     * 配置远程搜索, 请求头, 请求参数, 请求类型等
+     *
+     * formSelects.config(ID, Options, isJson);
+     *
+     * @param ID        xm-select的值
+     * @param Options   配置项
+     * @param isJson    是否传输json数据, true将添加请求头 Content-Type: application/json; charset=UTF-8
+     */
+    var userId = $("[name='id']").val();
+    formSelects.config("customerId", {
+        type: "post", // 请求方式
+        searchUrl: ctx + "/customer/queryAllCustomer",// 请求地址
+        keyName: 'customerName',  // 下拉框中的文本内容，要与返回的数据中对应key一致
+        keyVal: 'customerId'
+    }, true);
 
-        $.post(ctx+"/goods/queryGoodsByName",function (data){
-            parent.location.reload();
-        })
-
-
-    })
+    $('#goodsName').click(function () {
+            layui.layer.open({
+                type: 2,
+                title: '商品出库 - 选择',
+                maxmin: true,
+                area: ['800px', '80%'],
+                content: ctx + '/common/toSelectGoodsPage' // iframe 的 url
+            })
+        }
+    )
 
 });

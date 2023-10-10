@@ -19,11 +19,12 @@ layui.use(['table','layer'],function(){
             {field: "id", title:'编号',fixed:"true"},
             {field: 'userName', title: '用户名', align:'center'},
             {field: 'phone', title: '电话号码', align:'center'},
-            {field: 'email', title: '用户名', align:'center'},
+            {field: 'email', title: '邮箱', align:'center'},
             {field: 'password', title: '用户密码', align:'center'},
             {field: 'trueName', title: '真实姓名', align:'center'},
-            {field: 'remarks', title: '标记', align:'center'},
-            {field: 'bz', title: '备注',align:"center"},
+            {field: 'remarks', title: '备注', align:'center'},
+            {field: 'createtime', title: '创建时间',align:"center"},
+            {field: 'updatetime', title: '更新时间',align:"center"},
             {title: '操作', templet:'#userListBar',fixed:"right",align:"center",
                 minWidth:150}
         ]]
@@ -69,7 +70,7 @@ layui.use(['table','layer'],function(){
         var url = ctx + "/user/addOrUpdateUserPage";
         var title = "⽤户管理-⽤户添加";
         if(userId){
-            url = url + "?userId="+userId;
+            url = url + "?id="+userId;
             title = "⽤户管理-⽤户更新";
         }
         layui.layer.open({
@@ -117,9 +118,27 @@ layui.use(['table','layer'],function(){
                     }
                 });
             });
+        }else if (layEvent == "updatePwd"){//绑定修改密码事件
+            var userId = data.id;
+            openUpdatePwdDialog(userId);
         }
     });
 
+    /**
+     * 用户模块 修改用户密码
+     * @param roleId
+     */
+    function openUpdatePwdDialog(userId){
+        var title = "<h2>用户管理 - 修改用户密码 </h2>";
+        var url = ctx + "/user/toPasswordPage?userId="+userId;
+        layui.layer.open({
+            title:title,
+            type: 2,
+            content:url,
+            area:['500px','400px'],
+            maxmin:true
+        });
+    }
 
     function deleteUser(data){
         // 获取所有被选中的记录对应的数据

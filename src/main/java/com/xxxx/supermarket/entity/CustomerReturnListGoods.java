@@ -1,5 +1,8 @@
 package com.xxxx.supermarket.entity;
 
+import lombok.Data;
+
+@Data
 public class CustomerReturnListGoods {
     private Integer id;
 

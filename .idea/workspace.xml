@@ -4,34 +4,144 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="502eca5b-b788-47fc-ac7b-3d0b91715b94" name="Changes" comment="修改1">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="47f004b4-5068-48b2-9225-7a541737bcc5" name="Changes" comment="合并">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/aspect/SupLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/annotation/SupLog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/aspect/SupLogAop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/aspect/SupLogAop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/CommonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/CommonController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/CustomerReturnListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/CustomerReturnListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/GoodsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/GoodsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/GoodsTypeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/GoodsTypeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/LogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/LogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/MenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/ProviderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/ProviderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/PurchaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/PurchaseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/ReportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/ReportController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/ReturnController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/ReturnController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/RoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/RoleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/SaleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/SaleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/dao/GoodsTypeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/dao/GoodsTypeMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/dao/ReturnMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/dao/ReturnMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/dto/TreeDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/model/TreeDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/querys/PurchaseQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/query/PurchaseQuery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/querys/ReturnQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/query/ReturnQuery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/service/CustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/service/GoodsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/service/GoodsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/service/GoodsTypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/service/GoodsTypeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/service/ReturnService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/service/ReturnService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/GoodsTypeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/GoodsTypeMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/PurchaseMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/PurchaseMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/ReturnMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/ReturnMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/RoleMenuMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/RoleMenuMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/customerReturn/customer.return.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/js/customerReturn/customer.return.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/views/log/log.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/log/log.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/views/main.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/main.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/views/return/return.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/return/return.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/GoodsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/controller/GoodsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/service/CustomerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/service/CustomerService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/service/GoodsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xxxx/supermarket/service/GoodsService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="origin/detached" />
+    <option name="BRANCH" value="origin/zhou" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="hwj1" />
+        <entry key="$PROJECT_DIR$" value="306f66b841c4d7e5cb686f9144b28afdb9dcbd32" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\study\px\maven_rep\repository" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../downloadapp/apache-maven-3.9.4" />
+        <option name="useMavenConfig" value="true" />
+        <option name="userSettingsFile" value="D:\study\px\downloadapp\apache-maven-3.9.4\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2WKp0dODD9Slq5aYDzzTCORTx3j" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "node.js.selected.package.tslint": "(autodetect)"
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/study/px/gitStudy/SpringBootJinXiaoCun&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;46d7115f401497dd00b87ad0447a2608&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager">
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\study\px\gitStudy\SpringBootJinXiaoCun\src\main\resources\public\images" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.xxxx.supermarket" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.Starter">
+    <configuration name="supermarket [mybatis-generator:generate...]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="mybatis-generator:generate" />
+                <option value="-e" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
     <configuration name="Starter" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="supermarket" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.xxxx.supermarket.Starter" />
@@ -39,20 +149,310 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Maven.supermarket [mybatis-generator:generate...]" />
+      <item itemvalue="Spring Boot.Starter" />
+    </list>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task id="LOCAL-00001" summary="修改1">
-      <created>1696946616720</created>
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="47f004b4-5068-48b2-9225-7a541737bcc5" name="Changes" comment="" />
+      <created>1696490904462</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1696490904462</updated>
+      <workItem from="1696490905901" duration="35387000" />
+      <workItem from="1696752530180" duration="67263000" />
+      <workItem from="1696929214588" duration="42000" />
+      <workItem from="1696929262026" duration="2188000" />
+      <workItem from="1696931493907" duration="390000" />
+      <workItem from="1696935536182" duration="5119000" />
+    </task>
+    <task id="LOCAL-00001" summary="role module">
+      <created>1696554818830</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1696946616720</updated>
+      <updated>1696554818830</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="登录模块">
+      <created>1696560986248</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1696560986248</updated>
+    </task>
+    <task id="LOCAL-00003" summary="user更新">
+      <created>1696564079093</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1696564079093</updated>
+    </task>
+    <task id="LOCAL-00004" summary="user 与 menu 模块">
+      <created>1696584982153</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1696584982153</updated>
+    </task>
+    <task id="LOCAL-00005" summary="role.js操作">
+      <created>1696585021522</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1696585021522</updated>
+    </task>
+    <task id="LOCAL-00006" summary="unversioned 问题">
+      <created>1696585110928</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1696585110928</updated>
+    </task>
+    <task id="LOCAL-00007" summary="menu 下js文件">
+      <created>1696585138290</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1696585138290</updated>
+    </task>
+    <task id="LOCAL-00008" summary="user操作 用户登录 user的session作用域">
+      <created>1696773854861</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1696773854861</updated>
+    </task>
+    <task id="LOCAL-00009" summary="user操作 用户登录 user的session作用域">
+      <created>1696774176244</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1696774176244</updated>
+    </task>
+    <task id="LOCAL-00010" summary="非法访问拦截">
+      <created>1696776102180</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1696776102180</updated>
+    </task>
+    <task id="LOCAL-00011" summary="完善邮箱登录">
+      <created>1696814791348</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1696814791348</updated>
+    </task>
+    <task id="LOCAL-00012" summary="一堆xml">
+      <created>1696815588230</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1696815588230</updated>
+    </task>
+    <task id="LOCAL-00013" summary="修改密码 修改role业务">
+      <created>1696839389456</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1696839389456</updated>
+    </task>
+    <task id="LOCAL-00014" summary="修改role业务">
+      <created>1696839500744</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1696839500744</updated>
+    </task>
+    <task id="LOCAL-00015" summary="ignore">
+      <created>1696839538908</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1696839538909</updated>
+    </task>
+    <task id="LOCAL-00016" summary="菜单管理">
+      <created>1696853965926</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1696853965926</updated>
+    </task>
+    <task id="LOCAL-00017" summary="菜单操作 增改">
+      <created>1696858532443</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1696858532443</updated>
+    </task>
+    <task id="LOCAL-00018" summary="角色菜单操作 增改">
+      <created>1696862256417</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1696862256417</updated>
+    </task>
+    <task id="LOCAL-00019" summary="错误修改">
+      <created>1696863466901</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1696863466901</updated>
+    </task>
+    <task id="LOCAL-00020" summary="用户绑定角色">
+      <created>1696905979968</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1696905979968</updated>
+    </task>
+    <task id="LOCAL-00021" summary="角色授权">
+      <created>1696921341098</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1696921341098</updated>
+    </task>
+    <task id="LOCAL-00022" summary="角色小修改">
+      <created>1696922980357</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1696922980357</updated>
+    </task>
+    <task id="LOCAL-00023" summary="设置permissions作用域">
+      <created>1696925787935</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1696925787935</updated>
+    </task>
+    <task id="LOCAL-00024" summary="...">
+      <created>1696928480705</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1696928480705</updated>
+    </task>
+    <task id="LOCAL-00025" summary="忽略操作">
+      <created>1696929381404</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1696929381404</updated>
+    </task>
+    <task id="LOCAL-00026" summary="mapperscan">
+      <created>1696929869710</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1696929869710</updated>
+    </task>
+    <task id="LOCAL-00027" summary="合并 Wf wxh zjh">
+      <created>1696930880041</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1696930880041</updated>
+    </task>
+    <task id="LOCAL-00028" summary="marge sj">
+      <created>1696931264273</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1696931264273</updated>
+    </task>
+    <task id="LOCAL-00029" summary="goods 修改">
+      <created>1696931709318</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1696931709318</updated>
+    </task>
+    <task id="LOCAL-00030" summary="xml">
+      <created>1696935997053</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1696935997053</updated>
+    </task>
+    <task id="LOCAL-00031" summary="合并wf">
+      <created>1696939615855</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1696939615855</updated>
+    </task>
+    <task id="LOCAL-00032" summary="合并">
+      <created>1696940894997</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1696940894997</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="hwj1" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="修改1" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改1" />
+    <MESSAGE value="menu 下js文件" />
+    <MESSAGE value="user操作 用户登录 user的session作用域" />
+    <MESSAGE value="非法访问拦截" />
+    <MESSAGE value="完善邮箱登录" />
+    <MESSAGE value="一堆xml" />
+    <MESSAGE value="修改密码 修改role业务" />
+    <MESSAGE value="修改role业务" />
+    <MESSAGE value="ignore" />
+    <MESSAGE value="菜单管理" />
+    <MESSAGE value="菜单操作 增改" />
+    <MESSAGE value="角色菜单操作 增改" />
+    <MESSAGE value="错误修改" />
+    <MESSAGE value="用户绑定角色" />
+    <MESSAGE value="角色授权" />
+    <MESSAGE value="角色小修改" />
+    <MESSAGE value="设置permissions作用域" />
+    <MESSAGE value="..." />
+    <MESSAGE value="忽略操作" />
+    <MESSAGE value="mapperscan" />
+    <MESSAGE value="合并 Wf wxh zjh" />
+    <MESSAGE value="marge sj" />
+    <MESSAGE value="goods 修改" />
+    <MESSAGE value="xml" />
+    <MESSAGE value="合并wf" />
+    <MESSAGE value="合并" />
+    <option name="LAST_COMMIT_MESSAGE" value="合并" />
   </component>
 </project>

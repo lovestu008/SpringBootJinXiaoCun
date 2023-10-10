@@ -1,0 +1,459 @@
+Index: src/main/resources/views/main.ftl
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n<html>\r\n<head>\r\n    <meta charset=\"utf-8\">\r\n    <title>CRM-智能办公系统</title>\r\n    <#include \"common.ftl\">\r\n</head>\r\n<body class=\"layui-layout-body layuimini-all\">\r\n<div class=\"layui-layout layui-layout-admin\">\r\n    <div class=\"layui-header header\">\r\n        <div class=\"layui-logo\">\r\n            <a href=\"\">\r\n                <img src=\"images/logo.png\" alt=\"logo\">\r\n                <h1>超市进销管理系统</h1>\r\n            </a>\r\n        </div>\r\n        <a>\r\n            <div class=\"layuimini-tool\"><i title=\"展开\" class=\"fa fa-outdent\" data-side-fold=\"1\"></i></div>\r\n        </a>\r\n        <ul class=\"layui-nav layui-layout-right\">\r\n            <li class=\"layui-nav-item mobile layui-hide-xs\" lay-unselect>\r\n                <a href=\"javascript:;\" data-check-screen=\"full\"><i class=\"fa fa-arrows-alt\"></i></a>\r\n            </li>\r\n            <li class=\"layui-nav-item layuimini-setting\">\r\n                <a href=\"javascript:;\">${(user.userName)!\"\"}</a>\r\n                <dl class=\"layui-nav-child\">\r\n                    <dd>\r\n                        <a href=\"javascript:;\" data-iframe-tab=\"${ctx}/user/toSettingPage\" data-title=\"基本资料\" data-icon=\"fa fa-gears\">基本资料</a>\r\n                    </dd>\r\n                    <dd>\r\n                        <a href=\"javascript:;\" data-iframe-tab=\"${ctx}/user/toPasswordPage\" data-title=\"修改密码\" data-icon=\"fa fa-gears\">修改密码</a>\r\n                    </dd>\r\n                    <dd>\r\n                        <a href=\"javascript:;\" class=\"login-out\">退出登录</a>\r\n                    </dd>\r\n                </dl>\r\n            </li>\r\n            <li class=\"layui-nav-item layuimini-select-bgcolor mobile layui-hide-xs\" lay-unselect>\r\n                <a href=\"javascript:;\"></a>\r\n            </li>\r\n        </ul>\r\n    </div>\r\n\r\n    <div class=\"layui-side layui-bg-black\">\r\n        <div class=\"layui-side-scroll layui-left-menu\">\r\n            <#-- 判断当前登录用户是否拥有权限 -->\r\n                <ul class=\"layui-nav layui-nav-tree layui-left-nav-tree layui-this\" id=\"currency\">\r\n                    <#-- 通过freemarker中的seq_contains内建指令判断菜单是否显示 -->\r\n                        <li class=\"layui-nav-item\">\r\n                            <a href=\"javascript:;\" class=\"layui-menu-tips\"><i class=\"fa fa-street-view\"></i><span class=\"layui-left-nav\"> 基础管理</span> <span class=\"layui-nav-more\"></span></a>\r\n                            <dl class=\"layui-nav-child\">\r\n                                    <dd>\r\n                                        <a href=\"javascript:;\" class=\"layui-menu-tips\" data-type=\"tabAdd\" data-tab-mpi=\"m-p-i-1\" data-tab=\"sale_chance/index\" target=\"_self\"><i class=\"fa fa-tty\"></i><span class=\"layui-left-nav\"> 客户管理</span></a>\r\n                                    </dd>\r\n                                    <dd>\r\n                                        <a href=\"javascript:;\" class=\"layui-menu-tips\" data-type=\"tabAdd\" data-tab-mpi=\"m-p-i-2\" data-tab=\"cus_dev_plan/index\" target=\"_self\"><i class=\"fa fa-ellipsis-h\"></i><span class=\"layui-left-nav\"> 供应商管理</span></a>\r\n                                    </dd>\r\n                                    <dd>\r\n                                        <a href=\"javascript:;\" class=\"layui-menu-tips\" data-type=\"tabAdd\" data-tab-mpi=\"m-p-i-1\" data-tab=\"sale_chance/index\" target=\"_self\"><i class=\"fa fa-tty\"></i><span class=\"layui-left-nav\"> 商品管理</span></a>\r\n                                    </dd>\r\n                                    <dd>\r\n                                        <a href=\"javascript:;\" class=\"layui-menu-tips\" data-type=\"tabAdd\" data-tab-mpi=\"m-p-i-2\" data-tab=\"cus_dev_plan/index\" target=\"_self\"><i class=\"fa fa-ellipsis-h\"></i><span class=\"layui-left-nav\"> 商品类别管理</span></a>\r\n                                    </dd>\r\n\r\n                            </dl>\r\n                        </li>\r\n                        <li class=\"layui-nav-item\">\r\n                            <a href=\"javascript:;\" class=\"layui-menu-tips\"><i class=\"fa fa-flag\"></i><span class=\"layui-left-nav\"> 进退货管理</span> <span class=\"layui-nav-more\"></span></a><dl class=\"layui-nav-child\">\r\n                                <dd>\r\n                                    <a href=\"javascript:;\" class=\"layui-menu-tips\" data-type=\"tabAdd\" data-tab-mpi=\"m-p-i-3\" data-tab=\"customer/index\" target=\"_self\"><i class=\"fa fa-exchange\"></i><span class=\"layui-left-nav\"> 商品进货</span></a>\r\n                                </dd>\r\n                                <dd>\r\n                                    <a href=\"javascript:;\" class=\"layui-menu-tips\" data-type=\"tabAdd\" data-tab-mpi=\"m-p-i-4\" data-tab=\"customer_loss/index\" target=\"_self\"><i class=\"fa fa-user-times\"></i><span class=\"layui-left-nav\"> 商品退货查询</span></a>\r\n                                </dd>\r\n                            </dl>\r\n                        </li>\r\n                        <li class=\"layui-nav-item\">\r\n                            <a href=\"javascript:;\" class=\"layui-menu-tips\"><i class=\"fa fa-desktop\"></i><span class=\"layui-left-nav\"> 销售管理</span> <span class=\"layui-nav-more\"></span></a>\r\n                            <dl class=\"layui-nav-child\">\r\n                                <dd>\r\n                                    <a href=\"javascript:;\" class=\"layui-menu-tips\" data-type=\"tabAdd\" data-tab-mpi=\"m-p-i-5\" data-tab=\"customer_serve/index/1\" target=\"_self\"><i class=\"fa fa-tachometer\"></i><span class=\"layui-left-nav\"> 商品销售</span></a>\r\n                                </dd>\r\n                                <dd>\r\n                                    <a href=\"javascript:;\" class=\"layui-menu-tips\" data-type=\"tabAdd\" data-tab-mpi=\"m-p-i-6\" data-tab=\"customer_serve/index/2\" target=\"_self\"><i class=\"fa fa-tachometer\"></i><span class=\"layui-left-nav\"> 商品销售退货</span></a>\r\n                                </dd>\r\n                            </dl>\r\n                        </li>\r\n                        <li class=\"layui-nav-item\">\r\n                            <a href=\"javascript:;\" class=\"layui-menu-tips\"><i class=\"fa fa-home\"></i><span class=\"layui-left-nav\"> 系统管理</span> <span class=\"layui-nav-more\"></span></a><dl class=\"layui-nav-child\">\r\n                                <dd>\r\n                                    <a href=\"javascript:;\" class=\"layui-menu-tips\" data-type=\"tabAdd\" data-tab-mpi=\"m-p-i-10\" data-tab=\"report/0\" target=\"_self\"><i class=\"fa fa-tachometer\"></i><span class=\"layui-left-nav\"> 权限管理</span></a>\r\n                                </dd>\r\n                                <dd>\r\n                                    <a href=\"javascript:;\" class=\"layui-menu-tips\" data-type=\"tabAdd\" data-tab-mpi=\"m-p-i-10\" data-tab=\"report/1\" target=\"_self\"><i class=\"fa fa-tachometer\"></i><span class=\"layui-left-nav\"> 角色管理</span></a>\r\n                                </dd>\r\n                                <dd>\r\n                                    <a href=\"javascript:;\" class=\"layui-menu-tips\" data-type=\"tabAdd\" data-tab-mpi=\"m-p-i-10\" data-tab=\"report/2\" target=\"_self\"><i class=\"fa fa-tachometer\"></i><span class=\"layui-left-nav\"> 用户管理</span></a>\r\n                                </dd>\r\n                                <dd>\r\n                                    <a href=\"javascript:;\" class=\"layui-menu-tips\" data-type=\"tabAdd\" data-tab-mpi=\"m-p-i-10\" data-tab=\"report/3\" target=\"_self\"><i class=\"fa fa-tachometer\"></i><span class=\"layui-left-nav\"> 菜单管理</span></a>\r\n                                </dd>\r\n                            </dl>\r\n                        </li>\r\n                        <li class=\"layui-nav-item\">\r\n                            <a href=\"javascript:;\" class=\"layui-menu-tips\"><i class=\"fa fa-gears\"></i><span class=\"layui-left-nav\"> 其他管理</span> <span class=\"layui-nav-more\"></span></a>\r\n                            <dl class=\"layui-nav-child\">\r\n                                <dd>\r\n                                    <a href=\"javascript:;\" class=\"layui-menu-tips\" data-type=\"tabAdd\" data-tab-mpi=\"m-p-i-10\" data-tab=\"data_dic/index\" target=\"_self\"><i class=\"fa fa-tachometer\"></i><span class=\"layui-left-nav\"> 日志管理</span></a>\r\n                                </dd>\r\n                                <dd>\r\n                                    <a href=\"javascript:;\" class=\"layui-menu-tips\" data-type=\"tabAdd\" data-tab-mpi=\"m-p-i-11\" data-tab=\"user/index\" target=\"_self\"><i class=\"fa fa-user\"></i><span class=\"layui-left-nav\"> 统计报表</span></a>\r\n                                </dd>\r\n                            </dl>\r\n                        </li>\r\n                    <span class=\"layui-nav-bar\" style=\"top: 201px; height: 0px; opacity: 0;\"></span>\r\n                </ul>\r\n        </div>\r\n    </div>\r\n\r\n    <div class=\"layui-body\">\r\n        <div class=\"layui-tab\" lay-filter=\"layuiminiTab\" id=\"top_tabs_box\">\r\n            <ul class=\"layui-tab-title\" id=\"top_tabs\">\r\n                <li class=\"layui-this\" id=\"layuiminiHomeTabId\" lay-id=\"welcome\"><i class=\"fa fa-home\"></i> <span>首页</span></li>\r\n            </ul>\r\n\r\n            <ul class=\"layui-nav closeBox\">\r\n                <li class=\"layui-nav-item\">\r\n                    <a href=\"javascript:;\"> <i class=\"fa fa-dot-circle-o\"></i> 页面操作</a>\r\n                    <dl class=\"layui-nav-child\">\r\n                        <dd><a href=\"javascript:;\" data-page-close=\"other\"><i class=\"fa fa-window-close\"></i> 关闭其他</a></dd>\r\n                        <dd><a href=\"javascript:;\" data-page-close=\"all\"><i class=\"fa fa-window-close-o\"></i> 关闭全部</a></dd>\r\n                    </dl>\r\n                </li>\r\n            </ul>\r\n            <div class=\"layui-tab-content clildFrame\">\r\n                <div id=\"layuiminiHomeTabIframe\" class=\"layui-tab-item layui-show\">\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n\r\n</div>\r\n\r\n<script type=\"text/javascript\" src=\"${ctx}/js/main.js\"></script>\r\n</body>\r\n</html>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/views/main.ftl b/src/main/resources/views/main.ftl
+--- a/src/main/resources/views/main.ftl	(revision fffa1a9e1a7cf13f6ddce15d7c42b3cde85f520a)
++++ b/src/main/resources/views/main.ftl	(date 1696492292710)
+@@ -2,7 +2,7 @@
+ <html>
+ <head>
+     <meta charset="utf-8">
+-    <title>CRM-智能办公系统</title>
++    <title>超市进销管理系统</title>
+     <#include "common.ftl">
+ </head>
+ <body class="layui-layout-body layuimini-all">
+@@ -141,6 +141,6 @@
+ 
+ </div>
+ 
+-<script type="text/javascript" src="${ctx}/js/main.js"></script>
++<script type="text/javascript" src="${ctx}/public/js/main.js"></script>
+ </body>
+ </html>
+Index: src/main/java/com/xxxx/supermarket/service/UserService.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/xxxx/supermarket/service/UserService.java b/src/main/java/com/xxxx/supermarket/service/UserService.java
+new file mode 100644
+--- /dev/null	(date 1696491285452)
++++ b/src/main/java/com/xxxx/supermarket/service/UserService.java	(date 1696491285452)
+@@ -0,0 +1,20 @@
++package com.xxxx.supermarket.service;
++
++import com.xxxx.supermarket.base.BaseService;
++import com.xxxx.supermarket.dao.UserMapper;
++import com.xxxx.supermarket.entity.User;
++import org.springframework.stereotype.Service;
++
++import javax.annotation.Resource;
++
++@Service
++public class UserService extends BaseService<User,Integer> {
++
++    @Resource
++    private UserMapper userMapper;
++
++
++
++
++
++}
+Index: src/main/java/com/xxxx/supermarket/dao/UserMapper.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.xxxx.supermarket.dao;\r\n\r\nimport com.xxxx.supermarket.entity.User;\r\n\r\npublic interface UserMapper {\r\n    int deleteByPrimaryKey(Integer id);\r\n\r\n    int insert(User record);\r\n\r\n    int insertSelective(User record);\r\n\r\n    User selectByPrimaryKey(Integer id);\r\n\r\n    int updateByPrimaryKeySelective(User record);\r\n\r\n    int updateByPrimaryKey(User record);\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/xxxx/supermarket/dao/UserMapper.java b/src/main/java/com/xxxx/supermarket/dao/UserMapper.java
+--- a/src/main/java/com/xxxx/supermarket/dao/UserMapper.java	(revision fffa1a9e1a7cf13f6ddce15d7c42b3cde85f520a)
++++ b/src/main/java/com/xxxx/supermarket/dao/UserMapper.java	(date 1696491206789)
+@@ -1,17 +1,8 @@
+ package com.xxxx.supermarket.dao;
+ 
++import com.xxxx.supermarket.base.BaseMapper;
+ import com.xxxx.supermarket.entity.User;
+ 
+-public interface UserMapper {
+-    int deleteByPrimaryKey(Integer id);
+-
+-    int insert(User record);
+-
+-    int insertSelective(User record);
+-
+-    User selectByPrimaryKey(Integer id);
++public interface UserMapper extends BaseMapper<User,Integer> {
+ 
+-    int updateByPrimaryKeySelective(User record);
+-
+-    int updateByPrimaryKey(User record);
+ }
+\ No newline at end of file
+Index: src/main/java/com/xxxx/supermarket/Starter.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.xxxx.supermarket;\r\n\r\nimport org.springframework.boot.SpringApplication;\r\nimport org.springframework.boot.autoconfigure.SpringBootApplication;\r\n\r\n@SpringBootApplication\r\npublic class Starter {\r\n    public static void main(String[] args) {\r\n        SpringApplication.run(Starter.class);\r\n    }\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/xxxx/supermarket/Starter.java b/src/main/java/com/xxxx/supermarket/Starter.java
+--- a/src/main/java/com/xxxx/supermarket/Starter.java	(revision fffa1a9e1a7cf13f6ddce15d7c42b3cde85f520a)
++++ b/src/main/java/com/xxxx/supermarket/Starter.java	(date 1696491342100)
+@@ -1,9 +1,11 @@
+ package com.xxxx.supermarket;
+ 
++import org.mybatis.spring.annotation.MapperScan;
+ import org.springframework.boot.SpringApplication;
+ import org.springframework.boot.autoconfigure.SpringBootApplication;
+ 
+ @SpringBootApplication
++@MapperScan("com.xxxx.supermarket.dao")
+ public class Starter {
+     public static void main(String[] args) {
+         SpringApplication.run(Starter.class);
+Index: src/main/java/com/xxxx/supermarket/aspect/SysLog.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/xxxx/supermarket/aspect/SysLog.java b/src/main/java/com/xxxx/supermarket/aspect/PermissionCode.java
+rename from src/main/java/com/xxxx/supermarket/aspect/SysLog.java
+rename to src/main/java/com/xxxx/supermarket/aspect/PermissionCode.java
+--- a/src/main/java/com/xxxx/supermarket/aspect/SysLog.java	(revision fffa1a9e1a7cf13f6ddce15d7c42b3cde85f520a)
++++ b/src/main/java/com/xxxx/supermarket/aspect/PermissionCode.java	(date 1696492228263)
+@@ -9,6 +9,6 @@
+ @Target(ElementType.METHOD)
+ @Retention(RetentionPolicy.RUNTIME)
+ @Documented
+-public @interface SysLog {
++public @interface PermissionCode {
+     String value() default "";
+ }
+Index: src/main/resources/mappers/UserMapper.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<!DOCTYPE mapper PUBLIC \"-//mybatis.org//DTD Mapper 3.0//EN\" \"http://mybatis.org/dtd/mybatis-3-mapper.dtd\">\r\n<mapper namespace=\"com.xxxx.supermarket.dao.UserMapper\">\r\n  <resultMap id=\"BaseResultMap\" type=\"com.xxxx.supermarket.entity.User\">\r\n    <id column=\"id\" jdbcType=\"INTEGER\" property=\"id\" />\r\n    <result column=\"bz\" jdbcType=\"VARCHAR\" property=\"bz\" />\r\n    <result column=\"password\" jdbcType=\"VARCHAR\" property=\"password\" />\r\n    <result column=\"true_name\" jdbcType=\"VARCHAR\" property=\"trueName\" />\r\n    <result column=\"user_name\" jdbcType=\"VARCHAR\" property=\"userName\" />\r\n    <result column=\"remarks\" jdbcType=\"VARCHAR\" property=\"remarks\" />\r\n    <result column=\"is_del\" jdbcType=\"INTEGER\" property=\"isDel\" />\r\n  </resultMap>\r\n  <sql id=\"Base_Column_List\">\r\n    id, bz, password, true_name, user_name, remarks, is_del\r\n  </sql>\r\n  <select id=\"selectByPrimaryKey\" parameterType=\"java.lang.Integer\" resultMap=\"BaseResultMap\">\r\n    select \r\n    <include refid=\"Base_Column_List\" />\r\n    from t_user\r\n    where id = #{id,jdbcType=INTEGER}\r\n  </select>\r\n  <delete id=\"deleteByPrimaryKey\" parameterType=\"java.lang.Integer\">\r\n    delete from t_user\r\n    where id = #{id,jdbcType=INTEGER}\r\n  </delete>\r\n  <insert id=\"insert\" parameterType=\"com.xxxx.supermarket.entity.User\">\r\n    insert into t_user (id, bz, password, \r\n      true_name, user_name, remarks, \r\n      is_del)\r\n    values (#{id,jdbcType=INTEGER}, #{bz,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, \r\n      #{trueName,jdbcType=VARCHAR}, #{userName,jdbcType=VARCHAR}, #{remarks,jdbcType=VARCHAR}, \r\n      #{isDel,jdbcType=INTEGER})\r\n  </insert>\r\n  <insert id=\"insertSelective\" parameterType=\"com.xxxx.supermarket.entity.User\">\r\n    insert into t_user\r\n    <trim prefix=\"(\" suffix=\")\" suffixOverrides=\",\">\r\n      <if test=\"id != null\">\r\n        id,\r\n      </if>\r\n      <if test=\"bz != null\">\r\n        bz,\r\n      </if>\r\n      <if test=\"password != null\">\r\n        password,\r\n      </if>\r\n      <if test=\"trueName != null\">\r\n        true_name,\r\n      </if>\r\n      <if test=\"userName != null\">\r\n        user_name,\r\n      </if>\r\n      <if test=\"remarks != null\">\r\n        remarks,\r\n      </if>\r\n      <if test=\"isDel != null\">\r\n        is_del,\r\n      </if>\r\n    </trim>\r\n    <trim prefix=\"values (\" suffix=\")\" suffixOverrides=\",\">\r\n      <if test=\"id != null\">\r\n        #{id,jdbcType=INTEGER},\r\n      </if>\r\n      <if test=\"bz != null\">\r\n        #{bz,jdbcType=VARCHAR},\r\n      </if>\r\n      <if test=\"password != null\">\r\n        #{password,jdbcType=VARCHAR},\r\n      </if>\r\n      <if test=\"trueName != null\">\r\n        #{trueName,jdbcType=VARCHAR},\r\n      </if>\r\n      <if test=\"userName != null\">\r\n        #{userName,jdbcType=VARCHAR},\r\n      </if>\r\n      <if test=\"remarks != null\">\r\n        #{remarks,jdbcType=VARCHAR},\r\n      </if>\r\n      <if test=\"isDel != null\">\r\n        #{isDel,jdbcType=INTEGER},\r\n      </if>\r\n    </trim>\r\n  </insert>\r\n  <update id=\"updateByPrimaryKeySelective\" parameterType=\"com.xxxx.supermarket.entity.User\">\r\n    update t_user\r\n    <set>\r\n      <if test=\"bz != null\">\r\n        bz = #{bz,jdbcType=VARCHAR},\r\n      </if>\r\n      <if test=\"password != null\">\r\n        password = #{password,jdbcType=VARCHAR},\r\n      </if>\r\n      <if test=\"trueName != null\">\r\n        true_name = #{trueName,jdbcType=VARCHAR},\r\n      </if>\r\n      <if test=\"userName != null\">\r\n        user_name = #{userName,jdbcType=VARCHAR},\r\n      </if>\r\n      <if test=\"remarks != null\">\r\n        remarks = #{remarks,jdbcType=VARCHAR},\r\n      </if>\r\n      <if test=\"isDel != null\">\r\n        is_del = #{isDel,jdbcType=INTEGER},\r\n      </if>\r\n    </set>\r\n    where id = #{id,jdbcType=INTEGER}\r\n  </update>\r\n  <update id=\"updateByPrimaryKey\" parameterType=\"com.xxxx.supermarket.entity.User\">\r\n    update t_user\r\n    set bz = #{bz,jdbcType=VARCHAR},\r\n      password = #{password,jdbcType=VARCHAR},\r\n      true_name = #{trueName,jdbcType=VARCHAR},\r\n      user_name = #{userName,jdbcType=VARCHAR},\r\n      remarks = #{remarks,jdbcType=VARCHAR},\r\n      is_del = #{isDel,jdbcType=INTEGER}\r\n    where id = #{id,jdbcType=INTEGER}\r\n  </update>\r\n  <resultMap id=\"BaseResultMap\" type=\"com.xxxx.supermarket.entity.User\">\r\n    <id column=\"id\" jdbcType=\"INTEGER\" property=\"id\" />\r\n    <result column=\"bz\" jdbcType=\"VARCHAR\" property=\"bz\" />\r\n    <result column=\"password\" jdbcType=\"VARCHAR\" property=\"password\" />\r\n    <result column=\"true_name\" jdbcType=\"VARCHAR\" property=\"trueName\" />\r\n    <result column=\"user_name\" jdbcType=\"VARCHAR\" property=\"userName\" />\r\n    <result column=\"remarks\" jdbcType=\"VARCHAR\" property=\"remarks\" />\r\n    <result column=\"is_del\" jdbcType=\"INTEGER\" property=\"isDel\" />\r\n  </resultMap>\r\n  <sql id=\"Base_Column_List\">\r\n    id, bz, password, true_name, user_name, remarks, is_del\r\n  </sql>\r\n  <select id=\"selectByPrimaryKey\" parameterType=\"java.lang.Integer\" resultMap=\"BaseResultMap\">\r\n    select \r\n    <include refid=\"Base_Column_List\" />\r\n    from t_user\r\n    where id = #{id,jdbcType=INTEGER}\r\n  </select>\r\n  <delete id=\"deleteByPrimaryKey\" parameterType=\"java.lang.Integer\">\r\n    delete from t_user\r\n    where id = #{id,jdbcType=INTEGER}\r\n  </delete>\r\n  <insert id=\"insert\" parameterType=\"com.xxxx.supermarket.entity.User\">\r\n    insert into t_user (id, bz, password, \r\n      true_name, user_name, remarks, \r\n      is_del)\r\n    values (#{id,jdbcType=INTEGER}, #{bz,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, \r\n      #{trueName,jdbcType=VARCHAR}, #{userName,jdbcType=VARCHAR}, #{remarks,jdbcType=VARCHAR}, \r\n      #{isDel,jdbcType=INTEGER})\r\n  </insert>\r\n  <insert id=\"insertSelective\" parameterType=\"com.xxxx.supermarket.entity.User\">\r\n    insert into t_user\r\n    <trim prefix=\"(\" suffix=\")\" suffixOverrides=\",\">\r\n      <if test=\"id != null\">\r\n        id,\r\n      </if>\r\n      <if test=\"bz != null\">\r\n        bz,\r\n      </if>\r\n      <if test=\"password != null\">\r\n        password,\r\n      </if>\r\n      <if test=\"trueName != null\">\r\n        true_name,\r\n      </if>\r\n      <if test=\"userName != null\">\r\n        user_name,\r\n      </if>\r\n      <if test=\"remarks != null\">\r\n        remarks,\r\n      </if>\r\n      <if test=\"isDel != null\">\r\n        is_del,\r\n      </if>\r\n    </trim>\r\n    <trim prefix=\"values (\" suffix=\")\" suffixOverrides=\",\">\r\n      <if test=\"id != null\">\r\n        #{id,jdbcType=INTEGER},\r\n      </if>\r\n      <if test=\"bz != null\">\r\n        #{bz,jdbcType=VARCHAR},\r\n      </if>\r\n      <if test=\"password != null\">\r\n        #{password,jdbcType=VARCHAR},\r\n      </if>\r\n      <if test=\"trueName != null\">\r\n        #{trueName,jdbcType=VARCHAR},\r\n      </if>\r\n      <if test=\"userName != null\">\r\n        #{userName,jdbcType=VARCHAR},\r\n      </if>\r\n      <if test=\"remarks != null\">\r\n        #{remarks,jdbcType=VARCHAR},\r\n      </if>\r\n      <if test=\"isDel != null\">\r\n        #{isDel,jdbcType=INTEGER},\r\n      </if>\r\n    </trim>\r\n  </insert>\r\n  <update id=\"updateByPrimaryKeySelective\" parameterType=\"com.xxxx.supermarket.entity.User\">\r\n    update t_user\r\n    <set>\r\n      <if test=\"bz != null\">\r\n        bz = #{bz,jdbcType=VARCHAR},\r\n      </if>\r\n      <if test=\"password != null\">\r\n        password = #{password,jdbcType=VARCHAR},\r\n      </if>\r\n      <if test=\"trueName != null\">\r\n        true_name = #{trueName,jdbcType=VARCHAR},\r\n      </if>\r\n      <if test=\"userName != null\">\r\n        user_name = #{userName,jdbcType=VARCHAR},\r\n      </if>\r\n      <if test=\"remarks != null\">\r\n        remarks = #{remarks,jdbcType=VARCHAR},\r\n      </if>\r\n      <if test=\"isDel != null\">\r\n        is_del = #{isDel,jdbcType=INTEGER},\r\n      </if>\r\n    </set>\r\n    where id = #{id,jdbcType=INTEGER}\r\n  </update>\r\n  <update id=\"updateByPrimaryKey\" parameterType=\"com.xxxx.supermarket.entity.User\">\r\n    update t_user\r\n    set bz = #{bz,jdbcType=VARCHAR},\r\n      password = #{password,jdbcType=VARCHAR},\r\n      true_name = #{trueName,jdbcType=VARCHAR},\r\n      user_name = #{userName,jdbcType=VARCHAR},\r\n      remarks = #{remarks,jdbcType=VARCHAR},\r\n      is_del = #{isDel,jdbcType=INTEGER}\r\n    where id = #{id,jdbcType=INTEGER}\r\n  </update>\r\n  <resultMap id=\"BaseResultMap\" type=\"com.xxxx.supermarket.entity.User\">\r\n    <id column=\"id\" jdbcType=\"INTEGER\" property=\"id\" />\r\n    <result column=\"bz\" jdbcType=\"VARCHAR\" property=\"bz\" />\r\n    <result column=\"password\" jdbcType=\"VARCHAR\" property=\"password\" />\r\n    <result column=\"true_name\" jdbcType=\"VARCHAR\" property=\"trueName\" />\r\n    <result column=\"user_name\" jdbcType=\"VARCHAR\" property=\"userName\" />\r\n    <result column=\"remarks\" jdbcType=\"VARCHAR\" property=\"remarks\" />\r\n    <result column=\"is_del\" jdbcType=\"INTEGER\" property=\"isDel\" />\r\n  </resultMap>\r\n  <sql id=\"Base_Column_List\">\r\n    id, bz, password, true_name, user_name, remarks, is_del\r\n  </sql>\r\n  <select id=\"selectByPrimaryKey\" parameterType=\"java.lang.Integer\" resultMap=\"BaseResultMap\">\r\n    select \r\n    <include refid=\"Base_Column_List\" />\r\n    from t_user\r\n    where id = #{id,jdbcType=INTEGER}\r\n  </select>\r\n  <delete id=\"deleteByPrimaryKey\" parameterType=\"java.lang.Integer\">\r\n    delete from t_user\r\n    where id = #{id,jdbcType=INTEGER}\r\n  </delete>\r\n  <insert id=\"insert\" parameterType=\"com.xxxx.supermarket.entity.User\">\r\n    insert into t_user (id, bz, password, \r\n      true_name, user_name, remarks, \r\n      is_del)\r\n    values (#{id,jdbcType=INTEGER}, #{bz,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, \r\n      #{trueName,jdbcType=VARCHAR}, #{userName,jdbcType=VARCHAR}, #{remarks,jdbcType=VARCHAR}, \r\n      #{isDel,jdbcType=INTEGER})\r\n  </insert>\r\n  <insert id=\"insertSelective\" parameterType=\"com.xxxx.supermarket.entity.User\">\r\n    insert into t_user\r\n    <trim prefix=\"(\" suffix=\")\" suffixOverrides=\",\">\r\n      <if test=\"id != null\">\r\n        id,\r\n      </if>\r\n      <if test=\"bz != null\">\r\n        bz,\r\n      </if>\r\n      <if test=\"password != null\">\r\n        password,\r\n      </if>\r\n      <if test=\"trueName != null\">\r\n        true_name,\r\n      </if>\r\n      <if test=\"userName != null\">\r\n        user_name,\r\n      </if>\r\n      <if test=\"remarks != null\">\r\n        remarks,\r\n      </if>\r\n      <if test=\"isDel != null\">\r\n        is_del,\r\n      </if>\r\n    </trim>\r\n    <trim prefix=\"values (\" suffix=\")\" suffixOverrides=\",\">\r\n      <if test=\"id != null\">\r\n        #{id,jdbcType=INTEGER},\r\n      </if>\r\n      <if test=\"bz != null\">\r\n        #{bz,jdbcType=VARCHAR},\r\n      </if>\r\n      <if test=\"password != null\">\r\n        #{password,jdbcType=VARCHAR},\r\n      </if>\r\n      <if test=\"trueName != null\">\r\n        #{trueName,jdbcType=VARCHAR},\r\n      </if>\r\n      <if test=\"userName != null\">\r\n        #{userName,jdbcType=VARCHAR},\r\n      </if>\r\n      <if test=\"remarks != null\">\r\n        #{remarks,jdbcType=VARCHAR},\r\n      </if>\r\n      <if test=\"isDel != null\">\r\n        #{isDel,jdbcType=INTEGER},\r\n      </if>\r\n    </trim>\r\n  </insert>\r\n  <update id=\"updateByPrimaryKeySelective\" parameterType=\"com.xxxx.supermarket.entity.User\">\r\n    update t_user\r\n    <set>\r\n      <if test=\"bz != null\">\r\n        bz = #{bz,jdbcType=VARCHAR},\r\n      </if>\r\n      <if test=\"password != null\">\r\n        password = #{password,jdbcType=VARCHAR},\r\n      </if>\r\n      <if test=\"trueName != null\">\r\n        true_name = #{trueName,jdbcType=VARCHAR},\r\n      </if>\r\n      <if test=\"userName != null\">\r\n        user_name = #{userName,jdbcType=VARCHAR},\r\n      </if>\r\n      <if test=\"remarks != null\">\r\n        remarks = #{remarks,jdbcType=VARCHAR},\r\n      </if>\r\n      <if test=\"isDel != null\">\r\n        is_del = #{isDel,jdbcType=INTEGER},\r\n      </if>\r\n    </set>\r\n    where id = #{id,jdbcType=INTEGER}\r\n  </update>\r\n  <update id=\"updateByPrimaryKey\" parameterType=\"com.xxxx.supermarket.entity.User\">\r\n    update t_user\r\n    set bz = #{bz,jdbcType=VARCHAR},\r\n      password = #{password,jdbcType=VARCHAR},\r\n      true_name = #{trueName,jdbcType=VARCHAR},\r\n      user_name = #{userName,jdbcType=VARCHAR},\r\n      remarks = #{remarks,jdbcType=VARCHAR},\r\n      is_del = #{isDel,jdbcType=INTEGER}\r\n    where id = #{id,jdbcType=INTEGER}\r\n  </update>\r\n</mapper>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/mappers/UserMapper.xml b/src/main/resources/mappers/UserMapper.xml
+--- a/src/main/resources/mappers/UserMapper.xml	(revision fffa1a9e1a7cf13f6ddce15d7c42b3cde85f520a)
++++ b/src/main/resources/mappers/UserMapper.xml	(date 1696491519084)
+@@ -114,230 +114,5 @@
+       is_del = #{isDel,jdbcType=INTEGER}
+     where id = #{id,jdbcType=INTEGER}
+   </update>
+-  <resultMap id="BaseResultMap" type="com.xxxx.supermarket.entity.User">
+-    <id column="id" jdbcType="INTEGER" property="id" />
+-    <result column="bz" jdbcType="VARCHAR" property="bz" />
+-    <result column="password" jdbcType="VARCHAR" property="password" />
+-    <result column="true_name" jdbcType="VARCHAR" property="trueName" />
+-    <result column="user_name" jdbcType="VARCHAR" property="userName" />
+-    <result column="remarks" jdbcType="VARCHAR" property="remarks" />
+-    <result column="is_del" jdbcType="INTEGER" property="isDel" />
+-  </resultMap>
+-  <sql id="Base_Column_List">
+-    id, bz, password, true_name, user_name, remarks, is_del
+-  </sql>
+-  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+-    select 
+-    <include refid="Base_Column_List" />
+-    from t_user
+-    where id = #{id,jdbcType=INTEGER}
+-  </select>
+-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+-    delete from t_user
+-    where id = #{id,jdbcType=INTEGER}
+-  </delete>
+-  <insert id="insert" parameterType="com.xxxx.supermarket.entity.User">
+-    insert into t_user (id, bz, password, 
+-      true_name, user_name, remarks, 
+-      is_del)
+-    values (#{id,jdbcType=INTEGER}, #{bz,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
+-      #{trueName,jdbcType=VARCHAR}, #{userName,jdbcType=VARCHAR}, #{remarks,jdbcType=VARCHAR}, 
+-      #{isDel,jdbcType=INTEGER})
+-  </insert>
+-  <insert id="insertSelective" parameterType="com.xxxx.supermarket.entity.User">
+-    insert into t_user
+-    <trim prefix="(" suffix=")" suffixOverrides=",">
+-      <if test="id != null">
+-        id,
+-      </if>
+-      <if test="bz != null">
+-        bz,
+-      </if>
+-      <if test="password != null">
+-        password,
+-      </if>
+-      <if test="trueName != null">
+-        true_name,
+-      </if>
+-      <if test="userName != null">
+-        user_name,
+-      </if>
+-      <if test="remarks != null">
+-        remarks,
+-      </if>
+-      <if test="isDel != null">
+-        is_del,
+-      </if>
+-    </trim>
+-    <trim prefix="values (" suffix=")" suffixOverrides=",">
+-      <if test="id != null">
+-        #{id,jdbcType=INTEGER},
+-      </if>
+-      <if test="bz != null">
+-        #{bz,jdbcType=VARCHAR},
+-      </if>
+-      <if test="password != null">
+-        #{password,jdbcType=VARCHAR},
+-      </if>
+-      <if test="trueName != null">
+-        #{trueName,jdbcType=VARCHAR},
+-      </if>
+-      <if test="userName != null">
+-        #{userName,jdbcType=VARCHAR},
+-      </if>
+-      <if test="remarks != null">
+-        #{remarks,jdbcType=VARCHAR},
+-      </if>
+-      <if test="isDel != null">
+-        #{isDel,jdbcType=INTEGER},
+-      </if>
+-    </trim>
+-  </insert>
+-  <update id="updateByPrimaryKeySelective" parameterType="com.xxxx.supermarket.entity.User">
+-    update t_user
+-    <set>
+-      <if test="bz != null">
+-        bz = #{bz,jdbcType=VARCHAR},
+-      </if>
+-      <if test="password != null">
+-        password = #{password,jdbcType=VARCHAR},
+-      </if>
+-      <if test="trueName != null">
+-        true_name = #{trueName,jdbcType=VARCHAR},
+-      </if>
+-      <if test="userName != null">
+-        user_name = #{userName,jdbcType=VARCHAR},
+-      </if>
+-      <if test="remarks != null">
+-        remarks = #{remarks,jdbcType=VARCHAR},
+-      </if>
+-      <if test="isDel != null">
+-        is_del = #{isDel,jdbcType=INTEGER},
+-      </if>
+-    </set>
+-    where id = #{id,jdbcType=INTEGER}
+-  </update>
+-  <update id="updateByPrimaryKey" parameterType="com.xxxx.supermarket.entity.User">
+-    update t_user
+-    set bz = #{bz,jdbcType=VARCHAR},
+-      password = #{password,jdbcType=VARCHAR},
+-      true_name = #{trueName,jdbcType=VARCHAR},
+-      user_name = #{userName,jdbcType=VARCHAR},
+-      remarks = #{remarks,jdbcType=VARCHAR},
+-      is_del = #{isDel,jdbcType=INTEGER}
+-    where id = #{id,jdbcType=INTEGER}
+-  </update>
+-  <resultMap id="BaseResultMap" type="com.xxxx.supermarket.entity.User">
+-    <id column="id" jdbcType="INTEGER" property="id" />
+-    <result column="bz" jdbcType="VARCHAR" property="bz" />
+-    <result column="password" jdbcType="VARCHAR" property="password" />
+-    <result column="true_name" jdbcType="VARCHAR" property="trueName" />
+-    <result column="user_name" jdbcType="VARCHAR" property="userName" />
+-    <result column="remarks" jdbcType="VARCHAR" property="remarks" />
+-    <result column="is_del" jdbcType="INTEGER" property="isDel" />
+-  </resultMap>
+-  <sql id="Base_Column_List">
+-    id, bz, password, true_name, user_name, remarks, is_del
+-  </sql>
+-  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+-    select 
+-    <include refid="Base_Column_List" />
+-    from t_user
+-    where id = #{id,jdbcType=INTEGER}
+-  </select>
+-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+-    delete from t_user
+-    where id = #{id,jdbcType=INTEGER}
+-  </delete>
+-  <insert id="insert" parameterType="com.xxxx.supermarket.entity.User">
+-    insert into t_user (id, bz, password, 
+-      true_name, user_name, remarks, 
+-      is_del)
+-    values (#{id,jdbcType=INTEGER}, #{bz,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
+-      #{trueName,jdbcType=VARCHAR}, #{userName,jdbcType=VARCHAR}, #{remarks,jdbcType=VARCHAR}, 
+-      #{isDel,jdbcType=INTEGER})
+-  </insert>
+-  <insert id="insertSelective" parameterType="com.xxxx.supermarket.entity.User">
+-    insert into t_user
+-    <trim prefix="(" suffix=")" suffixOverrides=",">
+-      <if test="id != null">
+-        id,
+-      </if>
+-      <if test="bz != null">
+-        bz,
+-      </if>
+-      <if test="password != null">
+-        password,
+-      </if>
+-      <if test="trueName != null">
+-        true_name,
+-      </if>
+-      <if test="userName != null">
+-        user_name,
+-      </if>
+-      <if test="remarks != null">
+-        remarks,
+-      </if>
+-      <if test="isDel != null">
+-        is_del,
+-      </if>
+-    </trim>
+-    <trim prefix="values (" suffix=")" suffixOverrides=",">
+-      <if test="id != null">
+-        #{id,jdbcType=INTEGER},
+-      </if>
+-      <if test="bz != null">
+-        #{bz,jdbcType=VARCHAR},
+-      </if>
+-      <if test="password != null">
+-        #{password,jdbcType=VARCHAR},
+-      </if>
+-      <if test="trueName != null">
+-        #{trueName,jdbcType=VARCHAR},
+-      </if>
+-      <if test="userName != null">
+-        #{userName,jdbcType=VARCHAR},
+-      </if>
+-      <if test="remarks != null">
+-        #{remarks,jdbcType=VARCHAR},
+-      </if>
+-      <if test="isDel != null">
+-        #{isDel,jdbcType=INTEGER},
+-      </if>
+-    </trim>
+-  </insert>
+-  <update id="updateByPrimaryKeySelective" parameterType="com.xxxx.supermarket.entity.User">
+-    update t_user
+-    <set>
+-      <if test="bz != null">
+-        bz = #{bz,jdbcType=VARCHAR},
+-      </if>
+-      <if test="password != null">
+-        password = #{password,jdbcType=VARCHAR},
+-      </if>
+-      <if test="trueName != null">
+-        true_name = #{trueName,jdbcType=VARCHAR},
+-      </if>
+-      <if test="userName != null">
+-        user_name = #{userName,jdbcType=VARCHAR},
+-      </if>
+-      <if test="remarks != null">
+-        remarks = #{remarks,jdbcType=VARCHAR},
+-      </if>
+-      <if test="isDel != null">
+-        is_del = #{isDel,jdbcType=INTEGER},
+-      </if>
+-    </set>
+-    where id = #{id,jdbcType=INTEGER}
+-  </update>
+-  <update id="updateByPrimaryKey" parameterType="com.xxxx.supermarket.entity.User">
+-    update t_user
+-    set bz = #{bz,jdbcType=VARCHAR},
+-      password = #{password,jdbcType=VARCHAR},
+-      true_name = #{trueName,jdbcType=VARCHAR},
+-      user_name = #{userName,jdbcType=VARCHAR},
+-      remarks = #{remarks,jdbcType=VARCHAR},
+-      is_del = #{isDel,jdbcType=INTEGER}
+-    where id = #{id,jdbcType=INTEGER}
+-  </update>
++
+ </mapper>
+\ No newline at end of file
+Index: src/main/java/com/xxxx/supermarket/controller/LoginController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.xxxx.supermarket.controller;\r\n\r\nimport com.xxxx.supermarket.base.BaseController;\r\nimport org.springframework.stereotype.Controller;\r\nimport org.springframework.web.bind.annotation.RequestMapping;\r\n\r\n@Controller\r\npublic class LoginController extends BaseController {\r\n\r\n    @RequestMapping(\"index\")\r\n    public String index(){\r\n        return \"index\";\r\n    }\r\n    @RequestMapping(\"main\")\r\n    public String main(){\r\n        return \"main\";\r\n    }\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/xxxx/supermarket/controller/LoginController.java b/src/main/java/com/xxxx/supermarket/controller/LoginController.java
+--- a/src/main/java/com/xxxx/supermarket/controller/LoginController.java	(revision fffa1a9e1a7cf13f6ddce15d7c42b3cde85f520a)
++++ b/src/main/java/com/xxxx/supermarket/controller/LoginController.java	(date 1696491834764)
+@@ -1,12 +1,18 @@
+ package com.xxxx.supermarket.controller;
+ 
+ import com.xxxx.supermarket.base.BaseController;
++import com.xxxx.supermarket.service.UserService;
+ import org.springframework.stereotype.Controller;
+ import org.springframework.web.bind.annotation.RequestMapping;
+ 
++import javax.annotation.Resource;
++
+ @Controller
+ public class LoginController extends BaseController {
+ 
++    @Resource
++    private UserService userService;
++
+     @RequestMapping("index")
+     public String index(){
+         return "index";
+Index: src/main/java/com/xxxx/supermarket/interceptors/NoLoginInterceptor.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.xxxx.supermarket.interceptors;\r\n\r\nimport com.xxxx.supermarket.utils.LoginUserUtil;\r\nimport org.springframework.web.servlet.handler.HandlerInterceptorAdapter;\r\n\r\nimport javax.annotation.Resource;\r\nimport javax.servlet.http.HttpServletRequest;\r\nimport javax.servlet.http.HttpServletResponse;\r\n\r\n/**\r\n * ⾮法访问拦截\r\n */\r\npublic class NoLoginInterceptor extends HandlerInterceptorAdapter {\r\n\r\n\r\n    /**\r\n     * 判断⽤户是否是登录状态\r\n     * 获取Cookie对象，解析⽤户ID的值\r\n     * 如果⽤户ID不为空，且在数据库中存在对应的⽤户记录，表示请求合法\r\n     * 否则，请求不合法，进⾏拦截，重定向到登录⻚⾯\r\n     * @param request\r\n     * @param response\r\n     * @param handler\r\n     * @return\r\n     * @throws Exception\r\n     */\r\n    @Override\r\n    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {\r\n        //获取cookie中的用户id\r\n        Integer userId = LoginUserUtil.releaseUserIdFromCookie(request);\r\n        //判断用户id是否不为空，且数据库中存在对应的用户记录\r\n        /*if (null == userId || null == userService.selectByPrimaryKey(userId)){\r\n            throw new NoLoginException();\r\n        }*/\r\n        return true;\r\n    }\r\n\r\n\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/xxxx/supermarket/interceptors/NoLoginInterceptor.java b/src/main/java/com/xxxx/supermarket/interceptors/NoLoginInterceptor.java
+--- a/src/main/java/com/xxxx/supermarket/interceptors/NoLoginInterceptor.java	(revision fffa1a9e1a7cf13f6ddce15d7c42b3cde85f520a)
++++ b/src/main/java/com/xxxx/supermarket/interceptors/NoLoginInterceptor.java	(date 1696492155432)
+@@ -27,7 +27,7 @@
+     @Override
+     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
+         //获取cookie中的用户id
+-        Integer userId = LoginUserUtil.releaseUserIdFromCookie(request);
++        //Integer userId = LoginUserUtil.releaseUserIdFromCookie(request);
+         //判断用户id是否不为空，且数据库中存在对应的用户记录
+         /*if (null == userId || null == userService.selectByPrimaryKey(userId)){
+             throw new NoLoginException();
+Index: src/main/java/com/xxxx/supermarket/base/BaseController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.xxxx.supermarket.base;\r\n\r\n\r\nimport org.springframework.web.bind.annotation.ModelAttribute;\r\n\r\nimport javax.naming.ldap.BasicControl;\r\nimport javax.servlet.http.HttpServletRequest;\r\n\r\npublic class BaseController  {\r\n\r\n\r\n    @ModelAttribute\r\n    public void preHandler(HttpServletRequest request){\r\n        request.setAttribute(\"ctx\", request.getContextPath());\r\n    }\r\n\r\n\r\n    public ResultInfo success(){\r\n        return new ResultInfo();\r\n    }\r\n\r\n    public ResultInfo success(String msg){\r\n        ResultInfo resultInfo= new ResultInfo();\r\n        resultInfo.setMsg(msg);\r\n        return resultInfo;\r\n    }\r\n\r\n    public ResultInfo success(String msg,Object result){\r\n        ResultInfo resultInfo= new ResultInfo();\r\n        resultInfo.setMsg(msg);\r\n        resultInfo.setResult(result);\r\n        return resultInfo;\r\n    }\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/xxxx/supermarket/base/BaseController.java b/src/main/java/com/xxxx/supermarket/base/BaseController.java
+--- a/src/main/java/com/xxxx/supermarket/base/BaseController.java	(revision fffa1a9e1a7cf13f6ddce15d7c42b3cde85f520a)
++++ b/src/main/java/com/xxxx/supermarket/base/BaseController.java	(date 1696491658677)
+@@ -6,7 +6,7 @@
+ import javax.naming.ldap.BasicControl;
+ import javax.servlet.http.HttpServletRequest;
+ 
+-public class BaseController  {
++public class  BaseController  {
+ 
+ 
+     @ModelAttribute
+Index: src/main/resources/views/error.ftl
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n<html>\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <title>错误显示</title>\r\n    <#include \"common.ftl\">\r\n</head>\r\n<body>\r\n<h1>出错啦</h1>\r\n</body>\r\n</html>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/views/error.ftl b/src/main/resources/views/error.ftl
+--- a/src/main/resources/views/error.ftl	(revision fffa1a9e1a7cf13f6ddce15d7c42b3cde85f520a)
++++ b/src/main/resources/views/error.ftl	(date 1696492096316)
+@@ -6,6 +6,8 @@
+     <#include "common.ftl">
+ </head>
+ <body>
+-<h1>出错啦</h1>
++    <h1>出错啦</h1>
++???出错了
++
+ </body>
+ </html>
+\ No newline at end of file

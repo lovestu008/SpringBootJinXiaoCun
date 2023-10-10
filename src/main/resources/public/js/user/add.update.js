@@ -18,16 +18,12 @@ layui.use(['form', 'layer' ,'formSelects'], function () {
         // 请求的地址 添加操作
         var url = ctx + "/user/add";
 
-        // 通过营销机会的ID来判断当前需要执行添加操作还是修改操作
-        // 如果营销机会的ID为空，则表示执行添加操作；如果ID不为空，则表示执行更新操作
-        // 通过获取隐藏域中的ID
         var userId = $("[name='id']").val();
         // 判断ID是否为空
         if (userId != null && userId != '') {
             // 更新操作
             url = ctx + "/user/update";
         }
-        console.log(data.field);
         console.log(data.field);
         // 发送ajax请求
         $.post(url, data.field, function (result) {
@@ -58,19 +54,17 @@ layui.use(['form', 'layer' ,'formSelects'], function () {
     /**
      * 加载下拉框
      */
-    formSelects.config('selectId',{
+    /*formSelects.config('selectId',{
         type:"post",
         searchUrl :ctx+"/role/queryAllRoles",
         //⾃定义返回数据中name的key, 默认 name
         keyName: 'roleName',
         //⾃定义返回数据中value的key, 默认 value
         keyVal: 'id'
-    },true);
-
-
+    },true);*/
 
     //查询⻆⾊记录时传⼊⽤⼾id
-    var userId = $("input[name='id']").val();
+    var userId = $("[name='id']").val();
     formSelects.config('selectId',{
         type:"post",
         searchUrl:ctx+"/role/queryAllRoles?userId="+userId,

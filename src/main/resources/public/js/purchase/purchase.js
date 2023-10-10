@@ -4,6 +4,8 @@ layui.use(['table','layer'],function(){
         table = layui.table;
 
 
+
+    //初始化数据表格
     var tableIns = table.render({
         elem: '#purchaseList', // 表格绑定的ID
         url : ctx + '/purchase/list', // 访问数据的地址
@@ -32,7 +34,7 @@ layui.use(['table','layer'],function(){
      * 搜索按钮的点击事件
      */
     $(".search_btn").click(function () {
-
+        console.log($("[name='provider']").val());
         /**
          * 表格重载
          *  多条件查询
@@ -41,9 +43,10 @@ layui.use(['table','layer'],function(){
             // 设置需要传递给后端的参数
             where: { //设定异步数据接口的额外参数，任意设
                 // 通过文本框，设置传递的参数
-                provider: $("[name='provider']").val() // 供应商
-                ,goodsName: $("[name='goodsName']").val() // 商品名称
+                provider: $("[name='provider']").find("option:selected").text() // 供应商
+                ,goodsName: $("[name='goodsName']").find("option:selected").text() // 商品名称
             }
+
             ,page: {
                 curr: 1 // 重新从第 1 页开始
             }
@@ -51,7 +54,7 @@ layui.use(['table','layer'],function(){
 
     });
     /**
-     * 加载角色下拉框
+     * 加载供应商下拉框
      *
      * 配置远程搜索, 请求头, 请求参数, 请求类型等
      *
@@ -65,18 +68,103 @@ layui.use(['table','layer'],function(){
         type:"get",
         url: ctx+"/purchase/selectAllProvider",
         success:function (data){
+            console.log(data);
             if (data!=null){
                 var providerId=$("#providerId").val();
                 for (var i=0;i<data.length;i++){
-                    if (providerId==data[i].id){
-                        opt ="<option value='"+data[i].id+"'selected >"+data[i].uname+"</option>";
+                    if (providerId==data[i].providerId){
+                        var opt ="<option value='"+data[i].providerId+"'selected >"+data[i].provider+"</option>";
+
                     }else {
-                        opt ="<option value='"+data[i].id+"'>"+data[i].uname+"</option>";
+                        var opt ="<option value='"+data[i].providerId+"'>"+data[i].provider+"</option>";
                     }
                     $("#provider").append(opt);
 
                 }
             }
+            //渲染下拉框的内容
+            layui.form.render("select");
         }
     })
+    $.ajax({
+        type:"get",
+        url: ctx+"/purchase/selectAllGoodsName",
+        success:function (data){
+            //console.log(data)
+            if (data!=null){
+                var goodsId=$("#goodsId").val();
+                for (var i=0;i<data.length;i++){
+                    if (goodsId==data[i].goodsId){
+                        var opt ="<option value='"+data[i].goodsId+"'selected >"+data[i].goodsName+"</option>";
+                    }else {
+                        var opt ="<option value='"+data[i].goodsId+"'>"+data[i].goodsName+"</option>";
+                    }
+                    $("#goodsName").append(opt);
+
+                }
+            }
+            //渲染下拉框的内容
+            layui.form.render("select");
+        }
+    })
+    /**
+     * 监听头部工具栏
+     */
+    table.on('toolbar(purchases)',function (data) {
+        // 判断lay-event属性
+        if (data.event == "input") { // 添加操作
+            // 打开添加/更新进货信息                                    的对话框
+            openAddPurchaseDialog();
+
+        }
+    });
+    function openAddPurchaseDialog() {
+        var title = "<h3>进货明细 - 进货信息添加</h3>"
+        var url = ctx + "/purchase/toAddPurchasePage";
+        layui.layer.open({
+            title:title,
+            content:url,
+            area:["620px","420px"],
+            type:2,
+            maxmin:true
+        });
+    }
+
+    /**
+     * 监听行工具栏
+     */
+    table.on('tool(purchases)',function (data) {
+        // 判断lay-event属性
+        if (data.event == "edit") { // 修改角色
+            // 打开编辑进货单
+            openUpdatePurchaseDialog(data.data.id);
+        } else if (data.event == "return") {
+            // 打开退货单
+            returnPurchase(data.data.id);
+        }
+    });
+    function openUpdatePurchaseDialog(id) {
+        var title = "<h3>进货明细 - 进货信息更改</h3>"
+        var url = ctx + "/purchase/toUpdatePurchasePage?id="+id;
+        layui.layer.open({
+            title:title,
+            content:url,
+            area:["620px","420px"],
+            type:2,
+            maxmin:true
+        });
+    }
+    function returnPurchase(id) {
+        var title = "<h3>退货选择</h3>"
+        var url = ctx + "/purchase/toReturnPurchasePage?id="+id;
+        layui.layer.open({
+            title:title,
+            content:url,
+            area:["500px","400px"],
+            type:2,
+            maxmin:true
+        });
+
+    }
+
 });

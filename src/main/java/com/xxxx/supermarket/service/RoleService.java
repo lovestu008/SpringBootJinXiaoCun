@@ -2,12 +2,16 @@ package com.xxxx.supermarket.service;
 
 import com.xxxx.supermarket.base.BaseService;
 import com.xxxx.supermarket.dao.RoleMapper;
+import com.xxxx.supermarket.dao.RoleMenuMapper;
 import com.xxxx.supermarket.entity.Role;
+import com.xxxx.supermarket.entity.RoleMenu;
 import com.xxxx.supermarket.utils.AssertUtil;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
-import java.util.HashMap;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -16,13 +20,17 @@ public class RoleService extends BaseService<Role, Integer> {
 
     @Resource
     private RoleMapper roleMapper;
+    @Resource
+    private RoleMenuMapper roleMenuMapper;
+    @Resource
+    private MenuService menuService;
 
     /**
      * 添加角色模块
      *
      * @param role
      */
-
+    @Transactional(propagation = Propagation.REQUIRED)
     public void addRole(Role role) {
         AssertUtil.isTrue(null == role.getName(), "角色名不能为空");
         AssertUtil.isTrue(null == role.getBz(), "备注不能为空");
@@ -36,6 +44,7 @@ public class RoleService extends BaseService<Role, Integer> {
      *
      * @param role
      */
+    @Transactional(propagation = Propagation.REQUIRED)
     public void updateRole(Role role) {
         AssertUtil.isTrue(null == role.getName(), "角色名不能为空");
         AssertUtil.isTrue(null == role.getBz(), "备注不能为空");
@@ -45,12 +54,51 @@ public class RoleService extends BaseService<Role, Integer> {
         AssertUtil.isTrue(roleMapper.updateByPrimaryKeySelective(role) < 1,"角色更新失败");
     }
 
-
+    /**
+     * 删除角色
+     * @param id
+     */
+    @Transactional(propagation = Propagation.REQUIRED)
     public void deleteRole(Integer id) {
         AssertUtil.isTrue( null == id,"请选择要删除的角色");
         Role role = roleMapper.selectByPrimaryKey(id);
         AssertUtil.isTrue(role == null,"要删除的角色不存在");
-        role.setIsDel(1);
-        AssertUtil.isTrue(roleMapper.updateByPrimaryKeySelective(role) < 1,"角色删除失败");
+        AssertUtil.isTrue(roleMapper.deleteByPrimaryKey(id) < 1,"角色删除失败");
+    }
+
+    /**
+     * 为角色授权
+     * @param roleId
+     * @param mIds
+     */
+    @Transactional(propagation = Propagation.REQUIRED)
+    public void addGrant(Integer roleId, Integer[] mIds) {
+        //通过权限ID查询对应权限记录
+       Integer count =  roleMenuMapper.countPermissionByRoleId(roleId);
+        if (count>0){
+            roleMenuMapper.deleteRoleMenuByRoleId(roleId);
+        }
+        if (mIds != null && mIds.length>0){
+            List<RoleMenu> roleMenuList = new ArrayList<>();
+            for (Integer mId:mIds){
+                RoleMenu roleMenu = new RoleMenu();
+                roleMenu.setMenuId(mId);
+                roleMenu.setRoleId(roleId);
+                roleMenu.setAclValue(menuService.selectByPrimaryKey(mId).getAclValue());
+            //将对象设置到集合中
+                roleMenuList.add(roleMenu);
+            }
+            //批量添加
+            AssertUtil.isTrue(roleMenuMapper.insertBatch(roleMenuList)!=roleMenuList.size(),"角色授权失败！");
+        }
+    }
+
+    /**
+     * 查询所有的角色列表
+     * @param userId
+     * @return
+     */
+    public List<Map<String, Object>> queryAllRoles(Integer userId) {
+        return roleMapper.queryAllRoles(userId);
     }
 }

@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.xxxx.supermarket.dao.GoodsMapper" >
+  <resultMap id="BaseResultMap" type="com.xxxx.supermarket.entity.Goods" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="code" property="code" jdbcType="VARCHAR" />
+    <result column="inventory_quantity" property="inventoryQuantity" jdbcType="INTEGER" />
+    <result column="min_num" property="minNum" jdbcType="INTEGER" />
+    <result column="model" property="model" jdbcType="VARCHAR" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="producer" property="producer" jdbcType="VARCHAR" />
+    <result column="purchasing_price" property="purchasingPrice" jdbcType="REAL" />
+    <result column="remarks" property="remarks" jdbcType="VARCHAR" />
+    <result column="selling_price" property="sellingPrice" jdbcType="REAL" />
+    <result column="unit" property="unit" jdbcType="VARCHAR" />
+    <result column="type_id" property="typeId" jdbcType="INTEGER" />
+    <result column="state" property="state" jdbcType="INTEGER" />
+    <result column="last_purchasing_price" property="lastPurchasingPrice" jdbcType="REAL" />
+    <result column="is_del" property="isDel" jdbcType="INTEGER" />
+  </resultMap>
+
+  <sql id="Base_Column_List" >
+    id, code, inventory_quantity, min_num, model, name, producer, purchasing_price, remarks, 
+    selling_price, unit, type_id, state, last_purchasing_price, is_del
+    </sql>
+
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select
+    <include refid="Base_Column_List" />
+    from t_goods
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from t_goods
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+
+  <insert id="insert" parameterType="com.xxxx.supermarket.entity.Goods" >
+    insert into t_goods (id, code, inventory_quantity,
+      min_num, model, name,
+      producer, purchasing_price, remarks,
+      selling_price, unit, type_id,
+      state, last_purchasing_price, is_del
+      )
+    values (#{id,jdbcType=INTEGER}, #{code,jdbcType=VARCHAR}, #{inventoryQuantity,jdbcType=INTEGER},
+      #{minNum,jdbcType=INTEGER}, #{model,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR},
+      #{producer,jdbcType=VARCHAR}, #{purchasingPrice,jdbcType=REAL}, #{remarks,jdbcType=VARCHAR},
+      #{sellingPrice,jdbcType=REAL}, #{unit,jdbcType=VARCHAR}, #{typeId,jdbcType=INTEGER},
+      #{state,jdbcType=INTEGER}, #{lastPurchasingPrice,jdbcType=REAL}, #{isDel,jdbcType=INTEGER}
+      )
+  </insert>
+  <!--添加商品-->
+  <insert id="insertSelective" parameterType="com.xxxx.supermarket.entity.Goods" >
+    insert into t_goods
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="code != null" >
+        code,
+      </if>
+      <if test="inventoryQuantity != null" >
+        inventory_quantity,
+      </if>
+      <if test="minNum != null" >
+        min_num,
+      </if>
+      <if test="model != null" >
+        model,
+      </if>
+      <if test="name != null" >
+        name,
+      </if>
+      <if test="producer != null" >
+        producer,
+      </if>
+      <if test="purchasingPrice != null" >
+        purchasing_price,
+      </if>
+      <if test="remarks != null" >
+        remarks,
+      </if>
+      <if test="sellingPrice != null" >
+        selling_price,
+      </if>
+      <if test="unit != null" >
+        unit,
+      </if>
+      <if test="typeId != null" >
+        type_id,
+      </if>
+      <if test="state != null" >
+        state,
+      </if>
+      <if test="lastPurchasingPrice != null" >
+        last_purchasing_price,
+      </if>
+      <if test="isDel != null" >
+        is_del,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="code != null" >
+        #{code,jdbcType=VARCHAR},
+      </if>
+      <if test="inventoryQuantity != null" >
+        #{inventoryQuantity,jdbcType=INTEGER},
+      </if>
+      <if test="minNum != null" >
+        #{minNum,jdbcType=INTEGER},
+      </if>
+      <if test="model != null" >
+        #{model,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="producer != null" >
+        #{producer,jdbcType=VARCHAR},
+      </if>
+      <if test="purchasingPrice != null" >
+        #{purchasingPrice,jdbcType=REAL},
+      </if>
+      <if test="remarks != null" >
+        #{remarks,jdbcType=VARCHAR},
+      </if>
+      <if test="sellingPrice != null" >
+        #{sellingPrice,jdbcType=REAL},
+      </if>
+      <if test="unit != null" >
+        #{unit,jdbcType=VARCHAR},
+      </if>
+      <if test="typeId != null" >
+        #{typeId,jdbcType=INTEGER},
+      </if>
+      <if test="state != null" >
+        #{state,jdbcType=INTEGER},
+      </if>
+      <if test="lastPurchasingPrice != null" >
+        #{lastPurchasingPrice,jdbcType=REAL},
+      </if>
+      <if test="isDel != null" >
+        #{isDel,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+
+  <!--更新商品数据-->
+  <update id="updateByPrimaryKeySelective" parameterType="com.xxxx.supermarket.entity.Goods" >
+    update t_goods
+    <set >
+      <if test="code != null" >
+        code = #{code,jdbcType=VARCHAR},
+      </if>
+      <if test="inventoryQuantity != null" >
+        inventory_quantity = #{inventoryQuantity,jdbcType=INTEGER},
+      </if>
+      <if test="minNum != null" >
+        min_num = #{minNum,jdbcType=INTEGER},
+      </if>
+      <if test="model != null" >
+        model = #{model,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null" >
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="producer != null" >
+        producer = #{producer,jdbcType=VARCHAR},
+      </if>
+      <if test="purchasingPrice != null" >
+        purchasing_price = #{purchasingPrice,jdbcType=REAL},
+      </if>
+      <if test="remarks != null" >
+        remarks = #{remarks,jdbcType=VARCHAR},
+      </if>
+      <if test="sellingPrice != null" >
+        selling_price = #{sellingPrice,jdbcType=REAL},
+      </if>
+      <if test="unit != null" >
+        unit = #{unit,jdbcType=VARCHAR},
+      </if>
+      <if test="typeId != null" >
+        type_id = #{typeId,jdbcType=INTEGER},
+      </if>
+      <if test="state != null" >
+        state = #{state,jdbcType=INTEGER},
+      </if>
+      <if test="lastPurchasingPrice != null" >
+        last_purchasing_price = #{lastPurchasingPrice,jdbcType=REAL},
+      </if>
+      <if test="isDel != null" >
+        is_del = #{isDel,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+  <update id="updateByPrimaryKey" parameterType="com.xxxx.supermarket.entity.Goods" >
+    update t_goods
+    set code = #{code,jdbcType=VARCHAR},
+      inventory_quantity = #{inventoryQuantity,jdbcType=INTEGER},
+      min_num = #{minNum,jdbcType=INTEGER},
+      model = #{model,jdbcType=VARCHAR},
+      name = #{name,jdbcType=VARCHAR},
+      producer = #{producer,jdbcType=VARCHAR},
+      purchasing_price = #{purchasingPrice,jdbcType=REAL},
+      remarks = #{remarks,jdbcType=VARCHAR},
+      selling_price = #{sellingPrice,jdbcType=REAL},
+      unit = #{unit,jdbcType=VARCHAR},
+      type_id = #{typeId,jdbcType=INTEGER},
+      state = #{state,jdbcType=INTEGER},
+      last_purchasing_price = #{lastPurchasingPrice,jdbcType=REAL},
+      is_del = #{isDel,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+  <!--商品管理多条件查询-->
+  <select id="selectByParams" parameterType="com.xxxx.supermarket.query.GoodsQuery" resultType="com.xxxx.supermarket.entity.Goods">
+    SELECT
+        g.*,gu.name as unitName,gt.name as typeName
+    FROM
+        t_goods g left join t_goods_unit gu on g.unit = gu.id left join t_goods_type gt on g.type_id = gt.id
+    <where>
+      g.is_del =0
+      <if test="null != goodsName and goodsName !=''">
+        and g.name like concat('%',#{goodsName},'%')
+      </if>
+
+      <if test="null !=type">
+        <if test="type ==1 ">
+          and inventory_quantity =0
+        </if>
+        <if test="type ==2 ">
+          and inventory_quantity  &gt; 0
+        </if>
+        <if test="type ==3 ">
+          and inventory_quantity  &lt; min_num
+        </if>
+      </if>
+
+      <if test="null !=typeIds and typeIds.size>0">
+        and g.type_id in
+        <foreach collection="typeIds" item="typeId" open="(" separator="," close=")">
+          #{typeId}
+        </foreach>
+      </if>
+    </where>
+  </select>
+
+  <select id="queryGoodsByCode" resultType="com.xxxx.supermarket.entity.Goods">
+    select g.*, gt.id as typeId, gt.name as typeName, gu.name as unitName
+    from t_goods g
+           left join t_goods_type gt on g.type_id = gt.id
+           left join t_goods_unit gu on g.unit = gu.id
+    where g.code = #{code}
+  </select>
+
+  <select id="getGoodsById" resultType="com.xxxx.supermarket.entity.Goods">
+    select g.*, gt.id as typeId, gt.name as typeName, gu.name as unitName
+    from t_goods g
+           left join t_goods_type gt on g.type_id = gt.id
+           left join t_goods_unit gu on g.unit = gu.id
+    where g.id = #{id}
+  </select>
+  <!--通过角色名查询角色记录-->
+  <select id="selectByGoodsName" parameterType="string" resultType="com.xxxx.supermarket.entity.Goods">
+    select
+    <include refid="Base_Column_List"></include>
+    from
+    t_goods
+    where
+    is_del = 0 and name = #{name}
+  </select>
+
+
+
+  <!--单条删除(修改is_del)-->
+  <delete id="deleteGoods" >
+    update
+      t_goods
+    set
+      is_del = 1
+    where
+      id = #{id}
+  </delete>
+  
+</mapper>
