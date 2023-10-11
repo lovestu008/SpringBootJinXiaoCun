@@ -17,6 +17,13 @@ public interface GoodsMapper extends BaseMapper<Goods,Integer> {
      */
     public Integer deleteGoods(Integer id);
 
+    /**
+     * 批量删除
+     * @param ids
+     * @return
+     */
+    public Integer deleteAllGoods(Integer[] ids);
+
     Goods queryGoodsByCode(Integer code);
 
     Goods getGoodsById(Integer gid);

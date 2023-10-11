@@ -150,6 +150,14 @@ public class GoodsService extends BaseService<Goods, Integer> {
         AssertUtil.isTrue(goodsMapper.deleteGoods(id) != 1,"商品删除失败！");
     }
     /**
+     * 删除商品数据(批量删除)
+     * @param ids
+     */
+    @Transactional(propagation = Propagation.REQUIRED)
+    public void deleteAllGoods(Integer[] ids) {
+        goodsMapper.deleteAllGoods(ids);
+    }
+    /**
      * 参数判断方法
      *
      * @param name

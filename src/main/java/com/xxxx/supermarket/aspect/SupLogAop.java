@@ -8,7 +8,9 @@ import com.xxxx.supermarket.entity.User;
 import com.xxxx.supermarket.utils.AssertUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Pointcut;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.core.Ordered;
 import org.springframework.stereotype.Component;
@@ -28,7 +30,7 @@ public class SupLogAop implements Ordered {//Ordered接口用于排序，值越�
     /**
      * 定义SupLogAop的切入点为标记@SupLog注解的方法
      */
-    //@Pointcut(value = "@annotation(com.xxxx.supermarket.annotation.SupLog)")//切面，拦截到所有SupLog注解
+    @Pointcut(value = "@annotation(com.xxxx.supermarket.annotation.SupLog)")//切面，拦截到所有SupLog注解
     public void pointcut() {
     }
     /**
@@ -37,7 +39,7 @@ public class SupLogAop implements Ordered {//Ordered接口用于排序，值越�
      * @param proceedingJoinPoint
      * @retur
      */
-    //@Around("pointcut()")  //对连接点进行拦截
+    @Around("pointcut()")  //对连接点进行拦截
     public Object around(ProceedingJoinPoint proceedingJoinPoint) {//连接点，请求作为参数传入
         log.info("----SupAop 环绕通知 start");
         //执行目标方法

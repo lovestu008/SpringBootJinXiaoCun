@@ -27,8 +27,7 @@ public class GoodsController extends BaseController {
 
     @Resource
     private GoodsService goodsService;
-/*    @Resource
-    private GoodsTypeService goodsTypeService;*/
+
     /**
      * 进入商品管理页面
      *
@@ -58,7 +57,7 @@ public class GoodsController extends BaseController {
      * @return
      */
     @RequiredPermission(code = "102010")
-    @PostMapping("add")
+    @RequestMapping("add")
     @ResponseBody
     @SupLog(content = "商品数据添加操作")
     public ResultInfo addGoods(GoodsModel goodsModel){
@@ -96,7 +95,17 @@ public class GoodsController extends BaseController {
         return success("删除成功！");
     }
 
-
+    /**
+     * 删除商品数据(批量)
+     * @param ids
+     * @return
+     */
+    @ResponseBody
+    @PostMapping("allDelete")
+    public ResultInfo deleteAllGoods(Integer[] ids){
+        goodsService.deleteAllGoods(ids);
+        return success("删除成功！");
+    }
 
     /**
      * 进入 添加或修改 商品信息的页面
@@ -109,26 +118,8 @@ public class GoodsController extends BaseController {
         if (null != id){
             Goods goods =goodsService.selectByPrimaryKey(id);
             request.setAttribute("goods",goods);
-        }else if(null != typeId){  //如果typeId不为空，则表示是添加操作
-
         }
-
         return "goods/add_update";
-    }
-
-    /**
-     *进入商品类别选择页
-     * @param typeId
-     * @param request
-     * @return
-     */
-    @RequiredPermission(code = "102010")
-    @RequestMapping("toGoodsTypePage")
-    public String toGoodsTypePage(Integer typeId, HttpServletRequest request) {
-        if(null != typeId){
-            request.setAttribute("typeId",typeId);
-        }
-        return "goodsType";
     }
 
 }

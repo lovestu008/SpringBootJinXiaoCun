@@ -276,8 +276,6 @@
     is_del = 0 and name = #{name}
   </select>
 
-
-
   <!--单条删除(修改is_del)-->
   <delete id="deleteGoods" >
     update
@@ -286,6 +284,20 @@
       is_del = 1
     where
       id = #{id}
+  </delete>
+
+  <!--批量删除(修改is_del)-->
+  <delete id="deleteAllGoods">
+    update
+    t_goods
+    set
+    is_del = 1
+    where
+    id
+    in
+    <foreach collection="array" separator="," open="(" close=")" item="id">
+      #{id}
+    </foreach>
   </delete>
   
 </mapper>

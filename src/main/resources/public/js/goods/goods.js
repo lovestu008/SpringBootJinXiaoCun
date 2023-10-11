@@ -71,14 +71,6 @@ layui.use(['element','table','layer'],function(){
 
 
 
-    function addGoodsTypeManagerTab(){
-        //新增一个Tab项
-        window.parent.layui.element.tabAdd('bodyTab', {
-            title: '新选项'+ (Math.random()*1000|0)
-            ,content: '内容'+ (Math.random()*1000|0)
-            ,id: new Date().getTime()
-        })
-    }
 
 
     /**
@@ -91,10 +83,6 @@ layui.use(['element','table','layer'],function(){
         if(uid){
             url = url+"?id="+uid;
             title="商品管理-更新商品";
-        }else{
-            if(null !=$("input[name='typeId']").val()){
-                url=url+"?typeId="+$("input[name='typeId']").val();
-            }
         }
         layui.layer.open({
             title : title,
