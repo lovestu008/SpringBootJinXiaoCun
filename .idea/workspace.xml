@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="47f004b4-5068-48b2-9225-7a541737bcc5" name="Changes" comment="合并">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/views/goods/goodsManager.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/views/goods/goodsManager.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/SaleListGoodsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/SaleListGoodsMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mappers/PurchaseMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mappers/PurchaseMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

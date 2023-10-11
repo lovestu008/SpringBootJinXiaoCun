@@ -186,5 +186,14 @@
             goods_id     = #{goodsId,jdbcType=INTEGER}
         where id = #{id,jdbcType=INTEGER}
     </update>
-
+    <!--查询商品销量前五-->
+    <select id="selectSaleListGoods" resultType="com.xxxx.supermarket.model.SaleListGoodsModel">
+        select
+            goods_id,code,model,name,id,price,sum(total) allTotal,sale_list_id
+        from
+            t_sale_list_goods
+        group by goods_id
+        order by allTotal desc
+            limit 5
+    </select>
 </mapper>

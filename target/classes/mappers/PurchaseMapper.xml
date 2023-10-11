@@ -14,11 +14,11 @@
     <result column="is_valid" property="isValid" jdbcType="INTEGER" />
   </resultMap>
   <sql id="Base_Column_List" >
-    id, goods_name, provider, inp_price, all_inp_price, inp_num, inp_time, operate_person,
+    id, goods_name, provider, inp_price, all_inp_price, inp_num, inp_time, operate_person, 
     remark, is_valid
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
-    select
+    select 
     <include refid="Base_Column_List" />
     from t_purchase
     where id = #{id,jdbcType=INTEGER}
@@ -28,12 +28,12 @@
     where id = #{id,jdbcType=INTEGER}
   </delete>
   <insert id="insert" parameterType="com.xxxx.supermarket.entity.Purchase" >
-    insert into t_purchase (id, goods_name, provider,
-      inp_price, all_inp_price, inp_num,
+    insert into t_purchase (id, goods_name, provider, 
+      inp_price, all_inp_price, inp_num, 
       inp_time, operate_person, remark,
       is_valid)
-    values (#{id,jdbcType=INTEGER}, #{goodsName,jdbcType=VARCHAR}, #{provider,jdbcType=VARCHAR},
-      #{inpPrice,jdbcType=INTEGER}, #{allInpPrice,jdbcType=INTEGER}, #{inpNum,jdbcType=INTEGER},
+    values (#{id,jdbcType=INTEGER}, #{goodsName,jdbcType=VARCHAR}, #{provider,jdbcType=VARCHAR}, 
+      #{inpPrice,jdbcType=INTEGER}, #{allInpPrice,jdbcType=INTEGER}, #{inpNum,jdbcType=INTEGER}, 
       #{inpTime,jdbcType=TIMESTAMP}, #{operatePerson,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR},
       #{isValid,jdbcType=INTEGER})
   </insert>
@@ -151,8 +151,6 @@
     where id = #{id,jdbcType=INTEGER}
   </update>
 
-
-
   <select id="selectByParams" parameterType="com.xxxx.supermarket.querys.PurchaseQuery" resultType="com.xxxx.supermarket.entity.Purchase">
     select
     <include refid="Base_Column_List" />
@@ -197,6 +195,15 @@
         p.goods_name=g.name
     where p.is_valid=1
   </select>
+<select id="selectByTime" resultType="com.xxxx.supermarket.entity.Purchase">
+  select
+      <include refid="Base_Column_List"/>
+    from
+        t_purchase
+  where
+      is_valid = 1
+      and YEAR(inp_time) = YEAR(NOW()) AND MONTH(inp_time) = MONTH(NOW());
+</select>
 
   <select id="selectProviderByGoodsNameFromGoods" parameterType="string" resultType="string">
     select
