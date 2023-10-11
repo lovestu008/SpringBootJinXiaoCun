@@ -100,6 +100,7 @@ public class GoodsController extends BaseController {
      * @param ids
      * @return
      */
+    @RequiredPermission(code = "102010")
     @ResponseBody
     @PostMapping("allDelete")
     public ResultInfo deleteAllGoods(Integer[] ids){
