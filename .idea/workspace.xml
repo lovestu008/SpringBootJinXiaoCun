@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47f004b4-5068-48b2-9225-7a541737bcc5" name="Changes" comment="修改供应商查询bug">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/controller/CustomerController.java" afterDir="false" />
+    <list default="true" id="47f004b4-5068-48b2-9225-7a541737bcc5" name="Changes" comment="修改客户添加bug">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/service/CustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/service/ProviderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/supermarket/service/ProviderService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +133,7 @@
       <workItem from="1696929262026" duration="2188000" />
       <workItem from="1696931493907" duration="390000" />
       <workItem from="1696935536182" duration="5119000" />
-      <workItem from="1696988264272" duration="3503000" />
+      <workItem from="1696988264272" duration="3951000" />
     </task>
     <task id="LOCAL-00001" summary="role module">
       <created>1696554818830</created>
@@ -379,7 +380,14 @@
       <option name="project" value="LOCAL" />
       <updated>1696995129943</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="修改客户添加bug">
+      <created>1696995591431</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1696995591431</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -414,7 +422,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="非法访问拦截" />
     <MESSAGE value="完善邮箱登录" />
     <MESSAGE value="一堆xml" />
     <MESSAGE value="修改密码 修改role业务" />
@@ -439,6 +446,7 @@
     <MESSAGE value="合并" />
     <MESSAGE value="完善细节" />
     <MESSAGE value="修改供应商查询bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改供应商查询bug" />
+    <MESSAGE value="修改客户添加bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改客户添加bug" />
   </component>
 </project>

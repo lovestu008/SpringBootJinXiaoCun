@@ -70,7 +70,7 @@ public class CustomerService extends BaseService<Customer,Integer> {
         AssertUtil.isTrue(StringUtils.isBlank(name),"超市名称不能为空");
         // 电话号码不能为空，格式正确
         AssertUtil.isTrue(StringUtils.isBlank(number),"电话号码不能为空");
-        AssertUtil.isTrue(PhoneUtil.isMobile(number),"电话号码格式不正确");
+        AssertUtil.isTrue(!PhoneUtil.isMobile(number),"电话号码格式不正确");
     }
 
     /**
