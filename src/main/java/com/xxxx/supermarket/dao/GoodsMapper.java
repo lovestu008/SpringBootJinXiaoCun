@@ -17,6 +17,10 @@ public interface GoodsMapper extends BaseMapper<Goods,Integer> {
      */
     public Integer deleteGoods(Integer id);
 
+    Goods queryGoodsByCode(Integer code);
+
+    Goods getGoodsById(Integer gid);
+
     /**
      * 批量删除
      * @param ids
@@ -24,7 +28,4 @@ public interface GoodsMapper extends BaseMapper<Goods,Integer> {
      */
     public Integer deleteAllGoods(Integer[] ids);
 
-    Goods queryGoodsByCode(Integer code);
-
-    Goods getGoodsById(Integer gid);
 }

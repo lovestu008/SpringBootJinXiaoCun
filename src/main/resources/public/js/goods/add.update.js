@@ -39,6 +39,7 @@ layui.use(['form', 'layer'], function () {
         if($("input[name='id']").val()){
             url=ctx + "/goods/update";
         }
+
         $.post(url, data.field, function (res) {
             if (res.code == 200) {
                 setTimeout(function () {

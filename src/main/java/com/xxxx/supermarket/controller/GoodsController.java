@@ -57,7 +57,7 @@ public class GoodsController extends BaseController {
      * @return
      */
     @RequiredPermission(code = "102010")
-    @RequestMapping("add")
+    @PostMapping("add")
     @ResponseBody
     @SupLog(content = "商品数据添加操作")
     public ResultInfo addGoods(GoodsModel goodsModel){
@@ -80,7 +80,7 @@ public class GoodsController extends BaseController {
         return success("商品数据修改成功！");
     }
     /**
-     *删除商品数据
+     *删除商品数据(单条删除)
      *
      * @param id
      * @return

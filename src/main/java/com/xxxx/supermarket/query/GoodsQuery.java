@@ -16,7 +16,7 @@ public class GoodsQuery extends BaseQuery {
 
     //商品管理 多条件查询
     private String goodsName;
-    private Integer typeId;
+    private Integer typeId =1;
 
     private List<Integer> typeIds;
 
