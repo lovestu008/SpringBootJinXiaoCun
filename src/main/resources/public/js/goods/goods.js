@@ -4,48 +4,6 @@ layui.use(['element','table','layer'],function(){
         table = layui.table
 
 
-    /*zTree*/
-    $.ajax({
-        type:"post",
-        url:ctx+"/goodsType/queryAllGoodsTypes",
-        dataType:"json",
-        success:function (data) {
-            // zTree 的参数配置，深入使用请参考 API 文档（setting 配置详解）
-            var setting = {
-                data: {
-                    simpleData: {
-                        enable: true
-                    }
-                },
-                view:{
-                    showLine: false
-                },
-                callback: {
-                    onClick: zTreeOnClick
-                }
-            };
-            $.fn.zTree.init($("#goodsTypeTree"), setting, data);
-        }
-    })
-
-    function zTreeOnClick(event, treeId, treeNode) {
-        // 获取店家节点对应类型id
-        var typeId =  treeNode.id;
-        table.reload("goodsListTable",{
-            page: {
-                curr: 1 //重新从第 1 页开始
-            },
-            where: {
-                goodsName: $("input[name='goodsName']").val(),
-                typeId:typeId
-            }
-        })
-        // 设置商品类别查询条件到隐藏域
-        $("input[name='typeId']").val(typeId);
-    };
-
-
-
     //表格展示
     var tableIns = table.render({
         id:'goodsTable'
@@ -100,25 +58,61 @@ layui.use(['element','table','layer'],function(){
             case "add":
                 openAddOrUpdateGoodsDialog();//添加页面
                 break;
-            case "goodsType":
-                addGoodsTypeManagerTab();
+            case "delete":
+                deleteAllCheckedGoods();//批量删除
 
         };
     });
 
 
+    /**
+     * 批量删除选中数据
+     */
+    function deleteAllCheckedGoods(data){
+        // 获取数据表格选中的行数据   table.checkStatus('数据表格的ID');
+        var checkStatus = table.checkStatus("goodsTable");
+        console.log(checkStatus)
+        // 获取所有被选中的记录对应的数据
+        var GoodsData =  checkStatus.data;
+        // 判断用户是否选择的记录 (选中行的数量大于0)
+        if (GoodsData.length < 1){
+            layer.msg("请选择要删除的记录！",{icon:5});
+            return;
+        }
+        // 询问用户是否确认删除
+        layer.confirm('您确定要删除选中的记录吗？',{icon:3, title:'营销机会管理'}, function (index) {
+            // 关闭确认框
+            layer.close(index);
 
-
-
-
-
-    function addGoodsTypeManagerTab(){
-        //新增一个Tab项
-        window.parent.layui.element.tabAdd('bodyTab', {
-            title: '新选项'+ (Math.random()*1000|0)
-            ,content: '内容'+ (Math.random()*1000|0)
-            ,id: new Date().getTime()
-        })
+            // 传递的参数是数组   ids=1&ids=2&ids=3
+            var ids = "ids=";
+            // 循环选中的行记录的数据
+            for(var i = 0; i < GoodsData.length; i++) {
+                if(i < GoodsData.length -1) {
+                    ids = ids + GoodsData[i].id + "&ids="
+                } else {
+                    ids = ids + GoodsData[i].id;
+                }
+            }
+            // 发送ajax请求，执行删除营销机会
+            $.ajax({
+                type:"post",
+                url:ctx+"/goods/allDelete",
+                data:ids, //传参是数组
+                success:function (result){
+                    // 判断删除结果
+                    if (result.code == 200) {
+                        // 提示成功
+                        layer.msg("删除成功！",{icon:6});
+                        // 刷新表格
+                        tableIns.reload();
+                    } else {
+                        // 提示失败
+                        layer.msg(result.msg, {icon:5});
+                    }
+                }
+            });
+        });
     }
 
 
@@ -132,10 +126,6 @@ layui.use(['element','table','layer'],function(){
         if(uid){
             url = url+"?id="+uid;
             title="商品管理-更新商品";
-        }else{
-            if(null !=$("input[name='typeId']").val()){
-                url=url+"?typeId="+$("input[name='typeId']").val();
-            }
         }
         layui.layer.open({
             title : title,
@@ -157,27 +147,20 @@ layui.use(['element','table','layer'],function(){
             }else if(layEvent === "del") {
                 layer.confirm('确定删除当前商品？', {icon: 3, title: "商品管理"}, function (index) {
                     $.post(ctx+"/goods/delete",{id:obj.data.id},function (data) {
+                        //判断删除结果
                         if(data.code==200){
+                            //提示成功
                             layer.msg("操作成功！");
+                            //刷新表格
                             tableIns.reload();
                         }else{
+                            //提示失败
                             layer.msg(data.message, {icon: 5});
                         }
                     });
                 })
             }
         });
-
-
-
-
-
-
-
-
-
-
-
 
 
 

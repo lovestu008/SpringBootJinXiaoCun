@@ -95,7 +95,7 @@ public class GoodsService extends BaseService<Goods,Integer> {
         AssertUtil.isTrue(goodsMapper.updateByPrimaryKeySelective(goodsModel) != 1 ,"商品数据更新失败！");
     }
     /**
-     * 删除商品数据
+     * 删除商品数据(单条删除)
      *    参数判断
      *        判断id是否为空
      *    执行删除操作，判断受影响的行数
@@ -107,6 +107,14 @@ public class GoodsService extends BaseService<Goods,Integer> {
         AssertUtil.isTrue(goodsMapper.deleteGoods(id) != 1,"商品删除失败！");
     }
 
+    /**
+     * 删除商品数据(批量删除)
+     * @param ids
+     */
+    @Transactional(propagation = Propagation.REQUIRED)
+    public void deleteAllGoods(Integer[] ids) {
+        goodsMapper.deleteAllGoods(ids);
+    }
 
 
     /**
@@ -129,5 +137,6 @@ public class GoodsService extends BaseService<Goods,Integer> {
         //库存下限   非空，大于0
         AssertUtil.isTrue(null == minNum || minNum < 0 ,"库存下限错误！请重试！");
     }
+
 
 }
