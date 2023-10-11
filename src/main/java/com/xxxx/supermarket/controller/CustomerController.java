@@ -50,7 +50,7 @@ public class CustomerController extends BaseController {
 
 
     @RequiredPermission(code = "101010")
-    @RequestMapping("addCustomers")
+    @RequestMapping("add")
     @ResponseBody
     @SupLog(content = "添加客户记录")
     public ResultInfo addCustomer(Customer customer){
