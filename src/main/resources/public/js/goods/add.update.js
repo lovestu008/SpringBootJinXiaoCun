@@ -62,19 +62,6 @@ layui.use(['form', 'layer'], function () {
 
 
 
-    //商品类别设置弹出框
-    $("#reloadGoodsType").click(function (){
-        var url  =  ctx+"/goods/toGoodsTypePage?typeId="+$("input[name='typeId']").val();
-        var title="商品管理-商品类别";
-        layui.layer.open({
-            title : title,
-            type : 2,
-            area:["600px","400px"],
-            maxmin:true,
-            content : url
-        });
-    })
-
 
     /**
      * 关闭弹出层
@@ -86,4 +73,3 @@ layui.use(['form', 'layer'], function () {
 
 
 });
-

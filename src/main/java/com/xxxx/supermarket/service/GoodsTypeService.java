@@ -2,8 +2,8 @@ package com.xxxx.supermarket.service;
 
 import com.xxxx.supermarket.base.BaseService;
 import com.xxxx.supermarket.dao.GoodsTypeMapper;
-import com.xxxx.supermarket.model.TreeDto;
 import com.xxxx.supermarket.entity.GoodsType;
+import com.xxxx.supermarket.model.TreeGoodsModel;
 import com.xxxx.supermarket.utils.AssertUtil;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
@@ -24,22 +24,9 @@ public class GoodsTypeService extends BaseService<GoodsType,Integer> {
      * @param
      * @return
      */
-
-    public List<TreeDto> queryAllGoodsTypes(Integer typeId) {
-        List<TreeDto> treeDtos =goodsTypeMapper.queryAllGoodsTypes();
-        if (null != typeId){
-            for (TreeDto t:treeDtos
-            ) {
-                if (t.getId().equals(typeId)){
-                    //设置节点选中
-                    t.setChecked(true);
-                    break;
-                }
-            }
-        }
-        return treeDtos;
+    public List<TreeGoodsModel> queryAllGoodsTypes() {
+        return  goodsTypeMapper.queryAllGoodsTypes();
     }
-
 
     /**
      * 加载商品类别管理页面的表格数据
@@ -99,43 +86,19 @@ public class GoodsTypeService extends BaseService<GoodsType,Integer> {
     public void deleteGoodsType(Integer id) {
         AssertUtil.isTrue(null == id,"待删除记录不存在！");
         //判断类别是否存在子类别
-        Integer count = goodsTypeMapper.queryCountGoodsTypeByParentId(id);
-        //如果存在则不能删除
-        AssertUtil.isTrue(count >0,"该类别下存在子类，不可删除！");
-        AssertUtil.isTrue(goodsTypeMapper.deleteByPrimaryKey(id)<1,"删除失败！");
+        Integer count = goodsTypeMapper.queryGoodsTypeByParentId(id);
+        //判断删除的子类别，其父类别的状态
+        GoodsType num = goodsTypeMapper.selectByPrimaryKey(id);
+        GoodsType num2 = goodsTypeMapper.selectByPrimaryKey(num.getpId());
+        if(num2.getState()==1){
+            //删除商品类别时，更新父节点状态
+            AssertUtil.isTrue(goodsTypeMapper.updateByState(num2.getId()) <1 ,"删除失败！");
         }
-    /**
-     * 查询指定类型下所有的商品的类型Id
-     * @param typeId
-     * @return
-     */
-    public List<Integer> queryAllSubTypeIdsByTypeId(Integer typeId) {
-        GoodsType goodsType = goodsTypeMapper.queryGoodsTypeByTypeId(typeId);
-        if (goodsType.getId()==-1){
-            // 所有类别
-            return null;
-        }
-        List<Integer> integers = new ArrayList<>();
-        integers.add(typeId);
-        return getSubTypeIds(typeId,integers);
+            //如果存在则不能删除
+            AssertUtil.isTrue(count >0,"该类别下存在子类，不可删除！");
+            AssertUtil.isTrue(goodsTypeMapper.deleteByPrimaryKey(id)<1,"删除失败！");
     }
 
-    /**
-     * 获取指定类型Id下所有的商品Id
-     * @param typeId
-     * @param result
-     * @return
-     */
-    private List<Integer> getSubTypeIds(Integer typeId, List<Integer> result) {
-        List<GoodsType> goodsTypes = goodsTypeMapper.queryGoodsTypeByParentId(typeId);
-        if(goodsTypes!=null&&goodsTypes.size()>0){
-            goodsTypes.forEach(gt->{
-                result.add(gt.getId());
-                getSubTypeIds(gt.getId(),result);
-            });
-        }
-        return result;
-    }
 }
 
 

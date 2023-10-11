@@ -1,8 +1,8 @@
 package com.xxxx.supermarket.dao;
 
 import com.xxxx.supermarket.base.BaseMapper;
-import com.xxxx.supermarket.model.TreeDto;
 import com.xxxx.supermarket.entity.GoodsType;
+import com.xxxx.supermarket.model.TreeGoodsModel;
 
 
 import java.util.List;
@@ -14,7 +14,7 @@ public interface GoodsTypeMapper extends BaseMapper<GoodsType,Integer> {
      * @param
      * @return
      */
-    List<TreeDto> queryAllGoodsTypes();
+    public List<TreeGoodsModel> queryAllGoodsTypes();
 
     /**
      * 加载商品类别管理页面的表格数据
@@ -27,7 +27,7 @@ public interface GoodsTypeMapper extends BaseMapper<GoodsType,Integer> {
      * @param id
      * @return
      */
-    public Integer queryCountGoodsTypeByParentId(Integer id);
+    public Integer queryGoodsTypeByParentId(Integer id);
 
     /**
      * 将id添加 当做pId 添加数据
@@ -35,12 +35,11 @@ public interface GoodsTypeMapper extends BaseMapper<GoodsType,Integer> {
      * @return
      */
     Integer insertGoodsType(GoodsType goodsType);
+
     /**
-     * 通过父类id获取所有goodstype
+     * 删除商品类别时，更新父节点状态
      * @param id
      * @return
      */
-    List<GoodsType> queryGoodsTypeByParentId(Integer id);
-
-    GoodsType queryGoodsTypeByTypeId(Integer typeId);
+    public Integer updateByState(Integer id);
 }
