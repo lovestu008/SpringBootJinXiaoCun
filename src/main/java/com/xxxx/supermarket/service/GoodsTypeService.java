@@ -3,6 +3,7 @@ package com.xxxx.supermarket.service;
 import com.xxxx.supermarket.base.BaseService;
 import com.xxxx.supermarket.dao.GoodsTypeMapper;
 import com.xxxx.supermarket.entity.GoodsType;
+import com.xxxx.supermarket.model.TreeDto;
 import com.xxxx.supermarket.model.TreeGoodsModel;
 import com.xxxx.supermarket.utils.AssertUtil;
 import org.apache.commons.lang3.StringUtils;
@@ -24,8 +25,8 @@ public class GoodsTypeService extends BaseService<GoodsType,Integer> {
      * @param
      * @return
      */
-    public List<TreeGoodsModel> queryAllGoodsTypes() {
-        return  goodsTypeMapper.queryAllGoodsTypes();
+    public List<TreeDto> queryAllGoodsTypes(Integer typeId) {
+        return  goodsTypeMapper.queryAllGoodsTypes(typeId);
     }
 
     /**

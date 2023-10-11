@@ -2,6 +2,7 @@ package com.xxxx.supermarket.dao;
 
 import com.xxxx.supermarket.base.BaseMapper;
 import com.xxxx.supermarket.entity.GoodsType;
+import com.xxxx.supermarket.model.TreeDto;
 import com.xxxx.supermarket.model.TreeGoodsModel;
 
 
@@ -14,7 +15,7 @@ public interface GoodsTypeMapper extends BaseMapper<GoodsType,Integer> {
      * @param
      * @return
      */
-    public List<TreeGoodsModel> queryAllGoodsTypes();
+    public List<TreeDto> queryAllGoodsTypes(Integer typeId);
 
     /**
      * 加载商品类别管理页面的表格数据
