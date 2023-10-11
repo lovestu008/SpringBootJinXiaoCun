@@ -48,4 +48,11 @@ public interface GoodsTypeMapper extends BaseMapper<GoodsType,Integer> {
     GoodsType queryGoodsTypeByTypeId(Integer typeId);
 
 
+
+    /**
+     * 删除商品类别时，更新父节点状态
+     * @param id
+     * @return
+     */
+    public Integer updateByState(Integer id);
 }

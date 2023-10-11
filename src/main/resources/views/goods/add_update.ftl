@@ -10,21 +10,7 @@
 <form class="layui-form" style="width:80%;">
     <input name="id" type="hidden" value="${(goods.id)!}"/>
     <input name="goodsUnit" type="hidden" value="${(goods.unit)!}"/>
-    <div class="layui-form-item layui-row layui-col-xs12">
-        <label class="layui-form-label">商品类别</label>
-        <div class="layui-input-block">
-            <div class="layui-inline">
-                <div class="layui-input-inline">
-                    <input type="text" name="typeName"
-                           class="layui-input
-					searchVal" placeholder="商品类别" readonly="readonly"  value="${(goodsType.name)!""}"/>
-                    <input type="hidden" name="typeId" value="${(goodsType.id)!""}" />
-                </div>
-                <a class="layui-btn search_btn" data-type="reload" href="javascript:void(0)" id="reloadGoodsType"><i
-                            class="layui-icon">&#xe615;</i> 选择</a>
-            </div>
-        </div>
-    </div>
+
     <br/>
     <br/>
     <div class="layui-form-item layui-row layui-col-xs12">

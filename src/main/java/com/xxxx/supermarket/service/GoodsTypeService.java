@@ -101,11 +101,18 @@ public class GoodsTypeService extends BaseService<GoodsType,Integer> {
     public void deleteGoodsType(Integer id) {
         AssertUtil.isTrue(null == id,"待删除记录不存在！");
         //判断类别是否存在子类别
-        Integer count = goodsTypeMapper.queryGoodsTypeCountByParentId(id);
+        Integer count = goodsTypeMapper.queryGoodsTypeByParentId(id);
+        //判断删除的子类别，其父类别的状态
+        GoodsType num = goodsTypeMapper.selectByPrimaryKey(id);
+        GoodsType num2 = goodsTypeMapper.selectByPrimaryKey(num.getpId());
+        if(num2.getState()==1){
+            //删除商品类别时，更新父节点状态
+            AssertUtil.isTrue(goodsTypeMapper.updateByState(num2.getId()) <1 ,"删除失败！");
+        }
         //如果存在则不能删除
         AssertUtil.isTrue(count >0,"该类别下存在子类，不可删除！");
         AssertUtil.isTrue(goodsTypeMapper.deleteByPrimaryKey(id)<1,"删除失败！");
-        }
+    }
 
     /**
      * 查询指定类型下所有的商品的类型Id

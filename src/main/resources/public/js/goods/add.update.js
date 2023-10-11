@@ -4,32 +4,6 @@ layui.use(['form', 'layer'], function () {
         $ = layui.jquery;
 
 
-    /**
-     *
-     */
-    $.ajax({
-        type:"post",
-        url:ctx+"/goodsType/queryAllGoodsTypes",
-        dataType:"json",
-        success:function (data) {
-            var setting = {
-                data: {
-                    simpleData: {
-                        enable: true
-                    }
-                },
-                view:{
-                    showLine: false
-                }/*,
-                callback: {
-                    onClick: zTreeOnClick
-                }*/
-            };
-            $.fn.zTree.init($("#treeDemo"), setting, data);
-        }
-    })
-
-
 
     /**
      * 商品单位下拉框展示
@@ -76,7 +50,7 @@ layui.use(['form', 'layer'], function () {
                 }, 500);
             } else {
                 layer.msg(
-                        res.message, {
+                        res.msg, {
                             icon: 5
                         }
                     );
@@ -87,19 +61,6 @@ layui.use(['form', 'layer'], function () {
     });
 
 
-
-    //商品类别设置弹出框
-    $("#reloadGoodsType").click(function (){
-        var url  =  ctx+"/goods/toGoodsTypePage?typeId="+$("input[name='typeId']").val();
-        var title="商品管理-商品类别";
-        layui.layer.open({
-            title : title,
-            type : 2,
-            area:["600px","400px"],
-            maxmin:true,
-            content : url
-        });
-    })
 
 
     /**
@@ -112,13 +73,3 @@ layui.use(['form', 'layer'], function () {
 
 
 });
-
-/**
- * 子窗口调用方法  显示选中的商品类别
- * @param typeName
- * @param typeId
- */
-function getVal(typeName,typeId){
-    $("input[name='typeName']").val(typeName);
-    $("input[name='typeId']").val(typeId);
-}

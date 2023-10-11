@@ -97,6 +97,16 @@
     where id = #{id,jdbcType=INTEGER}
   </update>
 
+  <!--删除商品类别时，更新父节点状态-->
+  <update id="updateByState" parameterType="com.xxxx.supermarket.entity.Goods">
+    update t_goods_type
+    set
+      state = 0
+    where
+      id = #{id}
+  </update>
+
+
   <!--查询所有的商品类别-->
   <select id="queryAllGoodsTypes" resultType="com.xxxx.supermarket.model.TreeGoodsModel">
     select id,name,p_id as pId
