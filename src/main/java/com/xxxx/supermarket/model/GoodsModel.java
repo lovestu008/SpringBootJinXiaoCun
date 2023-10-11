@@ -18,5 +18,5 @@ public class GoodsModel extends Goods {
 
 
     private String producer;//生产厂商
-    private int isDel;
+    private Integer isDel;
 }
