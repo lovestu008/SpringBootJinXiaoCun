@@ -1,6 +1,5 @@
 package com.xxxx.supermarket.service;
 
-import com.github.pagehelper.IPage;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.xxxx.supermarket.base.BaseService;
@@ -9,6 +8,7 @@ import com.xxxx.supermarket.entity.Goods;
 import com.xxxx.supermarket.model.GoodsModel;
 import com.xxxx.supermarket.query.GoodsQuery;
 import com.xxxx.supermarket.utils.AssertUtil;
+import io.swagger.models.auth.In;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
@@ -20,7 +20,7 @@ import java.util.List;
 import java.util.Map;
 
 @Service
-public class GoodsService extends BaseService<Goods, Integer> {
+public class GoodsService extends BaseService<Goods,Integer> {
 
     @Resource
     private GoodsMapper goodsMapper;
@@ -28,10 +28,8 @@ public class GoodsService extends BaseService<Goods, Integer> {
     @Resource
     private GoodsTypeService goodsTypeService;
 
-
     /**
      * 多条件 商品数据 分页查询
-     *
      * @param goodsQuery
      * @return
      */
@@ -52,10 +50,9 @@ public class GoodsService extends BaseService<Goods, Integer> {
         map.put("msg", "success");
         map.put("count", pageInfo.getTotal());//查到的数据的总数量
         // 设置分页好的列表
-        map.put("data", pageInfo.getList());
+        map.put("data",pageInfo.getList());
         return map;
     }
-
     /**
      * 通过code查商品
      *
@@ -79,34 +76,36 @@ public class GoodsService extends BaseService<Goods, Integer> {
 
     /**
      * 根据goods更改数据
+     *
      * @param goods
      * @return
-     */@Transactional(propagation = Propagation.REQUIRED)
+     */
+    @Transactional(propagation = Propagation.REQUIRED)
     public Integer updateByGoods(Goods goods) {
         return goodsMapper.updateByPrimaryKeySelective(goods);
     }
-
     /**
      * 添加商品
-     *  参数校验
-     *      商品名             非空，唯一
-     *      采购价             非空，大于0
-     *      销售价             非空，大于0
-     *      库存下限            非空，大于0
-     *  设置参数默认值
-     *      设置是否是删除状态 0=有效 1=已删除
-     *          is_del =0
-     *  执行添加操作，判断受影响的行数
+     * 参数校验
+     * 商品名             非空，唯一
+     * 采购价             非空，大于0
+     * 销售价             非空，大于0
+     * 库存下限            非空，大于0
+     * 设置参数默认值
+     * 设置是否是删除状态 0=有效 1=已删除
+     * is_del =0
+     * 执行添加操作，判断受影响的行数
+     *
      * @param
      */
-    @Transactional(propagation=Propagation.REQUIRED)
-    public void addGoods(GoodsModel goodsModel){
+    @Transactional(propagation = Propagation.REQUIRED)
+    public void addGoods(GoodsModel goodsModel) {
         //校验参数
-        CheckGoodsParams(goodsModel.getName(),goodsModel.getPurchasingPrice(), goodsModel.getSellingPrice(),goodsModel.getMinNum());
+        CheckGoodsParams(goodsModel.getName(), goodsModel.getPurchasingPrice(), goodsModel.getSellingPrice(), goodsModel.getMinNum());
         //设置参数   0=有效 1=已删除
         goodsModel.setIsDel(0);
         //执行添加操作，判断受影响的行数
-        AssertUtil.isTrue(goodsMapper.insertSelective(goodsModel) !=1,"商品添加失败！");
+        AssertUtil.isTrue(goodsMapper.insertSelective(goodsModel) != 1, "商品添加失败！");
     }
 
     /**
@@ -137,8 +136,9 @@ public class GoodsService extends BaseService<Goods, Integer> {
         //执行更新操作，判断受影响的行数
         AssertUtil.isTrue(goodsMapper.updateByPrimaryKeySelective(goodsModel) != 1 ,"商品数据更新失败！");
     }
+
     /**
-     * 删除商品数据
+     * 删除商品数据(单条删除)
      *    参数判断
      *        判断id是否为空
      *    执行删除操作，判断受影响的行数
@@ -149,6 +149,17 @@ public class GoodsService extends BaseService<Goods, Integer> {
         AssertUtil.isTrue(null == id,"待删除记录不存在！");
         AssertUtil.isTrue(goodsMapper.deleteGoods(id) != 1,"商品删除失败！");
     }
+
+    /**
+     * 删除商品数据(批量删除)
+     * @param ids
+     */
+    @Transactional(propagation = Propagation.REQUIRED)
+    public void deleteAllGoods(Integer[] ids) {
+        goodsMapper.deleteAllGoods(ids);
+    }
+
+
     /**
      * 参数判断方法
      *
@@ -169,4 +180,5 @@ public class GoodsService extends BaseService<Goods, Integer> {
         //库存下限   非空，大于0
         AssertUtil.isTrue(null == minNum || minNum < 0 ,"库存下限错误！请重试！");
     }
+
 }

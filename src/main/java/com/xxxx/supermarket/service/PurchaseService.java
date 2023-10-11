@@ -9,7 +9,6 @@ import com.xxxx.supermarket.model.InpRetGoodsList;
 import com.xxxx.supermarket.utils.AssertUtil;
 import com.xxxx.supermarket.utils.PriceUtil;
 import org.apache.commons.lang3.StringUtils;
-import org.omg.CORBA.INTERNAL;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;

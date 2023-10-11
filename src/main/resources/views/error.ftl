@@ -6,6 +6,10 @@
     <#include "common.ftl">
 </head>
 <body>
-<h1>出错啦</h1>
+<h1>Error:  ${(code)!} !!!
+    <br>
+    您出现了 ${(msg)!} 的问题!!!
+
+</h1>
 </body>
 </html>

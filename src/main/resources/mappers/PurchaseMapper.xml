@@ -30,11 +30,11 @@
   <insert id="insert" parameterType="com.xxxx.supermarket.entity.Purchase" >
     insert into t_purchase (id, goods_name, provider, 
       inp_price, all_inp_price, inp_num, 
-      inp_time, operate_person, remark, 
+      inp_time, operate_person, remark,
       is_valid)
     values (#{id,jdbcType=INTEGER}, #{goodsName,jdbcType=VARCHAR}, #{provider,jdbcType=VARCHAR}, 
       #{inpPrice,jdbcType=INTEGER}, #{allInpPrice,jdbcType=INTEGER}, #{inpNum,jdbcType=INTEGER}, 
-      #{inpTime,jdbcType=TIMESTAMP}, #{operatePerson,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR}, 
+      #{inpTime,jdbcType=TIMESTAMP}, #{operatePerson,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR},
       #{isValid,jdbcType=INTEGER})
   </insert>
   <insert id="insertSelective" parameterType="com.xxxx.supermarket.entity.Purchase" >

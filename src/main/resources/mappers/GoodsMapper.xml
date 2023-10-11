@@ -22,7 +22,7 @@
   <sql id="Base_Column_List" >
     id, code, inventory_quantity, min_num, model, name, producer, purchasing_price, remarks, 
     selling_price, unit, type_id, state, last_purchasing_price, is_del
-    </sql>
+  </sql>
 
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select
@@ -221,9 +221,9 @@
   <!--商品管理多条件查询-->
   <select id="selectByParams" parameterType="com.xxxx.supermarket.query.GoodsQuery" resultType="com.xxxx.supermarket.entity.Goods">
     SELECT
-        g.*,gu.name as unitName,gt.name as typeName
+    g.*,gu.name as unitName,gt.name as typeName
     FROM
-        t_goods g left join t_goods_unit gu on g.unit = gu.id left join t_goods_type gt on g.type_id = gt.id
+    t_goods g left join t_goods_unit gu on g.unit = gu.id left join t_goods_type gt on g.type_id = gt.id
     <where>
       g.is_del =0
       <if test="null != goodsName and goodsName !=''">
@@ -242,6 +242,12 @@
         </if>
       </if>
 
+      <if test="null !=typeIds and typeIds.size>0">
+        and g.type_id in
+        <foreach collection="typeIds" item="typeId" open="(" separator="," close=")">
+          #{typeId}
+        </foreach>
+      </if>
       <if test="null !=typeIds and typeIds.size>0">
         and g.type_id in
         <foreach collection="typeIds" item="typeId" open="(" separator="," close=")">
@@ -276,8 +282,6 @@
     is_del = 0 and name = #{name}
   </select>
 
-
-
   <!--单条删除(修改is_del)-->
   <delete id="deleteGoods" >
     update
@@ -287,5 +291,20 @@
     where
       id = #{id}
   </delete>
-  
+
+  <!--批量删除(修改is_del)-->
+  <delete id="deleteAllGoods">
+    update
+    t_goods
+    set
+    is_del = 1
+    where
+    id
+    in
+    <foreach collection="array" separator="," open="(" close=")" item="id">
+      #{id}
+    </foreach>
+  </delete>
+
+
 </mapper>

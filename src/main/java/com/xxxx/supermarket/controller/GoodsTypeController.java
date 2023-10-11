@@ -42,8 +42,8 @@ public class GoodsTypeController extends BaseController {
         return "goodsType/goods_type";
     }
     /**
-     * 查询所有的商品类别
-     * @param
+     * 查找所有商品类别
+     * @return
      */
     @RequiredPermission(code = "102020")
     @RequestMapping("queryAllGoodsTypes")

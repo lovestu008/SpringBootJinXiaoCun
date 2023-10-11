@@ -1,14 +1,13 @@
 package com.xxxx.supermarket.aspect;
 
 import com.xxxx.supermarket.annotation.RequiredPermission;
+import com.xxxx.supermarket.exceptions.AuthException;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.stereotype.Component;
-
 import javax.annotation.Resource;
-import javax.security.auth.message.AuthException;
 import javax.servlet.http.HttpSession;
 import java.util.List;
 

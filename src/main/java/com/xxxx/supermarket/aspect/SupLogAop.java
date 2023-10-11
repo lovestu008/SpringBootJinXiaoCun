@@ -43,11 +43,7 @@ public class SupLogAop implements Ordered {//Ordered接口用于排序，值越�
         log.info("----SupAop 环绕通知 start");
         //执行目标方法
         Object result = null;
-        try {
-            result = proceedingJoinPoint.proceed();
-        } catch (Throwable throwable) {
-            throwable.printStackTrace();
-        }
+        result = proceedingJoinPoint.proceed();
         //目标方法执行完成后，获取目标类、目标方法上的业务日志注解上的功能名称和功能描述
         Object target = proceedingJoinPoint.getTarget();
         MethodSignature signature = (MethodSignature) proceedingJoinPoint.getSignature();
