@@ -9,7 +9,7 @@
 </head>
 <body class="childrenBody">
 
-        <!-- 右表 -->
+        <!-- 商品表 -->
         <div class="layui-col-sm12 layui-col-md8 layui-col-lg9" style="width: 100%">
             <div class="layui-card">
                 <fieldset class="layui-elem-field layui-field-title" >
@@ -38,6 +38,10 @@
                                 <a class="layui-btn layui-btn-normal addNews_btn" lay-event="add">
                                     <i class="layui-icon">&#xe608;</i>
                                     添加商品
+                                </a>
+                                <a class="layui-btn layui-btn-normal addNews_btn" lay-event="delete">
+                                    <i class="layui-icon layui-icon-delete"></i>
+                                    删除商品
                                 </a>
                             </div>
                         </script>
