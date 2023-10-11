@@ -101,7 +101,7 @@ public class GoodsTypeService extends BaseService<GoodsType,Integer> {
     public void deleteGoodsType(Integer id) {
         AssertUtil.isTrue(null == id,"待删除记录不存在！");
         //判断类别是否存在子类别
-        Integer count = goodsTypeMapper.queryGoodsTypeByParentId(id);
+        Integer count = goodsTypeMapper.queryGoodsTypeCountByParentId(id);
         //判断删除的子类别，其父类别的状态
         GoodsType num = goodsTypeMapper.selectByPrimaryKey(id);
         GoodsType num2 = goodsTypeMapper.selectByPrimaryKey(num.getpId());

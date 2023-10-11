@@ -55,6 +55,37 @@ public class GoodsService extends BaseService<Goods,Integer> {
         return map;
     }
     /**
+     * 通过code查商品
+     *
+     * @param code
+     * @return
+     */
+    public Goods queryGoodsByCode(Integer code) {
+        return goodsMapper.queryGoodsByCode(code);
+    }
+
+    /**
+     * 通过id查商品
+     *
+     * @param id
+     * @return
+     */
+    public Goods getGoodsById(Integer id) {
+
+        return goodsMapper.getGoodsById(id);
+    }
+
+    /**
+     * 根据goods更改数据
+     *
+     * @param goods
+     * @return
+     */
+    @Transactional(propagation = Propagation.REQUIRED)
+    public Integer updateByGoods(Goods goods) {
+        return goodsMapper.updateByPrimaryKeySelective(goods);
+    }
+    /**
      * 添加商品
      * 参数校验
      * 商品名             非空，唯一
@@ -138,7 +169,7 @@ public class GoodsService extends BaseService<Goods,Integer> {
      * @param sellingPrice
      * @param minNum
      */
-    private void CheckGoodsParams(String name, Float purchasingPrice, Float sellingPrice, Integer minNum) {
+    private void CheckGoodsParams(String name, Double purchasingPrice, Double sellingPrice, Integer minNum) {
         //商品名  非空,唯一
         AssertUtil.isTrue(StringUtils.isBlank(name),"商品名不能为空！");
         Goods temp = goodsMapper.selectByGoodsName(name);
