@@ -39,7 +39,7 @@ public class SupLogAop implements Ordered {//Ordered接口用于排序，值越�
      * @retur
      */
     @Around("pointcut()")  //对连接点进行拦截
-    public Object around(ProceedingJoinPoint proceedingJoinPoint) {//连接点，请求作为参数传入
+    public Object around(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {//连接点，请求作为参数传入
         log.info("----SupAop 环绕通知 start");
         //执行目标方法
         Object result = null;

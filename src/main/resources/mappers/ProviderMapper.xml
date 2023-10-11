@@ -141,18 +141,18 @@
         t_provider
     <where>
       is_del=0
-      <!--<if test="name!=null and name!=''">
+      <if test="name!=null and name!=''">
         and name like concat ('%',#{name},'%')
       </if>
       <if test="contact!=null and contact!=''">
-        and contact = #{contact}
+        and contact like concat ('%',#{contact},'%')
       </if>
       <if test="address!=null and address!=''">
-        and address = #{address}
+        and address like concat ('%', #{address},'%')
       </if>
       <if test="number!=null and number!=''">
-        and number = #{number}
-      </if>-->
+        and number like concat ('%', #{number},'%')
+      </if>
     </where>
   </select>
 </mapper>
